@@ -393,30 +393,30 @@
    "prov": "M",
    "note": "crawlspace / porch foundation"
   },
-  "B_X_BATH_L": {
+  "B_X_OFFICE": {
    "value": 16.48,
    "prov": "O",
-   "note": "bathroom left wall: as-built 9'-5\" clear from the stair wall (sketch: x 16.2)"
+   "note": "office 'new wall', 1'-2\" past the old wall on the walk-out line (old wall removed)"
   },
-  "B_Z_BATH_TOP": {
+  "B_X_BATH_TOP": {
+   "value": 25.2,
+   "prov": "O",
+   "note": "bathroom wall toward the stair: 9'-5\" clear (4'-10\" shower + 4'-3\" toilet zone) from the foundation jog"
+  },
+  "B_Z_BATH_L": {
    "value": 20.12,
    "prov": "O",
-   "note": "bathroom top wall, in line with the stair's top (as-built 6'-11\" clear gives 19.97, sketch 19.6)"
+   "note": "bathroom / closet wall toward the theater, in line with the stair (6'-11\" clear gives 19.96)"
   },
-  "B_X_CLOS_L": {
-   "value": 11.3,
+  "B_X_CLOS_TOP": {
+   "value": 20.0,
    "prov": "O",
-   "note": "new closet left wall (sketch)"
-  },
-  "B_Z_CLOS_TOP": {
-   "value": 19.2,
-   "prov": "O",
-   "note": "new closet top wall (sketch)"
+   "note": "office closet wall toward the bathroom (closet 'enclose for closet', 4'-3\" zone)"
   },
   "B_Z_MECH_CUT": {
    "value": 24.75,
    "prov": "O",
-   "note": "mechanical: start of the 45 deg corner wall with the 36\" door (sketch)"
+   "note": "mechanical: start of the 45 deg corner wall with the 36\" door (markup)"
   },
   "B_X_MECH_CUT": {
    "value": 37.25,
@@ -426,7 +426,17 @@
   "B_Z_STAIR_MID": {
    "value": 23.8,
    "prov": "O",
-   "note": "stair hall: stair entrance from here down (as on the main floor)"
+   "note": "stair hall: stair entrance from here down (3'-4\" strip on the sketch)"
+  },
+  "B_X_BAFFLE": {
+   "value": 42.332,
+   "prov": "O",
+   "note": "theater baffle wall: its face 27'-0\" from the walk-out wall"
+  },
+  "B_Z_BAFFLE_END": {
+   "value": 13.3,
+   "prov": "O",
+   "note": "baffle wall end / side wall with the slide-out equipment cabinet (sketch)"
   }
  },
  "vertical_ft": {
@@ -445,8 +455,9 @@
    "sheet": "A1",
    "rooms": [
     {
-     "name": "Basement",
+     "name": "Theater",
      "prov": "M",
+     "ceiling_ft": 9.0,
      "points": [
       [
        14.915,
@@ -477,7 +488,11 @@
        20.12
       ],
       [
-       26.27,
+       25.2,
+       20.12
+      ],
+      [
+       20.0,
        20.12
       ],
       [
@@ -486,21 +501,17 @@
       ],
       [
        16.48,
-       19.2
-      ],
-      [
-       14.915,
-       19.2
+       10.144
       ],
       [
        14.915,
        10.144
       ]
      ],
-     "note": "finished basement; owner markup: bathroom, closet, side room, stair hall and the angled doors as built"
+     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip along the bar side not modelled)"
     },
     {
-     "name": "Basement Room",
+     "name": "Office",
      "prov": "O",
      "points": [
       [
@@ -512,15 +523,19 @@
        10.144
       ],
       [
+       16.48,
+       10.144
+      ],
+      [
+       16.48,
+       20.12
+      ],
+      [
        14.915,
-       19.2
+       20.12
       ],
       [
-       11.3,
-       19.2
-      ],
-      [
-       11.3,
+       14.915,
        23.4
       ],
       [
@@ -528,76 +543,77 @@
        23.4
       ]
      ],
-     "note": "owner markup: new wall on the walk-out wall line (as-built room 10'-0\" x 12'-10\"); name not given"
+     "note": "as-built 12'-10\" wide; CH 8'-1\" / 9'-0\" (not modelled)"
     },
     {
-     "name": "Basement Closet",
+     "name": "Office Closet",
      "prov": "O",
      "points": [
       [
-       11.3,
-       19.2
+       14.915,
+       20.12
+      ],
+      [
+       16.48,
+       20.12
+      ],
+      [
+       20.0,
+       20.12
+      ],
+      [
+       20.0,
+       23.4
+      ],
+      [
+       15.25,
+       23.4
       ],
       [
        14.915,
-       19.2
-      ],
-      [
-       16.48,
-       19.2
-      ],
-      [
-       16.48,
-       20.12
-      ],
-      [
-       16.48,
-       27.4
-      ],
-      [
-       15.25,
-       27.4
-      ],
-      [
-       15.25,
-       23.4
-      ],
-      [
-       11.3,
        23.4
       ]
      ],
-     "note": "owner markup; the 1.2 ft strip behind the bathroom (down to the foundation jog) is counted in the closet"
+     "note": "'enclose for closet' (3'-5\" on the sketch; here 3'-1\" so it ends on the garage foundation line as drawn)"
     },
     {
-     "name": "Basement Bath",
+     "name": "Bathroom",
      "prov": "O",
+     "ceiling_ft": 9.0,
      "points": [
       [
-       16.48,
+       20.0,
        20.12
       ],
       [
-       26.27,
+       25.2,
        20.12
       ],
       [
-       26.27,
+       25.2,
        27.4
       ],
       [
-       16.48,
+       15.25,
        27.4
+      ],
+      [
+       15.25,
+       23.4
+      ],
+      [
+       20.0,
+       23.4
       ]
      ],
-     "note": "owner markup + as-built 9'-5\" x 6'-11\" (A1 'Bath R.I.')"
+     "note": "as built 9'-5\" x 6'-11\" (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"
     },
     {
      "name": "Stairs",
      "prov": "M",
      "points": [
       [
-       26.27,
+       25.2,
        20.12
       ],
       [
@@ -613,10 +629,11 @@
        27.4
       ],
       [
-       26.27,
+       25.2,
        27.4
       ]
-     ]
+     ],
+     "note": "flights as on A1/A2 (x 26.27-35.80); the 1 ft at the foot, to the bathroom wall, is part of the stair"
     },
     {
      "name": "Stair Hall",
@@ -647,10 +664,10 @@
        23.8
       ]
      ],
-     "note": "owner markup: angled walls with 36\" doors to the basement and to the mechanical room"
+     "note": "owner markup: angled walls with 36\" doors to the theater and to the mechanical room"
     },
     {
-     "name": "Mechanical",
+     "name": "Mechanical Room",
      "prov": "M",
      "points": [
       [
@@ -678,7 +695,7 @@
        24.75
       ]
      ],
-     "note": "furnace, water heater, sump pit; entered through the angled door from the stair hall (owner markup)"
+     "note": "2 water heaters, furnace, sump; entered through the angled door from the stair hall (owner markup)"
     },
     {
      "name": "Crawlspace",
@@ -724,7 +741,34 @@
      "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"
     }
    ],
-   "walls": [],
+   "walls": [
+    {
+     "from": [
+      42.332,
+      2.19
+     ],
+     "to": [
+      42.332,
+      13.3
+     ],
+     "thickness_ft": 0.375,
+     "prov": "O",
+     "note": "theater baffle wall with the 130\" 16:9 AT screen (27'-0\" from the walk-out wall)"
+    },
+    {
+     "from": [
+      42.332,
+      13.3
+     ],
+     "to": [
+      44.52,
+      13.3
+     ],
+     "thickness_ft": 0.375,
+     "prov": "O",
+     "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"
+    }
+   ],
    "doors": [
     {
      "at": [
@@ -739,32 +783,32 @@
     },
     {
      "at": [
-      14.915,
+      16.48,
       17.38
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door basement room (owner markup)",
+     "label": "36\" door office (owner markup)",
      "prov": "O"
     },
     {
      "at": [
-      11.3,
-      21.3
+      14.915,
+      21.759999999999998
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door closet (owner markup)",
+     "label": "36\" door office closet",
      "prov": "O"
     },
     {
      "at": [
-      21.2,
+      21.6,
       20.12
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door bathroom (owner markup)",
+     "label": "36\" door bathroom",
      "prov": "O"
     },
     {
@@ -774,7 +818,7 @@
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door on angle, basement to stair hall (owner markup)",
+     "label": "36\" door on angle, theater to stair hall (owner markup)",
      "prov": "O"
     },
     {
@@ -855,6 +899,36 @@
      "rot": 270,
      "label": "UP 16R to main floor",
      "prov": "M"
+    },
+    {
+     "type": "kitchen",
+     "x": 27.35,
+     "z": 18.93,
+     "w": 8.9,
+     "d": 2.0,
+     "rot": 180,
+     "label": "wet bar (as-built sketch, +/- 1 ft)",
+     "prov": "O"
+    },
+    {
+     "type": "shower",
+     "x": 22.6,
+     "z": 25.235,
+     "w": 4.819999999999999,
+     "d": 3.6700000000000017,
+     "rot": 0,
+     "label": "curbless walk-around shower, no door (4'-10\")",
+     "prov": "O"
+    },
+    {
+     "type": "wc",
+     "x": 16.78,
+     "z": 25.5,
+     "w": 1.4,
+     "d": 2.4,
+     "rot": 270,
+     "label": "toilet (moved, owner sketch)",
+     "prov": "O"
     }
    ],
    "outdoor": [],
@@ -870,6 +944,32 @@
      ],
      "h": 0,
      "why": "stair entrance from the stair hall (owner markup)"
+    }
+   ],
+   "thick_edges": [
+    {
+     "a": [
+      39.9,
+      16.2
+     ],
+     "b": [
+      35.8,
+      20.12
+     ],
+     "t": 0.23,
+     "why": "thick sound reducing wall, theater | stair hall"
+    },
+    {
+     "a": [
+      44.52,
+      16.2
+     ],
+     "b": [
+      39.9,
+      16.2
+     ],
+     "t": 0.23,
+     "why": "thick sound reducing wall, theater | mechanical"
     }
    ]
   },
@@ -1367,10 +1467,10 @@
       50.333,
       16.146
      ],
-     "w": 8.0,
-     "h": 6.666666666666667,
-     "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")",
-     "prov": "E",
+     "w": 9.0,
+     "h": 8.0,
+     "label": "sliding glass door to the dining deck, 108\" x 8'-0\" (owner; replaces 3 x 2650 SH, centred on them)",
+     "prov": "O",
      "style": "sliding"
     },
     {

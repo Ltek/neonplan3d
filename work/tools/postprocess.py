@@ -67,12 +67,22 @@ def main(src, dst):
                 shared = any(r2 is not r and any(on_seg(mp, r2["points"][j], r2["points"][(j + 1) % len(r2["points"])], 0.01)[0] for j in range(len(r2["points"]))) for r2 in f["rooms"])
                 if not shared and gf["name"] == "Basement":
                     thick[i] = BASE_EXT
+                for te in gf.get("thick_edges", []):
+                    if on_seg(mp, pt(te["a"]), pt(te["b"]), 0.01)[0]:
+                        thick[i] = te["t"]
+                        log.append(f"{f['name']}: '{r['name']}' edge {i}: thickness {te['t']} ({te['why']})")
             if any(h is not None for h in heights):
                 r["wall_heights"] = heights
             if any(s for s in splits):
                 r["wall_splits"] = splits
             if any(t for t in thick):
                 r["wall_thickness"] = thick
+        # ceiling heights given for some rooms (as built)
+        for gr in gf["rooms"]:
+            if gr.get("ceiling_ft"):
+                r = next(r for r in f["rooms"] if r["name"] == gr["name"])
+                r["ceiling_height"] = m(gr["ceiling_ft"])
+                log.append(f"{f['name']}: '{gr['name']}' ceiling {r['ceiling_height']} m")
         # door looks the import format cannot carry (sliding glass doors). A door 2.2 m or wider comes in as a garage
         # door; a sliding door is put back to a door.
         for d in gf["doors"]:
