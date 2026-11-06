@@ -146,12 +146,12 @@
   "X_PANTRY_R": {
    "value": 8.8,
    "prov": "M",
-   "note": "pantry right wall (2468 PKT)"
+   "note": "pantry right wall (2468 PKT) - NOT BUILT per owner, unused"
   },
   "X_CLOS_L": {
    "value": 12.46,
    "prov": "M",
-   "note": "coat closet left wall (2'-4 1/2\" inside)"
+   "note": "NOT BUILT per owner, unused: coat closet left wall (2'-4 1/2\" inside)"
   },
   "Z_LAUND_BOT": {
    "value": 16.13,
@@ -161,7 +161,7 @@
   "Z_CLOS_BOT": {
    "value": 20.2,
    "prov": "M",
-   "note": "coat closet bottom wall"
+   "note": "coat closet bottom wall - NOT BUILT per owner, unused"
   },
   "Z_BRK_KIT": {
    "value": 8.5,
@@ -177,6 +177,11 @@
    "value": 35.8,
    "prov": "M",
    "note": "stair right end (newel / rail)"
+  },
+  "Z_STAIR_MID": {
+   "value": 23.8,
+   "prov": "M",
+   "note": "stair: line between the two runs (rail #10 at the landing)"
   },
   "Z_STAIR_TOP": {
    "value": 20.12,
@@ -705,7 +710,7 @@
      ]
     },
     {
-     "name": "Pantry",
+     "name": "Mud Hall / Pantry",
      "prov": "M",
      "points": [
       [
@@ -713,72 +718,19 @@
        16.13
       ],
       [
-       8.8,
+       14.813,
        16.13
       ],
       [
-       8.8,
+       14.813,
        23.85
       ],
       [
        4.146,
        23.85
       ]
-     ]
-    },
-    {
-     "name": "Mud Hall",
-     "prov": "M",
-     "points": [
-      [
-       8.8,
-       16.13
-      ],
-      [
-       12.46,
-       16.13
-      ],
-      [
-       12.46,
-       20.2
-      ],
-      [
-       14.813,
-       20.2
-      ],
-      [
-       14.813,
-       23.85
-      ],
-      [
-       8.8,
-       23.85
-      ]
      ],
-     "note": "unnamed on the drawing: hall from garage (2868 #4) to kitchen, laundry and pantry"
-    },
-    {
-     "name": "Coat Closet",
-     "prov": "M",
-     "points": [
-      [
-       12.46,
-       16.13
-      ],
-      [
-       14.813,
-       16.13
-      ],
-      [
-       14.813,
-       20.2
-      ],
-      [
-       12.46,
-       20.2
-      ]
-     ],
-     "note": "unnamed closet off the mud hall (2468)"
+     "note": "owner markup: the pantry wall + pocket door and the coat closet walls + door drawn on A3.1 were not built"
     },
     {
      "name": "Breakfast",
@@ -829,10 +781,6 @@
       [
        14.813,
        23.85
-      ],
-      [
-       14.813,
-       20.2
       ],
       [
        14.813,
@@ -1167,26 +1115,6 @@
     },
     {
      "at": [
-      8.8,
-      20.4
-     ],
-     "w": 2.3333333333333335,
-     "h": 6.666666666666667,
-     "label": "2468 PKT pantry",
-     "prov": "E"
-    },
-    {
-     "at": [
-      12.46,
-      17.6
-     ],
-     "w": 2.3333333333333335,
-     "h": 6.666666666666667,
-     "label": "2468 closet (drawn at 45 deg)",
-     "prov": "E"
-    },
-    {
-     "at": [
       14.813,
       5.0
      ],
@@ -1194,6 +1122,16 @@
      "h": 6.666666666666667,
      "label": "6080 SGD to covered deck",
      "prov": "M"
+    },
+    {
+     "at": [
+      50.333,
+      16.146
+     ],
+     "w": 8.0,
+     "h": 6.666666666666667,
+     "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")",
+     "prov": "E"
     },
     {
      "at": [
@@ -1347,39 +1285,6 @@
      "h": 1.75,
      "sill": 8.402916666666666,
      "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
-    },
-    {
-     "at": [
-      47.333,
-      16.146
-     ],
-     "w": 2.5,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "2650 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      50.333,
-      16.146
-     ],
-     "w": 2.5,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "2650 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      53.333,
-      16.146
-     ],
-     "w": 2.5,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "2650 SH",
      "prov": "D"
     },
     {
@@ -1611,23 +1516,13 @@
     },
     {
      "type": "island",
-     "x": 22.5,
-     "z": 10.65,
-     "w": 5.2,
-     "d": 3.3,
-     "rot": 0,
-     "label": "island with D.W. and angled sink",
-     "prov": "M"
-    },
-    {
-     "type": "island",
-     "x": 24.25,
-     "z": 14.35,
-     "w": 4.1,
-     "d": 1.7,
+     "x": 22.6,
+     "z": 9.0,
+     "w": 10.0,
+     "d": 3.3333333333333335,
      "rot": 90,
-     "label": "island return / raised bar 34 1/2\"",
-     "prov": "M"
+     "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)",
+     "prov": "E"
     },
     {
      "type": "dryer",
@@ -1719,6 +1614,30 @@
       ]
      ],
      "prov": "M"
+    },
+    {
+     "type": "terrace",
+     "name": "Dining Deck",
+     "points": [
+      [
+       44.667,
+       -2.0
+      ],
+      [
+       64.667,
+       -2.0
+      ],
+      [
+       64.667,
+       16.0
+      ],
+      [
+       44.667,
+       16.0
+      ]
+     ],
+     "prov": "E",
+     "note": "owner markup: approx. 20 ft wide x 18 ft deep, against the dining wall from the fireplace chase; exact position unconfirmed"
     }
    ],
    "open_edges": [
@@ -1813,10 +1732,22 @@
      ],
      "b": [
       35.8,
-      27.5
+      23.8
      ],
      "h": 0.914,
-     "why": "stair end rail"
+     "why": "stair end rail (upper run)"
+    },
+    {
+     "a": [
+      35.8,
+      23.8
+     ],
+     "b": [
+      35.8,
+      27.5
+     ],
+     "h": 0,
+     "why": "stair entrance (owner markup)"
     }
    ]
   },
@@ -2451,12 +2382,12 @@
     },
     {
      "at": [
-      20.146,
-      26.0
+      21.7,
+      27.5
      ],
      "w": 2.3333333333333335,
      "h": 6.666666666666667,
-     "label": "2468 bath 3",
+     "label": "2468 bath 3, in its bottom wall (owner markup; opening x 20.5-22.9 on A3.2)",
      "prov": "M"
     },
     {
@@ -2471,13 +2402,13 @@
     },
     {
      "at": [
-      31.1,
+      39.27,
       16.146
      ],
-     "w": 5.0,
-     "h": 7.333333333333333,
-     "label": "ARCH OPNG to master (spring 7'-4\")",
-     "prov": "E"
+     "w": 4.666666666666667,
+     "h": 6.666666666666667,
+     "label": "(2) 2468 master bedroom double doors (owner markup; A3.2 width x 36.95-41.6)",
+     "prov": "M"
     },
     {
      "at": [
@@ -2491,12 +2422,12 @@
     },
     {
      "at": [
-      20.146,
-      11.198
+      21.8,
+      12.25
      ],
-     "w": 1.9,
+     "w": 2.3333333333333335,
      "h": 6.666666666666667,
-     "label": "2468 master WIC (the wall stub is only 2'-1 long, opening narrowed)",
+     "label": "2468 master WIC, in its bottom wall (owner markup; opening x 20.6-23.0 on A3.2)",
      "prov": "M"
     },
     {
@@ -2521,12 +2452,12 @@
     },
     {
      "at": [
-      41.65,
-      25.95
+      43.4,
+      27.5
      ],
      "w": 2.5,
      "h": 6.666666666666667,
-     "label": "2668 bedroom 3",
+     "label": "2668 bedroom 3, in its bottom wall (owner markup; opening x 42.0-44.8 on A3.2)",
      "prov": "M"
     },
     {
@@ -2562,21 +2493,21 @@
     {
      "at": [
       50.35,
-      29.4
+      32.25
      ],
      "w": 2.3333333333333335,
      "h": 6.666666666666667,
-     "label": "2468 bath 2 WC/tub",
+     "label": "2468 bath 2 WC/tub (owner markup; opening z 30.9-33.6 on A3.2)",
      "prov": "M"
     },
     {
      "at": [
-      41.65,
-      35.5
+      43.3,
+      33.9
      ],
      "w": 2.5,
      "h": 6.666666666666667,
-     "label": "2668 bedroom 4",
+     "label": "2668 bedroom 4, in its top wall (owner markup; opening x 42.0-44.6 on A3.2)",
      "prov": "M"
     },
     {
@@ -2735,23 +2666,33 @@
      "prov": "M"
     },
     {
-     "type": "washbasin",
-     "x": 8.6,
-     "z": 11.0,
-     "w": 1.8,
-     "d": 1.6,
+     "type": "sink",
+     "x": 10.85,
+     "z": 11.15,
+     "w": 3.5,
+     "d": 1.8,
      "rot": 0,
-     "label": "master vanity sink",
+     "label": "master vanity: basin 1 (one counter x 9.1-20.0, owner markup)",
      "prov": "M"
     },
     {
-     "type": "washbasin",
-     "x": 15.3,
-     "z": 11.0,
-     "w": 1.8,
-     "d": 1.6,
+     "type": "kitchen",
+     "x": 14.45,
+     "z": 11.15,
+     "w": 3.7,
+     "d": 1.8,
      "rot": 0,
-     "label": "master vanity sink",
+     "label": "master vanity: counter between the basins",
+     "prov": "M"
+    },
+    {
+     "type": "sink",
+     "x": 18.15,
+     "z": 11.15,
+     "w": 3.7,
+     "d": 1.8,
+     "rot": 0,
+     "label": "master vanity: basin 2",
      "prov": "M"
     },
     {

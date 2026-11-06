@@ -49,13 +49,14 @@ Z_UP_FRONT_L = c("Z_UP_FRONT_L", 40 - T, "D", "upper left chain: bedroom 2 front
 Z_BAY = c("Z_BAY", 42.75 - T, "M", "bedroom 2 bay front (measured 42.55-42.6)")
 
 # ---------------------------------------------------------------- main floor interior lines
-X_PANTRY_R = c("X_PANTRY_R", 8.80, "M", "pantry right wall (2468 PKT)")
-X_CLOS_L = c("X_CLOS_L", 12.46, "M", "coat closet left wall (2'-4 1/2\" inside)")
+X_PANTRY_R = c("X_PANTRY_R", 8.80, "M", "pantry right wall (2468 PKT) - NOT BUILT per owner, unused")
+X_CLOS_L = c("X_CLOS_L", 12.46, "M", "NOT BUILT per owner, unused: coat closet left wall (2'-4 1/2\" inside)")
 Z_LAUND_BOT = c("Z_LAUND_BOT", 16.13, "M", "laundry bottom wall (2868 PKT)")
-Z_CLOS_BOT = c("Z_CLOS_BOT", 20.20, "M", "coat closet bottom wall")
+Z_CLOS_BOT = c("Z_CLOS_BOT", 20.20, "M", "coat closet bottom wall - NOT BUILT per owner, unused")
 Z_BRK_KIT = c("Z_BRK_KIT", 8.50, "E", "no wall: breakfast / kitchen split taken at the 5'-5\"/6'-1\" dimension line")
 X_STAIR_L = c("X_STAIR_L", 26.27, "M", "stair left wall / kitchen right; also breakfast|great-room split (1'-0\" pier at 25.46-26.46)")
 X_STAIR_R = c("X_STAIR_R", 35.80, "M", "stair right end (newel / rail)")
+Z_STAIR_MID = c("Z_STAIR_MID", 23.80, "M", "stair: line between the two runs (rail #10 at the landing)")
 Z_STAIR_TOP = c("Z_STAIR_TOP", 20.12, "M", "stair top (handrail #10 main, 36\" AFF wall upper)")
 X_DIN_L = c("X_DIN_L", 42.40, "E", "no wall: dining flat arch (#34) line")
 X_HALF_END = c("X_HALF_END", 47.30, "M", "end of 36\" half wall (#22) dining|hall, full wall beyond")
@@ -155,13 +156,11 @@ M["rooms"] += [
     {"name": "3-Car Garage", "prov": "D", "points": [[X_GAR_L, Z_GAR_TOP], [X_BRK_L, Z_GAR_TOP], [X_BRK_L, Z_STAIR_BOT], [X_GAR_R, Z_STAIR_BOT], [X_GAR_R, Z_GAR_DOOR2],
                                                    [X_BRK_L, Z_GAR_DOOR2], [X_BRK_L, Z_GAR_DOOR1], [X_DECK, Z_GAR_DOOR1], [X_DECK, Z_GAR_JOG], [X_GAR_L, Z_GAR_JOG]]},
     {"name": "Laundry", "prov": "D", "points": rect(X_DECK, Z_DECK, X_BRK_L, Z_LAUND_BOT)},
-    {"name": "Pantry", "prov": "M", "points": rect(X_DECK, Z_LAUND_BOT, X_PANTRY_R, Z_GAR_TOP)},
-    {"name": "Mud Hall", "prov": "M", "points": [[X_PANTRY_R, Z_LAUND_BOT], [X_CLOS_L, Z_LAUND_BOT], [X_CLOS_L, Z_CLOS_BOT], [X_BRK_L, Z_CLOS_BOT], [X_BRK_L, Z_GAR_TOP], [X_PANTRY_R, Z_GAR_TOP]],
-     "note": "unnamed on the drawing: hall from garage (2868 #4) to kitchen, laundry and pantry"},
-    {"name": "Coat Closet", "prov": "M", "points": rect(X_CLOS_L, Z_LAUND_BOT, X_BRK_L, Z_CLOS_BOT), "note": "unnamed closet off the mud hall (2468)"},
+    {"name": "Mud Hall / Pantry", "prov": "M", "points": rect(X_DECK, Z_LAUND_BOT, X_BRK_L, Z_GAR_TOP),
+     "note": "owner markup: the pantry wall + pocket door and the coat closet walls + door drawn on A3.1 were not built"},
     {"name": "Breakfast", "prov": "D", "points": rect(X_BRK_L, Z_REAR, X_STAIR_L, Z_BRK_KIT)},
     {"name": "Kitchen", "prov": "M", "points": [[X_BRK_L, Z_BRK_KIT], [X_STAIR_L, Z_BRK_KIT], [X_STAIR_L, Z_STAIR_TOP], [X_STAIR_L, Z_STAIR_BOT], [X_BRK_L, Z_STAIR_BOT],
-                                              [X_BRK_L, Z_GAR_TOP], [X_BRK_L, Z_CLOS_BOT], [X_BRK_L, Z_LAUND_BOT], [X_BRK_L, Z_DECK]]},
+                                              [X_BRK_L, Z_GAR_TOP], [X_BRK_L, Z_LAUND_BOT], [X_BRK_L, Z_DECK]]},
     {"name": "Great Room", "prov": "D", "points": [[X_STAIR_L, Z_REAR], [X_REAR_R, Z_REAR], [X_REAR_R, Z_CHASE], [X_CHASE, Z_CHASE], [X_CHASE, Z_DIN_TOP], [X_DIN_L, Z_DIN_TOP],
                                                  [X_DIN_L, Z_STAIR_BOT], [X_STAIR_R, Z_STAIR_BOT], [X_STAIR_R, Z_STAIR_TOP], [X_STAIR_L, Z_STAIR_TOP], [X_STAIR_L, Z_BRK_KIT]],
      "note": "includes the 2'-0\" fireplace / media chase bump and the hall from the great room to the foyer"},
@@ -183,7 +182,8 @@ M["open_edges"] = [
     {"a": [X_STAIR_R, Z_STAIR_BOT], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "great-room hall | foyer, columns + flat arch"},
     {"a": [X_DIN_L, Z_STAIR_BOT], "b": [X_HALF_END, Z_STAIR_BOT], "h": 0.914, "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"},
     {"a": [X_STAIR_L, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_TOP], "h": 0.914, "why": "#10 handrail at stair"},
-    {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0.914, "why": "stair end rail"},
+    {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_MID], "h": 0.914, "why": "stair end rail (upper run)"},
+    {"a": [X_STAIR_R, Z_STAIR_MID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair entrance (owner markup)"},
 ]
 M["walls"] += [{"from": [X_REAR_R, 7.0], "to": [X_REAR_R, 15.2], "thickness_ft": 0.29, "prov": "M", "note": "media / TV niche wall inside the chase"}]
 M["doors"] += [
@@ -195,9 +195,8 @@ M["doors"] += [
     {"at": [12.33, Z_GAR_TOP], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 #4 self-closing rated door, garage", "prov": "M"},
     {"at": [X_BRK_L, 22.0], "w": 3.0, "h": DOOR_H, "label": "cased opening mud hall | kitchen", "prov": "E"},
     {"at": [10.2, Z_LAUND_BOT], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 PKT laundry", "prov": "M"},
-    {"at": [X_PANTRY_R, 20.4], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 PKT pantry", "prov": "E"},
-    {"at": [X_CLOS_L, 17.6], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 closet (drawn at 45 deg)", "prov": "E"},
     {"at": [X_BRK_L, 5.0], "w": 6, "h": DOOR_H, "label": "6080 SGD to covered deck", "prov": "M"},
+    {"at": [50.333, Z_DIN_TOP], "w": 8.0, "h": DOOR_H, "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")", "prov": "E"},
     {"at": [9.333, Z_GAR_DOOR1], "w": 8, "h": 8, "label": "8080 O.G.D.", "prov": "D"},
     {"at": [24.833, Z_GAR_DOOR2], "w": 16, "h": 8, "label": "16080 O.G.D.", "prov": "D"},
 ]
@@ -205,7 +204,6 @@ WT = dict(head=HEAD_MAIN)
 M["windows"] += [
     *[{"at": [x, Z_REAR], "w": 3, "h": 5, **WT, "label": "3050 SH", "prov": "D"} for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)],
     *[{"at": [x, Z_REAR], "w": 3, "h": 1.75, "sill": HEAD_MAIN + 0.33, "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)", "prov": "D"} for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)],
-    *[{"at": [x, Z_DIN_TOP], "w": 2.5, "h": 5, **WT, "label": "2650 SH", "prov": "D"} for x in (47.333, 50.333, 53.333)],
     *[{"at": [x, Z_DIN_TOP], "w": 2.5, "h": 1.75, "sill": HEAD_MAIN + 0.33, "label": "2620 TRANS", "prov": "D"} for x in (47.333, 50.333, 53.333)],
     *[{"at": [X_R, z], "w": 2, "h": 2, **WT, "label": "2020 FX", "prov": "D"} for z in (19.333, 21.833, 24.333)],
     {"at": [X_R, 29.875], "w": 2, "h": 2, **WT, "label": "2020 FX powder", "prov": "D"},
@@ -228,8 +226,7 @@ M["furniture"] += [
     {"type": "kitchen", "x": 21.8, "z": 26.3, "w": 4.4, "d": 2.0, "rot": 180, "label": "base cabinets", "prov": "M"},
     {"type": "kitchen", "x": 15.85, "z": 15.1, "w": 9.6, "d": 2.0, "rot": 270, "label": "base cabinets (220V range position at ~12.8)", "prov": "M"},
     {"type": "kitchen", "x": 25.1, "z": 23.5, "w": 6.9, "d": 2.0, "rot": 90, "label": "base cabinets under 24\" soffit", "prov": "M"},
-    {"type": "island", "x": 22.5, "z": 10.65, "w": 5.2, "d": 3.3, "rot": 0, "label": "island with D.W. and angled sink", "prov": "M"},
-    {"type": "island", "x": 24.25, "z": 14.35, "w": 4.1, "d": 1.7, "rot": 90, "label": "island return / raised bar 34 1/2\"", "prov": "M"},
+    {"type": "island", "x": 22.6, "z": 9.0, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
     {"type": "dryer", "x": 13.45, "z": 11.55, "w": 2.2, "d": 2.2, "rot": 90, "label": "#24 +36 220V", "prov": "M"},
     {"type": "washer", "x": 13.45, "z": 14.3, "w": 2.2, "d": 2.2, "rot": 90, "label": "#2 washer box", "prov": "M"},
 ]
@@ -237,6 +234,8 @@ M["outdoor"] += [
     {"type": "terrace", "name": "Covered Deck", "points": rect(X_DECK - T, Z_REAR - T, X_BRK_L - T, Z_DECK - T), "prov": "D"},
     {"type": "terrace", "name": "Uncovered Deck", "points": rect(X_DECK - T, -7.0, X_BRK_L - T, Z_REAR - T), "prov": "D"},
     {"type": "terrace", "name": "Porch", "points": rect(X_GAR_R, Z_FOYER_FRONT, X_DEN_L, Z_DEN_FRONT), "prov": "M"},
+    {"type": "terrace", "name": "Dining Deck", "points": rect(X_CHASE + T, Z_DIN_TOP - T - 18, X_CHASE + T + 20, Z_DIN_TOP - T), "prov": "E",
+     "note": "owner markup: approx. 20 ft wide x 18 ft deep, against the dining wall from the fireplace chase; exact position unconfirmed"},
 ]
 FLOORS.append(M)
 
@@ -285,19 +284,19 @@ U["walls"] += [
 U["doors"] += [
     {"at": [X_UP_HALLCL_L, 29.3], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 2", "prov": "E"},
     {"at": [X_UP_BR2_L, 29.9], "w": 2.5, "h": DOOR_H, "label": "2668 dressing | bedroom 2", "prov": "M"},
-    {"at": [X_UP_BR2_L, 26.0], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 3", "prov": "M"},
+    {"at": [21.70, Z_STAIR_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 3, in its bottom wall (owner markup; opening x 20.5-22.9 on A3.2)", "prov": "M"},
     {"at": [33.2, Z_UP_HALLCL_TOP], "w": 2 + 4.5 / 12, "h": DOOR_H, "label": "hall closet 2'-4 1/2\" opening", "prov": "D"},
-    {"at": [31.1, Z_UP_MID], "w": 5.0, "h": 7 + 4 / 12, "label": "ARCH OPNG to master (spring 7'-4\")", "prov": "E"},
+    {"at": [39.27, Z_UP_MID], "w": 4 + 8 / 12, "h": DOOR_H, "label": "(2) 2468 master bedroom double doors (owner markup; A3.2 width x 36.95-41.6)", "prov": "M"},
     {"at": [X_STAIR_L, 14.4], "w": 2 + 9.5 / 12, "h": DOOR_H, "label": "master bedroom | bath opening 2'-9 1/2\"", "prov": "D"},
-    {"at": [X_UP_BR2_L, (Z_DECK + Z_UP_WIC_BOT) / 2], "w": 1.9, "h": DOOR_H, "label": "2468 master WIC (the wall stub is only 2'-1 long, opening narrowed)", "prov": "M"},
+    {"at": [21.80, Z_UP_WIC_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 master WIC, in its bottom wall (owner markup; opening x 20.6-23.0 on A3.2)", "prov": "M"},
     {"at": [21.45, Z_UP_MID], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 master WC (drawn at 45 deg)", "prov": "E"},
     {"at": [14.2, Z_UP_MID], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 WIC 2 (drawn at 45 deg)", "prov": "E"},
-    {"at": [X_UP_HALL_R, 25.95], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 3", "prov": "M"},
+    {"at": [43.40, Z_STAIR_BOT], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 3, in its bottom wall (owner markup; opening x 42.0-44.8 on A3.2)", "prov": "M"},
     {"at": [X_UP_CLOS_R, 20.0], "w": 6, "h": DOOR_H, "label": "6068 BP", "prov": "M"},
     {"at": [48.6, Z_STAIR_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "bath 2 from bedroom 3", "prov": "E"},
     {"at": [48.3, Z_UP_VOID_TOP], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 2 from bedroom 4 (45 deg)", "prov": "E"},
-    {"at": [X_UP_BATH2_MID, 29.4], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 2 WC/tub", "prov": "M"},
-    {"at": [X_UP_HALL_R, 35.5], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 4", "prov": "M"},
+    {"at": [X_UP_BATH2_MID, 32.25], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 2 WC/tub (owner markup; opening z 30.9-33.6 on A3.2)", "prov": "M"},
+    {"at": [43.30, Z_UP_VOID_TOP], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 4, in its top wall (owner markup; opening x 42.0-44.6 on A3.2)", "prov": "M"},
     {"at": [X_UP_CLOS_R, 41.5], "w": 6, "h": DOOR_H, "label": "6068 BP", "prov": "M"},
 ]
 WU = dict(head=HEAD_UP)
@@ -314,8 +313,9 @@ U["windows"] += [
 U["furniture"] += [
     {"type": "bathtub", "x": 6.6, "z": 14.6, "w": 6.0, "d": 3.5, "rot": 270, "label": "42\"x72\" tub", "prov": "M"},
     {"type": "shower", "x": 6.95, "z": 21.0, "w": 5.0, "d": 2.83, "rot": 270, "label": "34\"x60\" shower w/ seat", "prov": "M"},
-    {"type": "washbasin", "x": 8.6, "z": 11.0, "w": 1.8, "d": 1.6, "rot": 0, "label": "master vanity sink", "prov": "M"},
-    {"type": "washbasin", "x": 15.3, "z": 11.0, "w": 1.8, "d": 1.6, "rot": 0, "label": "master vanity sink", "prov": "M"},
+    {"type": "sink", "x": 10.85, "z": 11.15, "w": 3.5, "d": 1.8, "rot": 0, "label": "master vanity: basin 1 (one counter x 9.1-20.0, owner markup)", "prov": "M"},
+    {"type": "kitchen", "x": 14.45, "z": 11.15, "w": 3.7, "d": 1.8, "rot": 0, "label": "master vanity: counter between the basins", "prov": "M"},
+    {"type": "sink", "x": 18.15, "z": 11.15, "w": 3.7, "d": 1.8, "rot": 0, "label": "master vanity: basin 2", "prov": "M"},
     {"type": "wc", "x": 24.7, "z": 17.5, "w": 1.4, "d": 2.4, "rot": 90, "label": "master WC", "prov": "M"},
     {"type": "bathtub", "x": 22.6, "z": 20.6, "w": 5.0, "d": 2.7, "rot": 0, "label": "bath 3 tub", "prov": "M"},
     {"type": "wc", "x": 24.8, "z": 23.0, "w": 1.4, "d": 2.4, "rot": 90, "label": "bath 3 WC", "prov": "M"},

@@ -5,15 +5,15 @@
 | Item | Value |
 |---|---|
 | Floors | 3: Basement (−3.019 m), Main Floor (0), Upper Floor (+3.397 m) |
-| Rooms | 34 (basement 3, main 14, upper 17) |
-| Doors | 31 (basement 2, main 13, upper 16). These include 2 garage doors and 5 openings without a leaf: the mud hall→kitchen cased opening, the master arch, the master bedroom→bath passage, the hall-closet opening and bath 2 from bedroom 3. |
-| Windows | 46 individual units (basement 5, main 30, upper 11). These include 9 transoms, 1 sidelight, 1 crawlspace access. |
+| Rooms | 32 (basement 3, main 12, upper 17) |
+| Doors | 30 (basement 2, main 12, upper 16), including 2 garage doors and the dining sliding door |
+| Windows | 43 units (basement 5, main 27, upper 11), including 9 transoms, 1 sidelight, 1 crawlspace access |
 | Furniture / fixtures | 23 (2 U-stairs, kitchen, laundry, bathroom fixtures) |
 | Free walls | 8 (stair wall, media niche, foyer front at upper level, bath 2 partition, linen closet ×4) |
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 34 rooms, 31 doors, 46 windows, 8 walls, 23 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 32 rooms, 30 doors, 43 windows, 8 walls, 23 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -80,14 +80,35 @@ Corrections made during the comparison and validation, each recorded:
 10. **Not imported:** decks, porch and steps are not rooms. They are in the full NeonPlan file as outdoor terraces. Also not imported: the unexcavated areas, the roof, and the deck stairs (hand note A4: "Deck stairs off side not the rear").
 11. **As-built:** S-1 is marked "AS BUILT" and its 56'-0" × 48'-0" outline and wall lines agree with A2. The architectural sheets are the permit set and not as-built. Field changes to partitions, if any, are unknown.
 
-## 6. Import testing
+## 6. Owner corrections (markup of 2026-11-06)
+
+Applied in `work/tools/geometry.py`. Where the owner moved a door, it was placed on the opening drawn on A3.2 at that spot (provenance M); the new overlays show each one on its drawn opening.
+
+| Floor | Change |
+|---|---|
+| Upper | Master WIC door moved to the WIC's bottom wall (x 21.8 ft) |
+| Upper | Master bedroom entry: the (2) 2468 double doors, 4'-8", centred x 39.27 ft on the master's bottom wall; the "arch to master" at x 31.1 is removed |
+| Upper | Bath 3 door moved to its bottom wall (x 21.7 ft) |
+| Upper | Bedroom 3 door moved to its bottom wall (x 43.4 ft); bedroom 4 door to its top wall (x 43.3 ft) |
+| Upper | Bath 2 WC/tub door moved down the partition (z 32.25 ft) |
+| Upper | Master vanity: one long counter (x 9.1–20.0 ft) with 2 basins instead of 2 loose washbasins |
+| Main | Pantry wall + pocket door and the coat-closet walls + door are not built: Pantry, Mud Hall and Coat Closet are one room "Mud Hall / Pantry" |
+| Main | Kitchen island replaced by one island about 10'-0" × 3'-4", centred where the sketch shows it (±1 ft) |
+| Main | Dining room: the 3 × 2650 SH windows are one sliding glass door. Size assumed 8'-0" × 6'-8", centred on the old group; the 3 transoms above are kept |
+| Main | Stair entrance on the lower run of the stair's right side: no rail there (full NeonPlan file) |
+| Main | New "Dining Deck" outdoor area, 20 ft wide × 18 ft deep, against the dining wall starting at the fireplace chase (full NeonPlan file only; position assumed) |
+| Main | Front door drawn on top of its transom in the preview and overlays (it was hidden under the blue transom bar) |
+
+Not yet applied: the Bedroom 2 door move (the arrow's target is unclear) and the basement changes (need the markup images at full resolution).
+
+## 7. Import testing
 
 - I did **not** load the file in a browser on <https://neonplan3d.mastershort.de/import/>, so I make no claim about the import page UI.
 - I verified that the page's script (`/import/neonplan-import.js`, fetched 2026-11-06) is byte-identical to `site/import/neonplan-import.js` in the repo at commit `ffbf4ac`. I then ran that repo's TypeScript import code in Node 24, on the same path the page uses (`readFile` → `readSimple` → `buildPlan` with the page's default options). Results:
   - `neonplan_house.json`: recognised as `simple`, 0 warnings, nothing dropped. The building parses with the editor's `parseExport` (what Editor → Backup → Import runs). Output: `neonplan_house.pagecheck.json`.
   - `neonplan_house.neonplan3d.json` (that output post-processed with open edges, wall heights, wall thickness, outdoor areas): recognised as a NeonPlan plan, `repairPlan` gives 0 warnings, and the editor's wall generator reports no overlaps.
 
-## 7. How to reproduce
+## 8. How to reproduce
 
 ```
 python3 tools/build.py                    # geometry.py -> neonplan_house.json, geometry_data.json, preview SVG, overlays

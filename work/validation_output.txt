@@ -6,15 +6,15 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Basement] 3 rooms, 129.5 m2, extents x 1.242..16.799, z 0.012..13.932
   ok    [Basement] 2 doors, 5 windows, 1 furniture, 1 free walls
   ok    [Main Floor] consistent winding (clockwise on screen)
-  ok    [Main Floor] 19 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
-  ok    [Main Floor] 14 rooms, 199.0 m2, extents x 0.000..16.980, z 0.000..14.541
+  ok    [Main Floor] 13 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
+  ok    [Main Floor] 12 rooms, 199.0 m2, extents x 0.000..16.980, z 0.000..14.541
   ok    [Main Floor] overall 16.980 x 14.541 m matches the drawing's dimension strings (16.980 x 14.542)
-  ok    [Main Floor] 13 doors, 30 windows, 10 furniture, 1 free walls
+  ok    [Main Floor] 12 doors, 27 windows, 9 furniture, 1 free walls
   ok    [Upper Floor] consistent winding (clockwise on screen)
   ok    [Upper Floor] 21 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Upper Floor] 17 rooms, 142.7 m2, extents x 1.219..16.980, z 0.000..13.932
   ok    [Upper Floor] overall 15.761 x 13.932 m matches the drawing's dimension strings (15.761 x 13.932)
-  ok    [Upper Floor] 16 doors, 11 windows, 12 furniture, 6 free walls
+  ok    [Upper Floor] 16 doors, 11 windows, 13 furniture, 6 free walls
   ok    upper floor sits on the main floor footprint (overhang 0.24 m2)
   ok    right wall x aligned on main and upper (16.980 m)
   ok    rear wall aligned on main and upper (z 0.000 m)

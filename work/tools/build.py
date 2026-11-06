@@ -117,7 +117,7 @@ def svg_preview(path):
                 fw, fd = fd, fw
             o.append(f'<rect x="{X(u["x"] - fw / 2):.1f}" y="{Z(u["z"] - fd / 2):.1f}" width="{fw * S:.1f}" height="{fd * S:.1f}" fill="none" stroke="{COL["furn"]}" stroke-width="1"/>')
             o.append(f'<text x="{X(u["x"]):.1f}" y="{Z(u["z"]) + 3:.1f}" font-size="7" fill="{COL["furn"]}" text-anchor="middle">{u["type"]}</text>')
-        for kind, L, col in (("door", f["doors"], COL["door"]), ("win", f["windows"], COL["win"])):
+        for kind, L, col in (("win", f["windows"], COL["win"]), ("door", f["doors"], COL["door"])):
             for d in L:
                 a, b = opening_ends(f, d)
                 o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="{col}" stroke-width="5" stroke-opacity="0.85"/>')
@@ -221,7 +221,7 @@ def overlays():
             d.line(pts + [pts[0]], fill=(220, 20, 60, 230), width=7)
         for w in f["walls"]:
             d.line([Q(w["from"]), Q(w["to"])], fill=(147, 51, 234, 230), width=7)
-        for L, col in ((f["doors"], (234, 88, 12, 255)), (f["windows"], (2, 132, 199, 255))):
+        for L, col in ((f["windows"], (2, 132, 199, 255)), (f["doors"], (234, 88, 12, 255))):
             for o in L:
                 a, b = opening_ends(f, o)
                 d.line([Q(a), Q(b)], fill=col, width=18)
