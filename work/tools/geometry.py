@@ -107,7 +107,9 @@ B_X_CRAWL_PORCH = c("B_X_CRAWL_PORCH", 42.20, "M", "crawlspace / porch foundatio
 # walls). Provenance O = owner. Sketch positions are good to about +/- 1 ft; written dimensions are used first.
 B_X_OFFICE = c("B_X_OFFICE", 16.48, "O", "office 'new wall', 1'-2\" past the old wall on the walk-out line (old wall removed)")
 B_X_BATH_TOP = c("B_X_BATH_TOP", 25.20, "O", "bathroom wall toward the stair: 9'-5\" clear (4'-10\" shower + 4'-3\" toilet zone) from the foundation jog")
-B_Z_BATH_L = c("B_Z_BATH_L", Z_STAIR_TOP, "O", "bathroom / closet wall toward the theater, in line with the stair (6'-11\" clear gives 19.96)")
+B_Z_BATH_L = c("B_Z_BATH_L", Z_STAIR_TOP - 4 / 12, "O", "bathroom / closet wall toward the theater: 4\" in front of the stair wall (owner); bathroom 7'-1\" clear")
+B_Z_CLOS_BOT = c("B_Z_CLOS_BOT", B_Z_BATH_L + 0.1875 + 41 / 12 + 0.1875, "O", "office closet | toilet area wall: closet 3'-5\" clear (as built), toilet area 3'-3\" clear")
+B_X_OFFICE_DOOR = c("B_X_OFFICE_DOOR", B_Z_BATH_L - 0.1875 - 4 / 12 - 1.5, "O", "office door centre: 4\" of wall between it and the closet/bathroom wall (owner)")
 B_X_CLOS_TOP = c("B_X_CLOS_TOP", 20.00, "O", "office closet wall toward the bathroom (closet 'enclose for closet', 4'-3\" zone)")
 B_Z_STAIR_BOT = c("B_Z_STAIR_BOT", 23.80, "O", "basement stair: its wall toward the mechanical room (owner's edited plan)")
 B_X_STAIR_END = c("B_X_STAIR_END", B_X_MECH, "O", "basement stair: its end at the hall, open (owner's edited plan)")
@@ -140,15 +142,15 @@ B = {"name": "Basement", "elev_ft": -H_BASE, "height_ft": H_BASE, "sheet": "A1",
 B["rooms"] += [
     {"name": "Theater", "prov": "M", "ceiling_ft": 9.0,
      "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_R2],
-                [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
+                [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
      "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip not modelled)"},
     {"name": "Office", "prov": "O", "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
      "note": "as-built 12'-10\" wide; CH 8'-1\" / 9'-0\" (not modelled)"},
-    {"name": "Office Closet", "prov": "O", "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_L_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
-     "note": "'enclose for closet' (3'-5\" on the sketch; here 3'-1\" so it ends on the garage foundation line as drawn)"},
+    {"name": "Office Closet", "prov": "O", "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
+     "note": "'enclose for closet', 3'-5\" clear (as built)"},
     {"name": "Bathroom", "prov": "O", "ceiling_ft": 9.0,
-     "points": [[B_X_CLOS_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_STAIR_BOT], [B_X_BATH_TOP, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_CLOS_TOP, B_Z_L_BOT]],
-     "note": "as built 9'-5\" x 6'-11\" (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"},
+     "points": [[B_X_CLOS_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_STAIR_BOT], [B_X_BATH_TOP, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_CLOS_TOP, B_Z_CLOS_BOT]],
+     "note": "as built 9'-5\" deep (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"},
     {"name": "Stairs", "prov": "O", "points": rect(B_X_BATH_TOP, Z_STAIR_TOP, B_X_STAIR_END, B_Z_STAIR_BOT),
      "note": "owner's edited plan: one straight flight, open to the hall at its end"},
     {"name": "Hall", "prov": "O", "points": [[B_X_STAIR_END, Z_STAIR_TOP], [B_X_R2, B_Z_R2], [B_X_R2, B_Z_HALL_R], [B_X_HALL_BOT, B_Z_STAIR_BOT], [B_X_STAIR_END, B_Z_STAIR_BOT]],
@@ -170,7 +172,7 @@ B["walls"] += [
 ]
 B["doors"] += [
     {"at": [B_X_WALK, 4.6], "w": 71 / 12, "h": 7.0, "label": "sliding glass door walk-out, as built 71\" x 84\"", "prov": "O", "style": "sliding"},
-    {"at": [B_X_OFFICE, 17.38], "w": 3.0, "h": DOOR_H, "label": "36\" door office (owner markup)", "prov": "O"},
+    {"at": [B_X_OFFICE, B_X_OFFICE_DOOR], "w": 3.0, "h": DOOR_H, "label": "36\" door office (owner markup)", "prov": "O"},
     {"at": [B_X_WALK, (B_Z_BATH_L + B_Z_L_BOT) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door office closet", "prov": "O"},
     {"at": [21.60, B_Z_BATH_L], "w": 3.0, "h": DOOR_H, "label": "36\" door bathroom", "prov": "O"},
     {"at": [(B_X_STAIR_END + B_X_R2) / 2, (Z_STAIR_TOP + B_Z_R2) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, theater to hall", "prov": "O"},
@@ -186,9 +188,9 @@ B["windows"] += [
 B["furniture"] += [
     {"type": "stairs", "x": (X_STAIR_L + 39.30) / 2, "z": (Z_STAIR_TOP + B_Z_STAIR_BOT) / 2, "w": B_Z_STAIR_BOT - Z_STAIR_TOP - 0.2, "d": 39.30 - X_STAIR_L,
      "rot": 270, "label": "UP 16R to main floor: straight flight as on the owner's edited plan, bottom at the hall (direction assumed)", "prov": "O"},
-    {"type": "shower", "x": (B_X_CLOS_TOP + 0.19 + B_X_BATH_TOP - 0.19) / 2, "z": (B_Z_L_BOT + B_Z_BOT - 0.33) / 2, "w": B_X_BATH_TOP - B_X_CLOS_TOP - 0.38, "d": B_Z_BOT - 0.33 - B_Z_L_BOT,
+    {"type": "shower", "x": (B_X_CLOS_TOP + 0.19 + B_X_BATH_TOP - 0.19) / 2, "z": (B_Z_CLOS_BOT + 0.19 + B_Z_BOT - 0.33) / 2, "w": B_X_BATH_TOP - B_X_CLOS_TOP - 0.38, "d": B_Z_BOT - 0.33 - B_Z_CLOS_BOT - 0.19,
      "rot": 0, "label": "curbless walk-around shower, no door (4'-10\")", "prov": "O"},
-    {"type": "wc", "x": B_X_STEP2 + 0.33 + 1.2, "z": 25.5, "w": 1.4, "d": 2.4, "rot": 270, "label": "toilet (moved, owner sketch)", "prov": "O"},
+    {"type": "wc", "x": B_X_STEP2 + 0.33 + 1.2, "z": (B_Z_CLOS_BOT + 0.19 + B_Z_BOT - 0.33) / 2, "w": 1.4, "d": 2.4, "rot": 270, "label": "toilet (moved, owner sketch)", "prov": "O"},
 ]
 FLOORS.append(B)
 

@@ -362,10 +362,10 @@
 <circle cx="69.0" cy="784.0" r="3" fill="red"/><text x="73.0" y="780.0" font-size="9" fill="red">[0,0]</text>
 <line x1="60.0" y1="1228.0" x2="207.6" y2="1228.0" stroke="#111" stroke-width="3"/><text x="60.0" y="1224.0" font-size="9">5 m</text>
 <text x="60" y="1296.0" font-size="16" font-weight="bold">Basement  (elevation -3.019 m, storey 3.019 m)</text>
-<polygon points="201.9,1376.4 443.4,1376.4 443.4,1394.4 468.4,1394.4 468.4,1520.5 426.8,1555.8 294.5,1555.8 247.7,1555.8 216.0,1555.8 216.0,1466.0 201.9,1466.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<polygon points="105.7,1466.0 201.9,1466.0 216.0,1466.0 216.0,1555.8 201.9,1555.8 201.9,1585.3 105.7,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<polygon points="201.9,1555.8 216.0,1555.8 247.7,1555.8 247.7,1585.3 204.9,1585.3 201.9,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<polygon points="247.7,1555.8 294.5,1555.8 294.5,1588.9 294.5,1621.3 204.9,1621.3 204.9,1585.3 247.7,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="201.9,1376.4 443.4,1376.4 443.4,1394.4 468.4,1394.4 468.4,1520.5 426.8,1555.8 294.5,1555.8 294.5,1552.8 247.7,1552.8 216.0,1552.8 216.0,1466.0 201.9,1466.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="105.7,1466.0 201.9,1466.0 216.0,1466.0 216.0,1552.8 201.9,1552.8 201.9,1585.3 105.7,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="201.9,1552.8 216.0,1552.8 247.7,1552.8 247.7,1586.9 204.9,1586.9 204.9,1585.3 201.9,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="247.7,1552.8 294.5,1552.8 294.5,1588.9 294.5,1621.3 204.9,1621.3 204.9,1586.9 247.7,1586.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="294.5,1555.8 426.8,1555.8 426.8,1588.9 294.5,1588.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="426.8,1555.8 468.4,1520.5 468.4,1558.3 434.9,1588.9 426.8,1588.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="468.4,1520.5 565.0,1520.5 565.0,1621.3 378.2,1621.3 294.5,1621.3 294.5,1588.9 426.8,1588.9 434.9,1588.9 468.4,1558.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
@@ -376,25 +376,28 @@
 <line x1="468.4" y1="1394.4" x2="468.4" y2="1520.5" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="468.4" y1="1520.5" x2="426.8" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="426.8" y1="1555.8" x2="294.5" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="294.5" y1="1555.8" x2="247.7" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="247.7" y1="1555.8" x2="216.0" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="216.0" y1="1555.8" x2="216.0" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="294.5" y1="1555.8" x2="294.5" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="294.5" y1="1552.8" x2="247.7" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="247.7" y1="1552.8" x2="216.0" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="216.0" y1="1552.8" x2="216.0" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="216.0" y1="1466.0" x2="201.9" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.9" y1="1466.0" x2="201.9" y2="1376.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.7" y1="1466.0" x2="201.9" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="216.0" y1="1555.8" x2="201.9" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.9" y1="1555.8" x2="201.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="216.0" y1="1552.8" x2="201.9" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="201.9" y1="1552.8" x2="201.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.9" y1="1585.3" x2="105.7" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.7" y1="1585.3" x2="105.7" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="247.7" y1="1555.8" x2="247.7" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="247.7" y1="1585.3" x2="204.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="247.7" y1="1552.8" x2="247.7" y2="1586.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="247.7" y1="1586.9" x2="204.9" y2="1586.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="204.9" y1="1586.9" x2="204.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="204.9" y1="1585.3" x2="201.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="294.5" y1="1555.8" x2="294.5" y2="1588.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="294.5" y1="1552.8" x2="294.5" y2="1588.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="294.5" y1="1588.9" x2="294.5" y2="1621.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="294.5" y1="1621.3" x2="204.9" y2="1621.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="204.9" y1="1621.3" x2="204.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="204.9" y1="1621.3" x2="204.9" y2="1586.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="426.8" y1="1555.8" x2="426.8" y2="1588.9" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>
 <line x1="426.8" y1="1588.9" x2="294.5" y2="1588.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="294.5" y1="1588.9" x2="294.5" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="468.4" y1="1520.5" x2="468.4" y2="1558.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="468.4" y1="1558.3" x2="434.9" y2="1588.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="434.9" y1="1588.9" x2="426.8" y2="1588.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
@@ -411,29 +414,29 @@
 <line x1="438.8" y1="1494.4" x2="468.4" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
 <rect x="304.1" y="1556.7" width="117.3" height="31.3" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="362.8" y="1575.3" font-size="7" fill="#6b7280" text-anchor="middle">stairs</text>
-<rect x="249.4" y="1585.3" width="43.4" height="33.0" fill="none" stroke="#6b7280" stroke-width="1"/>
-<text x="271.1" y="1604.8" font-size="7" fill="#6b7280" text-anchor="middle">shower</text>
-<rect x="207.9" y="1597.9" width="21.6" height="12.6" fill="none" stroke="#6b7280" stroke-width="1"/>
-<text x="218.7" y="1607.2" font-size="7" fill="#6b7280" text-anchor="middle">wc</text>
+<rect x="249.4" y="1588.6" width="43.4" height="29.7" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="271.1" y="1606.5" font-size="7" fill="#6b7280" text-anchor="middle">shower</text>
+<rect x="207.9" y="1597.2" width="21.6" height="12.6" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="218.7" y="1606.5" font-size="7" fill="#6b7280" text-anchor="middle">wc</text>
 <line x1="240.9" y1="1376.4" x2="266.4" y2="1376.4" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="312.9" y1="1376.4" x2="338.4" y2="1376.4" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="384.9" y1="1376.4" x2="410.4" y2="1376.4" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="131.6" y1="1466.0" x2="167.6" y2="1466.0" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="511.7" y1="1621.3" x2="487.7" y2="1621.3" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="201.9" y1="1442.7" x2="201.9" y2="1389.5" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<line x1="216.0" y1="1544.6" x2="216.0" y2="1517.6" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<line x1="201.9" y1="1557.0" x2="201.9" y2="1584.0" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<line x1="275.6" y1="1555.8" x2="248.6" y2="1555.8" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
+<line x1="216.0" y1="1548.1" x2="216.0" y2="1521.1" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
+<line x1="201.9" y1="1555.5" x2="201.9" y2="1582.5" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
+<line x1="275.6" y1="1552.8" x2="248.6" y2="1552.8" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="457.9" y1="1529.4" x2="437.3" y2="1546.9" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="461.6" y1="1564.5" x2="441.7" y2="1582.7" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<text x="335.5" y="1464.3" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Theater</text>
-<text x="335.5" y="1475.3" font-size="8" text-anchor="middle" fill="#2b6cb0">52.0 m²</text>
-<text x="159.3" y="1524.2" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Office</text>
-<text x="159.3" y="1535.2" font-size="8" text-anchor="middle" fill="#2b6cb0">14.6 m²</text>
-<text x="224.8" y="1570.5" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Office Closet</text>
-<text x="224.8" y="1581.5" font-size="8" text-anchor="middle" fill="#2b6cb0">1.5 m²</text>
-<text x="256.1" y="1593.5" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Bathroom</text>
-<text x="256.1" y="1604.5" font-size="8" text-anchor="middle" fill="#2b6cb0">5.3 m²</text>
+<text x="336.0" y="1463.9" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Theater</text>
+<text x="336.0" y="1474.9" font-size="8" text-anchor="middle" fill="#2b6cb0">51.8 m²</text>
+<text x="159.1" y="1524.1" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Office</text>
+<text x="159.1" y="1535.1" font-size="8" text-anchor="middle" fill="#2b6cb0">14.6 m²</text>
+<text x="224.9" y="1569.8" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Office Closet</text>
+<text x="224.9" y="1580.8" font-size="8" text-anchor="middle" fill="#2b6cb0">1.8 m²</text>
+<text x="257.0" y="1592.4" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Bathroom</text>
+<text x="257.0" y="1603.4" font-size="8" text-anchor="middle" fill="#2b6cb0">5.4 m²</text>
 <text x="360.6" y="1572.3" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Stairs</text>
 <text x="360.6" y="1583.3" font-size="8" text-anchor="middle" fill="#2b6cb0">5.0 m²</text>
 <text x="447.7" y="1557.3" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Hall</text>

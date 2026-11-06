@@ -404,9 +404,19 @@
    "note": "bathroom wall toward the stair: 9'-5\" clear (4'-10\" shower + 4'-3\" toilet zone) from the foundation jog"
   },
   "B_Z_BATH_L": {
-   "value": 20.12,
+   "value": 19.787,
    "prov": "O",
-   "note": "bathroom / closet wall toward the theater, in line with the stair (6'-11\" clear gives 19.96)"
+   "note": "bathroom / closet wall toward the theater: 4\" in front of the stair wall (owner); bathroom 7'-1\" clear"
+  },
+  "B_Z_CLOS_BOT": {
+   "value": 23.579,
+   "prov": "O",
+   "note": "office closet | toilet area wall: closet 3'-5\" clear (as built), toilet area 3'-3\" clear"
+  },
+  "B_X_OFFICE_DOOR": {
+   "value": 17.766,
+   "prov": "O",
+   "note": "office door centre: 4\" of wall between it and the closet/bathroom wall (owner)"
   },
   "B_X_CLOS_TOP": {
    "value": 20.0,
@@ -493,12 +503,16 @@
        20.12
       ],
       [
+       25.2,
+       19.787
+      ],
+      [
        20.0,
-       20.12
+       19.787
       ],
       [
        16.48,
-       20.12
+       19.787
       ],
       [
        16.48,
@@ -529,11 +543,11 @@
       ],
       [
        16.48,
-       20.12
+       19.787
       ],
       [
        14.915,
-       20.12
+       19.787
       ],
       [
        14.915,
@@ -552,19 +566,23 @@
      "points": [
       [
        14.915,
-       20.12
+       19.787
       ],
       [
        16.48,
-       20.12
+       19.787
       ],
       [
        20.0,
-       20.12
+       19.787
       ],
       [
        20.0,
-       23.4
+       23.579
+      ],
+      [
+       15.25,
+       23.579
       ],
       [
        15.25,
@@ -575,7 +593,7 @@
        23.4
       ]
      ],
-     "note": "'enclose for closet' (3'-5\" on the sketch; here 3'-1\" so it ends on the garage foundation line as drawn)"
+     "note": "'enclose for closet', 3'-5\" clear (as built)"
     },
     {
      "name": "Bathroom",
@@ -584,11 +602,11 @@
      "points": [
       [
        20.0,
-       20.12
+       19.787
       ],
       [
        25.2,
-       20.12
+       19.787
       ],
       [
        25.2,
@@ -604,14 +622,14 @@
       ],
       [
        15.25,
-       23.4
+       23.579
       ],
       [
        20.0,
-       23.4
+       23.579
       ]
      ],
-     "note": "as built 9'-5\" x 6'-11\" (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"
+     "note": "as built 9'-5\" deep (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"
     },
     {
      "name": "Stairs",
@@ -781,7 +799,7 @@
     {
      "at": [
       16.48,
-      17.38
+      17.766
      ],
      "w": 3.0,
      "h": 6.666666666666667,
@@ -791,7 +809,7 @@
     {
      "at": [
       14.915,
-      21.759999999999998
+      21.5935
      ],
      "w": 3.0,
      "h": 6.666666666666667,
@@ -801,7 +819,7 @@
     {
      "at": [
       21.6,
-      20.12
+      19.787
      ],
      "w": 3.0,
      "h": 6.666666666666667,
@@ -900,9 +918,9 @@
     {
      "type": "shower",
      "x": 22.6,
-     "z": 25.235,
+     "z": 25.4195,
      "w": 4.819999999999999,
-     "d": 3.6700000000000017,
+     "d": 3.3009999999999997,
      "rot": 0,
      "label": "curbless walk-around shower, no door (4'-10\")",
      "prov": "O"
@@ -910,7 +928,7 @@
     {
      "type": "wc",
      "x": 16.78,
-     "z": 25.5,
+     "z": 25.4195,
      "w": 1.4,
      "d": 2.4,
      "rot": 270,
