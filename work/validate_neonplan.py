@@ -211,7 +211,7 @@ def main(path):
         else: I(f"rear wall aligned on main and upper (z {m.bounds[1]:.3f} m)")
     # area schedule (sheet A2/A3: main 1451, upper 1425, finished basement 889, total basement 1018 sq ft)
     SF = 0.3048 ** 2
-    sched = {"Main Floor": (1451, lambda n: n not in ("3-Car Garage",)), "Upper Floor": (1425, lambda n: True), "Basement": (889, lambda n: n == "Basement")}
+    sched = {"Main Floor": (1451, lambda n: n not in ("3-Car Garage",)), "Upper Floor": (1425, lambda n: True), "Basement": (889, lambda n: n not in ("Mechanical", "Crawlspace"))}
     for f in floors:
         if f["name"] in sched:
             want, keep = sched[f["name"]]

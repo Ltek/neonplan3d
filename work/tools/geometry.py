@@ -99,10 +99,18 @@ B_Z_R1 = c("B_Z_R1", 2.19, "M", "basement foundation jog (2'-0\")")
 B_X_R2 = c("B_X_R2", 44.52, "M", "basement right foundation wall (great room chase)")
 B_Z_R2 = c("B_Z_R2", 16.20, "M", "basement foundation step under dining")
 B_X_RR = c("B_X_RR", 55.26, "M", "basement right foundation wall (mechanical)")
-B_X_MECH = c("B_X_MECH", 39.90, "M", "mechanical room left wall (2868 door)")
+B_X_MECH = c("B_X_MECH", 39.90, "M", "mechanical room left wall (owner: no door in it)")
 B_X_CRAWL_L = c("B_X_CRAWL_L", 34.50, "M", "crawlspace left foundation wall")
 B_Z_CRAWL_PORCH = c("B_Z_CRAWL_PORCH", 39.30, "M", "crawlspace / porch foundation")
 B_X_CRAWL_PORCH = c("B_X_CRAWL_PORCH", 42.20, "M", "crawlspace / porch foundation")
+# as built (owner markup "corrections-basement", provenance O = owner markup / as-built note, +/- 0.5 ft unless stated)
+B_X_BATH_L = c("B_X_BATH_L", 16.48, "O", "bathroom left wall: as-built 9'-5\" clear from the stair wall (sketch: x 16.2)")
+B_Z_BATH_TOP = c("B_Z_BATH_TOP", Z_STAIR_TOP, "O", "bathroom top wall, in line with the stair's top (as-built 6'-11\" clear gives 19.97, sketch 19.6)")
+B_X_CLOS_L = c("B_X_CLOS_L", 11.30, "O", "new closet left wall (sketch)")
+B_Z_CLOS_TOP = c("B_Z_CLOS_TOP", 19.20, "O", "new closet top wall (sketch)")
+B_Z_MECH_CUT = c("B_Z_MECH_CUT", 24.75, "O", "mechanical: start of the 45 deg corner wall with the 36\" door (sketch)")
+B_X_MECH_CUT = c("B_X_MECH_CUT", B_X_MECH - (B_Z_BOT - 24.75), "O", "mechanical: end of the 45 deg corner wall on the foundation")
+B_Z_STAIR_MID = c("B_Z_STAIR_MID", 23.80, "O", "stair hall: stair entrance from here down (as on the main floor)")
 
 # ---------------------------------------------------------------- vertical (from building sections A5/A6)
 FT = 0.3048
@@ -126,23 +134,37 @@ FLOORS = []
 B = {"name": "Basement", "elev_ft": -H_BASE, "height_ft": H_BASE, "sheet": "A1", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 B["rooms"] += [
     {"name": "Basement", "prov": "M", "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_R2], [B_X_MECH, B_Z_R2],
-                                               [B_X_MECH, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_L, B_Z_L_BOT], [B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
-     "note": "finished basement; 'Bath R.I.' (rough-in, dashed future walls) left inside it"},
-    {"name": "Mechanical", "prov": "M", "points": [[B_X_MECH, B_Z_R2], [B_X_R2, B_Z_R2], [B_X_RR, B_Z_R2], [B_X_RR, B_Z_BOT], [B_X_MECH, B_Z_BOT]],
-     "note": "furnace, water heater, sump pit; unnamed on the drawing (named for its equipment)"},
-    {"name": "Crawlspace", "prov": "M", "points": [[B_X_CRAWL_L, B_Z_BOT], [B_X_MECH, B_Z_BOT], [B_X_RR, B_Z_BOT], [B_X_RR, Z_DEN_FRONT], [B_X_CRAWL_PORCH, Z_DEN_FRONT],
+                                               [X_STAIR_R, Z_STAIR_TOP], [X_STAIR_L, Z_STAIR_TOP], [B_X_BATH_L, B_Z_BATH_TOP], [B_X_BATH_L, B_Z_CLOS_TOP],
+                                               [B_X_WALK, B_Z_CLOS_TOP], [B_X_WALK, B_Z_STEP]],
+     "note": "finished basement; owner markup: bathroom, closet, side room, stair hall and the angled doors as built"},
+    {"name": "Basement Room", "prov": "O", "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_WALK, B_Z_CLOS_TOP], [B_X_CLOS_L, B_Z_CLOS_TOP], [B_X_CLOS_L, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
+     "note": "owner markup: new wall on the walk-out wall line (as-built room 10'-0\" x 12'-10\"); name not given"},
+    {"name": "Basement Closet", "prov": "O", "points": [[B_X_CLOS_L, B_Z_CLOS_TOP], [B_X_WALK, B_Z_CLOS_TOP], [B_X_BATH_L, B_Z_CLOS_TOP], [B_X_BATH_L, B_Z_BATH_TOP], [B_X_BATH_L, B_Z_BOT],
+                                                       [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_CLOS_L, B_Z_L_BOT]],
+     "note": "owner markup; the 1.2 ft strip behind the bathroom (down to the foundation jog) is counted in the closet"},
+    {"name": "Basement Bath", "prov": "O", "points": rect(B_X_BATH_L, B_Z_BATH_TOP, X_STAIR_L, B_Z_BOT), "note": "owner markup + as-built 9'-5\" x 6'-11\" (A1 'Bath R.I.')"},
+    {"name": "Stairs", "prov": "M", "points": [[X_STAIR_L, Z_STAIR_TOP], [X_STAIR_R, Z_STAIR_TOP], [X_STAIR_R, B_Z_STAIR_MID], [X_STAIR_R, B_Z_BOT], [X_STAIR_L, B_Z_BOT]]},
+    {"name": "Stair Hall", "prov": "O", "points": [[X_STAIR_R, Z_STAIR_TOP], [B_X_MECH, B_Z_R2], [B_X_MECH, B_Z_MECH_CUT], [B_X_MECH_CUT, B_Z_BOT], [X_STAIR_R, B_Z_BOT], [X_STAIR_R, B_Z_STAIR_MID]],
+     "note": "owner markup: angled walls with 36\" doors to the basement and to the mechanical room"},
+    {"name": "Mechanical", "prov": "M", "points": [[B_X_MECH, B_Z_R2], [B_X_R2, B_Z_R2], [B_X_RR, B_Z_R2], [B_X_RR, B_Z_BOT], [B_X_MECH_CUT, B_Z_BOT], [B_X_MECH, B_Z_MECH_CUT]],
+     "note": "furnace, water heater, sump pit; entered through the angled door from the stair hall (owner markup)"},
+    {"name": "Crawlspace", "prov": "M", "points": [[B_X_CRAWL_L, B_Z_BOT], [X_STAIR_R, B_Z_BOT], [B_X_MECH_CUT, B_Z_BOT], [B_X_MECH, B_Z_BOT], [B_X_RR, B_Z_BOT], [B_X_RR, Z_DEN_FRONT], [B_X_CRAWL_PORCH, Z_DEN_FRONT],
                                                  [B_X_CRAWL_PORCH, B_Z_CRAWL_PORCH], [B_X_CRAWL_L, B_Z_CRAWL_PORCH]],
      "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"},
 ]
-B["walls"] += [{"from": [X_STAIR_L, Z_STAIR_TOP], "to": [X_STAIR_L, B_Z_BOT], "thickness_ft": 0.375, "prov": "M", "note": "stair wall (Bath R.I. side)"}]
+B["open_edges"] = [{"a": [X_STAIR_R, B_Z_STAIR_MID], "b": [X_STAIR_R, B_Z_BOT], "h": 0, "why": "stair entrance from the stair hall (owner markup)"}]
 B["doors"] += [
-    {"at": [B_X_MECH, 21.8], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 mechanical", "prov": "M"},
-    {"at": [B_X_WALK, 4.6], "w": 6.0, "h": DOOR_H, "label": "6080 SGD walk-out", "prov": "E"},
+    {"at": [B_X_WALK, 4.6], "w": 71 / 12, "h": 7.0, "label": "sliding glass door walk-out, as built 71\" x 84\"", "prov": "O", "style": "sliding"},
+    {"at": [B_X_WALK, 17.38], "w": 3.0, "h": DOOR_H, "label": "36\" door basement room (owner markup)", "prov": "O"},
+    {"at": [B_X_CLOS_L, 21.30], "w": 3.0, "h": DOOR_H, "label": "36\" door closet (owner markup)", "prov": "O"},
+    {"at": [21.20, B_Z_BATH_TOP], "w": 3.0, "h": DOOR_H, "label": "36\" door bathroom (owner markup)", "prov": "O"},
+    {"at": [(X_STAIR_R + B_X_MECH) / 2, (Z_STAIR_TOP + B_Z_R2) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, basement to stair hall (owner markup)", "prov": "O"},
+    {"at": [(B_X_MECH + B_X_MECH_CUT) / 2, (B_Z_MECH_CUT + B_Z_BOT) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, stair hall to mechanical (owner markup)", "prov": "O"},
 ]
 B["windows"] += [
-    {"at": [20.667, B_Z_REAR], "w": 3, "h": 5, "head": HEAD_BASE, "label": "3050 SH", "prov": "D"},
-    {"at": [28.667, B_Z_REAR], "w": 3, "h": 5, "head": HEAD_BASE, "label": "3050 SH", "prov": "D"},
-    {"at": [36.667, B_Z_REAR], "w": 3, "h": 5, "head": HEAD_BASE, "label": "3050 SH", "prov": "D"},
+    {"at": [20.667, B_Z_REAR], "w": 34 / 12, "h": 5, "head": HEAD_BASE, "label": "SH, as built 34\" x 60\"", "prov": "O"},
+    {"at": [28.667, B_Z_REAR], "w": 34 / 12, "h": 5, "head": HEAD_BASE, "label": "SH, as built 34\" x 60\"", "prov": "O"},
+    {"at": [36.667, B_Z_REAR], "w": 34 / 12, "h": 5, "head": HEAD_BASE, "label": "SH, as built 34\" x 60\"", "prov": "O"},
     {"at": [9.10, B_Z_STEP], "w": 4, "h": 4, "head": HEAD_BASE, "label": "4040 SL", "prov": "M"},
     {"at": [48.0, B_Z_BOT], "w": 2 + 8 / 12, "h": 2.5, "sill": 5.5, "label": "2'-8\" HDR crawlspace access (30x30)", "prov": "E"},
 ]
@@ -195,8 +217,8 @@ M["doors"] += [
     {"at": [12.33, Z_GAR_TOP], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 #4 self-closing rated door, garage", "prov": "M"},
     {"at": [X_BRK_L, 22.0], "w": 3.0, "h": DOOR_H, "label": "cased opening mud hall | kitchen", "prov": "E"},
     {"at": [10.2, Z_LAUND_BOT], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 PKT laundry", "prov": "M"},
-    {"at": [X_BRK_L, 5.0], "w": 6, "h": DOOR_H, "label": "6080 SGD to covered deck", "prov": "M"},
-    {"at": [50.333, Z_DIN_TOP], "w": 8.0, "h": DOOR_H, "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")", "prov": "E"},
+    {"at": [X_BRK_L, 5.0], "w": 6, "h": DOOR_H, "label": "6080 SGD to covered deck", "prov": "M", "style": "sliding"},
+    {"at": [50.333, Z_DIN_TOP], "w": 8.0, "h": DOOR_H, "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")", "prov": "E", "style": "sliding"},
     {"at": [9.333, Z_GAR_DOOR1], "w": 8, "h": 8, "label": "8080 O.G.D.", "prov": "D"},
     {"at": [24.833, Z_GAR_DOOR2], "w": 16, "h": 8, "label": "16080 O.G.D.", "prov": "D"},
 ]
@@ -226,7 +248,7 @@ M["furniture"] += [
     {"type": "kitchen", "x": 21.8, "z": 26.3, "w": 4.4, "d": 2.0, "rot": 180, "label": "base cabinets", "prov": "M"},
     {"type": "kitchen", "x": 15.85, "z": 15.1, "w": 9.6, "d": 2.0, "rot": 270, "label": "base cabinets (220V range position at ~12.8)", "prov": "M"},
     {"type": "kitchen", "x": 25.1, "z": 23.5, "w": 6.9, "d": 2.0, "rot": 90, "label": "base cabinets under 24\" soffit", "prov": "M"},
-    {"type": "island", "x": 22.6, "z": 9.0, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
+    {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
     {"type": "dryer", "x": 13.45, "z": 11.55, "w": 2.2, "d": 2.2, "rot": 90, "label": "#24 +36 220V", "prov": "M"},
     {"type": "washer", "x": 13.45, "z": 14.3, "w": 2.2, "d": 2.2, "rot": 90, "label": "#2 washer box", "prov": "M"},
 ]

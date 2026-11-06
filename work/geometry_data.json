@@ -376,7 +376,7 @@
   "B_X_MECH": {
    "value": 39.9,
    "prov": "M",
-   "note": "mechanical room left wall (2868 door)"
+   "note": "mechanical room left wall (owner: no door in it)"
   },
   "B_X_CRAWL_L": {
    "value": 34.5,
@@ -392,6 +392,41 @@
    "value": 42.2,
    "prov": "M",
    "note": "crawlspace / porch foundation"
+  },
+  "B_X_BATH_L": {
+   "value": 16.48,
+   "prov": "O",
+   "note": "bathroom left wall: as-built 9'-5\" clear from the stair wall (sketch: x 16.2)"
+  },
+  "B_Z_BATH_TOP": {
+   "value": 20.12,
+   "prov": "O",
+   "note": "bathroom top wall, in line with the stair's top (as-built 6'-11\" clear gives 19.97, sketch 19.6)"
+  },
+  "B_X_CLOS_L": {
+   "value": 11.3,
+   "prov": "O",
+   "note": "new closet left wall (sketch)"
+  },
+  "B_Z_CLOS_TOP": {
+   "value": 19.2,
+   "prov": "O",
+   "note": "new closet top wall (sketch)"
+  },
+  "B_Z_MECH_CUT": {
+   "value": 24.75,
+   "prov": "O",
+   "note": "mechanical: start of the 45 deg corner wall with the 36\" door (sketch)"
+  },
+  "B_X_MECH_CUT": {
+   "value": 37.25,
+   "prov": "O",
+   "note": "mechanical: end of the 45 deg corner wall on the foundation"
+  },
+  "B_Z_STAIR_MID": {
+   "value": 23.8,
+   "prov": "O",
+   "note": "stair hall: stair entrance from here down (as on the main floor)"
   }
  },
  "vertical_ft": {
@@ -438,21 +473,36 @@
        16.2
       ],
       [
-       39.9,
-       27.4
+       35.8,
+       20.12
       ],
       [
-       15.25,
-       27.4
+       26.27,
+       20.12
       ],
       [
-       15.25,
-       23.4
+       16.48,
+       20.12
       ],
       [
-       4.22,
-       23.4
+       16.48,
+       19.2
       ],
+      [
+       14.915,
+       19.2
+      ],
+      [
+       14.915,
+       10.144
+      ]
+     ],
+     "note": "finished basement; owner markup: bathroom, closet, side room, stair hall and the angled doors as built"
+    },
+    {
+     "name": "Basement Room",
+     "prov": "O",
+     "points": [
       [
        4.22,
        10.144
@@ -460,9 +510,144 @@
       [
        14.915,
        10.144
+      ],
+      [
+       14.915,
+       19.2
+      ],
+      [
+       11.3,
+       19.2
+      ],
+      [
+       11.3,
+       23.4
+      ],
+      [
+       4.22,
+       23.4
       ]
      ],
-     "note": "finished basement; 'Bath R.I.' (rough-in, dashed future walls) left inside it"
+     "note": "owner markup: new wall on the walk-out wall line (as-built room 10'-0\" x 12'-10\"); name not given"
+    },
+    {
+     "name": "Basement Closet",
+     "prov": "O",
+     "points": [
+      [
+       11.3,
+       19.2
+      ],
+      [
+       14.915,
+       19.2
+      ],
+      [
+       16.48,
+       19.2
+      ],
+      [
+       16.48,
+       20.12
+      ],
+      [
+       16.48,
+       27.4
+      ],
+      [
+       15.25,
+       27.4
+      ],
+      [
+       15.25,
+       23.4
+      ],
+      [
+       11.3,
+       23.4
+      ]
+     ],
+     "note": "owner markup; the 1.2 ft strip behind the bathroom (down to the foundation jog) is counted in the closet"
+    },
+    {
+     "name": "Basement Bath",
+     "prov": "O",
+     "points": [
+      [
+       16.48,
+       20.12
+      ],
+      [
+       26.27,
+       20.12
+      ],
+      [
+       26.27,
+       27.4
+      ],
+      [
+       16.48,
+       27.4
+      ]
+     ],
+     "note": "owner markup + as-built 9'-5\" x 6'-11\" (A1 'Bath R.I.')"
+    },
+    {
+     "name": "Stairs",
+     "prov": "M",
+     "points": [
+      [
+       26.27,
+       20.12
+      ],
+      [
+       35.8,
+       20.12
+      ],
+      [
+       35.8,
+       23.8
+      ],
+      [
+       35.8,
+       27.4
+      ],
+      [
+       26.27,
+       27.4
+      ]
+     ]
+    },
+    {
+     "name": "Stair Hall",
+     "prov": "O",
+     "points": [
+      [
+       35.8,
+       20.12
+      ],
+      [
+       39.9,
+       16.2
+      ],
+      [
+       39.9,
+       24.75
+      ],
+      [
+       37.25,
+       27.4
+      ],
+      [
+       35.8,
+       27.4
+      ],
+      [
+       35.8,
+       23.8
+      ]
+     ],
+     "note": "owner markup: angled walls with 36\" doors to the basement and to the mechanical room"
     },
     {
      "name": "Mechanical",
@@ -485,11 +670,15 @@
        27.4
       ],
       [
-       39.9,
+       37.25,
        27.4
+      ],
+      [
+       39.9,
+       24.75
       ]
      ],
-     "note": "furnace, water heater, sump pit; unnamed on the drawing (named for its equipment)"
+     "note": "furnace, water heater, sump pit; entered through the angled door from the stair hall (owner markup)"
     },
     {
      "name": "Crawlspace",
@@ -497,6 +686,14 @@
      "points": [
       [
        34.5,
+       27.4
+      ],
+      [
+       35.8,
+       27.4
+      ],
+      [
+       37.25,
        27.4
       ],
       [
@@ -527,41 +724,68 @@
      "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"
     }
    ],
-   "walls": [
-    {
-     "from": [
-      26.27,
-      20.12
-     ],
-     "to": [
-      26.27,
-      27.4
-     ],
-     "thickness_ft": 0.375,
-     "prov": "M",
-     "note": "stair wall (Bath R.I. side)"
-    }
-   ],
+   "walls": [],
    "doors": [
-    {
-     "at": [
-      39.9,
-      21.8
-     ],
-     "w": 2.6666666666666665,
-     "h": 6.666666666666667,
-     "label": "2868 mechanical",
-     "prov": "M"
-    },
     {
      "at": [
       14.915,
       4.6
      ],
-     "w": 6.0,
+     "w": 5.916666666666667,
+     "h": 7.0,
+     "label": "sliding glass door walk-out, as built 71\" x 84\"",
+     "prov": "O",
+     "style": "sliding"
+    },
+    {
+     "at": [
+      14.915,
+      17.38
+     ],
+     "w": 3.0,
      "h": 6.666666666666667,
-     "label": "6080 SGD walk-out",
-     "prov": "E"
+     "label": "36\" door basement room (owner markup)",
+     "prov": "O"
+    },
+    {
+     "at": [
+      11.3,
+      21.3
+     ],
+     "w": 3.0,
+     "h": 6.666666666666667,
+     "label": "36\" door closet (owner markup)",
+     "prov": "O"
+    },
+    {
+     "at": [
+      21.2,
+      20.12
+     ],
+     "w": 3.0,
+     "h": 6.666666666666667,
+     "label": "36\" door bathroom (owner markup)",
+     "prov": "O"
+    },
+    {
+     "at": [
+      37.849999999999994,
+      18.16
+     ],
+     "w": 3.0,
+     "h": 6.666666666666667,
+     "label": "36\" door on angle, basement to stair hall (owner markup)",
+     "prov": "O"
+    },
+    {
+     "at": [
+      38.575,
+      26.075
+     ],
+     "w": 3.0,
+     "h": 6.666666666666667,
+     "label": "36\" door on angle, stair hall to mechanical (owner markup)",
+     "prov": "O"
     }
    ],
    "windows": [
@@ -570,33 +794,33 @@
       20.667,
       0.185
      ],
-     "w": 3,
+     "w": 2.8333333333333335,
      "h": 5,
      "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "label": "SH, as built 34\" x 60\"",
+     "prov": "O"
     },
     {
      "at": [
       28.667,
       0.185
      ],
-     "w": 3,
+     "w": 2.8333333333333335,
      "h": 5,
      "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "label": "SH, as built 34\" x 60\"",
+     "prov": "O"
     },
     {
      "at": [
       36.667,
       0.185
      ],
-     "w": 3,
+     "w": 2.8333333333333335,
      "h": 5,
      "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "label": "SH, as built 34\" x 60\"",
+     "prov": "O"
     },
     {
      "at": [
@@ -633,7 +857,21 @@
      "prov": "M"
     }
    ],
-   "outdoor": []
+   "outdoor": [],
+   "open_edges": [
+    {
+     "a": [
+      35.8,
+      23.8
+     ],
+     "b": [
+      35.8,
+      27.4
+     ],
+     "h": 0,
+     "why": "stair entrance from the stair hall (owner markup)"
+    }
+   ]
   },
   {
    "name": "Main Floor",
@@ -1121,7 +1359,8 @@
      "w": 6,
      "h": 6.666666666666667,
      "label": "6080 SGD to covered deck",
-     "prov": "M"
+     "prov": "M",
+     "style": "sliding"
     },
     {
      "at": [
@@ -1131,7 +1370,8 @@
      "w": 8.0,
      "h": 6.666666666666667,
      "label": "sliding glass door to the dining deck (owner markup: replaces 3 x 2650 SH; size assumed 8'-0\" x 6'-8\")",
-     "prov": "E"
+     "prov": "E",
+     "style": "sliding"
     },
     {
      "at": [
@@ -1516,8 +1756,8 @@
     },
     {
      "type": "island",
-     "x": 22.6,
-     "z": 9.0,
+     "x": 22.8,
+     "z": 10.7,
      "w": 10.0,
      "d": 3.3333333333333335,
      "rot": 90,

@@ -5,15 +5,15 @@
 | Item | Value |
 |---|---|
 | Floors | 3: Basement (−3.019 m), Main Floor (0), Upper Floor (+3.397 m) |
-| Rooms | 32 (basement 3, main 12, upper 17) |
-| Doors | 30 (basement 2, main 12, upper 16), including 2 garage doors and the dining sliding door |
+| Rooms | 37 (basement 8, main 12, upper 17) |
+| Doors | 34 (basement 6, main 12, upper 16), including 2 garage doors and 3 sliding glass doors |
 | Windows | 43 units (basement 5, main 27, upper 11), including 9 transoms, 1 sidelight, 1 crawlspace access |
 | Furniture / fixtures | 23 (2 U-stairs, kitchen, laundry, bathroom fixtures) |
 | Free walls | 8 (stair wall, media niche, foyer front at upper level, bath 2 partition, linen closet ×4) |
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 32 rooms, 30 doors, 43 windows, 8 walls, 23 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 37 rooms, 34 doors, 43 windows, 7 walls, 23 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -99,7 +99,21 @@ Applied in `work/tools/geometry.py`. Where the owner moved a door, it was placed
 | Main | New "Dining Deck" outdoor area, 20 ft wide × 18 ft deep, against the dining wall starting at the fireplace chase (full NeonPlan file only; position assumed) |
 | Main | Front door drawn on top of its transom in the preview and overlays (it was hidden under the blue transom bar) |
 
-Not yet applied: the Bedroom 2 door move (the arrow's target is unclear) and the basement changes (need the markup images at full resolution).
+Basement, from the owner's markup and as-built notes (provenance O; positions read off the markup, about ±0.5 ft):
+
+| Change |
+|---|
+| Mechanical room: no door in its long left wall. It is entered through a 36" door in a 45° wall across its bottom-left corner, from a new Stair Hall |
+| Stair Hall between the stair and the mechanical room, closed off from the basement by a 45° wall with a 36" door; the stair is entered from it on the lower part of its right side |
+| Bathroom (A1 "Bath R.I."), 36" door on its top wall. Width from the as-built 9'-5" clear; its top wall is put in line with the stair's top (as-built 6'-11" clear would put it 2" higher) |
+| Closet with a 36" door on its left side; the 1.2 ft strip behind the bathroom, down to the foundation jog, is counted in it |
+| New wall on the walk-out wall line closing off "Basement Room" (as-built 10'-0" × 12'-10"), with a 36" door. Name not given |
+| Rear windows 34" × 60" and the walk-out sliding door 71" × 84" (as built) |
+| The basement's finished area is now 885 sq ft against 889 in the area schedule |
+
+Sliding glass doors: the import format has no door styles and turns any door 2.2 m or wider into a garage door. The full NeonPlan file sets the 3 sliding doors to NeonPlan's "sliding" door style (and the 8 ft dining door back from garage to door).
+
+Not yet applied: the Bedroom 2 door move (the arrow's target is unclear).
 
 ## 7. Import testing
 
