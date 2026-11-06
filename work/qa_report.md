@@ -108,7 +108,7 @@ Basement, from the owner's as-built sketch (written dimensions) and markup (the 
 | Office: the old wall on the walk-out wall line is removed; the new wall is 1'-2" further into the theater, with a 36" door. As-built width 12'-10" |
 | Office closet ("enclose for closet") between the office and the bathroom, 36" door from the office. It ends on the garage foundation line as drawn, so it is 3'-1" deep instead of the 3'-5" written |
 | Bathroom 9'-5" clear (4'-10" shower + 4'-3" toilet zone) from the foundation; it includes the strip down to the foundation jog. Its wall toward the theater is in line with the stair's top (6'-9" clear instead of 6'-11"). Curbless walk-around shower and the moved toilet; no sink is shown on the sketch, none modelled. 36" door from the theater |
-| Theater: baffle wall with the 130" screen, its face 27'-0" from the walk-out wall, from the foundation jog to a short side wall (equipment cabinet, hidden door not modelled). |
+| Theater: baffle wall with the 130" screen, the full width of the room from the rear wall, its back against the 2'-0" foundation jog (face 25'-11" from the walk-out wall), ending at a short side wall (equipment cabinet, hidden door not modelled). |
 | Ceiling heights (full NeonPlan file): theater and bathroom 9'-0". The 8'-0" soffit strip in the theater and the office's 8'-1"/9'-0" are not modelled |
 | All basement doors 36" wide; rear windows 34" × 60" and the walk-out sliding door 71" × 84" (as built) |
 | The basement's finished area (without the mechanical room and crawlspace) is 865 sq ft against 889 in the area schedule |

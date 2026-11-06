@@ -113,7 +113,7 @@ B_Z_STAIR_BOT = c("B_Z_STAIR_BOT", 23.80, "O", "basement stair: its wall toward 
 B_X_STAIR_END = c("B_X_STAIR_END", B_X_MECH, "O", "basement stair: its end at the hall, open (owner's edited plan)")
 B_Z_HALL_R = c("B_Z_HALL_R", 20.40, "O", "hall: end of its straight wall to the mechanical room (owner's edited plan)")
 B_X_HALL_BOT = c("B_X_HALL_BOT", 40.80, "O", "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)")
-B_X_BAFFLE = c("B_X_BAFFLE", 15.145 + 27 + 0.1875, "O", "theater baffle wall: its face 27'-0\" from the walk-out wall")
+B_X_BAFFLE = c("B_X_BAFFLE", B_X_R1 - 0.328 - 0.1875, "O", "theater baffle wall, full width from the rear wall (owner's edited plan); its back touches the 2'-0\" foundation jog, face 25'-11\" from the walk-out wall")
 B_Z_BAFFLE_END = c("B_Z_BAFFLE_END", 13.30, "O", "baffle wall end / side wall with the slide-out equipment cabinet (sketch)")
 THICK_SOUND = 0.23  # m (9"): "thick sound reducing walls" - no thickness given, assumed
 
@@ -165,7 +165,7 @@ B["thick_edges"] = [
     {"a": [B_X_R2, B_Z_R2], "b": [B_X_STAIR_END, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | hall"},
 ]
 B["walls"] += [
-    {"from": [B_X_BAFFLE, B_Z_R1], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen (27'-0\" from the walk-out wall)"},
+    {"from": [B_X_BAFFLE, B_Z_REAR], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen"},
     {"from": [B_X_BAFFLE, B_Z_BAFFLE_END], "to": [B_X_R2, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"},
 ]
 B["doors"] += [

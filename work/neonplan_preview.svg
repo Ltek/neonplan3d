@@ -407,8 +407,8 @@
 <line x1="447.5" y1="1787.4" x2="447.5" y2="1728.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="447.5" y1="1728.4" x2="378.2" y2="1728.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="378.2" y1="1728.4" x2="378.2" y2="1621.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="448.7" y1="1394.4" x2="448.7" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
-<line x1="448.7" y1="1494.4" x2="468.4" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
+<line x1="438.8" y1="1376.4" x2="438.8" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
+<line x1="438.8" y1="1494.4" x2="468.4" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
 <rect x="304.1" y="1556.7" width="117.3" height="31.3" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="362.8" y="1575.3" font-size="7" fill="#6b7280" text-anchor="middle">stairs</text>
 <rect x="249.4" y="1585.3" width="43.4" height="33.0" fill="none" stroke="#6b7280" stroke-width="1"/>

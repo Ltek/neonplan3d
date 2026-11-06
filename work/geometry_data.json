@@ -434,9 +434,9 @@
    "note": "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)"
   },
   "B_X_BAFFLE": {
-   "value": 42.332,
+   "value": 41.234,
    "prov": "O",
-   "note": "theater baffle wall: its face 27'-0\" from the walk-out wall"
+   "note": "theater baffle wall, full width from the rear wall (owner's edited plan); its back touches the 2'-0\" foundation jog, face 25'-11\" from the walk-out wall"
   },
   "B_Z_BAFFLE_END": {
    "value": 13.3,
@@ -741,20 +741,20 @@
    "walls": [
     {
      "from": [
-      42.332,
-      2.19
+      41.234,
+      0.185
      ],
      "to": [
-      42.332,
+      41.234,
       13.3
      ],
      "thickness_ft": 0.375,
      "prov": "O",
-     "note": "theater baffle wall with the 130\" 16:9 AT screen (27'-0\" from the walk-out wall)"
+     "note": "theater baffle wall with the 130\" 16:9 AT screen"
     },
     {
      "from": [
-      42.332,
+      41.234,
       13.3
      ],
      "to": [
