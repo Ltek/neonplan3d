@@ -1,0 +1,2891 @@
+{
+ "source": "scanned house plans (sheets A1-A6, S-1 foundation plan)",
+ "frame": {
+  "units_internal": "ft",
+  "units_export": "m",
+  "origin": "outer face of studs: garage left wall (X) and rear wall (Z)",
+  "export_shift_ft": [
+   0.146,
+   0.146
+  ],
+  "x": "right",
+  "z": "down the sheet",
+  "rooms_at": "centre"
+ },
+ "provenance_codes": {
+  "D": "explicit dimension (face of stud) +/- 1.75\" to the stud centre",
+  "M": "measured on the calibrated raster",
+  "E": "estimated / inferred"
+ },
+ "constants_ft": {
+  "X_GAR_L": {
+   "value": 0.146,
+   "prov": "D",
+   "note": "garage left wall, 56'-0\" chain origin"
+  },
+  "X_DECK": {
+   "value": 4.146,
+   "prov": "D",
+   "note": "4'-0\" chain: garage jog / laundry & master bath left wall"
+  },
+  "X_BRK_L": {
+   "value": 14.813,
+   "prov": "D",
+   "note": "10'-8\" chain: breakfast / laundry / dressing left wall line"
+  },
+  "X_REAR_R": {
+   "value": 42.521,
+   "prov": "D",
+   "note": "10'-8\"+28'-0\": end of rear wall, fireplace jog, master bedroom bearing wall"
+  },
+  "X_CHASE": {
+   "value": 44.521,
+   "prov": "D",
+   "note": "2'-0\" fireplace/media chase bump"
+  },
+  "X_R": {
+   "value": 55.854,
+   "prov": "D",
+   "note": "52'-0\" / 56'-0\" right face"
+  },
+  "X_GAR_R": {
+   "value": 34.146,
+   "prov": "D",
+   "note": "19'-4\" chain (14'-8\"..34'-0\"): garage right wall"
+  },
+  "X_DEN_L": {
+   "value": 42.15,
+   "prov": "M",
+   "note": "den left (porch side) wall; 9'-0\"/13'-0\" chain puts porch post face at 43'-0\""
+  },
+  "X_UP_BR2_L": {
+   "value": 20.146,
+   "prov": "D",
+   "note": "upper 5'-4\" chain: bedroom 2 left wall"
+  },
+  "X_BAY_L": {
+   "value": 23.396,
+   "prov": "D",
+   "note": "upper 3'-3\" chain: bay left"
+  },
+  "X_BAY_R": {
+   "value": 31.604,
+   "prov": "D",
+   "note": "upper 11'-9\" chain: bay right"
+  },
+  "Z_REAR": {
+   "value": 0.146,
+   "prov": "D",
+   "note": "rear wall, 48'-0\"/46'-0\" chain origin"
+  },
+  "Z_CHASE": {
+   "value": 2.146,
+   "prov": "D",
+   "note": "right chain 2'-0\": fireplace jog"
+  },
+  "Z_DECK": {
+   "value": 10.146,
+   "prov": "D",
+   "note": "left chain 5'-0\"+5'-0\": laundry / master bath top (under/over covered deck)"
+  },
+  "Z_WIC_TOP": {
+   "value": 5.146,
+   "prov": "D",
+   "note": "upper left chain 5'-0\": master WIC top"
+  },
+  "Z_DIN_TOP": {
+   "value": 16.146,
+   "prov": "D",
+   "note": "right chain 2'-0\"+14'-0\": dining / bedroom 3 top wall"
+  },
+  "Z_GAR_TOP": {
+   "value": 23.85,
+   "prov": "M",
+   "note": "garage top wall under pantry/mud hall (13'-8 1/2\" chain = 23.71 face)"
+  },
+  "Z_STAIR_BOT": {
+   "value": 27.5,
+   "prov": "M",
+   "note": "garage / kitchen / stair / foyer / dining line (27.42-27.6 measured; right chain 27'-8\")"
+  },
+  "Z_DEN_FRONT": {
+   "value": 45.854,
+   "prov": "D",
+   "note": "right chain 46'-0\": den front / bedroom 4 front"
+  },
+  "Z_GAR_DOOR1": {
+   "value": 45.854,
+   "prov": "D",
+   "note": "left chain 2'-0\": single garage door wall"
+  },
+  "Z_GAR_DOOR2": {
+   "value": 47.854,
+   "prov": "D",
+   "note": "left chain 48'-0\": double garage door wall"
+  },
+  "Z_GAR_JOG": {
+   "value": 43.854,
+   "prov": "D",
+   "note": "left chain 20'-3 1/2\"+2'-0\": garage left jog"
+  },
+  "Z_FOYER_FRONT": {
+   "value": 39.85,
+   "prov": "M",
+   "note": "front door wall (foyer)"
+  },
+  "Z_UP_FRONT_L": {
+   "value": 39.854,
+   "prov": "D",
+   "note": "upper left chain: bedroom 2 front / upper front over foyer"
+  },
+  "Z_BAY": {
+   "value": 42.604,
+   "prov": "M",
+   "note": "bedroom 2 bay front (measured 42.55-42.6)"
+  },
+  "X_PANTRY_R": {
+   "value": 8.8,
+   "prov": "M",
+   "note": "pantry right wall (2468 PKT)"
+  },
+  "X_CLOS_L": {
+   "value": 12.46,
+   "prov": "M",
+   "note": "coat closet left wall (2'-4 1/2\" inside)"
+  },
+  "Z_LAUND_BOT": {
+   "value": 16.13,
+   "prov": "M",
+   "note": "laundry bottom wall (2868 PKT)"
+  },
+  "Z_CLOS_BOT": {
+   "value": 20.2,
+   "prov": "M",
+   "note": "coat closet bottom wall"
+  },
+  "Z_BRK_KIT": {
+   "value": 8.5,
+   "prov": "E",
+   "note": "no wall: breakfast / kitchen split taken at the 5'-5\"/6'-1\" dimension line"
+  },
+  "X_STAIR_L": {
+   "value": 26.27,
+   "prov": "M",
+   "note": "stair left wall / kitchen right; also breakfast|great-room split (1'-0\" pier at 25.46-26.46)"
+  },
+  "X_STAIR_R": {
+   "value": 35.8,
+   "prov": "M",
+   "note": "stair right end (newel / rail)"
+  },
+  "Z_STAIR_TOP": {
+   "value": 20.12,
+   "prov": "M",
+   "note": "stair top (handrail #10 main, 36\" AFF wall upper)"
+  },
+  "X_DIN_L": {
+   "value": 42.4,
+   "prov": "E",
+   "note": "no wall: dining flat arch (#34) line"
+  },
+  "X_HALF_END": {
+   "value": 47.3,
+   "prov": "M",
+   "note": "end of 36\" half wall (#22) dining|hall, full wall beyond"
+  },
+  "X_POW_L": {
+   "value": 50.55,
+   "prov": "M",
+   "note": "powder left wall"
+  },
+  "Z_CLO_TOP": {
+   "value": 31.3,
+   "prov": "M",
+   "note": "coat closet front (bifolds)"
+  },
+  "X_CLO2_L": {
+   "value": 43.35,
+   "prov": "M",
+   "note": "coat closet left wall"
+  },
+  "Z_DEN_TOP": {
+   "value": 33.85,
+   "prov": "M",
+   "note": "den top / powder & closet bottom"
+  },
+  "X_UP_WIC2_L": {
+   "value": 12.6,
+   "prov": "M",
+   "note": "second master closet left wall"
+  },
+  "X_UP_LIN_L": {
+   "value": 11.25,
+   "prov": "M",
+   "note": "master linen left wall"
+  },
+  "Z_UP_LIN_TOP": {
+   "value": 20.4,
+   "prov": "M",
+   "note": "master linen top"
+  },
+  "Z_UP_WIC_BOT": {
+   "value": 12.25,
+   "prov": "M",
+   "note": "master WIC bottom (right part)"
+  },
+  "Z_UP_MID": {
+   "value": 16.146,
+   "prov": "M",
+   "note": "master bath corridor bottom / WC & WIC2 top / master bedroom bottom"
+  },
+  "Z_UP_WC_BOT": {
+   "value": 19.3,
+   "prov": "M",
+   "note": "master WC / bath 3 wall"
+  },
+  "Z_UP_MBATH_BOT": {
+   "value": 23.854,
+   "prov": "D",
+   "note": "upper left chain 10'-0\"+14'-0\": master bath bottom"
+  },
+  "Z_UP_DRESS_BOT": {
+   "value": 31.35,
+   "prov": "M",
+   "note": "bedroom 2 dressing room bottom"
+  },
+  "X_UP_HALLCL_L": {
+   "value": 31.9,
+   "prov": "M",
+   "note": "hall closet left / bedroom 2 right wall"
+  },
+  "X_UP_HALLCL_R": {
+   "value": 34.6,
+   "prov": "M",
+   "note": "hall closet right wall"
+  },
+  "Z_UP_HALLCL_TOP": {
+   "value": 35.0,
+   "prov": "M",
+   "note": "hall closet top (2'-4 1/2\" opening)"
+  },
+  "X_UP_HALL_R": {
+   "value": 41.65,
+   "prov": "M",
+   "note": "upper hall right wall"
+  },
+  "X_UP_VOID_L": {
+   "value": 36.3,
+   "prov": "E",
+   "note": "open-to-foyer rail line"
+  },
+  "Z_UP_VOID_TOP": {
+   "value": 33.9,
+   "prov": "M",
+   "note": "bedroom 4 top / open-to-foyer rail"
+  },
+  "X_UP_CLOS_R": {
+   "value": 44.8,
+   "prov": "M",
+   "note": "bedroom 3 / 4 closet front (6068 BP)"
+  },
+  "Z_UP_BR3_CL_BOT": {
+   "value": 24.0,
+   "prov": "M",
+   "note": "bedroom 3 closet bottom"
+  },
+  "Z_UP_BR4_CL_TOP": {
+   "value": 37.2,
+   "prov": "M",
+   "note": "bedroom 4 closet top"
+  },
+  "X_UP_BATH2_L": {
+   "value": 45.11,
+   "prov": "M",
+   "note": "bath 2 left wall"
+  },
+  "X_UP_BATH2_MID": {
+   "value": 50.35,
+   "prov": "M",
+   "note": "bath 2 vanity | WC-tub partition"
+  },
+  "B_Z_REAR": {
+   "value": 0.185,
+   "prov": "M",
+   "note": "basement rear 2x6 walk-out wall"
+  },
+  "B_X_WALK": {
+   "value": 14.915,
+   "prov": "M",
+   "note": "basement 2x6 wall with 6080 SGD"
+  },
+  "B_Z_STEP": {
+   "value": 10.144,
+   "prov": "M",
+   "note": "basement 2x6 wall with 4040 SL"
+  },
+  "B_X_L": {
+   "value": 4.22,
+   "prov": "M",
+   "note": "basement left foundation wall"
+  },
+  "B_Z_L_BOT": {
+   "value": 23.4,
+   "prov": "M",
+   "note": "basement left part bottom (garage foundation)"
+  },
+  "B_X_STEP2": {
+   "value": 15.25,
+   "prov": "M",
+   "note": "basement wall at garage corner"
+  },
+  "B_Z_BOT": {
+   "value": 27.4,
+   "prov": "M",
+   "note": "basement bottom foundation wall"
+  },
+  "B_X_R1": {
+   "value": 41.75,
+   "prov": "M",
+   "note": "basement rear-right foundation jog"
+  },
+  "B_Z_R1": {
+   "value": 2.19,
+   "prov": "M",
+   "note": "basement foundation jog (2'-0\")"
+  },
+  "B_X_R2": {
+   "value": 44.52,
+   "prov": "M",
+   "note": "basement right foundation wall (great room chase)"
+  },
+  "B_Z_R2": {
+   "value": 16.2,
+   "prov": "M",
+   "note": "basement foundation step under dining"
+  },
+  "B_X_RR": {
+   "value": 55.26,
+   "prov": "M",
+   "note": "basement right foundation wall (mechanical)"
+  },
+  "B_X_MECH": {
+   "value": 39.9,
+   "prov": "M",
+   "note": "mechanical room left wall (2868 door)"
+  },
+  "B_X_CRAWL_L": {
+   "value": 34.5,
+   "prov": "M",
+   "note": "crawlspace left foundation wall"
+  },
+  "B_Z_CRAWL_PORCH": {
+   "value": 39.3,
+   "prov": "M",
+   "note": "crawlspace / porch foundation"
+  },
+  "B_X_CRAWL_PORCH": {
+   "value": 42.2,
+   "prov": "M",
+   "note": "crawlspace / porch foundation"
+  }
+ },
+ "vertical_ft": {
+  "basement_floor_to_floor": 9.90625,
+  "main_floor_to_floor": 11.145833333333334,
+  "upper_plate": 8.09375,
+  "window_head_main": 8.072916666666666,
+  "window_head_upper": 7.072916666666667,
+  "window_head_basement_assumed": 7.072916666666667
+ },
+ "floors": [
+  {
+   "name": "Basement",
+   "elev_ft": -9.90625,
+   "height_ft": 9.90625,
+   "sheet": "A1",
+   "rooms": [
+    {
+     "name": "Basement",
+     "prov": "M",
+     "points": [
+      [
+       14.915,
+       0.185
+      ],
+      [
+       41.75,
+       0.185
+      ],
+      [
+       41.75,
+       2.19
+      ],
+      [
+       44.52,
+       2.19
+      ],
+      [
+       44.52,
+       16.2
+      ],
+      [
+       39.9,
+       16.2
+      ],
+      [
+       39.9,
+       27.4
+      ],
+      [
+       15.25,
+       27.4
+      ],
+      [
+       15.25,
+       23.4
+      ],
+      [
+       4.22,
+       23.4
+      ],
+      [
+       4.22,
+       10.144
+      ],
+      [
+       14.915,
+       10.144
+      ]
+     ],
+     "note": "finished basement; 'Bath R.I.' (rough-in, dashed future walls) left inside it"
+    },
+    {
+     "name": "Mechanical",
+     "prov": "M",
+     "points": [
+      [
+       39.9,
+       16.2
+      ],
+      [
+       44.52,
+       16.2
+      ],
+      [
+       55.26,
+       16.2
+      ],
+      [
+       55.26,
+       27.4
+      ],
+      [
+       39.9,
+       27.4
+      ]
+     ],
+     "note": "furnace, water heater, sump pit; unnamed on the drawing (named for its equipment)"
+    },
+    {
+     "name": "Crawlspace",
+     "prov": "M",
+     "points": [
+      [
+       34.5,
+       27.4
+      ],
+      [
+       39.9,
+       27.4
+      ],
+      [
+       55.26,
+       27.4
+      ],
+      [
+       55.26,
+       45.854
+      ],
+      [
+       42.2,
+       45.854
+      ],
+      [
+       42.2,
+       39.3
+      ],
+      [
+       34.5,
+       39.3
+      ]
+     ],
+     "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"
+    }
+   ],
+   "walls": [
+    {
+     "from": [
+      26.27,
+      20.12
+     ],
+     "to": [
+      26.27,
+      27.4
+     ],
+     "thickness_ft": 0.375,
+     "prov": "M",
+     "note": "stair wall (Bath R.I. side)"
+    }
+   ],
+   "doors": [
+    {
+     "at": [
+      39.9,
+      21.8
+     ],
+     "w": 2.6666666666666665,
+     "h": 6.666666666666667,
+     "label": "2868 mechanical",
+     "prov": "M"
+    },
+    {
+     "at": [
+      14.915,
+      4.6
+     ],
+     "w": 6.0,
+     "h": 6.666666666666667,
+     "label": "6080 SGD walk-out",
+     "prov": "E"
+    }
+   ],
+   "windows": [
+    {
+     "at": [
+      20.667,
+      0.185
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      28.667,
+      0.185
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      36.667,
+      0.185
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      9.1,
+      10.144
+     ],
+     "w": 4,
+     "h": 4,
+     "head": 7.072916666666667,
+     "label": "4040 SL",
+     "prov": "M"
+    },
+    {
+     "at": [
+      48.0,
+      27.4
+     ],
+     "w": 2.6666666666666665,
+     "h": 2.5,
+     "sill": 5.5,
+     "label": "2'-8\" HDR crawlspace access (30x30)",
+     "prov": "E"
+    }
+   ],
+   "furniture": [
+    {
+     "type": "stairs_u",
+     "x": 31.034999999999997,
+     "z": 23.759999999999998,
+     "w": 7.279999999999998,
+     "d": 9.529999999999998,
+     "rot": 270,
+     "label": "UP 16R to main floor",
+     "prov": "M"
+    }
+   ],
+   "outdoor": []
+  },
+  {
+   "name": "Main Floor",
+   "elev_ft": 0.0,
+   "height_ft": 11.145833333333334,
+   "sheet": "A2",
+   "rooms": [
+    {
+     "name": "3-Car Garage",
+     "prov": "D",
+     "points": [
+      [
+       0.146,
+       23.85
+      ],
+      [
+       14.813,
+       23.85
+      ],
+      [
+       14.813,
+       27.5
+      ],
+      [
+       34.146,
+       27.5
+      ],
+      [
+       34.146,
+       47.854
+      ],
+      [
+       14.813,
+       47.854
+      ],
+      [
+       14.813,
+       45.854
+      ],
+      [
+       4.146,
+       45.854
+      ],
+      [
+       4.146,
+       43.854
+      ],
+      [
+       0.146,
+       43.854
+      ]
+     ]
+    },
+    {
+     "name": "Laundry",
+     "prov": "D",
+     "points": [
+      [
+       4.146,
+       10.146
+      ],
+      [
+       14.813,
+       10.146
+      ],
+      [
+       14.813,
+       16.13
+      ],
+      [
+       4.146,
+       16.13
+      ]
+     ]
+    },
+    {
+     "name": "Pantry",
+     "prov": "M",
+     "points": [
+      [
+       4.146,
+       16.13
+      ],
+      [
+       8.8,
+       16.13
+      ],
+      [
+       8.8,
+       23.85
+      ],
+      [
+       4.146,
+       23.85
+      ]
+     ]
+    },
+    {
+     "name": "Mud Hall",
+     "prov": "M",
+     "points": [
+      [
+       8.8,
+       16.13
+      ],
+      [
+       12.46,
+       16.13
+      ],
+      [
+       12.46,
+       20.2
+      ],
+      [
+       14.813,
+       20.2
+      ],
+      [
+       14.813,
+       23.85
+      ],
+      [
+       8.8,
+       23.85
+      ]
+     ],
+     "note": "unnamed on the drawing: hall from garage (2868 #4) to kitchen, laundry and pantry"
+    },
+    {
+     "name": "Coat Closet",
+     "prov": "M",
+     "points": [
+      [
+       12.46,
+       16.13
+      ],
+      [
+       14.813,
+       16.13
+      ],
+      [
+       14.813,
+       20.2
+      ],
+      [
+       12.46,
+       20.2
+      ]
+     ],
+     "note": "unnamed closet off the mud hall (2468)"
+    },
+    {
+     "name": "Breakfast",
+     "prov": "D",
+     "points": [
+      [
+       14.813,
+       0.146
+      ],
+      [
+       26.27,
+       0.146
+      ],
+      [
+       26.27,
+       8.5
+      ],
+      [
+       14.813,
+       8.5
+      ]
+     ]
+    },
+    {
+     "name": "Kitchen",
+     "prov": "M",
+     "points": [
+      [
+       14.813,
+       8.5
+      ],
+      [
+       26.27,
+       8.5
+      ],
+      [
+       26.27,
+       20.12
+      ],
+      [
+       26.27,
+       27.5
+      ],
+      [
+       14.813,
+       27.5
+      ],
+      [
+       14.813,
+       23.85
+      ],
+      [
+       14.813,
+       20.2
+      ],
+      [
+       14.813,
+       16.13
+      ],
+      [
+       14.813,
+       10.146
+      ]
+     ]
+    },
+    {
+     "name": "Great Room",
+     "prov": "D",
+     "points": [
+      [
+       26.27,
+       0.146
+      ],
+      [
+       42.521,
+       0.146
+      ],
+      [
+       42.521,
+       2.146
+      ],
+      [
+       44.521,
+       2.146
+      ],
+      [
+       44.521,
+       16.146
+      ],
+      [
+       42.4,
+       16.146
+      ],
+      [
+       42.4,
+       27.5
+      ],
+      [
+       35.8,
+       27.5
+      ],
+      [
+       35.8,
+       20.12
+      ],
+      [
+       26.27,
+       20.12
+      ],
+      [
+       26.27,
+       8.5
+      ]
+     ],
+     "note": "includes the 2'-0\" fireplace / media chase bump and the hall from the great room to the foyer"
+    },
+    {
+     "name": "Stairs",
+     "prov": "M",
+     "points": [
+      [
+       26.27,
+       20.12
+      ],
+      [
+       35.8,
+       20.12
+      ],
+      [
+       35.8,
+       27.5
+      ],
+      [
+       26.27,
+       27.5
+      ]
+     ]
+    },
+    {
+     "name": "Dining Room",
+     "prov": "D",
+     "points": [
+      [
+       42.4,
+       16.146
+      ],
+      [
+       44.521,
+       16.146
+      ],
+      [
+       55.854,
+       16.146
+      ],
+      [
+       55.854,
+       27.5
+      ],
+      [
+       50.55,
+       27.5
+      ],
+      [
+       47.3,
+       27.5
+      ],
+      [
+       42.4,
+       27.5
+      ]
+     ]
+    },
+    {
+     "name": "Foyer",
+     "prov": "M",
+     "points": [
+      [
+       34.146,
+       27.5
+      ],
+      [
+       35.8,
+       27.5
+      ],
+      [
+       42.4,
+       27.5
+      ],
+      [
+       47.3,
+       27.5
+      ],
+      [
+       50.55,
+       27.5
+      ],
+      [
+       50.55,
+       31.3
+      ],
+      [
+       43.35,
+       31.3
+      ],
+      [
+       43.35,
+       33.85
+      ],
+      [
+       42.15,
+       33.85
+      ],
+      [
+       42.15,
+       39.85
+      ],
+      [
+       34.146,
+       39.85
+      ]
+     ],
+     "note": "2-story foyer incl. the hall to powder, coat closet and den"
+    },
+    {
+     "name": "Coat Closet (Foyer)",
+     "prov": "M",
+     "points": [
+      [
+       43.35,
+       31.3
+      ],
+      [
+       50.55,
+       31.3
+      ],
+      [
+       50.55,
+       33.85
+      ],
+      [
+       43.35,
+       33.85
+      ]
+     ]
+    },
+    {
+     "name": "Powder",
+     "prov": "M",
+     "points": [
+      [
+       50.55,
+       27.5
+      ],
+      [
+       55.854,
+       27.5
+      ],
+      [
+       55.854,
+       33.85
+      ],
+      [
+       50.55,
+       33.85
+      ]
+     ]
+    },
+    {
+     "name": "Den / Flex",
+     "prov": "D",
+     "points": [
+      [
+       42.15,
+       33.85
+      ],
+      [
+       55.854,
+       33.85
+      ],
+      [
+       55.854,
+       45.854
+      ],
+      [
+       42.15,
+       45.854
+      ]
+     ]
+    }
+   ],
+   "walls": [
+    {
+     "from": [
+      42.521,
+      7.0
+     ],
+     "to": [
+      42.521,
+      15.2
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "media / TV niche wall inside the chase"
+    }
+   ],
+   "doors": [
+    {
+     "at": [
+      36.8,
+      39.85
+     ],
+     "w": 3,
+     "h": 6.666666666666667,
+     "label": "3068 front door (#34 porch)",
+     "prov": "M"
+    },
+    {
+     "at": [
+      42.15,
+      36.3
+     ],
+     "w": 4,
+     "h": 6.666666666666667,
+     "label": "2-2068 den french doors",
+     "prov": "M"
+    },
+    {
+     "at": [
+      45.2,
+      31.3
+     ],
+     "w": 3.3,
+     "h": 6.666666666666667,
+     "label": "2-2068 bifold pair (angled)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      48.7,
+      31.3
+     ],
+     "w": 3.3,
+     "h": 6.666666666666667,
+     "label": "2-2068 bifold pair (angled)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      50.55,
+      29.4
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 powder",
+     "prov": "M"
+    },
+    {
+     "at": [
+      12.33,
+      23.85
+     ],
+     "w": 2.6666666666666665,
+     "h": 6.666666666666667,
+     "label": "2868 #4 self-closing rated door, garage",
+     "prov": "M"
+    },
+    {
+     "at": [
+      14.813,
+      22.0
+     ],
+     "w": 3.0,
+     "h": 6.666666666666667,
+     "label": "cased opening mud hall | kitchen",
+     "prov": "E"
+    },
+    {
+     "at": [
+      10.2,
+      16.13
+     ],
+     "w": 2.6666666666666665,
+     "h": 6.666666666666667,
+     "label": "2868 PKT laundry",
+     "prov": "M"
+    },
+    {
+     "at": [
+      8.8,
+      20.4
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 PKT pantry",
+     "prov": "E"
+    },
+    {
+     "at": [
+      12.46,
+      17.6
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 closet (drawn at 45 deg)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      14.813,
+      5.0
+     ],
+     "w": 6,
+     "h": 6.666666666666667,
+     "label": "6080 SGD to covered deck",
+     "prov": "M"
+    },
+    {
+     "at": [
+      9.333,
+      45.854
+     ],
+     "w": 8,
+     "h": 8,
+     "label": "8080 O.G.D.",
+     "prov": "D"
+    },
+    {
+     "at": [
+      24.833,
+      47.854
+     ],
+     "w": 16,
+     "h": 8,
+     "label": "16080 O.G.D.",
+     "prov": "D"
+    }
+   ],
+   "windows": [
+    {
+     "at": [
+      18.208,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      21.917,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      29.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      18.208,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      21.917,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      29.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      47.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "2650 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      50.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "2650 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      53.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 5,
+     "head": 8.072916666666666,
+     "label": "2650 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      47.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "2620 TRANS",
+     "prov": "D"
+    },
+    {
+     "at": [
+      50.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "2620 TRANS",
+     "prov": "D"
+    },
+    {
+     "at": [
+      53.333,
+      16.146
+     ],
+     "w": 2.5,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "2620 TRANS",
+     "prov": "D"
+    },
+    {
+     "at": [
+      55.854,
+      19.333
+     ],
+     "w": 2,
+     "h": 2,
+     "head": 8.072916666666666,
+     "label": "2020 FX",
+     "prov": "D"
+    },
+    {
+     "at": [
+      55.854,
+      21.833
+     ],
+     "w": 2,
+     "h": 2,
+     "head": 8.072916666666666,
+     "label": "2020 FX",
+     "prov": "D"
+    },
+    {
+     "at": [
+      55.854,
+      24.333
+     ],
+     "w": 2,
+     "h": 2,
+     "head": 8.072916666666666,
+     "label": "2020 FX",
+     "prov": "D"
+    },
+    {
+     "at": [
+      55.854,
+      29.875
+     ],
+     "w": 2,
+     "h": 2,
+     "head": 8.072916666666666,
+     "label": "2020 FX powder",
+     "prov": "D"
+    },
+    {
+     "at": [
+      55.854,
+      36.42
+     ],
+     "w": 3,
+     "h": 6,
+     "head": 8.072916666666666,
+     "label": "3060 SH den",
+     "prov": "D"
+    },
+    {
+     "at": [
+      45.75,
+      45.854
+     ],
+     "w": 2,
+     "h": 6,
+     "head": 8.072916666666666,
+     "label": "2060 SH den",
+     "prov": "D"
+    },
+    {
+     "at": [
+      49.0,
+      45.854
+     ],
+     "w": 3.5,
+     "h": 6,
+     "head": 8.072916666666666,
+     "label": "3660 SH den",
+     "prov": "D"
+    },
+    {
+     "at": [
+      52.25,
+      45.854
+     ],
+     "w": 2,
+     "h": 6,
+     "head": 8.072916666666666,
+     "label": "2060 SH den",
+     "prov": "D"
+    },
+    {
+     "at": [
+      4.146,
+      14.458
+     ],
+     "w": 2.5,
+     "h": 3.5,
+     "head": 8.072916666666666,
+     "label": "2636 SH laundry",
+     "prov": "D"
+    },
+    {
+     "at": [
+      4.146,
+      14.458
+     ],
+     "w": 2.5,
+     "h": 1.75,
+     "sill": 8.402916666666666,
+     "label": "2620 TRANS laundry",
+     "prov": "D"
+    },
+    {
+     "at": [
+      39.0,
+      39.85
+     ],
+     "w": 1.1666666666666667,
+     "h": 6.666666666666667,
+     "sill": 0.0,
+     "label": "1268 sidelight",
+     "prov": "M"
+    },
+    {
+     "at": [
+      37.55,
+      39.85
+     ],
+     "w": 4.5,
+     "h": 1.5,
+     "sill": 6.916666666666667,
+     "label": "4616 TRANS over front door",
+     "prov": "M"
+    }
+   ],
+   "furniture": [
+    {
+     "type": "stairs_u",
+     "x": 31.034999999999997,
+     "z": 23.759999999999998,
+     "w": 7.279999999999998,
+     "d": 9.529999999999998,
+     "rot": 270,
+     "label": "UP 18R: 8 treads, landing, 7 treads (A6); NeonPlan draws the flights mirrored",
+     "prov": "M"
+    },
+    {
+     "type": "fridge",
+     "x": 18.5,
+     "z": 26.3,
+     "w": 3.0,
+     "d": 2.4,
+     "rot": 180,
+     "label": "REF.",
+     "prov": "M"
+    },
+    {
+     "type": "kitchen_tall",
+     "x": 16.2,
+     "z": 26.2,
+     "w": 2.4,
+     "d": 2.3,
+     "rot": 180,
+     "label": "double oven",
+     "prov": "M"
+    },
+    {
+     "type": "kitchen",
+     "x": 21.8,
+     "z": 26.3,
+     "w": 4.4,
+     "d": 2.0,
+     "rot": 180,
+     "label": "base cabinets",
+     "prov": "M"
+    },
+    {
+     "type": "kitchen",
+     "x": 15.85,
+     "z": 15.1,
+     "w": 9.6,
+     "d": 2.0,
+     "rot": 270,
+     "label": "base cabinets (220V range position at ~12.8)",
+     "prov": "M"
+    },
+    {
+     "type": "kitchen",
+     "x": 25.1,
+     "z": 23.5,
+     "w": 6.9,
+     "d": 2.0,
+     "rot": 90,
+     "label": "base cabinets under 24\" soffit",
+     "prov": "M"
+    },
+    {
+     "type": "island",
+     "x": 22.5,
+     "z": 10.65,
+     "w": 5.2,
+     "d": 3.3,
+     "rot": 0,
+     "label": "island with D.W. and angled sink",
+     "prov": "M"
+    },
+    {
+     "type": "island",
+     "x": 24.25,
+     "z": 14.35,
+     "w": 4.1,
+     "d": 1.7,
+     "rot": 90,
+     "label": "island return / raised bar 34 1/2\"",
+     "prov": "M"
+    },
+    {
+     "type": "dryer",
+     "x": 13.45,
+     "z": 11.55,
+     "w": 2.2,
+     "d": 2.2,
+     "rot": 90,
+     "label": "#24 +36 220V",
+     "prov": "M"
+    },
+    {
+     "type": "washer",
+     "x": 13.45,
+     "z": 14.3,
+     "w": 2.2,
+     "d": 2.2,
+     "rot": 90,
+     "label": "#2 washer box",
+     "prov": "M"
+    }
+   ],
+   "outdoor": [
+    {
+     "type": "terrace",
+     "name": "Covered Deck",
+     "points": [
+      [
+       4.0,
+       0.0
+      ],
+      [
+       14.667,
+       0.0
+      ],
+      [
+       14.667,
+       10.0
+      ],
+      [
+       4.0,
+       10.0
+      ]
+     ],
+     "prov": "D"
+    },
+    {
+     "type": "terrace",
+     "name": "Uncovered Deck",
+     "points": [
+      [
+       4.0,
+       -7.0
+      ],
+      [
+       14.667,
+       -7.0
+      ],
+      [
+       14.667,
+       0.0
+      ],
+      [
+       4.0,
+       0.0
+      ]
+     ],
+     "prov": "D"
+    },
+    {
+     "type": "terrace",
+     "name": "Porch",
+     "points": [
+      [
+       34.146,
+       39.85
+      ],
+      [
+       42.15,
+       39.85
+      ],
+      [
+       42.15,
+       45.854
+      ],
+      [
+       34.146,
+       45.854
+      ]
+     ],
+     "prov": "M"
+    }
+   ],
+   "open_edges": [
+    {
+     "a": [
+      26.27,
+      0.146
+     ],
+     "b": [
+      26.27,
+      8.5
+     ],
+     "h": 0,
+     "why": "breakfast | great room open (1'-0\" pier only)"
+    },
+    {
+     "a": [
+      14.813,
+      8.5
+     ],
+     "b": [
+      26.27,
+      8.5
+     ],
+     "h": 0,
+     "why": "breakfast | kitchen open"
+    },
+    {
+     "a": [
+      26.27,
+      8.5
+     ],
+     "b": [
+      26.27,
+      20.12
+     ],
+     "h": 0,
+     "why": "kitchen | great room open"
+    },
+    {
+     "a": [
+      42.4,
+      16.146
+     ],
+     "b": [
+      42.4,
+      27.5
+     ],
+     "h": 0,
+     "why": "dining flat arch #34"
+    },
+    {
+     "a": [
+      35.8,
+      27.5
+     ],
+     "b": [
+      42.4,
+      27.5
+     ],
+     "h": 0,
+     "why": "great-room hall | foyer, columns + flat arch"
+    },
+    {
+     "a": [
+      42.4,
+      27.5
+     ],
+     "b": [
+      47.3,
+      27.5
+     ],
+     "h": 0.914,
+     "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"
+    },
+    {
+     "a": [
+      26.27,
+      20.12
+     ],
+     "b": [
+      35.8,
+      20.12
+     ],
+     "h": 0.914,
+     "why": "#10 handrail at stair"
+    },
+    {
+     "a": [
+      35.8,
+      20.12
+     ],
+     "b": [
+      35.8,
+      27.5
+     ],
+     "h": 0.914,
+     "why": "stair end rail"
+    }
+   ]
+  },
+  {
+   "name": "Upper Floor",
+   "elev_ft": 11.145833333333334,
+   "height_ft": 8.09375,
+   "sheet": "A3",
+   "rooms": [
+    {
+     "name": "Master Bedroom",
+     "prov": "D",
+     "points": [
+      [
+       26.27,
+       0.146
+      ],
+      [
+       42.521,
+       0.146
+      ],
+      [
+       42.521,
+       16.146
+      ],
+      [
+       26.27,
+       16.146
+      ]
+     ],
+     "note": "vaulted ceiling (not modelled)"
+    },
+    {
+     "name": "Master WIC",
+     "prov": "D",
+     "points": [
+      [
+       14.813,
+       5.146
+      ],
+      [
+       26.27,
+       5.146
+      ],
+      [
+       26.27,
+       12.25
+      ],
+      [
+       20.146,
+       12.25
+      ],
+      [
+       20.146,
+       10.146
+      ],
+      [
+       14.813,
+       10.146
+      ]
+     ]
+    },
+    {
+     "name": "Master Bath",
+     "prov": "M",
+     "points": [
+      [
+       4.146,
+       10.146
+      ],
+      [
+       14.813,
+       10.146
+      ],
+      [
+       20.146,
+       10.146
+      ],
+      [
+       20.146,
+       12.25
+      ],
+      [
+       26.27,
+       12.25
+      ],
+      [
+       26.27,
+       16.146
+      ],
+      [
+       20.146,
+       16.146
+      ],
+      [
+       12.6,
+       16.146
+      ],
+      [
+       12.6,
+       20.4
+      ],
+      [
+       11.25,
+       20.4
+      ],
+      [
+       11.25,
+       23.854
+      ],
+      [
+       4.146,
+       23.854
+      ]
+     ]
+    },
+    {
+     "name": "Master Linen",
+     "prov": "M",
+     "points": [
+      [
+       11.25,
+       20.4
+      ],
+      [
+       12.6,
+       20.4
+      ],
+      [
+       12.6,
+       23.854
+      ],
+      [
+       11.25,
+       23.854
+      ]
+     ]
+    },
+    {
+     "name": "Master WIC 2",
+     "prov": "M",
+     "points": [
+      [
+       12.6,
+       16.146
+      ],
+      [
+       20.146,
+       16.146
+      ],
+      [
+       20.146,
+       23.854
+      ],
+      [
+       12.6,
+       23.854
+      ]
+     ],
+     "note": "second 'WIC' on the drawing"
+    },
+    {
+     "name": "Master WC",
+     "prov": "M",
+     "points": [
+      [
+       20.146,
+       16.146
+      ],
+      [
+       26.27,
+       16.146
+      ],
+      [
+       26.27,
+       19.3
+      ],
+      [
+       20.146,
+       19.3
+      ]
+     ],
+     "note": "unnamed toilet room of the master bath"
+    },
+    {
+     "name": "Bath 3",
+     "prov": "M",
+     "points": [
+      [
+       20.146,
+       19.3
+      ],
+      [
+       26.27,
+       19.3
+      ],
+      [
+       26.27,
+       27.5
+      ],
+      [
+       20.146,
+       27.5
+      ]
+     ],
+     "note": "plan label 'Bath 2' corrected by hand to 'Bath 3' (A6 stair section: 'Bath 3')"
+    },
+    {
+     "name": "Bedroom 2 Dressing",
+     "prov": "D",
+     "points": [
+      [
+       14.813,
+       23.854
+      ],
+      [
+       20.146,
+       23.854
+      ],
+      [
+       20.146,
+       31.35
+      ],
+      [
+       14.813,
+       31.35
+      ]
+     ],
+     "note": "unnamed room between bath 3 and bedroom 2"
+    },
+    {
+     "name": "Bedroom 2",
+     "prov": "D",
+     "points": [
+      [
+       20.146,
+       27.5
+      ],
+      [
+       26.27,
+       27.5
+      ],
+      [
+       31.9,
+       27.5
+      ],
+      [
+       31.9,
+       35.0
+      ],
+      [
+       31.9,
+       39.854
+      ],
+      [
+       31.604,
+       39.854
+      ],
+      [
+       31.604,
+       42.604
+      ],
+      [
+       23.396,
+       42.604
+      ],
+      [
+       23.396,
+       39.854
+      ],
+      [
+       20.146,
+       39.854
+      ],
+      [
+       20.146,
+       31.35
+      ]
+     ],
+     "note": "with the window-seat bay"
+    },
+    {
+     "name": "Hall Closet",
+     "prov": "M",
+     "points": [
+      [
+       31.9,
+       35.0
+      ],
+      [
+       34.6,
+       35.0
+      ],
+      [
+       34.6,
+       39.854
+      ],
+      [
+       31.9,
+       39.854
+      ]
+     ]
+    },
+    {
+     "name": "Stairs",
+     "prov": "M",
+     "points": [
+      [
+       26.27,
+       20.12
+      ],
+      [
+       35.8,
+       20.12
+      ],
+      [
+       35.8,
+       27.5
+      ],
+      [
+       26.27,
+       27.5
+      ]
+     ]
+    },
+    {
+     "name": "Upper Hall",
+     "prov": "M",
+     "points": [
+      [
+       26.27,
+       16.146
+      ],
+      [
+       41.65,
+       16.146
+      ],
+      [
+       41.65,
+       24.0
+      ],
+      [
+       41.65,
+       27.5
+      ],
+      [
+       45.11,
+       27.5
+      ],
+      [
+       45.11,
+       33.9
+      ],
+      [
+       41.65,
+       33.9
+      ],
+      [
+       36.3,
+       33.9
+      ],
+      [
+       36.3,
+       39.854
+      ],
+      [
+       34.6,
+       39.854
+      ],
+      [
+       34.6,
+       35.0
+      ],
+      [
+       31.9,
+       35.0
+      ],
+      [
+       31.9,
+       27.5
+      ],
+      [
+       35.8,
+       27.5
+      ],
+      [
+       35.8,
+       20.12
+      ],
+      [
+       26.27,
+       20.12
+      ]
+     ],
+     "note": "landing + hall; the open-to-foyer void (X 36.3-41.65, Z 33.9-39.85) is left out of the floor"
+    },
+    {
+     "name": "Bedroom 3",
+     "prov": "D",
+     "points": [
+      [
+       44.8,
+       16.146
+      ],
+      [
+       55.854,
+       16.146
+      ],
+      [
+       55.854,
+       27.5
+      ],
+      [
+       45.11,
+       27.5
+      ],
+      [
+       41.65,
+       27.5
+      ],
+      [
+       41.65,
+       24.0
+      ],
+      [
+       44.8,
+       24.0
+      ]
+     ]
+    },
+    {
+     "name": "Bedroom 3 Closet",
+     "prov": "M",
+     "points": [
+      [
+       41.65,
+       16.146
+      ],
+      [
+       44.8,
+       16.146
+      ],
+      [
+       44.8,
+       24.0
+      ],
+      [
+       41.65,
+       24.0
+      ]
+     ]
+    },
+    {
+     "name": "Bath 2",
+     "prov": "M",
+     "points": [
+      [
+       45.11,
+       27.5
+      ],
+      [
+       55.854,
+       27.5
+      ],
+      [
+       55.854,
+       33.9
+      ],
+      [
+       45.11,
+       33.9
+      ]
+     ]
+    },
+    {
+     "name": "Bedroom 4",
+     "prov": "D",
+     "points": [
+      [
+       41.65,
+       33.9
+      ],
+      [
+       45.11,
+       33.9
+      ],
+      [
+       55.854,
+       33.9
+      ],
+      [
+       55.854,
+       45.854
+      ],
+      [
+       44.8,
+       45.854
+      ],
+      [
+       44.8,
+       37.2
+      ],
+      [
+       41.65,
+       37.2
+      ]
+     ]
+    },
+    {
+     "name": "Bedroom 4 Closet",
+     "prov": "M",
+     "points": [
+      [
+       41.65,
+       37.2
+      ],
+      [
+       44.8,
+       37.2
+      ],
+      [
+       44.8,
+       45.854
+      ],
+      [
+       41.65,
+       45.854
+      ]
+     ]
+    }
+   ],
+   "walls": [
+    {
+     "from": [
+      36.3,
+      39.854
+     ],
+     "to": [
+      41.65,
+      39.854
+     ],
+     "thickness_ft": 0.45,
+     "prov": "D",
+     "note": "front wall of the 2-story foyer"
+    },
+    {
+     "from": [
+      50.35,
+      27.5
+     ],
+     "to": [
+      50.35,
+      33.9
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "bath 2 vanity | WC-tub partition"
+    },
+    {
+     "from": [
+      32.5,
+      30.9
+     ],
+     "to": [
+      34.6,
+      30.9
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "linen closet in the hall (1668)"
+    },
+    {
+     "from": [
+      32.5,
+      30.9
+     ],
+     "to": [
+      32.5,
+      33.6
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "linen closet"
+    },
+    {
+     "from": [
+      32.5,
+      33.6
+     ],
+     "to": [
+      34.6,
+      33.6
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "linen closet"
+    },
+    {
+     "from": [
+      34.6,
+      30.9
+     ],
+     "to": [
+      34.6,
+      33.6
+     ],
+     "thickness_ft": 0.29,
+     "prov": "M",
+     "note": "linen closet"
+    }
+   ],
+   "doors": [
+    {
+     "at": [
+      31.9,
+      29.3
+     ],
+     "w": 2.5,
+     "h": 6.666666666666667,
+     "label": "2668 bedroom 2",
+     "prov": "E"
+    },
+    {
+     "at": [
+      20.146,
+      29.9
+     ],
+     "w": 2.5,
+     "h": 6.666666666666667,
+     "label": "2668 dressing | bedroom 2",
+     "prov": "M"
+    },
+    {
+     "at": [
+      20.146,
+      26.0
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 bath 3",
+     "prov": "M"
+    },
+    {
+     "at": [
+      33.2,
+      35.0
+     ],
+     "w": 2.375,
+     "h": 6.666666666666667,
+     "label": "hall closet 2'-4 1/2\" opening",
+     "prov": "D"
+    },
+    {
+     "at": [
+      31.1,
+      16.146
+     ],
+     "w": 5.0,
+     "h": 7.333333333333333,
+     "label": "ARCH OPNG to master (spring 7'-4\")",
+     "prov": "E"
+    },
+    {
+     "at": [
+      26.27,
+      14.4
+     ],
+     "w": 2.7916666666666665,
+     "h": 6.666666666666667,
+     "label": "master bedroom | bath opening 2'-9 1/2\"",
+     "prov": "D"
+    },
+    {
+     "at": [
+      20.146,
+      11.198
+     ],
+     "w": 1.9,
+     "h": 6.666666666666667,
+     "label": "2468 master WIC (the wall stub is only 2'-1 long, opening narrowed)",
+     "prov": "M"
+    },
+    {
+     "at": [
+      21.45,
+      16.146
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 master WC (drawn at 45 deg)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      14.2,
+      16.146
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 WIC 2 (drawn at 45 deg)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      41.65,
+      25.95
+     ],
+     "w": 2.5,
+     "h": 6.666666666666667,
+     "label": "2668 bedroom 3",
+     "prov": "M"
+    },
+    {
+     "at": [
+      44.8,
+      20.0
+     ],
+     "w": 6,
+     "h": 6.666666666666667,
+     "label": "6068 BP",
+     "prov": "M"
+    },
+    {
+     "at": [
+      48.6,
+      27.5
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "bath 2 from bedroom 3",
+     "prov": "E"
+    },
+    {
+     "at": [
+      48.3,
+      33.9
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 bath 2 from bedroom 4 (45 deg)",
+     "prov": "E"
+    },
+    {
+     "at": [
+      50.35,
+      29.4
+     ],
+     "w": 2.3333333333333335,
+     "h": 6.666666666666667,
+     "label": "2468 bath 2 WC/tub",
+     "prov": "M"
+    },
+    {
+     "at": [
+      41.65,
+      35.5
+     ],
+     "w": 2.5,
+     "h": 6.666666666666667,
+     "label": "2668 bedroom 4",
+     "prov": "M"
+    },
+    {
+     "at": [
+      44.8,
+      41.5
+     ],
+     "w": 6,
+     "h": 6.666666666666667,
+     "label": "6068 BP",
+     "prov": "M"
+    }
+   ],
+   "windows": [
+    {
+     "at": [
+      29.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      6.708,
+      10.146
+     ],
+     "w": 4,
+     "h": 4,
+     "head": 7.072916666666667,
+     "label": "4040 SL (TEMP)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      4.146,
+      14.5
+     ],
+     "w": 6,
+     "h": 4,
+     "head": 7.072916666666667,
+     "label": "6040 FX (TEMP)",
+     "prov": "D"
+    },
+    {
+     "at": [
+      50.0,
+      16.146
+     ],
+     "w": 6,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "6050 SL #8",
+     "prov": "D"
+    },
+    {
+     "at": [
+      49.0,
+      45.854
+     ],
+     "w": 3.5,
+     "h": 5.5,
+     "head": 7.072916666666667,
+     "label": "3656 ARCHTOP",
+     "prov": "D"
+    },
+    {
+     "at": [
+      25.75,
+      42.604
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH",
+     "prov": "D"
+    },
+    {
+     "at": [
+      29.25,
+      42.604
+     ],
+     "w": 3,
+     "h": 5,
+     "head": 7.072916666666667,
+     "label": "3050 SH #8",
+     "prov": "D"
+    },
+    {
+     "at": [
+      38.3,
+      39.854
+     ],
+     "w": 2,
+     "h": 2,
+     "head": 7.072916666666667,
+     "label": "2020 FX (foyer, upper level)",
+     "prov": "M"
+    }
+   ],
+   "furniture": [
+    {
+     "type": "bathtub",
+     "x": 6.6,
+     "z": 14.6,
+     "w": 6.0,
+     "d": 3.5,
+     "rot": 270,
+     "label": "42\"x72\" tub",
+     "prov": "M"
+    },
+    {
+     "type": "shower",
+     "x": 6.95,
+     "z": 21.0,
+     "w": 5.0,
+     "d": 2.83,
+     "rot": 270,
+     "label": "34\"x60\" shower w/ seat",
+     "prov": "M"
+    },
+    {
+     "type": "washbasin",
+     "x": 8.6,
+     "z": 11.0,
+     "w": 1.8,
+     "d": 1.6,
+     "rot": 0,
+     "label": "master vanity sink",
+     "prov": "M"
+    },
+    {
+     "type": "washbasin",
+     "x": 15.3,
+     "z": 11.0,
+     "w": 1.8,
+     "d": 1.6,
+     "rot": 0,
+     "label": "master vanity sink",
+     "prov": "M"
+    },
+    {
+     "type": "wc",
+     "x": 24.7,
+     "z": 17.5,
+     "w": 1.4,
+     "d": 2.4,
+     "rot": 90,
+     "label": "master WC",
+     "prov": "M"
+    },
+    {
+     "type": "bathtub",
+     "x": 22.6,
+     "z": 20.6,
+     "w": 5.0,
+     "d": 2.7,
+     "rot": 0,
+     "label": "bath 3 tub",
+     "prov": "M"
+    },
+    {
+     "type": "wc",
+     "x": 24.8,
+     "z": 23.0,
+     "w": 1.4,
+     "d": 2.4,
+     "rot": 90,
+     "label": "bath 3 WC",
+     "prov": "M"
+    },
+    {
+     "type": "washbasin",
+     "x": 25.0,
+     "z": 26.0,
+     "w": 2.0,
+     "d": 1.8,
+     "rot": 90,
+     "label": "bath 3 lav",
+     "prov": "M"
+    },
+    {
+     "type": "washbasin",
+     "x": 46.0,
+     "z": 29.2,
+     "w": 1.8,
+     "d": 1.8,
+     "rot": 270,
+     "label": "bath 2 sink",
+     "prov": "M"
+    },
+    {
+     "type": "washbasin",
+     "x": 46.0,
+     "z": 31.6,
+     "w": 1.8,
+     "d": 1.8,
+     "rot": 270,
+     "label": "bath 2 sink",
+     "prov": "M"
+    },
+    {
+     "type": "wc",
+     "x": 51.8,
+     "z": 29.4,
+     "w": 1.4,
+     "d": 2.4,
+     "rot": 0,
+     "label": "bath 2 WC",
+     "prov": "M"
+    },
+    {
+     "type": "bathtub",
+     "x": 54.5,
+     "z": 31.0,
+     "w": 5.0,
+     "d": 2.6,
+     "rot": 90,
+     "label": "bath 2 tub/shower",
+     "prov": "M"
+    }
+   ],
+   "outdoor": [],
+   "open_edges": [
+    {
+     "a": [
+      26.27,
+      20.12
+     ],
+     "b": [
+      35.8,
+      20.12
+     ],
+     "h": 0.914,
+     "why": "36\" AFF wall at stair (A6)"
+    },
+    {
+     "a": [
+      35.8,
+      20.12
+     ],
+     "b": [
+      35.8,
+      27.5
+     ],
+     "h": 0.914,
+     "why": "stair rail"
+    },
+    {
+     "a": [
+      41.65,
+      33.9
+     ],
+     "b": [
+      36.3,
+      33.9
+     ],
+     "h": 0.914,
+     "why": "rail, open to foyer below"
+    },
+    {
+     "a": [
+      36.3,
+      33.9
+     ],
+     "b": [
+      36.3,
+      39.854
+     ],
+     "h": 0.914,
+     "why": "rail, open to foyer below"
+    }
+   ]
+  }
+ ]
+}
