@@ -413,20 +413,25 @@
    "prov": "O",
    "note": "office closet wall toward the bathroom (closet 'enclose for closet', 4'-3\" zone)"
   },
-  "B_Z_MECH_CUT": {
-   "value": 24.75,
-   "prov": "O",
-   "note": "mechanical: start of the 45 deg corner wall with the 36\" door (markup)"
-  },
-  "B_X_MECH_CUT": {
-   "value": 37.25,
-   "prov": "O",
-   "note": "mechanical: end of the 45 deg corner wall on the foundation"
-  },
-  "B_Z_STAIR_MID": {
+  "B_Z_STAIR_BOT": {
    "value": 23.8,
    "prov": "O",
-   "note": "stair hall: stair entrance from here down (3'-4\" strip on the sketch)"
+   "note": "basement stair: its wall toward the mechanical room (owner's edited plan)"
+  },
+  "B_X_STAIR_END": {
+   "value": 39.9,
+   "prov": "O",
+   "note": "basement stair: its end at the hall, open (owner's edited plan)"
+  },
+  "B_Z_HALL_R": {
+   "value": 20.4,
+   "prov": "O",
+   "note": "hall: end of its straight wall to the mechanical room (owner's edited plan)"
+  },
+  "B_X_HALL_BOT": {
+   "value": 40.8,
+   "prov": "O",
+   "note": "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)"
   },
   "B_X_BAFFLE": {
    "value": 42.332,
@@ -481,10 +486,6 @@
       ],
       [
        39.9,
-       16.2
-      ],
-      [
-       35.8,
        20.12
       ],
       [
@@ -508,7 +509,7 @@
        10.144
       ]
      ],
-     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip along the bar side not modelled)"
+     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip not modelled)"
     },
     {
      "name": "Office",
@@ -591,6 +592,10 @@
       ],
       [
        25.2,
+       23.8
+      ],
+      [
+       25.2,
        27.4
       ],
       [
@@ -610,70 +615,58 @@
     },
     {
      "name": "Stairs",
-     "prov": "M",
-     "points": [
-      [
-       25.2,
-       20.12
-      ],
-      [
-       35.8,
-       20.12
-      ],
-      [
-       35.8,
-       23.8
-      ],
-      [
-       35.8,
-       27.4
-      ],
-      [
-       25.2,
-       27.4
-      ]
-     ],
-     "note": "flights as on A1/A2 (x 26.27-35.80); the 1 ft at the foot, to the bathroom wall, is part of the stair"
-    },
-    {
-     "name": "Stair Hall",
      "prov": "O",
      "points": [
       [
-       35.8,
+       25.2,
        20.12
       ],
       [
        39.9,
-       16.2
+       20.12
       ],
       [
        39.9,
-       24.75
+       23.8
       ],
       [
-       37.25,
-       27.4
-      ],
-      [
-       35.8,
-       27.4
-      ],
-      [
-       35.8,
+       25.2,
        23.8
       ]
      ],
-     "note": "owner markup: angled walls with 36\" doors to the theater and to the mechanical room"
+     "note": "owner's edited plan: one straight flight, open to the hall at its end"
     },
     {
-     "name": "Mechanical Room",
-     "prov": "M",
+     "name": "Hall",
+     "prov": "O",
      "points": [
       [
        39.9,
+       20.12
+      ],
+      [
+       44.52,
        16.2
       ],
+      [
+       44.52,
+       20.4
+      ],
+      [
+       40.8,
+       23.8
+      ],
+      [
+       39.9,
+       23.8
+      ]
+     ],
+     "note": "owner's edited plan: angled walls with 36\" doors to the theater and to the mechanical room"
+    },
+    {
+     "name": "Mechanical Room",
+     "prov": "O",
+     "points": [
       [
        44.52,
        16.2
@@ -687,15 +680,31 @@
        27.4
       ],
       [
-       37.25,
+       34.5,
        27.4
       ],
       [
+       25.2,
+       27.4
+      ],
+      [
+       25.2,
+       23.8
+      ],
+      [
        39.9,
-       24.75
+       23.8
+      ],
+      [
+       40.8,
+       23.8
+      ],
+      [
+       44.52,
+       20.4
       ]
      ],
-     "note": "2 water heaters, furnace, sump; entered through the angled door from the stair hall (owner markup)"
+     "note": "2 water heaters, furnace, sump; runs under the stair to the bathroom (owner's edited plan); entered from the hall"
     },
     {
      "name": "Crawlspace",
@@ -703,18 +712,6 @@
      "points": [
       [
        34.5,
-       27.4
-      ],
-      [
-       35.8,
-       27.4
-      ],
-      [
-       37.25,
-       27.4
-      ],
-      [
-       39.9,
        27.4
       ],
       [
@@ -813,22 +810,22 @@
     },
     {
      "at": [
-      37.849999999999994,
+      42.21,
       18.16
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door on angle, theater to stair hall (owner markup)",
+     "label": "36\" door on angle, theater to hall",
      "prov": "O"
     },
     {
      "at": [
-      38.575,
-      26.075
+      42.66,
+      22.1
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "36\" door on angle, stair hall to mechanical (owner markup)",
+     "label": "36\" door on angle, hall to mechanical room",
      "prov": "O"
     }
    ],
@@ -891,23 +888,13 @@
    ],
    "furniture": [
     {
-     "type": "stairs_u",
-     "x": 31.034999999999997,
-     "z": 23.759999999999998,
-     "w": 7.279999999999998,
-     "d": 9.529999999999998,
+     "type": "stairs",
+     "x": 32.785,
+     "z": 21.96,
+     "w": 3.4799999999999995,
+     "d": 13.029999999999998,
      "rot": 270,
-     "label": "UP 16R to main floor",
-     "prov": "M"
-    },
-    {
-     "type": "kitchen",
-     "x": 27.35,
-     "z": 18.93,
-     "w": 8.9,
-     "d": 2.0,
-     "rot": 180,
-     "label": "wet bar (as-built sketch, +/- 1 ft)",
+     "label": "UP 16R to main floor: straight flight as on the owner's edited plan, bottom at the hall (direction assumed)",
      "prov": "O"
     },
     {
@@ -935,30 +922,18 @@
    "open_edges": [
     {
      "a": [
-      35.8,
-      23.8
+      39.9,
+      20.12
      ],
      "b": [
-      35.8,
-      27.4
+      39.9,
+      23.8
      ],
      "h": 0,
-     "why": "stair entrance from the stair hall (owner markup)"
+     "why": "stair open to the hall (owner's edited plan)"
     }
    ],
    "thick_edges": [
-    {
-     "a": [
-      39.9,
-      16.2
-     ],
-     "b": [
-      35.8,
-      20.12
-     ],
-     "t": 0.23,
-     "why": "thick sound reducing wall, theater | stair hall"
-    },
     {
      "a": [
       44.52,
@@ -966,10 +941,10 @@
      ],
      "b": [
       39.9,
-      16.2
+      20.12
      ],
      "t": 0.23,
-     "why": "thick sound reducing wall, theater | mechanical"
+     "why": "thick sound reducing wall, theater | hall"
     }
    ]
   },

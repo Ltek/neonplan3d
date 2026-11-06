@@ -109,9 +109,10 @@ B_X_OFFICE = c("B_X_OFFICE", 16.48, "O", "office 'new wall', 1'-2\" past the old
 B_X_BATH_TOP = c("B_X_BATH_TOP", 25.20, "O", "bathroom wall toward the stair: 9'-5\" clear (4'-10\" shower + 4'-3\" toilet zone) from the foundation jog")
 B_Z_BATH_L = c("B_Z_BATH_L", Z_STAIR_TOP, "O", "bathroom / closet wall toward the theater, in line with the stair (6'-11\" clear gives 19.96)")
 B_X_CLOS_TOP = c("B_X_CLOS_TOP", 20.00, "O", "office closet wall toward the bathroom (closet 'enclose for closet', 4'-3\" zone)")
-B_Z_MECH_CUT = c("B_Z_MECH_CUT", 24.75, "O", "mechanical: start of the 45 deg corner wall with the 36\" door (markup)")
-B_X_MECH_CUT = c("B_X_MECH_CUT", B_X_MECH - (B_Z_BOT - 24.75), "O", "mechanical: end of the 45 deg corner wall on the foundation")
-B_Z_STAIR_MID = c("B_Z_STAIR_MID", 23.80, "O", "stair hall: stair entrance from here down (3'-4\" strip on the sketch)")
+B_Z_STAIR_BOT = c("B_Z_STAIR_BOT", 23.80, "O", "basement stair: its wall toward the mechanical room (owner's edited plan)")
+B_X_STAIR_END = c("B_X_STAIR_END", B_X_MECH, "O", "basement stair: its end at the hall, open (owner's edited plan)")
+B_Z_HALL_R = c("B_Z_HALL_R", 20.40, "O", "hall: end of its straight wall to the mechanical room (owner's edited plan)")
+B_X_HALL_BOT = c("B_X_HALL_BOT", 40.80, "O", "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)")
 B_X_BAFFLE = c("B_X_BAFFLE", 15.145 + 27 + 0.1875, "O", "theater baffle wall: its face 27'-0\" from the walk-out wall")
 B_Z_BAFFLE_END = c("B_Z_BAFFLE_END", 13.30, "O", "baffle wall end / side wall with the slide-out equipment cabinet (sketch)")
 THICK_SOUND = 0.23  # m (9"): "thick sound reducing walls" - no thickness given, assumed
@@ -138,30 +139,30 @@ FLOORS = []
 B = {"name": "Basement", "elev_ft": -H_BASE, "height_ft": H_BASE, "sheet": "A1", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 B["rooms"] += [
     {"name": "Theater", "prov": "M", "ceiling_ft": 9.0,
-     "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_R2], [B_X_MECH, B_Z_R2],
-                [X_STAIR_R, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
-     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip along the bar side not modelled)"},
+     "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_R2],
+                [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
+     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip not modelled)"},
     {"name": "Office", "prov": "O", "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
      "note": "as-built 12'-10\" wide; CH 8'-1\" / 9'-0\" (not modelled)"},
     {"name": "Office Closet", "prov": "O", "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_L_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
      "note": "'enclose for closet' (3'-5\" on the sketch; here 3'-1\" so it ends on the garage foundation line as drawn)"},
     {"name": "Bathroom", "prov": "O", "ceiling_ft": 9.0,
-     "points": [[B_X_CLOS_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_CLOS_TOP, B_Z_L_BOT]],
+     "points": [[B_X_CLOS_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_STAIR_BOT], [B_X_BATH_TOP, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_CLOS_TOP, B_Z_L_BOT]],
      "note": "as built 9'-5\" x 6'-11\" (CH 9'-0\", 7'-11\" over the toilet); tub replaced by a curbless walk-around shower"},
-    {"name": "Stairs", "prov": "M", "points": [[B_X_BATH_TOP, Z_STAIR_TOP], [X_STAIR_R, Z_STAIR_TOP], [X_STAIR_R, B_Z_STAIR_MID], [X_STAIR_R, B_Z_BOT], [B_X_BATH_TOP, B_Z_BOT]],
-     "note": "flights as on A1/A2 (x 26.27-35.80); the 1 ft at the foot, to the bathroom wall, is part of the stair"},
-    {"name": "Stair Hall", "prov": "O", "points": [[X_STAIR_R, Z_STAIR_TOP], [B_X_MECH, B_Z_R2], [B_X_MECH, B_Z_MECH_CUT], [B_X_MECH_CUT, B_Z_BOT], [X_STAIR_R, B_Z_BOT], [X_STAIR_R, B_Z_STAIR_MID]],
-     "note": "owner markup: angled walls with 36\" doors to the theater and to the mechanical room"},
-    {"name": "Mechanical Room", "prov": "M", "points": [[B_X_MECH, B_Z_R2], [B_X_R2, B_Z_R2], [B_X_RR, B_Z_R2], [B_X_RR, B_Z_BOT], [B_X_MECH_CUT, B_Z_BOT], [B_X_MECH, B_Z_MECH_CUT]],
-     "note": "2 water heaters, furnace, sump; entered through the angled door from the stair hall (owner markup)"},
-    {"name": "Crawlspace", "prov": "M", "points": [[B_X_CRAWL_L, B_Z_BOT], [X_STAIR_R, B_Z_BOT], [B_X_MECH_CUT, B_Z_BOT], [B_X_MECH, B_Z_BOT], [B_X_RR, B_Z_BOT], [B_X_RR, Z_DEN_FRONT], [B_X_CRAWL_PORCH, Z_DEN_FRONT],
+    {"name": "Stairs", "prov": "O", "points": rect(B_X_BATH_TOP, Z_STAIR_TOP, B_X_STAIR_END, B_Z_STAIR_BOT),
+     "note": "owner's edited plan: one straight flight, open to the hall at its end"},
+    {"name": "Hall", "prov": "O", "points": [[B_X_STAIR_END, Z_STAIR_TOP], [B_X_R2, B_Z_R2], [B_X_R2, B_Z_HALL_R], [B_X_HALL_BOT, B_Z_STAIR_BOT], [B_X_STAIR_END, B_Z_STAIR_BOT]],
+     "note": "owner's edited plan: angled walls with 36\" doors to the theater and to the mechanical room"},
+    {"name": "Mechanical Room", "prov": "O", "points": [[B_X_R2, B_Z_R2], [B_X_RR, B_Z_R2], [B_X_RR, B_Z_BOT], [B_X_CRAWL_L, B_Z_BOT], [B_X_BATH_TOP, B_Z_BOT], [B_X_BATH_TOP, B_Z_STAIR_BOT],
+                                                       [B_X_STAIR_END, B_Z_STAIR_BOT], [B_X_HALL_BOT, B_Z_STAIR_BOT], [B_X_R2, B_Z_HALL_R]],
+     "note": "2 water heaters, furnace, sump; runs under the stair to the bathroom (owner's edited plan); entered from the hall"},
+    {"name": "Crawlspace", "prov": "M", "points": [[B_X_CRAWL_L, B_Z_BOT], [B_X_RR, B_Z_BOT], [B_X_RR, Z_DEN_FRONT], [B_X_CRAWL_PORCH, Z_DEN_FRONT],
                                                  [B_X_CRAWL_PORCH, B_Z_CRAWL_PORCH], [B_X_CRAWL_L, B_Z_CRAWL_PORCH]],
      "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"},
 ]
-B["open_edges"] = [{"a": [X_STAIR_R, B_Z_STAIR_MID], "b": [X_STAIR_R, B_Z_BOT], "h": 0, "why": "stair entrance from the stair hall (owner markup)"}]
+B["open_edges"] = [{"a": [B_X_STAIR_END, Z_STAIR_TOP], "b": [B_X_STAIR_END, B_Z_STAIR_BOT], "h": 0, "why": "stair open to the hall (owner's edited plan)"}]
 B["thick_edges"] = [
-    {"a": [B_X_MECH, B_Z_R2], "b": [X_STAIR_R, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | stair hall"},
-    {"a": [B_X_R2, B_Z_R2], "b": [B_X_MECH, B_Z_R2], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | mechanical"},
+    {"a": [B_X_R2, B_Z_R2], "b": [B_X_STAIR_END, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | hall"},
 ]
 B["walls"] += [
     {"from": [B_X_BAFFLE, B_Z_R1], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen (27'-0\" from the walk-out wall)"},
@@ -172,8 +173,8 @@ B["doors"] += [
     {"at": [B_X_OFFICE, 17.38], "w": 3.0, "h": DOOR_H, "label": "36\" door office (owner markup)", "prov": "O"},
     {"at": [B_X_WALK, (B_Z_BATH_L + B_Z_L_BOT) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door office closet", "prov": "O"},
     {"at": [21.60, B_Z_BATH_L], "w": 3.0, "h": DOOR_H, "label": "36\" door bathroom", "prov": "O"},
-    {"at": [(X_STAIR_R + B_X_MECH) / 2, (Z_STAIR_TOP + B_Z_R2) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, theater to stair hall (owner markup)", "prov": "O"},
-    {"at": [(B_X_MECH + B_X_MECH_CUT) / 2, (B_Z_MECH_CUT + B_Z_BOT) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, stair hall to mechanical (owner markup)", "prov": "O"},
+    {"at": [(B_X_STAIR_END + B_X_R2) / 2, (Z_STAIR_TOP + B_Z_R2) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, theater to hall", "prov": "O"},
+    {"at": [(B_X_R2 + B_X_HALL_BOT) / 2, (B_Z_HALL_R + B_Z_STAIR_BOT) / 2], "w": 3.0, "h": DOOR_H, "label": "36\" door on angle, hall to mechanical room", "prov": "O"},
 ]
 B["windows"] += [
     {"at": [20.667, B_Z_REAR], "w": 34 / 12, "h": 5, "head": HEAD_BASE, "label": "SH, as built 34\" x 60\"", "prov": "O"},
@@ -183,9 +184,8 @@ B["windows"] += [
     {"at": [48.0, B_Z_BOT], "w": 2 + 8 / 12, "h": 2.5, "sill": 5.5, "label": "2'-8\" HDR crawlspace access (30x30)", "prov": "E"},
 ]
 B["furniture"] += [
-    {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L,
-     "rot": 270, "label": "UP 16R to main floor", "prov": "M"},
-    {"type": "kitchen", "x": 27.35, "z": Z_STAIR_TOP - 0.19 - 1.0, "w": 8.9, "d": 2.0, "rot": 180, "label": "wet bar (as-built sketch, +/- 1 ft)", "prov": "O"},
+    {"type": "stairs", "x": (X_STAIR_L + 39.30) / 2, "z": (Z_STAIR_TOP + B_Z_STAIR_BOT) / 2, "w": B_Z_STAIR_BOT - Z_STAIR_TOP - 0.2, "d": 39.30 - X_STAIR_L,
+     "rot": 270, "label": "UP 16R to main floor: straight flight as on the owner's edited plan, bottom at the hall (direction assumed)", "prov": "O"},
     {"type": "shower", "x": (B_X_CLOS_TOP + 0.19 + B_X_BATH_TOP - 0.19) / 2, "z": (B_Z_L_BOT + B_Z_BOT - 0.33) / 2, "w": B_X_BATH_TOP - B_X_CLOS_TOP - 0.38, "d": B_Z_BOT - 0.33 - B_Z_L_BOT,
      "rot": 0, "label": "curbless walk-around shower, no door (4'-10\")", "prov": "O"},
     {"type": "wc", "x": B_X_STEP2 + 0.33 + 1.2, "z": 25.5, "w": 1.4, "d": 2.4, "rot": 270, "label": "toilet (moved, owner sketch)", "prov": "O"},

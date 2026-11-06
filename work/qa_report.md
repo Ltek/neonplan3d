@@ -13,7 +13,7 @@
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 37 rooms, 34 doors, 43 windows, 9 walls, 26 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 37 rooms, 34 doors, 43 windows, 9 walls, 25 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -104,16 +104,14 @@ Basement, from the owner's as-built sketch (written dimensions) and markup (the 
 | Change |
 |---|
 | Rooms named as the owner gave them: Theater (main room), Office (with its closet), Bathroom, Mechanical Room; plus Stairs, Stair Hall and the Crawlspace |
-| Mechanical room: no door in its long left wall. It is entered through a 36" door in a 45° wall across its bottom-left corner, from the Stair Hall |
-| Stair Hall between the stair and the mechanical room, closed off from the theater by a 45° wall with a 36" door; the stair is entered from it on the lower part of its right side. The walls between the theater and the stair hall / mechanical room are "thick sound reducing walls", modelled 0.23 m (9", thickness assumed) |
+| Stair, hall and mechanical room as on the owner's edited plan: the stair is one straight flight (x 26.3–39.3 ft, 3'-8" wide), open at its end to a small Hall. The Hall has a 36" door on an angled wall to the theater and another to the Mechanical Room. The mechanical room wraps round under the stair to the bathroom. The angled wall to the theater is a "thick sound reducing wall", modelled 0.23 m (9", thickness assumed). Which end of the flight is the bottom is assumed (the hall end) |
 | Office: the old wall on the walk-out wall line is removed; the new wall is 1'-2" further into the theater, with a 36" door. As-built width 12'-10" |
 | Office closet ("enclose for closet") between the office and the bathroom, 36" door from the office. It ends on the garage foundation line as drawn, so it is 3'-1" deep instead of the 3'-5" written |
 | Bathroom 9'-5" clear (4'-10" shower + 4'-3" toilet zone) from the foundation; it includes the strip down to the foundation jog. Its wall toward the theater is in line with the stair's top (6'-9" clear instead of 6'-11"). Curbless walk-around shower and the moved toilet; no sink is shown on the sketch, none modelled. 36" door from the theater |
-| Stairs: the flights stay as measured on A1/A2 (the sketch agrees within about 1 ft); the 1 ft between the bathroom wall and the first tread is part of the stair room |
-| Theater: baffle wall with the 130" screen, its face 27'-0" from the walk-out wall, from the foundation jog to a short side wall (equipment cabinet, hidden door not modelled). Wet bar along the bathroom/stair wall |
+| Theater: baffle wall with the 130" screen, its face 27'-0" from the walk-out wall, from the foundation jog to a short side wall (equipment cabinet, hidden door not modelled). |
 | Ceiling heights (full NeonPlan file): theater and bathroom 9'-0". The 8'-0" soffit strip in the theater and the office's 8'-1"/9'-0" are not modelled |
 | All basement doors 36" wide; rear windows 34" × 60" and the walk-out sliding door 71" × 84" (as built) |
-| The basement's finished area is 885 sq ft against 889 in the area schedule |
+| The basement's finished area (without the mechanical room and crawlspace) is 865 sq ft against 889 in the area schedule |
 
 Sliding glass doors: the import format has no door styles and turns any door 2.2 m or wider into a garage door. The full NeonPlan file sets the 3 sliding doors to NeonPlan's "sliding" door style (and the 8 ft dining door back from garage to door).
 

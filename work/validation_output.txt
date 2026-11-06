@@ -2,9 +2,9 @@ Validation of /shared/user/home/neonplan_house.json
 
   ok    JSON parses
   ok    [Basement] consistent winding (clockwise on screen)
-  ok    [Basement] 2 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
+  ok    [Basement] 0 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Basement] 8 rooms, 129.5 m2, extents x 1.242..16.799, z 0.012..13.932
-  ok    [Basement] 6 doors, 5 windows, 4 furniture, 2 free walls
+  ok    [Basement] 6 doors, 5 windows, 3 furniture, 2 free walls
   ok    [Main Floor] consistent winding (clockwise on screen)
   ok    [Main Floor] 13 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Main Floor] 12 rooms, 199.0 m2, extents x 0.000..16.980, z 0.000..14.541
@@ -18,10 +18,10 @@ Validation of /shared/user/home/neonplan_house.json
   ok    upper floor sits on the main floor footprint (overhang 0.24 m2)
   ok    right wall x aligned on main and upper (16.980 m)
   ok    rear wall aligned on main and upper (z 0.000 m)
-  ok    [Basement] centre-line area 885 sq ft vs area schedule 889 sq ft (-0.4%)
+  ok    [Basement] centre-line area 865 sq ft vs area schedule 889 sq ft (-2.7%)
   ok    [Main Floor] centre-line area 1434 sq ft vs area schedule 1451 sq ft (-1.2%)
   ok    stair room identical on main and upper floor
-  ok    basement and main-floor stairs share one footprint
+  ok    basement stair stands in the basement stair room
   WARN  [Upper Floor] 'Master Linen' is only 0.41 m wide
   WARN  [Upper Floor] centre-line area 1536 sq ft vs area schedule 1425 sq ft (+7.8%)
 
