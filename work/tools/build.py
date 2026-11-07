@@ -91,6 +91,10 @@ def svg_preview(path):
             o.append(f'<polygon points="{pts}" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>')
         # walls: every room edge, thin if open/low
         drawn = set()
+        stair_open = []
+        # open edges are drawn dashed only round a stair (the stair opening); other open edges between rooms are left out
+        stair_keys = {tuple(sorted([(round(P[i][0], 2), round(P[i][1], 2)), (round(P[(i + 1) % len(P)][0], 2), round(P[(i + 1) % len(P)][1], 2))]))
+                      for r in f["rooms"] if r["name"] == "Stairs" for P in [r["points"]] for i in range(len(P))}
         for r in f["rooms"]:
             P = r["points"]
             for i in range(len(P)):
@@ -104,7 +108,9 @@ def svg_preview(path):
                     if seg_on(a, b, e["a"], e["b"]):
                         low = e["h"]
                 if low == 0:
-                    o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3 3"/>')
+                    if key in stair_keys:
+                        stair_open.append((a, b))
+                    continue
                 elif low:
                     o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="#475569" stroke-width="2"/>')
                 else:
@@ -116,10 +122,16 @@ def svg_preview(path):
             if u["rot"] in (90, 270):
                 fw, fd = fd, fw
             o.append(f'<rect x="{X(u["x"] - fw / 2):.1f}" y="{Z(u["z"] - fd / 2):.1f}" width="{fw * S:.1f}" height="{fd * S:.1f}" fill="none" stroke="{COL["furn"]}" stroke-width="1"/>')
-            o.append(f'<text x="{X(u["x"]):.1f}" y="{Z(u["z"]) + 3:.1f}" font-size="7" fill="{COL["furn"]}" text-anchor="middle">{u["type"]}</text>')
+            o.append(f'<text x="{X(u["x"]):.1f}" y="{Z(u["z"]) + 3:.1f}" font-size="7" fill="{COL["furn"]}" text-anchor="middle">{esc(u.get("show", u["type"]))}</text>')
+        # stair openings (no wall): dashed, on top of the stair symbol
+        for a, b in stair_open:
+            o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4 3"/>')
         for kind, L, col in (("win", f["windows"], COL["win"]), ("door", f["doors"], COL["door"])):
             for d in L:
                 a, b = opening_ends(f, d)
+                if d.get("style") == "passage":  # an opening without a door: a gap in the wall
+                    o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="#eff6ff" stroke-width="5"/>')
+                    continue
                 o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="{col}" stroke-width="5" stroke-opacity="0.85"/>')
         for r in f["rooms"]:
             cx, cz = label_point(r["points"])
@@ -139,7 +151,7 @@ def svg_preview(path):
         o.append(f'<circle cx="{X(SX):.1f}" cy="{Z(SZ):.1f}" r="3" fill="red"/><text x="{X(SX) + 4:.1f}" y="{Z(SZ) - 4:.1f}" font-size="9" fill="red">[0,0]</text>')
         sb = 5 / FT
         o.append(f'<line x1="{ox:.1f}" y1="{oy + floor_h - 6:.1f}" x2="{ox + sb * S:.1f}" y2="{oy + floor_h - 6:.1f}" stroke="#111" stroke-width="3"/><text x="{ox:.1f}" y="{oy + floor_h - 10:.1f}" font-size="9">5 m</text>')
-    o.append(f'<text x="{pad}" y="{H - 14:.0f}" font-size="7.5">Legend: black = wall, grey = low wall/rail, dashed = open edge (no wall), orange = door, blue = window, green dashed = outdoor (not imported), grey box = fixture/furniture.</text>')
+    o.append(f'<text x="{pad}" y="{H - 14:.0f}" font-size="7.5">Legend: black = wall, grey = low wall/rail, dashed = stair opening (no wall), gap = opening without a door, orange = door, blue = window, green dashed = outdoor (not imported), grey box = fixture/furniture.</text>')
     o.append("</svg>")
     open(path, "w").write("\n".join(o))
 

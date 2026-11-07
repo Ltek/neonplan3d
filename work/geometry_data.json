@@ -1071,7 +1071,7 @@
      ]
     },
     {
-     "name": "Mud Hall / Pantry",
+     "name": "Mud Room",
      "prov": "M",
      "points": [
       [
@@ -1154,7 +1154,7 @@
      ]
     },
     {
-     "name": "Great Room",
+     "name": "Living Room",
      "prov": "D",
      "points": [
       [
@@ -1191,6 +1191,10 @@
       ],
       [
        35.8,
+       23.8
+      ],
+      [
+       35.8,
        20.12
       ],
       [
@@ -1202,7 +1206,7 @@
        8.5
       ]
      ],
-     "note": "includes the 2'-0\" fireplace / media chase bump and the hall from the great room to the foyer"
+     "note": "'Great Room' on the drawing (owner: living room); includes the 2'-0\" fireplace / TV nook and the hall to the foyer"
     },
     {
      "name": "Stairs",
@@ -1215,6 +1219,10 @@
       [
        35.8,
        20.12
+      ],
+      [
+       35.8,
+       23.8
       ],
       [
        35.8,
@@ -1378,21 +1386,7 @@
      ]
     }
    ],
-   "walls": [
-    {
-     "from": [
-      42.521,
-      7.0
-     ],
-     "to": [
-      42.521,
-      15.2
-     ],
-     "thickness_ft": 0.29,
-     "prov": "M",
-     "note": "media / TV niche wall inside the chase"
-    }
-   ],
+   "walls": [],
    "doors": [
     {
      "at": [
@@ -1461,8 +1455,9 @@
      ],
      "w": 3.0,
      "h": 6.666666666666667,
-     "label": "cased opening mud hall | kitchen",
-     "prov": "E"
+     "label": "opening mud room | kitchen, no door (owner)",
+     "prov": "O",
+     "style": "passage"
     },
     {
      "at": [
@@ -1876,6 +1871,28 @@
      "rot": 90,
      "label": "base cabinets under 24\" soffit",
      "prov": "M"
+    },
+    {
+     "type": "sideboard",
+     "x": 43.521,
+     "z": 4.479333333333333,
+     "w": 4.466666666666667,
+     "d": 1.7,
+     "rot": 90,
+     "show": "fireplace",
+     "label": "fireplace: 1/3 of the nook (owner); rear end assumed",
+     "prov": "O"
+    },
+    {
+     "type": "tv_board",
+     "x": 43.521,
+     "z": 11.479333333333333,
+     "w": 9.133333333333335,
+     "d": 1.7,
+     "rot": 90,
+     "show": "TV cabinet",
+     "label": "built-in TV cabinet: the other 2/3 of the nook (owner)",
+     "prov": "O"
     },
     {
      "type": "island",
