@@ -998,13 +998,15 @@
    ],
    "furniture": [
     {
-     "type": "stairs",
-     "x": 32.785,
-     "z": 21.96,
-     "w": 3.4799999999999995,
-     "d": 13.029999999999998,
+     "type": "stairs_u",
+     "x": 31.034999999999997,
+     "z": 23.759999999999998,
+     "w": 7.279999999999998,
+     "d": 9.529999999999998,
      "rot": 270,
-     "label": "UP 16R to main floor: straight flight as on the owner's edited plan, bottom at the hall (direction assumed)",
+     "mirror": true,
+     "h_ft": 9.90625,
+     "label": "UP 16R to main floor (owner's photos): from the hall end up the rear half, landing at the far end, back up the front half to the main floor's down-stair side; the mechanical room runs under the second flight",
      "prov": "O"
     },
     {
@@ -1930,7 +1932,9 @@
      "w": 7.279999999999998,
      "d": 9.529999999999998,
      "rot": 270,
-     "label": "UP 18R: 8 treads, landing, 7 treads (A6); NeonPlan draws the flights mirrored",
+     "mirror": true,
+     "h_ft": 11.145833333333334,
+     "label": "UP 18R: 8 treads, landing, 7 treads (A6; owner's photos): up the rear half from the dining side, landing at the far end, back up over the down stair to the upper hall",
      "prov": "M"
     },
     {

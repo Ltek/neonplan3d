@@ -416,8 +416,8 @@
 <line x1="378.2" y1="1728.4" x2="378.2" y2="1621.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="438.8" y1="1376.4" x2="438.8" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
 <line x1="438.8" y1="1494.4" x2="468.4" y2="1494.4" stroke="#334155" stroke-width="2.5"/>
-<rect x="304.1" y="1556.7" width="117.3" height="31.3" fill="none" stroke="#6b7280" stroke-width="1"/>
-<text x="362.8" y="1575.3" font-size="7" fill="#6b7280" text-anchor="middle">stairs</text>
+<rect x="304.1" y="1555.8" width="85.8" height="65.5" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="347.0" y="1591.5" font-size="7" fill="#6b7280" text-anchor="middle">stairs_u</text>
 <rect x="249.4" y="1588.6" width="43.4" height="29.7" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="271.1" y="1606.5" font-size="7" fill="#6b7280" text-anchor="middle">shower</text>
 <rect x="207.9" y="1597.2" width="21.6" height="12.6" fill="none" stroke="#6b7280" stroke-width="1"/>

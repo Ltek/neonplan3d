@@ -97,6 +97,16 @@ def main(src, dst):
                 r["wall_slopes"] = sl
                 log.append(f"{f['name']}: '{gr['name']}' pitched ceiling, wall slopes {sl}")
         log.append(f"{f['name']}: ceilings " + ", ".join(f"{r['name']} {r['ceiling_height']}" for r in f["rooms"] if r.get("ceiling_height")))
+        # stairs: which way the flights run (mirror) and their full height, so each one opens the floor above
+        stairs = [u for u in gf["furniture"] if u["type"] in ("stairs", "stairs_u")]
+        built = [u for u in f["furniture"] if u["type"] in ("stairs", "stairs_u")]
+        assert len(stairs) == len(built)
+        for u, v in zip(stairs, built):
+            if u.get("mirror"):
+                v["mirror"] = True
+            if u.get("h_ft"):
+                v["h"] = m(u["h_ft"])
+            log.append(f"{f['name']}: {u['type']} mirror={v.get('mirror')} h={v['h']}")
         # door looks the import format cannot carry (sliding glass doors). A door 2.2 m or wider comes in as a garage
         # door; a sliding door is put back to a door.
         for d in gf["doors"]:

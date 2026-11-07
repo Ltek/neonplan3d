@@ -226,14 +226,12 @@ def main(path):
         a, b = Polygon(st["Main Floor"][0]["points"]), Polygon(st["Upper Floor"][0]["points"])
         if b.difference(a).area > 0.01: E("upper stair room reaches outside the main-floor stair")
         else: I("upper stair room lies over the main-floor stair")
-    # the basement stair (a straight flight on the owner's plan) must stand in the basement's stair room
-    if sf.get("Basement") and st.get("Basement"):
-        x = sf["Basement"][0]
-        hw, hd = x["width"] / 2, x["depth"] / 2
-        if round(x.get("rotation", 0)) % 180 == 90: hw, hd = hd, hw
-        fp = Polygon([(x["at"][0] - hw, x["at"][1] - hd), (x["at"][0] + hw, x["at"][1] - hd), (x["at"][0] + hw, x["at"][1] + hd), (x["at"][0] - hw, x["at"][1] + hd)])
-        if fp.difference(Polygon(st["Basement"][0]["points"])).area > 0.01: E("basement stair sticks out of the basement stair room")
-        else: I("basement stair stands in the basement stair room")
+    # the basement U-stair rises into the main floor's stair: one footprint
+    if sf.get("Basement") and sf.get("Main Floor"):
+        a, b = sf["Basement"][0], sf["Main Floor"][0]
+        if math.hypot(a["at"][0] - b["at"][0], a["at"][1] - b["at"][1]) > 0.01 or abs(a["width"] - b["width"]) > 0.01 or abs(a["depth"] - b["depth"]) > 0.01:
+            E("basement and main stairs differ in footprint")
+        else: I("basement and main-floor stairs share one footprint")
     return d
 
 

@@ -202,8 +202,9 @@ B["windows"] += [
     {"at": [48.0, B_Z_BOT], "w": 2 + 8 / 12, "h": 2.5, "sill": 5.5, "label": "2'-8\" HDR crawlspace access (30x30)", "prov": "E"},
 ]
 B["furniture"] += [
-    {"type": "stairs", "x": (X_STAIR_L + 39.30) / 2, "z": (Z_STAIR_TOP + B_Z_STAIR_BOT) / 2, "w": B_Z_STAIR_BOT - Z_STAIR_TOP - 0.2, "d": 39.30 - X_STAIR_L,
-     "rot": 270, "label": "UP 16R to main floor: straight flight as on the owner's edited plan, bottom at the hall (direction assumed)", "prov": "O"},
+    {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
+     "mirror": True, "h_ft": H_BASE,
+     "label": "UP 16R to main floor (owner's photos): from the hall end up the rear half, landing at the far end, back up the front half to the main floor's down-stair side; the mechanical room runs under the second flight", "prov": "O"},
     {"type": "shower", "x": (B_X_CLOS_TOP + 0.19 + B_X_BATH_TOP - 0.19) / 2, "z": (B_Z_CLOS_BOT + 0.19 + B_Z_BOT - 0.33) / 2, "w": B_X_BATH_TOP - B_X_CLOS_TOP - 0.38, "d": B_Z_BOT - 0.33 - B_Z_CLOS_BOT - 0.19,
      "rot": 0, "label": "curbless walk-around shower, no door (4'-10\")", "prov": "O"},
     {"type": "wc", "x": B_X_STEP2 + 0.33 + 1.2, "z": (B_Z_CLOS_BOT + 0.19 + B_Z_BOT - 0.33) / 2, "w": 1.4, "d": 2.4, "rot": 270, "label": "toilet (moved, owner sketch)", "prov": "O"},
@@ -281,7 +282,8 @@ for w in M["windows"]:
         w["label"] = "3660 SH den"
 M["furniture"] += [
     {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
-     "label": "UP 18R: 8 treads, landing, 7 treads (A6); NeonPlan draws the flights mirrored", "prov": "M"},
+     "mirror": True, "h_ft": H_MAIN,
+     "label": "UP 18R: 8 treads, landing, 7 treads (A6; owner's photos): up the rear half from the dining side, landing at the far end, back up over the down stair to the upper hall", "prov": "M"},
     {"type": "fridge", "x": 18.5, "z": 26.3, "w": 3.0, "d": 2.4, "rot": 180, "label": "REF.", "prov": "M"},
     {"type": "kitchen_tall", "x": 16.2, "z": 26.2, "w": 2.4, "d": 2.3, "rot": 180, "label": "double oven", "prov": "M"},
     {"type": "kitchen", "x": 21.8, "z": 26.3, "w": 4.4, "d": 2.0, "rot": 180, "label": "base cabinets", "prov": "M"},

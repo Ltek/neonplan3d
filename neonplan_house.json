@@ -442,13 +442,13 @@
    ],
    "furniture": [
     {
-     "type": "stairs",
+     "type": "stairs_u",
      "at": [
-      9.948,
-      6.649
+      9.415,
+      7.198
      ],
-     "width": 1.061,
-     "depth": 3.972,
+     "width": 2.219,
+     "depth": 2.905,
      "rotation": 270
     },
     {

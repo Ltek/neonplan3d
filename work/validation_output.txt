@@ -23,7 +23,7 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Main Floor] centre-line area 1434 sq ft vs area schedule 1451 sq ft (-1.2%)
   ok    [Upper Floor] centre-line area 1470 sq ft vs area schedule 1425 sq ft (+3.1%)
   ok    upper stair room lies over the main-floor stair
-  ok    basement stair stands in the basement stair room
+  ok    basement and main-floor stairs share one footprint
   WARN  [Upper Floor] 'Master Linen' is only 0.41 m wide
   WARN  [Upper Floor] 'Hall Closet' is only 0.56 m wide
 
