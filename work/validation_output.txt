@@ -2,7 +2,7 @@ Validation of /shared/user/home/neonplan_house.json
 
   ok    JSON parses
   ok    [Basement] consistent winding (clockwise on screen)
-  ok    [Basement] 2 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
+  ok    [Basement] 6 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Basement] 10 rooms, 129.5 m2, extents x 1.242..16.799, z 0.012..13.932
   ok    [Basement] 6 doors, 5 windows, 3 furniture, 2 free walls
   ok    [Main Floor] consistent winding (clockwise on screen)

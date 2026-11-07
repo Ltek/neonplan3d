@@ -491,7 +491,12 @@
   "B_Z_SOFFIT": {
    "value": 13.12,
    "prov": "O",
-   "note": "theater / office: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it"
+   "note": "theater: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it"
+  },
+  "B_Z_OFFICE_CUT": {
+   "value": 20.093,
+   "prov": "O",
+   "note": "office: 8'-0\" ceiling from the window wall to here (the closet door opening's near edge), 9'-0\" beyond (owner)"
   }
  },
  "vertical_ft": {
@@ -591,6 +596,42 @@
      "note": "the theater's 7'-0\" strip along the stair wall with an 8'-0\" ceiling (owner); open to the theater"
     },
     {
+     "name": "Office",
+     "prov": "O",
+     "ceiling_ft": 8.0,
+     "points": [
+      [
+       4.22,
+       10.144
+      ],
+      [
+       14.915,
+       10.144
+      ],
+      [
+       16.48,
+       10.144
+      ],
+      [
+       16.48,
+       19.787
+      ],
+      [
+       14.915,
+       19.787
+      ],
+      [
+       14.915,
+       20.093
+      ],
+      [
+       4.22,
+       20.093
+      ]
+     ],
+     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from the window wall to the closet door opening (owner)"
+    },
+    {
      "name": "Office (9 ft)",
      "part_of": "Office",
      "prov": "O",
@@ -598,47 +639,11 @@
      "points": [
       [
        4.22,
-       10.144
+       20.093
       ],
       [
        14.915,
-       10.144
-      ],
-      [
-       16.48,
-       10.144
-      ],
-      [
-       16.48,
-       13.12
-      ],
-      [
-       4.22,
-       13.12
-      ]
-     ],
-     "note": "the office's part behind the 8'-0\" strip, 9'-0\" ceiling (owner); open to the office"
-    },
-    {
-     "name": "Office",
-     "prov": "O",
-     "ceiling_ft": 8.0,
-     "points": [
-      [
-       4.22,
-       13.12
-      ],
-      [
-       16.48,
-       13.12
-      ],
-      [
-       16.48,
-       19.787
-      ],
-      [
-       14.915,
-       19.787
+       20.093
       ],
       [
        14.915,
@@ -649,7 +654,7 @@
        23.4
       ]
      ],
-     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from 7'-0\" in front of the stair wall line (owner)"
+     "note": "the office's part from the closet door opening to the end wall, 9'-0\" ceiling (owner); open to the office"
     },
     {
      "name": "Office Closet",
@@ -1059,14 +1064,14 @@
     {
      "a": [
       4.22,
-      13.12
+      20.093
      ],
      "b": [
-      16.48,
-      13.12
+      14.915,
+      20.093
      ],
      "h": 0,
-     "why": "office: edge of the 8 ft ceiling strip (one room)"
+     "why": "office: edge of the 9 ft ceiling part (one room)"
     }
    ],
    "thick_edges": [

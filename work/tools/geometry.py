@@ -125,7 +125,8 @@ B_Z_HALL_R = c("B_Z_HALL_R", 20.40, "O", "hall: end of its straight wall to the 
 B_X_HALL_BOT = c("B_X_HALL_BOT", 40.80, "O", "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)")
 B_X_BAFFLE = c("B_X_BAFFLE", B_X_R1 - 0.328 - 0.1875, "O", "theater baffle wall, full width from the rear wall (owner's edited plan); its back touches the 2'-0\" foundation jog, face 25'-11\" from the walk-out wall")
 B_Z_BAFFLE_END = c("B_Z_BAFFLE_END", 13.30, "O", "baffle wall end / side wall with the slide-out equipment cabinet (sketch)")
-B_Z_SOFFIT = c("B_Z_SOFFIT", Z_STAIR_TOP - 7, "O", "theater / office: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it")
+B_Z_SOFFIT = c("B_Z_SOFFIT", Z_STAIR_TOP - 7, "O", "theater: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it")
+B_Z_OFFICE_CUT = c("B_Z_OFFICE_CUT", (B_Z_BATH_L + B_Z_L_BOT) / 2 - 1.5, "O", "office: 8'-0\" ceiling from the window wall to here (the closet door opening's near edge), 9'-0\" beyond (owner)")
 THICK_SOUND = 0.23  # m (9"): "thick sound reducing walls" - no thickness given, assumed
 
 # ---------------------------------------------------------------- vertical (from building sections A5/A6)
@@ -156,10 +157,11 @@ B["rooms"] += [
      "points": [[B_X_OFFICE, B_Z_SOFFIT], [B_X_R2, B_Z_SOFFIT], [B_X_R2, B_Z_R2], [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_BATH_TOP, B_Z_BATH_L],
                 [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L]],
      "note": "the theater's 7'-0\" strip along the stair wall with an 8'-0\" ceiling (owner); open to the theater"},
-    {"name": "Office (9 ft)", "part_of": "Office", "prov": "O", "ceiling_ft": 9.0, "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_SOFFIT], [B_X_L, B_Z_SOFFIT]],
-     "note": "the office's part behind the 8'-0\" strip, 9'-0\" ceiling (owner); open to the office"},
-    {"name": "Office", "prov": "O", "ceiling_ft": 8.0, "points": [[B_X_L, B_Z_SOFFIT], [B_X_OFFICE, B_Z_SOFFIT], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
-     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from 7'-0\" in front of the stair wall line (owner)"},
+    {"name": "Office", "prov": "O", "ceiling_ft": 8.0,
+     "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_OFFICE_CUT], [B_X_L, B_Z_OFFICE_CUT]],
+     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from the window wall to the closet door opening (owner)"},
+    {"name": "Office (9 ft)", "part_of": "Office", "prov": "O", "ceiling_ft": 9.0, "points": [[B_X_L, B_Z_OFFICE_CUT], [B_X_WALK, B_Z_OFFICE_CUT], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
+     "note": "the office's part from the closet door opening to the end wall, 9'-0\" ceiling (owner); open to the office"},
     {"name": "Office Closet", "prov": "O", "ceiling_ft": 9.0, "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
      "note": "'enclose for closet', 3'-5\" clear (as built)"},
     {"name": "Bathroom", "prov": "O", "ceiling_ft": 9.0,
@@ -178,7 +180,7 @@ B["rooms"] += [
 ]
 B["open_edges"] = [{"a": [B_X_STAIR_END, Z_STAIR_TOP], "b": [B_X_STAIR_END, B_Z_STAIR_BOT], "h": 0, "why": "stair open to the hall (owner's edited plan)"},
                    {"a": [B_X_OFFICE, B_Z_SOFFIT], "b": [B_X_R2, B_Z_SOFFIT], "h": 0, "why": "theater: edge of the 8 ft ceiling strip (one room)"},
-                   {"a": [B_X_L, B_Z_SOFFIT], "b": [B_X_OFFICE, B_Z_SOFFIT], "h": 0, "why": "office: edge of the 8 ft ceiling strip (one room)"}]
+                   {"a": [B_X_L, B_Z_OFFICE_CUT], "b": [B_X_WALK, B_Z_OFFICE_CUT], "h": 0, "why": "office: edge of the 9 ft ceiling part (one room)"}]
 B["thick_edges"] = [
     {"a": [B_X_R2, B_Z_R2], "b": [B_X_STAIR_END, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | hall"},
 ]
