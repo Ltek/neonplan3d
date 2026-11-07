@@ -69,6 +69,7 @@ Z_DEN_TOP = c("Z_DEN_TOP", 33.85, "M", "den top / powder & closet bottom")
 X_UP_WIC2_L = c("X_UP_WIC2_L", 12.60, "M", "second master closet left wall")
 X_UP_LIN_L = c("X_UP_LIN_L", 11.25, "M", "master linen left wall")
 Z_UP_LIN_TOP = c("Z_UP_LIN_TOP", 20.40, "M", "master linen top")
+X_UP_WIC2_DIAG = c("X_UP_WIC2_DIAG", 14.2 + (2 + 4 / 12) / 2, "O", "WIC 2: 45 deg corner wall from the old door's right end to the linen's top-left corner (owner)")
 Z_UP_WIC_BOT = c("Z_UP_WIC_BOT", 12.25, "M", "master WIC bottom (right part)")
 Z_UP_MID = c("Z_UP_MID", 16.146, "M", "master bath corridor bottom / WC & WIC2 top / master bedroom bottom")
 Z_UP_WC_BOT = c("Z_UP_WC_BOT", 19.30, "M", "master WC / bath 3 wall")
@@ -295,9 +296,10 @@ U["rooms"] += [
     {"name": "Master Bedroom", "prov": "D", "points": rect(X_STAIR_L, Z_REAR, X_REAR_R, Z_UP_MID), "note": "vaulted ceiling (not modelled)"},
     {"name": "Master WIC", "prov": "D", "points": [[X_BRK_L, Z_WIC_TOP], [X_STAIR_L, Z_WIC_TOP], [X_STAIR_L, Z_UP_WIC_BOT], [X_UP_BR2_L, Z_UP_WIC_BOT], [X_UP_BR2_L, Z_DECK], [X_BRK_L, Z_DECK]]},
     {"name": "Master Bath", "prov": "M", "points": [[X_DECK, Z_DECK], [X_BRK_L, Z_DECK], [X_UP_BR2_L, Z_DECK], [X_UP_BR2_L, Z_UP_WIC_BOT], [X_STAIR_L, Z_UP_WIC_BOT], [X_STAIR_L, Z_UP_MID],
-                                                  [X_UP_BR2_L, Z_UP_MID], [X_UP_WIC2_L, Z_UP_MID], [X_UP_WIC2_L, Z_UP_LIN_TOP], [X_UP_LIN_L, Z_UP_LIN_TOP], [X_UP_LIN_L, Z_UP_MBATH_BOT], [X_DECK, Z_UP_MBATH_BOT]]},
+                                                  [X_UP_BR2_L, Z_UP_MID], [X_UP_WIC2_DIAG, Z_UP_MID], [X_UP_LIN_L, Z_UP_LIN_TOP], [X_UP_LIN_L, Z_UP_MBATH_BOT], [X_DECK, Z_UP_MBATH_BOT]]},
     {"name": "Master Linen", "prov": "M", "points": rect(X_UP_LIN_L, Z_UP_LIN_TOP, X_UP_WIC2_L, Z_UP_MBATH_BOT)},
-    {"name": "Master WIC 2", "prov": "M", "points": rect(X_UP_WIC2_L, Z_UP_MID, X_UP_BR2_L, Z_UP_MBATH_BOT), "note": "second 'WIC' on the drawing"},
+    {"name": "Master WIC 2", "prov": "M", "points": [[X_UP_WIC2_DIAG, Z_UP_MID], [X_UP_BR2_L, Z_UP_MID], [X_UP_BR2_L, Z_UP_MBATH_BOT], [X_UP_WIC2_L, Z_UP_MBATH_BOT], [X_UP_WIC2_L, Z_UP_LIN_TOP], [X_UP_LIN_L, Z_UP_LIN_TOP]],
+     "note": "second 'WIC' on the drawing; its door corner cut at 45 deg (owner)"},
     {"name": "Master WC", "prov": "M", "points": rect(X_UP_BR2_L, Z_UP_MID, X_STAIR_L, Z_UP_WC_BOT), "note": "unnamed toilet room of the master bath"},
     {"name": "Bath 3", "prov": "M", "points": rect(X_UP_BR2_L, Z_UP_WC_BOT, X_STAIR_L, Z_STAIR_BOT), "note": "plan label 'Bath 2' corrected by hand to 'Bath 3' (A6 stair section: 'Bath 3')"},
     {"name": "Bedroom 2 Dressing", "prov": "D", "points": rect(X_BRK_L, Z_UP_MBATH_BOT, X_UP_BR2_L, Z_UP_DRESS_BOT), "note": "unnamed room between bath 3 and bedroom 2"},
@@ -340,7 +342,8 @@ U["doors"] += [
     {"at": [X_STAIR_L, 14.4], "w": 2 + 9.5 / 12, "h": DOOR_H, "label": "master bedroom | bath opening 2'-9 1/2\"", "prov": "D"},
     {"at": [21.80, Z_UP_WIC_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 master WIC, in its bottom wall (owner markup; opening x 20.6-23.0 on A3.2)", "prov": "M"},
     {"at": [21.45, Z_UP_MID], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 master WC (drawn at 45 deg)", "prov": "E"},
-    {"at": [14.2, Z_UP_MID], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 WIC 2 (drawn at 45 deg)", "prov": "E"},
+    {"at": [(X_UP_WIC2_DIAG + X_UP_LIN_L) / 2, (Z_UP_MID + Z_UP_LIN_TOP) / 2], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 WIC 2, in the 45 deg corner wall (owner)", "prov": "O"},
+    {"at": [X_UP_LIN_L, 22.23], "w": 2.5, "h": DOOR_H, "label": "master linen door (owner)", "prov": "O"},
     {"at": [43.40, Z_STAIR_BOT], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 3, in its bottom wall (owner markup; opening x 42.0-44.8 on A3.2)", "prov": "M"},
     {"at": [X_UP_CLOS_R, 20.0], "w": 6, "h": DOOR_H, "label": "6068 BP", "prov": "M"},
     {"at": [48.6, Z_STAIR_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "bath 2 from bedroom 3", "prov": "E"},
@@ -362,9 +365,9 @@ U["windows"] += [
 ]
 U["furniture"] += [
     {"type": "bathtub", "x": 6.6, "z": 14.6, "w": 6.0, "d": 3.5, "rot": 270, "label": "42\"x72\" tub", "prov": "M"},
-    {"type": "shower", "x": 6.95, "z": 21.0, "w": 5.0, "d": 2.83, "rot": 270, "label": "34\"x60\" shower w/ seat", "prov": "M"},
+    {"type": "shower", "x": (X_DECK + 0.23 + 8.39) / 2, "z": (18.58 + Z_UP_MBATH_BOT - 0.23) / 2, "w": Z_UP_MBATH_BOT - 0.23 - 18.58, "d": 8.39 - X_DECK - 0.23, "rot": 270, "label": "shower, wall to wall (owner)", "prov": "O"},
     {"type": "sink", "x": 10.85, "z": 11.15, "w": 3.5, "d": 1.8, "rot": 0, "label": "master vanity: basin 1 (one counter x 9.1-20.0, owner markup)", "prov": "M"},
-    {"type": "kitchen", "x": 14.45, "z": 11.15, "w": 3.7, "d": 1.8, "rot": 0, "label": "master vanity: counter between the basins", "prov": "M"},
+    {"type": "worktop", "x": 14.45, "z": 11.15, "w": 3.7, "d": 1.8, "rot": 0, "label": "master vanity: counter between the basins", "prov": "M"},
     {"type": "sink", "x": 18.15, "z": 11.15, "w": 3.7, "d": 1.8, "rot": 0, "label": "master vanity: basin 2", "prov": "M"},
     {"type": "wc", "x": 24.7, "z": 17.5, "w": 1.4, "d": 2.4, "rot": 90, "label": "master WC", "prov": "M"},
     {"type": "bathtub", "x": 22.6, "z": 20.6, "w": 5.0, "d": 2.7, "rot": 0, "label": "bath 3 tub", "prov": "M"},

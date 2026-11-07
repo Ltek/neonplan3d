@@ -233,6 +233,11 @@
    "prov": "M",
    "note": "master linen top"
   },
+  "X_UP_WIC2_DIAG": {
+   "value": 15.367,
+   "prov": "O",
+   "note": "WIC 2: 45 deg corner wall from the old door's right end to the linen's top-left corner (owner)"
+  },
   "Z_UP_WIC_BOT": {
    "value": 12.25,
    "prov": "M",
@@ -2201,12 +2206,8 @@
        16.146
       ],
       [
-       12.6,
+       15.367,
        16.146
-      ],
-      [
-       12.6,
-       20.4
       ],
       [
        11.25,
@@ -2249,7 +2250,7 @@
      "prov": "M",
      "points": [
       [
-       12.6,
+       15.367,
        16.146
       ],
       [
@@ -2263,9 +2264,17 @@
       [
        12.6,
        23.854
+      ],
+      [
+       12.6,
+       20.4
+      ],
+      [
+       11.25,
+       20.4
       ]
      ],
-     "note": "second 'WIC' on the drawing"
+     "note": "second 'WIC' on the drawing; its door corner cut at 45 deg (owner)"
     },
     {
      "name": "Master WC",
@@ -2763,13 +2772,23 @@
     },
     {
      "at": [
-      14.2,
-      16.146
+      13.3085,
+      18.273
      ],
      "w": 2.3333333333333335,
      "h": 6.666666666666667,
-     "label": "2468 WIC 2 (drawn at 45 deg)",
-     "prov": "E"
+     "label": "2468 WIC 2, in the 45 deg corner wall (owner)",
+     "prov": "O"
+    },
+    {
+     "at": [
+      11.25,
+      22.23
+     ],
+     "w": 2.5,
+     "h": 6.666666666666667,
+     "label": "master linen door (owner)",
+     "prov": "O"
     },
     {
      "at": [
@@ -2978,13 +2997,13 @@
     },
     {
      "type": "shower",
-     "x": 6.95,
-     "z": 21.0,
-     "w": 5.0,
-     "d": 2.83,
+     "x": 6.383000000000001,
+     "z": 21.102,
+     "w": 5.0440000000000005,
+     "d": 4.014,
      "rot": 270,
-     "label": "34\"x60\" shower w/ seat",
-     "prov": "M"
+     "label": "shower, wall to wall (owner)",
+     "prov": "O"
     },
     {
      "type": "sink",
@@ -2997,7 +3016,7 @@
      "prov": "M"
     },
     {
-     "type": "kitchen",
+     "type": "worktop",
      "x": 14.45,
      "z": 11.15,
      "w": 3.7,

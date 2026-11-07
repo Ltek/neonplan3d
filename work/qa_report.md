@@ -13,7 +13,7 @@
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 37 rooms, 34 doors, 43 windows, 6 walls, 25 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 37 rooms, 35 doors, 43 windows, 6 walls, 25 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -94,6 +94,7 @@ Applied in `work/tools/geometry.py`. Where the owner moved a door, it was placed
 | Upper | Master vanity: one long counter (x 9.1–20.0 ft) with 2 basins instead of 2 loose washbasins |
 | Upper | Owner's edited plan: the opening over the stair is at its top (x 26.3–35.8, z 16.1–21.5 ft) with a rail on its right side and along its bottom; the top of the stair is open to the hall |
 | Upper | Hall closet where the 1668 linen was, with its 1'-6" door from the hall (its bottom put on the foyer rail line, 3.6" lower than drawn). Bedroom 2 takes in the old hall closet; its wall is the left side of the open-to-foyer area, which now runs to it. Short wall at the right end of the foyer rail |
+| Upper | Master WIC 2: its door corner cut at 45° (from the old door's right end to the linen's top-left corner), with the 2468 door in the angled wall. Master linen door on its left side. Master shower wall to wall (outer wall to the tub's edge, down to the bottom wall). The vanity's middle section is a plain counter |
 | Main | Pantry wall + pocket door and the coat-closet walls + door are not built: Pantry, Mud Hall and Coat Closet are one room "Mud Hall / Pantry" |
 | Main | Kitchen island replaced by one island about 10'-0" × 3'-4", centred on the sketch's box (the box is not to scale; ±1 ft) |
 | Main | Dining room: the 3 × 2650 SH windows are one sliding glass door, 108" × 8'-0" (owner), centred on the old group; the 3 transoms above are kept |
