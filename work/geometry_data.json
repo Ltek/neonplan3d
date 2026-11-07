@@ -1364,8 +1364,9 @@
      ]
     },
     {
-     "name": "Den / Flex",
+     "name": "Playroom",
      "prov": "D",
+     "note": "'Den / Flex' on the drawing (owner: playroom)",
      "points": [
       [
        42.15,
@@ -1386,7 +1387,21 @@
      ]
     }
    ],
-   "walls": [],
+   "walls": [
+    {
+     "from": [
+      26.27,
+      23.8
+     ],
+     "to": [
+      35.8,
+      23.8
+     ],
+     "thickness_ft": 0.375,
+     "prov": "O",
+     "note": "divider wall between the up stair (rear half) and the down stair (front half) (owner); full height assumed"
+    }
+   ],
    "doors": [
     {
      "at": [
@@ -2114,8 +2129,8 @@
       35.8,
       23.8
      ],
-     "h": 0.914,
-     "why": "stair end rail (upper run)"
+     "h": 0,
+     "why": "stair up: open end facing the dining room (owner)"
     },
     {
      "a": [
@@ -2127,7 +2142,7 @@
       27.5
      ],
      "h": 0,
-     "why": "stair entrance (owner markup)"
+     "why": "stair down: open end facing the dining room (owner)"
     }
    ]
   },

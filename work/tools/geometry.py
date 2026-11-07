@@ -222,7 +222,7 @@ M["rooms"] += [
      "note": "2-story foyer incl. the hall to powder, coat closet and den"},
     {"name": "Coat Closet (Foyer)", "prov": "M", "points": rect(X_CLO2_L, Z_CLO_TOP, X_POW_L, Z_DEN_TOP)},
     {"name": "Powder", "prov": "M", "points": rect(X_POW_L, Z_STAIR_BOT, X_R, Z_DEN_TOP)},
-    {"name": "Den / Flex", "prov": "D", "points": rect(X_DEN_L, Z_DEN_TOP, X_R, Z_DEN_FRONT)},
+    {"name": "Playroom", "prov": "D", "note": "'Den / Flex' on the drawing (owner: playroom)", "points": rect(X_DEN_L, Z_DEN_TOP, X_R, Z_DEN_FRONT)},
 ]
 # edges without walls / lower walls (applied to the full NeonPlan file only; the simple format has no such field)
 M["open_edges"] = [
@@ -233,9 +233,11 @@ M["open_edges"] = [
     {"a": [X_STAIR_R, Z_STAIR_BOT], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "great-room hall | foyer, columns + flat arch"},
     {"a": [X_DIN_L, Z_STAIR_BOT], "b": [X_HALF_END, Z_STAIR_BOT], "h": 0.914, "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"},
     {"a": [X_STAIR_L, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_TOP], "h": 0.914, "why": "#10 handrail at stair"},
-    {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_MID], "h": 0.914, "why": "stair end rail (upper run)"},
-    {"a": [X_STAIR_R, Z_STAIR_MID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair entrance (owner markup)"},
+    {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_MID], "h": 0, "why": "stair up: open end facing the dining room (owner)"},
+    {"a": [X_STAIR_R, Z_STAIR_MID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair down: open end facing the dining room (owner)"},
 ]
+M["walls"] += [{"from": [X_STAIR_L, Z_STAIR_MID], "to": [X_STAIR_R, Z_STAIR_MID], "thickness_ft": 0.375, "prov": "O",
+                "note": "divider wall between the up stair (rear half) and the down stair (front half) (owner); full height assumed"}]
 M["doors"] += [
     {"at": [36.8, Z_FOYER_FRONT], "w": 3, "h": DOOR_H, "label": "3068 front door (#34 porch)", "prov": "M"},
     {"at": [X_DEN_L, 36.3], "w": 4, "h": DOOR_H, "label": "2-2068 den french doors", "prov": "M"},
