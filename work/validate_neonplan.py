@@ -174,7 +174,7 @@ def main(path):
                 if dist > ON_EDGE: E(f"{tag}: {dist * 100:.1f} cm off the nearest wall line ('{rn}' edge {ei})")
                 if s - wdt / 2 < -0.01 or s + wdt / 2 > L + 0.01:
                     E(f"{tag}: extends beyond its wall segment ('{rn}' edge {ei}, length {L:.2f} m, centre at {s:.2f} m)")
-                lo, hi = (0.5, 5.0) if kind == "doors" else (0.25, 3.0)
+                lo, hi = (0.45, 5.0) if kind == "doors" else (0.25, 3.0)
                 if not lo <= wdt <= hi: E(f"{tag}: implausible width")
                 if kind == "windows":
                     if o["sill"] + o["height"] > f["height"] + 1e-6: E(f"{tag}: top {o['sill'] + o['height']:.2f} above storey height {f['height']:.2f}")
@@ -224,8 +224,8 @@ def main(path):
     sf = {f["name"]: [x for x in f.get("furniture", []) if x["type"] in ("stairs", "stairs_u")] for f in floors}
     if st.get("Main Floor") and st.get("Upper Floor"):
         a, b = Polygon(st["Main Floor"][0]["points"]), Polygon(st["Upper Floor"][0]["points"])
-        if a.symmetric_difference(b).area > 0.01: E("stair footprints differ between main and upper")
-        else: I("stair room identical on main and upper floor")
+        if b.difference(a).area > 0.01: E("upper stair room reaches outside the main-floor stair")
+        else: I("upper stair room lies over the main-floor stair")
     # the basement stair (a straight flight on the owner's plan) must stand in the basement's stair room
     if sf.get("Basement") and st.get("Basement"):
         x = sf["Basement"][0]

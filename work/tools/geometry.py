@@ -80,6 +80,12 @@ Z_UP_HALLCL_TOP = c("Z_UP_HALLCL_TOP", 35.00, "M", "hall closet top (2'-4 1/2\" 
 X_UP_HALL_R = c("X_UP_HALL_R", 41.65, "M", "upper hall right wall")
 X_UP_VOID_L = c("X_UP_VOID_L", 36.30, "E", "open-to-foyer rail line")
 Z_UP_VOID_TOP = c("Z_UP_VOID_TOP", 33.90, "M", "bedroom 4 top / open-to-foyer rail")
+# owner's edited upper plan ("preview-upper-v6-UPDATED")
+Z_UP_STAIR_VOID = c("Z_UP_STAIR_VOID", 21.50, "O", "upper floor: bottom of the opening over the stair (owner)")
+X_UP_STAIR_ARR = c("X_UP_STAIR_ARR", 29.83, "O", "upper floor: rail along the stair opening from here to the right; open to its left (top of the stair)")
+X_UP_BR2_R = c("X_UP_BR2_R", 33.75, "O", "bedroom 2 right wall below the hall closet, also the left side of the open-to-foyer area (owner)")
+Z_UP_HCL_TOP = c("Z_UP_HCL_TOP", 30.90, "O", "hall closet top (door), where the 1668 linen was")
+Z_UP_RAIL_STUB = c("Z_UP_RAIL_STUB", 32.16, "O", "short wall at the right end of the foyer rail (owner)")
 X_UP_CLOS_R = c("X_UP_CLOS_R", 44.80, "M", "bedroom 3 / 4 closet front (6068 BP)")
 Z_UP_BR3_CL_BOT = c("Z_UP_BR3_CL_BOT", 24.00, "M", "bedroom 3 closet bottom")
 Z_UP_BR4_CL_TOP = c("Z_UP_BR4_CL_TOP", 37.20, "M", "bedroom 4 closet top")
@@ -295,16 +301,18 @@ U["rooms"] += [
     {"name": "Master WC", "prov": "M", "points": rect(X_UP_BR2_L, Z_UP_MID, X_STAIR_L, Z_UP_WC_BOT), "note": "unnamed toilet room of the master bath"},
     {"name": "Bath 3", "prov": "M", "points": rect(X_UP_BR2_L, Z_UP_WC_BOT, X_STAIR_L, Z_STAIR_BOT), "note": "plan label 'Bath 2' corrected by hand to 'Bath 3' (A6 stair section: 'Bath 3')"},
     {"name": "Bedroom 2 Dressing", "prov": "D", "points": rect(X_BRK_L, Z_UP_MBATH_BOT, X_UP_BR2_L, Z_UP_DRESS_BOT), "note": "unnamed room between bath 3 and bedroom 2"},
-    {"name": "Bedroom 2", "prov": "D", "points": [[X_UP_BR2_L, Z_STAIR_BOT], [X_STAIR_L, Z_STAIR_BOT], [X_UP_HALLCL_L, Z_STAIR_BOT], [X_UP_HALLCL_L, Z_UP_HALLCL_TOP], [X_UP_HALLCL_L, Z_UP_FRONT_L],
+    {"name": "Bedroom 2", "prov": "D", "points": [[X_UP_BR2_L, Z_STAIR_BOT], [X_STAIR_L, Z_STAIR_BOT], [X_UP_HALLCL_L, Z_STAIR_BOT], [X_UP_HALLCL_L, Z_UP_HCL_TOP], [X_UP_HALLCL_L, Z_UP_VOID_TOP],
+                                                [X_UP_BR2_R, Z_UP_VOID_TOP], [X_UP_BR2_R, Z_UP_FRONT_L],
                                                 [X_BAY_R, Z_UP_FRONT_L], [X_BAY_R, Z_BAY], [X_BAY_L, Z_BAY], [X_BAY_L, Z_UP_FRONT_L], [X_UP_BR2_L, Z_UP_FRONT_L], [X_UP_BR2_L, Z_UP_DRESS_BOT]],
-     "note": "with the window-seat bay"},
-    {"name": "Hall Closet", "prov": "M", "points": rect(X_UP_HALLCL_L, Z_UP_HALLCL_TOP, X_UP_HALLCL_R, Z_UP_FRONT_L)},
-    {"name": "Stairs", "prov": "M", "points": rect(X_STAIR_L, Z_STAIR_TOP, X_STAIR_R, Z_STAIR_BOT)},
-    {"name": "Upper Hall", "prov": "M", "points": [[X_STAIR_L, Z_UP_MID], [X_UP_HALL_R, Z_UP_MID], [X_UP_HALL_R, Z_UP_BR3_CL_BOT], [X_UP_HALL_R, Z_STAIR_BOT], [X_UP_BATH2_L, Z_STAIR_BOT],
-                                                 [X_UP_BATH2_L, Z_UP_VOID_TOP], [X_UP_HALL_R, Z_UP_VOID_TOP], [X_UP_VOID_L, Z_UP_VOID_TOP], [X_UP_VOID_L, Z_UP_FRONT_L], [X_UP_HALLCL_R, Z_UP_FRONT_L],
-                                                 [X_UP_HALLCL_R, Z_UP_HALLCL_TOP], [X_UP_HALLCL_L, Z_UP_HALLCL_TOP], [X_UP_HALLCL_L, Z_STAIR_BOT], [X_STAIR_R, Z_STAIR_BOT], [X_STAIR_R, Z_STAIR_TOP],
-                                                 [X_STAIR_L, Z_STAIR_TOP]],
-     "note": "landing + hall; the open-to-foyer void (X 36.3-41.65, Z 33.9-39.85) is left out of the floor"},
+     "note": "with the window-seat bay; takes in the old hall closet (owner's edited plan)"},
+    {"name": "Hall Closet", "prov": "O", "points": rect(X_UP_HALLCL_L, Z_UP_HCL_TOP, X_UP_BR2_R, Z_UP_VOID_TOP),
+     "note": "where the 1668 linen was (owner); its bottom put on the foyer rail line (drawn 3.6\" higher)"},
+    {"name": "Stairs", "prov": "O", "points": [[X_STAIR_L, Z_UP_STAIR_VOID], [X_UP_STAIR_ARR, Z_UP_STAIR_VOID], [X_STAIR_R, Z_UP_STAIR_VOID], [X_STAIR_R, Z_STAIR_BOT], [X_STAIR_L, Z_STAIR_BOT]],
+     "note": "top of the stair; the opening over the stair (x 26.27-35.80, z 16.15-21.50) is left out of the floor (owner)"},
+    {"name": "Upper Hall", "prov": "M", "points": [[X_STAIR_R, Z_UP_MID], [X_UP_HALL_R, Z_UP_MID], [X_UP_HALL_R, Z_UP_BR3_CL_BOT], [X_UP_HALL_R, Z_STAIR_BOT], [X_UP_BATH2_L, Z_STAIR_BOT],
+                                                 [X_UP_BATH2_L, Z_UP_VOID_TOP], [X_UP_HALL_R, Z_UP_VOID_TOP], [X_UP_BR2_R, Z_UP_VOID_TOP], [X_UP_BR2_R, Z_UP_HCL_TOP], [X_UP_HALLCL_L, Z_UP_HCL_TOP],
+                                                 [X_UP_HALLCL_L, Z_STAIR_BOT], [X_STAIR_R, Z_STAIR_BOT], [X_STAIR_R, Z_UP_STAIR_VOID]],
+     "note": "landing + hall; the stair opening and the open-to-foyer area (x 33.75-41.65, z 33.9-39.85) are left out of the floor"},
     {"name": "Bedroom 3", "prov": "D", "points": [[X_UP_CLOS_R, Z_DIN_TOP], [X_R, Z_DIN_TOP], [X_R, Z_STAIR_BOT], [X_UP_BATH2_L, Z_STAIR_BOT], [X_UP_HALL_R, Z_STAIR_BOT], [X_UP_HALL_R, Z_UP_BR3_CL_BOT], [X_UP_CLOS_R, Z_UP_BR3_CL_BOT]]},
     {"name": "Bedroom 3 Closet", "prov": "M", "points": rect(X_UP_HALL_R, Z_DIN_TOP, X_UP_CLOS_R, Z_UP_BR3_CL_BOT)},
     {"name": "Bath 2", "prov": "M", "points": rect(X_UP_BATH2_L, Z_STAIR_BOT, X_R, Z_UP_VOID_TOP)},
@@ -312,24 +320,22 @@ U["rooms"] += [
     {"name": "Bedroom 4 Closet", "prov": "M", "points": rect(X_UP_HALL_R, Z_UP_BR4_CL_TOP, X_UP_CLOS_R, Z_DEN_FRONT)},
 ]
 U["open_edges"] = [
-    {"a": [X_STAIR_L, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_TOP], "h": 0.914, "why": "36\" AFF wall at stair (A6)"},
-    {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0.914, "why": "stair rail"},
-    {"a": [X_UP_HALL_R, Z_UP_VOID_TOP], "b": [X_UP_VOID_L, Z_UP_VOID_TOP], "h": 0.914, "why": "rail, open to foyer below"},
-    {"a": [X_UP_VOID_L, Z_UP_VOID_TOP], "b": [X_UP_VOID_L, Z_UP_FRONT_L], "h": 0.914, "why": "rail, open to foyer below"},
+    {"a": [X_STAIR_R, Z_UP_MID], "b": [X_STAIR_R, Z_UP_STAIR_VOID], "h": 0.914, "why": "rail along the stair opening (owner)"},
+    {"a": [X_UP_STAIR_ARR, Z_UP_STAIR_VOID], "b": [X_STAIR_R, Z_UP_STAIR_VOID], "h": 0.914, "why": "rail along the stair opening (owner)"},
+    {"a": [X_STAIR_L, Z_UP_STAIR_VOID], "b": [X_UP_STAIR_ARR, Z_UP_STAIR_VOID], "h": 0, "why": "top of the stair (owner)"},
+    {"a": [X_STAIR_R, Z_UP_STAIR_VOID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair top open to the hall (owner)"},
+    {"a": [X_UP_HALL_R, Z_UP_VOID_TOP], "b": [X_UP_BR2_R, Z_UP_VOID_TOP], "h": 0.914, "why": "rail, open to foyer below"},
 ]
 U["walls"] += [
-    {"from": [X_UP_VOID_L, Z_UP_FRONT_L], "to": [X_UP_HALL_R, Z_UP_FRONT_L], "thickness_ft": 0.45, "prov": "D", "note": "front wall of the 2-story foyer"},
+    {"from": [X_UP_BR2_R, Z_UP_FRONT_L], "to": [X_UP_HALL_R, Z_UP_FRONT_L], "thickness_ft": 0.45, "prov": "D", "note": "front wall of the 2-story foyer"},
+    {"from": [X_UP_HALL_R, Z_UP_RAIL_STUB], "to": [X_UP_HALL_R, Z_UP_VOID_TOP], "thickness_ft": 0.375, "prov": "O", "note": "short wall at the end of the foyer rail (owner)"},
     {"from": [X_UP_BATH2_MID, Z_STAIR_BOT], "to": [X_UP_BATH2_MID, Z_UP_VOID_TOP], "thickness_ft": 0.29, "prov": "M", "note": "bath 2 vanity | WC-tub partition"},
-    {"from": [32.5, 30.9], "to": [34.6, 30.9], "thickness_ft": 0.29, "prov": "M", "note": "linen closet in the hall (1668)"},
-    {"from": [32.5, 30.9], "to": [32.5, 33.6], "thickness_ft": 0.29, "prov": "M", "note": "linen closet"},
-    {"from": [32.5, 33.6], "to": [34.6, 33.6], "thickness_ft": 0.29, "prov": "M", "note": "linen closet"},
-    {"from": [34.6, 30.9], "to": [34.6, 33.6], "thickness_ft": 0.29, "prov": "M", "note": "linen closet"},
 ]
 U["doors"] += [
     {"at": [X_UP_HALLCL_L, 29.3], "w": 2.5, "h": DOOR_H, "label": "2668 bedroom 2", "prov": "E"},
     {"at": [X_UP_BR2_L, 29.9], "w": 2.5, "h": DOOR_H, "label": "2668 dressing | bedroom 2", "prov": "M"},
     {"at": [21.70, Z_STAIR_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 bath 3, in its bottom wall (owner markup; opening x 20.5-22.9 on A3.2)", "prov": "M"},
-    {"at": [33.2, Z_UP_HALLCL_TOP], "w": 2 + 4.5 / 12, "h": DOOR_H, "label": "hall closet 2'-4 1/2\" opening", "prov": "D"},
+    {"at": [32.67, Z_UP_HCL_TOP], "w": 1.5, "h": DOOR_H, "label": "1668 hall closet (owner: the old linen door)", "prov": "O"},
     {"at": [39.27, Z_UP_MID], "w": 4 + 8 / 12, "h": DOOR_H, "label": "(2) 2468 master bedroom double doors (owner markup; A3.2 width x 36.95-41.6)", "prov": "M"},
     {"at": [X_STAIR_L, 14.4], "w": 2 + 9.5 / 12, "h": DOOR_H, "label": "master bedroom | bath opening 2'-9 1/2\"", "prov": "D"},
     {"at": [21.80, Z_UP_WIC_BOT], "w": 2 + 4 / 12, "h": DOOR_H, "label": "2468 master WIC, in its bottom wall (owner markup; opening x 20.6-23.0 on A3.2)", "prov": "M"},

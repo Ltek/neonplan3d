@@ -11,18 +11,20 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Main Floor] overall 16.980 x 14.541 m matches the drawing's dimension strings (16.980 x 14.542)
   ok    [Main Floor] 12 doors, 27 windows, 9 furniture, 1 free walls
   ok    [Upper Floor] consistent winding (clockwise on screen)
-  ok    [Upper Floor] 21 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
-  ok    [Upper Floor] 17 rooms, 142.7 m2, extents x 1.219..16.980, z 0.000..13.932
+  ok    [Upper Floor] 19 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
+  ok    [Upper Floor] 17 rooms, 136.5 m2, extents x 1.219..16.980, z 0.000..13.932
+  ok    [Upper Floor] outline has 1 hole(s) (open-to-below / courtyard)
   ok    [Upper Floor] overall 15.761 x 13.932 m matches the drawing's dimension strings (15.761 x 13.932)
-  ok    [Upper Floor] 16 doors, 11 windows, 13 furniture, 6 free walls
+  ok    [Upper Floor] 16 doors, 11 windows, 13 furniture, 3 free walls
   ok    upper floor sits on the main floor footprint (overhang 0.24 m2)
   ok    right wall x aligned on main and upper (16.980 m)
   ok    rear wall aligned on main and upper (z 0.000 m)
   ok    [Basement] centre-line area 865 sq ft vs area schedule 889 sq ft (-2.7%)
   ok    [Main Floor] centre-line area 1434 sq ft vs area schedule 1451 sq ft (-1.2%)
-  ok    stair room identical on main and upper floor
+  ok    [Upper Floor] centre-line area 1470 sq ft vs area schedule 1425 sq ft (+3.1%)
+  ok    upper stair room lies over the main-floor stair
   ok    basement stair stands in the basement stair room
   WARN  [Upper Floor] 'Master Linen' is only 0.41 m wide
-  WARN  [Upper Floor] centre-line area 1536 sq ft vs area schedule 1425 sq ft (+7.8%)
+  WARN  [Upper Floor] 'Hall Closet' is only 0.56 m wide
 
 0 errors, 2 warnings

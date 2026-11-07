@@ -288,6 +288,31 @@
    "prov": "M",
    "note": "bedroom 4 top / open-to-foyer rail"
   },
+  "Z_UP_STAIR_VOID": {
+   "value": 21.5,
+   "prov": "O",
+   "note": "upper floor: bottom of the opening over the stair (owner)"
+  },
+  "X_UP_STAIR_ARR": {
+   "value": 29.83,
+   "prov": "O",
+   "note": "upper floor: rail along the stair opening from here to the right; open to its left (top of the stair)"
+  },
+  "X_UP_BR2_R": {
+   "value": 33.75,
+   "prov": "O",
+   "note": "bedroom 2 right wall below the hall closet, also the left side of the open-to-foyer area (owner)"
+  },
+  "Z_UP_HCL_TOP": {
+   "value": 30.9,
+   "prov": "O",
+   "note": "hall closet top (door), where the 1668 linen was"
+  },
+  "Z_UP_RAIL_STUB": {
+   "value": 32.16,
+   "prov": "O",
+   "note": "short wall at the right end of the foyer rail (owner)"
+  },
   "X_UP_CLOS_R": {
    "value": 44.8,
    "prov": "M",
@@ -2329,10 +2354,18 @@
       ],
       [
        31.9,
-       35.0
+       30.9
       ],
       [
        31.9,
+       33.9
+      ],
+      [
+       33.75,
+       33.9
+      ],
+      [
+       33.75,
        39.854
       ],
       [
@@ -2360,41 +2393,46 @@
        31.35
       ]
      ],
-     "note": "with the window-seat bay"
+     "note": "with the window-seat bay; takes in the old hall closet (owner's edited plan)"
     },
     {
      "name": "Hall Closet",
-     "prov": "M",
+     "prov": "O",
      "points": [
       [
        31.9,
-       35.0
+       30.9
       ],
       [
-       34.6,
-       35.0
+       33.75,
+       30.9
       ],
       [
-       34.6,
-       39.854
+       33.75,
+       33.9
       ],
       [
        31.9,
-       39.854
+       33.9
       ]
-     ]
+     ],
+     "note": "where the 1668 linen was (owner); its bottom put on the foyer rail line (drawn 3.6\" higher)"
     },
     {
      "name": "Stairs",
-     "prov": "M",
+     "prov": "O",
      "points": [
       [
        26.27,
-       20.12
+       21.5
+      ],
+      [
+       29.83,
+       21.5
       ],
       [
        35.8,
-       20.12
+       21.5
       ],
       [
        35.8,
@@ -2404,14 +2442,15 @@
        26.27,
        27.5
       ]
-     ]
+     ],
+     "note": "top of the stair; the opening over the stair (x 26.27-35.80, z 16.15-21.50) is left out of the floor (owner)"
     },
     {
      "name": "Upper Hall",
      "prov": "M",
      "points": [
       [
-       26.27,
+       35.8,
        16.146
       ],
       [
@@ -2439,24 +2478,16 @@
        33.9
       ],
       [
-       36.3,
+       33.75,
        33.9
       ],
       [
-       36.3,
-       39.854
-      ],
-      [
-       34.6,
-       39.854
-      ],
-      [
-       34.6,
-       35.0
+       33.75,
+       30.9
       ],
       [
        31.9,
-       35.0
+       30.9
       ],
       [
        31.9,
@@ -2468,14 +2499,10 @@
       ],
       [
        35.8,
-       20.12
-      ],
-      [
-       26.27,
-       20.12
+       21.5
       ]
      ],
-     "note": "landing + hall; the open-to-foyer void (X 36.3-41.65, Z 33.9-39.85) is left out of the floor"
+     "note": "landing + hall; the stair opening and the open-to-foyer area (x 33.75-41.65, z 33.9-39.85) are left out of the floor"
     },
     {
      "name": "Bedroom 3",
@@ -2615,7 +2642,7 @@
    "walls": [
     {
      "from": [
-      36.3,
+      33.75,
       39.854
      ],
      "to": [
@@ -2625,6 +2652,19 @@
      "thickness_ft": 0.45,
      "prov": "D",
      "note": "front wall of the 2-story foyer"
+    },
+    {
+     "from": [
+      41.65,
+      32.16
+     ],
+     "to": [
+      41.65,
+      33.9
+     ],
+     "thickness_ft": 0.375,
+     "prov": "O",
+     "note": "short wall at the end of the foyer rail (owner)"
     },
     {
      "from": [
@@ -2638,58 +2678,6 @@
      "thickness_ft": 0.29,
      "prov": "M",
      "note": "bath 2 vanity | WC-tub partition"
-    },
-    {
-     "from": [
-      32.5,
-      30.9
-     ],
-     "to": [
-      34.6,
-      30.9
-     ],
-     "thickness_ft": 0.29,
-     "prov": "M",
-     "note": "linen closet in the hall (1668)"
-    },
-    {
-     "from": [
-      32.5,
-      30.9
-     ],
-     "to": [
-      32.5,
-      33.6
-     ],
-     "thickness_ft": 0.29,
-     "prov": "M",
-     "note": "linen closet"
-    },
-    {
-     "from": [
-      32.5,
-      33.6
-     ],
-     "to": [
-      34.6,
-      33.6
-     ],
-     "thickness_ft": 0.29,
-     "prov": "M",
-     "note": "linen closet"
-    },
-    {
-     "from": [
-      34.6,
-      30.9
-     ],
-     "to": [
-      34.6,
-      33.6
-     ],
-     "thickness_ft": 0.29,
-     "prov": "M",
-     "note": "linen closet"
     }
    ],
    "doors": [
@@ -2725,13 +2713,13 @@
     },
     {
      "at": [
-      33.2,
-      35.0
+      32.67,
+      30.9
      ],
-     "w": 2.375,
+     "w": 1.5,
      "h": 6.666666666666667,
-     "label": "hall closet 2'-4 1/2\" opening",
-     "prov": "D"
+     "label": "1668 hall closet (owner: the old linen door)",
+     "prov": "O"
     },
     {
      "at": [
@@ -3113,27 +3101,51 @@
    "open_edges": [
     {
      "a": [
-      26.27,
-      20.12
+      35.8,
+      16.146
      ],
      "b": [
       35.8,
-      20.12
+      21.5
      ],
      "h": 0.914,
-     "why": "36\" AFF wall at stair (A6)"
+     "why": "rail along the stair opening (owner)"
+    },
+    {
+     "a": [
+      29.83,
+      21.5
+     ],
+     "b": [
+      35.8,
+      21.5
+     ],
+     "h": 0.914,
+     "why": "rail along the stair opening (owner)"
+    },
+    {
+     "a": [
+      26.27,
+      21.5
+     ],
+     "b": [
+      29.83,
+      21.5
+     ],
+     "h": 0,
+     "why": "top of the stair (owner)"
     },
     {
      "a": [
       35.8,
-      20.12
+      21.5
      ],
      "b": [
       35.8,
       27.5
      ],
-     "h": 0.914,
-     "why": "stair rail"
+     "h": 0,
+     "why": "stair top open to the hall (owner)"
     },
     {
      "a": [
@@ -3141,20 +3153,8 @@
       33.9
      ],
      "b": [
-      36.3,
+      33.75,
       33.9
-     ],
-     "h": 0.914,
-     "why": "rail, open to foyer below"
-    },
-    {
-     "a": [
-      36.3,
-      33.9
-     ],
-     "b": [
-      36.3,
-      39.854
      ],
      "h": 0.914,
      "why": "rail, open to foyer below"
