@@ -71,6 +71,7 @@ X_UP_LIN_L = c("X_UP_LIN_L", 11.25, "M", "master linen left wall")
 Z_UP_LIN_TOP = c("Z_UP_LIN_TOP", 20.40, "M", "master linen top")
 X_UP_WIC2_DIAG = c("X_UP_WIC2_DIAG", 14.2 + (2 + 4 / 12) / 2, "O", "WIC 2: 45 deg corner wall from the old door's right end to the linen's top-left corner (owner)")
 Z_UP_WIC_BOT = c("Z_UP_WIC_BOT", 12.25, "M", "master WIC bottom (right part)")
+X_UP_MB_RIDGE = c("X_UP_MB_RIDGE", (26.27 + 42.667 - T) / 2, "O", "master bedroom: ceiling ridge line, centred between the side walls (owner)")
 Z_UP_MID = c("Z_UP_MID", 16.146, "M", "master bath corridor bottom / WC & WIC2 top / master bedroom bottom")
 Z_UP_WC_BOT = c("Z_UP_WC_BOT", 19.30, "M", "master WC / bath 3 wall")
 Z_UP_MBATH_BOT = c("Z_UP_MBATH_BOT", 24 - T, "D", "upper left chain 10'-0\"+14'-0\": master bath bottom")
@@ -124,6 +125,7 @@ B_Z_HALL_R = c("B_Z_HALL_R", 20.40, "O", "hall: end of its straight wall to the 
 B_X_HALL_BOT = c("B_X_HALL_BOT", 40.80, "O", "hall: corner of the angled wall to the mechanical room at the stair wall (owner's edited plan)")
 B_X_BAFFLE = c("B_X_BAFFLE", B_X_R1 - 0.328 - 0.1875, "O", "theater baffle wall, full width from the rear wall (owner's edited plan); its back touches the 2'-0\" foundation jog, face 25'-11\" from the walk-out wall")
 B_Z_BAFFLE_END = c("B_Z_BAFFLE_END", 13.30, "O", "baffle wall end / side wall with the slide-out equipment cabinet (sketch)")
+B_Z_SOFFIT = c("B_Z_SOFFIT", Z_STAIR_TOP - 7, "O", "theater / office: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it")
 THICK_SOUND = 0.23  # m (9"): "thick sound reducing walls" - no thickness given, assumed
 
 # ---------------------------------------------------------------- vertical (from building sections A5/A6)
@@ -148,12 +150,17 @@ FLOORS = []
 B = {"name": "Basement", "elev_ft": -H_BASE, "height_ft": H_BASE, "sheet": "A1", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 B["rooms"] += [
     {"name": "Theater", "prov": "M", "ceiling_ft": 9.0,
-     "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_R2],
-                [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
-     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip not modelled)"},
-    {"name": "Office", "prov": "O", "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
-     "note": "as-built 12'-10\" wide; CH 8'-1\" / 9'-0\" (not modelled)"},
-    {"name": "Office Closet", "prov": "O", "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
+     "points": [[B_X_WALK, B_Z_REAR], [B_X_R1, B_Z_REAR], [B_X_R1, B_Z_R1], [B_X_R2, B_Z_R1], [B_X_R2, B_Z_SOFFIT], [B_X_OFFICE, B_Z_SOFFIT], [B_X_OFFICE, B_Z_STEP], [B_X_WALK, B_Z_STEP]],
+     "note": "main basement room, 9'-0\" ceiling (owner)"},
+    {"name": "Theater (8 ft)", "part_of": "Theater", "prov": "O", "ceiling_ft": 8.0,
+     "points": [[B_X_OFFICE, B_Z_SOFFIT], [B_X_R2, B_Z_SOFFIT], [B_X_R2, B_Z_R2], [B_X_STAIR_END, Z_STAIR_TOP], [B_X_BATH_TOP, Z_STAIR_TOP], [B_X_BATH_TOP, B_Z_BATH_L],
+                [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L]],
+     "note": "the theater's 7'-0\" strip along the stair wall with an 8'-0\" ceiling (owner); open to the theater"},
+    {"name": "Office (9 ft)", "part_of": "Office", "prov": "O", "ceiling_ft": 9.0, "points": [[B_X_L, B_Z_STEP], [B_X_WALK, B_Z_STEP], [B_X_OFFICE, B_Z_STEP], [B_X_OFFICE, B_Z_SOFFIT], [B_X_L, B_Z_SOFFIT]],
+     "note": "the office's part behind the 8'-0\" strip, 9'-0\" ceiling (owner); open to the office"},
+    {"name": "Office", "prov": "O", "ceiling_ft": 8.0, "points": [[B_X_L, B_Z_SOFFIT], [B_X_OFFICE, B_Z_SOFFIT], [B_X_OFFICE, B_Z_BATH_L], [B_X_WALK, B_Z_BATH_L], [B_X_WALK, B_Z_L_BOT], [B_X_L, B_Z_L_BOT]],
+     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from 7'-0\" in front of the stair wall line (owner)"},
+    {"name": "Office Closet", "prov": "O", "ceiling_ft": 9.0, "points": [[B_X_WALK, B_Z_BATH_L], [B_X_OFFICE, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_BATH_L], [B_X_CLOS_TOP, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_STEP2, B_Z_L_BOT], [B_X_WALK, B_Z_L_BOT]],
      "note": "'enclose for closet', 3'-5\" clear (as built)"},
     {"name": "Bathroom", "prov": "O", "ceiling_ft": 9.0,
      "points": [[B_X_CLOS_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_BATH_L], [B_X_BATH_TOP, B_Z_STAIR_BOT], [B_X_BATH_TOP, B_Z_BOT], [B_X_STEP2, B_Z_BOT], [B_X_STEP2, B_Z_CLOS_BOT], [B_X_CLOS_TOP, B_Z_CLOS_BOT]],
@@ -169,7 +176,9 @@ B["rooms"] += [
                                                  [B_X_CRAWL_PORCH, B_Z_CRAWL_PORCH], [B_X_CRAWL_L, B_Z_CRAWL_PORCH]],
      "note": "crawlspace #13 under den/foyer; its floor is higher than the basement slab (stepped footing), not modelled"},
 ]
-B["open_edges"] = [{"a": [B_X_STAIR_END, Z_STAIR_TOP], "b": [B_X_STAIR_END, B_Z_STAIR_BOT], "h": 0, "why": "stair open to the hall (owner's edited plan)"}]
+B["open_edges"] = [{"a": [B_X_STAIR_END, Z_STAIR_TOP], "b": [B_X_STAIR_END, B_Z_STAIR_BOT], "h": 0, "why": "stair open to the hall (owner's edited plan)"},
+                   {"a": [B_X_OFFICE, B_Z_SOFFIT], "b": [B_X_R2, B_Z_SOFFIT], "h": 0, "why": "theater: edge of the 8 ft ceiling strip (one room)"},
+                   {"a": [B_X_L, B_Z_SOFFIT], "b": [B_X_OFFICE, B_Z_SOFFIT], "h": 0, "why": "office: edge of the 8 ft ceiling strip (one room)"}]
 B["thick_edges"] = [
     {"a": [B_X_R2, B_Z_R2], "b": [B_X_STAIR_END, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | hall"},
 ]
@@ -299,7 +308,10 @@ FLOORS.append(M)
 # =============================================================== UPPER FLOOR
 U = {"name": "Upper Floor", "elev_ft": H_MAIN, "height_ft": H_UP, "sheet": "A3", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 U["rooms"] += [
-    {"name": "Master Bedroom", "prov": "D", "points": rect(X_STAIR_L, Z_REAR, X_REAR_R, Z_UP_MID), "note": "vaulted ceiling (not modelled)"},
+    {"name": "Master Bedroom", "prov": "D", "points": rect(X_STAIR_L, Z_REAR, X_UP_MB_RIDGE, Z_UP_MID), "gable": True,
+     "note": "pitched ceiling 8'-0\" at the side walls to 12'-0\" at the centre line, ridge running from the window wall (owner); left half"},
+    {"name": "Master Bedroom (right)", "part_of": "Master Bedroom", "prov": "D", "points": rect(X_UP_MB_RIDGE, Z_REAR, X_REAR_R, Z_UP_MID), "gable": True,
+     "note": "right half of the master bedroom, open to the left half (NeonPlan walls slope only from one end of an edge to the other)"},
     {"name": "Master WIC", "prov": "D", "points": [[X_BRK_L, Z_WIC_TOP], [X_STAIR_L, Z_WIC_TOP], [X_STAIR_L, Z_UP_WIC_BOT], [X_UP_BR2_L, Z_UP_WIC_BOT], [X_UP_BR2_L, Z_DECK], [X_BRK_L, Z_DECK]]},
     {"name": "Master Bath", "prov": "M", "points": [[X_DECK, Z_DECK], [X_BRK_L, Z_DECK], [X_UP_BR2_L, Z_DECK], [X_UP_BR2_L, Z_UP_WIC_BOT], [X_STAIR_L, Z_UP_WIC_BOT], [X_STAIR_L, Z_UP_MID],
                                                   [X_UP_BR2_L, Z_UP_MID], [X_UP_WIC2_DIAG, Z_UP_MID], [X_UP_LIN_L, Z_UP_LIN_TOP], [X_UP_LIN_L, Z_UP_MBATH_BOT], [X_DECK, Z_UP_MBATH_BOT]]},
@@ -328,6 +340,7 @@ U["rooms"] += [
     {"name": "Bedroom 4 Closet", "prov": "M", "points": rect(X_UP_HALL_R, Z_UP_BR4_CL_TOP, X_UP_CLOS_R, Z_DEN_FRONT)},
 ]
 U["open_edges"] = [
+    {"a": [X_UP_MB_RIDGE, Z_REAR], "b": [X_UP_MB_RIDGE, Z_UP_MID], "h": 0, "why": "master bedroom: its two halves are one room (ceiling ridge)"},
     {"a": [X_STAIR_R, Z_UP_MID], "b": [X_STAIR_R, Z_UP_STAIR_VOID], "h": 0.914, "why": "rail along the stair opening (owner)"},
     {"a": [X_UP_STAIR_ARR, Z_UP_STAIR_VOID], "b": [X_STAIR_R, Z_UP_STAIR_VOID], "h": 0.914, "why": "rail along the stair opening (owner)"},
     {"a": [X_STAIR_L, Z_UP_STAIR_VOID], "b": [X_UP_STAIR_ARR, Z_UP_STAIR_VOID], "h": 0, "why": "top of the stair (owner)"},
@@ -385,3 +398,12 @@ U["furniture"] += [
     {"type": "bathtub", "x": 54.5, "z": 31.0, "w": 5.0, "d": 2.6, "rot": 90, "label": "bath 2 tub/shower", "prov": "M"},
 ]
 FLOORS.append(U)
+
+# ceilings (owner): main floor 10'-0" (not the 2-storey foyer or the open stair), upper floor 8'-0" (master bedroom pitched
+# 8'-0" to 12'-0", see "gable"); basement as set per room above
+for r in M["rooms"]:
+    if r["name"] not in ("Foyer", "Stairs"):
+        r.setdefault("ceiling_ft", 10.0)
+for r in U["rooms"]:
+    r.setdefault("ceiling_ft", 8.0)
+GABLE = {"ridge_x": X_UP_MB_RIDGE, "half": X_UP_MB_RIDGE - X_STAIR_L, "low_ft": 8.0, "high_ft": 12.0}

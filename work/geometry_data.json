@@ -243,6 +243,11 @@
    "prov": "M",
    "note": "master WIC bottom (right part)"
   },
+  "X_UP_MB_RIDGE": {
+   "value": 34.395,
+   "prov": "O",
+   "note": "master bedroom: ceiling ridge line, centred between the side walls (owner)"
+  },
   "Z_UP_MID": {
    "value": 16.146,
    "prov": "M",
@@ -482,6 +487,11 @@
    "value": 13.3,
    "prov": "O",
    "note": "baffle wall end / side wall with the slide-out equipment cabinet (sketch)"
+  },
+  "B_Z_SOFFIT": {
+   "value": 13.12,
+   "prov": "O",
+   "note": "theater / office: 8'-0\" ceiling for the first 7'-0\" from the stair wall (owner); 9'-0\" behind it"
   }
  },
  "vertical_ft": {
@@ -522,6 +532,39 @@
       ],
       [
        44.52,
+       13.12
+      ],
+      [
+       16.48,
+       13.12
+      ],
+      [
+       16.48,
+       10.144
+      ],
+      [
+       14.915,
+       10.144
+      ]
+     ],
+     "note": "main basement room, 9'-0\" ceiling (owner)"
+    },
+    {
+     "name": "Theater (8 ft)",
+     "part_of": "Theater",
+     "prov": "O",
+     "ceiling_ft": 8.0,
+     "points": [
+      [
+       16.48,
+       13.12
+      ],
+      [
+       44.52,
+       13.12
+      ],
+      [
+       44.52,
        16.2
       ],
       [
@@ -543,21 +586,15 @@
       [
        16.48,
        19.787
-      ],
-      [
-       16.48,
-       10.144
-      ],
-      [
-       14.915,
-       10.144
       ]
      ],
-     "note": "main basement room; as-built CH 9'-0\" (8'-0\" soffit strip not modelled)"
+     "note": "the theater's 7'-0\" strip along the stair wall with an 8'-0\" ceiling (owner); open to the theater"
     },
     {
-     "name": "Office",
+     "name": "Office (9 ft)",
+     "part_of": "Office",
      "prov": "O",
+     "ceiling_ft": 9.0,
      "points": [
       [
        4.22,
@@ -573,6 +610,30 @@
       ],
       [
        16.48,
+       13.12
+      ],
+      [
+       4.22,
+       13.12
+      ]
+     ],
+     "note": "the office's part behind the 8'-0\" strip, 9'-0\" ceiling (owner); open to the office"
+    },
+    {
+     "name": "Office",
+     "prov": "O",
+     "ceiling_ft": 8.0,
+     "points": [
+      [
+       4.22,
+       13.12
+      ],
+      [
+       16.48,
+       13.12
+      ],
+      [
+       16.48,
        19.787
       ],
       [
@@ -588,11 +649,12 @@
        23.4
       ]
      ],
-     "note": "as-built 12'-10\" wide; CH 8'-1\" / 9'-0\" (not modelled)"
+     "note": "as-built 12'-10\" wide; 8'-0\" ceiling from 7'-0\" in front of the stair wall line (owner)"
     },
     {
      "name": "Office Closet",
      "prov": "O",
+     "ceiling_ft": 9.0,
      "points": [
       [
        14.915,
@@ -979,6 +1041,30 @@
      ],
      "h": 0,
      "why": "stair open to the hall (owner's edited plan)"
+    },
+    {
+     "a": [
+      16.48,
+      13.12
+     ],
+     "b": [
+      44.52,
+      13.12
+     ],
+     "h": 0,
+     "why": "theater: edge of the 8 ft ceiling strip (one room)"
+    },
+    {
+     "a": [
+      4.22,
+      13.12
+     ],
+     "b": [
+      16.48,
+      13.12
+     ],
+     "h": 0,
+     "why": "office: edge of the 8 ft ceiling strip (one room)"
     }
    ],
    "thick_edges": [
@@ -1046,7 +1132,8 @@
        0.146,
        43.854
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Laundry",
@@ -1068,7 +1155,8 @@
        4.146,
        16.13
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Mud Room",
@@ -1091,7 +1179,8 @@
        23.85
       ]
      ],
-     "note": "owner markup: the pantry wall + pocket door and the coat closet walls + door drawn on A3.1 were not built"
+     "note": "owner markup: the pantry wall + pocket door and the coat closet walls + door drawn on A3.1 were not built",
+     "ceiling_ft": 10.0
     },
     {
      "name": "Breakfast",
@@ -1113,7 +1202,8 @@
        14.813,
        8.5
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Kitchen",
@@ -1151,7 +1241,8 @@
        14.813,
        10.146
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Living Room",
@@ -1206,7 +1297,8 @@
        8.5
       ]
      ],
-     "note": "'Great Room' on the drawing (owner: living room); includes the 2'-0\" fireplace / TV nook and the hall to the foyer"
+     "note": "'Great Room' on the drawing (owner: living room); includes the 2'-0\" fireplace / TV nook and the hall to the foyer",
+     "ceiling_ft": 10.0
     },
     {
      "name": "Stairs",
@@ -1266,7 +1358,8 @@
        42.4,
        27.5
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Foyer",
@@ -1339,7 +1432,8 @@
        43.35,
        33.85
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Powder",
@@ -1361,7 +1455,8 @@
        50.55,
        33.85
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     },
     {
      "name": "Playroom",
@@ -1384,7 +1479,8 @@
        42.15,
        45.854
       ]
-     ]
+     ],
+     "ceiling_ft": 10.0
     }
    ],
    "walls": [
@@ -2161,6 +2257,32 @@
        0.146
       ],
       [
+       34.395,
+       0.146
+      ],
+      [
+       34.395,
+       16.146
+      ],
+      [
+       26.27,
+       16.146
+      ]
+     ],
+     "gable": true,
+     "note": "pitched ceiling 8'-0\" at the side walls to 12'-0\" at the centre line, ridge running from the window wall (owner); left half",
+     "ceiling_ft": 8.0
+    },
+    {
+     "name": "Master Bedroom (right)",
+     "part_of": "Master Bedroom",
+     "prov": "D",
+     "points": [
+      [
+       34.395,
+       0.146
+      ],
+      [
        42.521,
        0.146
       ],
@@ -2169,11 +2291,13 @@
        16.146
       ],
       [
-       26.27,
+       34.395,
        16.146
       ]
      ],
-     "note": "vaulted ceiling (not modelled)"
+     "gable": true,
+     "note": "right half of the master bedroom, open to the left half (NeonPlan walls slope only from one end of an edge to the other)",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Master WIC",
@@ -2203,7 +2327,8 @@
        14.813,
        10.146
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Master Bath",
@@ -2253,7 +2378,8 @@
        4.146,
        23.854
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Master Linen",
@@ -2275,7 +2401,8 @@
        11.25,
        23.854
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Master WIC 2",
@@ -2306,7 +2433,8 @@
        20.4
       ]
      ],
-     "note": "second 'WIC' on the drawing; its door corner cut at 45 deg (owner)"
+     "note": "second 'WIC' on the drawing; its door corner cut at 45 deg (owner)",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Master WC",
@@ -2329,7 +2457,8 @@
        19.3
       ]
      ],
-     "note": "unnamed toilet room of the master bath"
+     "note": "unnamed toilet room of the master bath",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bath 3",
@@ -2352,7 +2481,8 @@
        27.5
       ]
      ],
-     "note": "plan label 'Bath 2' corrected by hand to 'Bath 3' (A6 stair section: 'Bath 3')"
+     "note": "plan label 'Bath 2' corrected by hand to 'Bath 3' (A6 stair section: 'Bath 3')",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 2 Dressing",
@@ -2375,7 +2505,8 @@
        31.35
       ]
      ],
-     "note": "unnamed room between bath 3 and bedroom 2"
+     "note": "unnamed room between bath 3 and bedroom 2",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 2",
@@ -2434,7 +2565,8 @@
        31.35
       ]
      ],
-     "note": "with the window-seat bay; takes in the old hall closet (owner's edited plan)"
+     "note": "with the window-seat bay; takes in the old hall closet (owner's edited plan)",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Hall Closet",
@@ -2457,7 +2589,8 @@
        33.9
       ]
      ],
-     "note": "where the 1668 linen was (owner); its bottom put on the foyer rail line (drawn 3.6\" higher)"
+     "note": "where the 1668 linen was (owner); its bottom put on the foyer rail line (drawn 3.6\" higher)",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Stairs",
@@ -2484,7 +2617,8 @@
        27.5
       ]
      ],
-     "note": "top of the stair; the opening over the stair (x 26.27-35.80, z 16.15-21.50) is left out of the floor (owner)"
+     "note": "top of the stair; the opening over the stair (x 26.27-35.80, z 16.15-21.50) is left out of the floor (owner)",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Upper Hall",
@@ -2543,7 +2677,8 @@
        21.5
       ]
      ],
-     "note": "landing + hall; the stair opening and the open-to-foyer area (x 33.75-41.65, z 33.9-39.85) are left out of the floor"
+     "note": "landing + hall; the stair opening and the open-to-foyer area (x 33.75-41.65, z 33.9-39.85) are left out of the floor",
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 3",
@@ -2577,7 +2712,8 @@
        44.8,
        24.0
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 3 Closet",
@@ -2599,7 +2735,8 @@
        41.65,
        24.0
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bath 2",
@@ -2621,7 +2758,8 @@
        45.11,
        33.9
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 4",
@@ -2655,7 +2793,8 @@
        41.65,
        37.2
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     },
     {
      "name": "Bedroom 4 Closet",
@@ -2677,7 +2816,8 @@
        41.65,
        45.854
       ]
-     ]
+     ],
+     "ceiling_ft": 8.0
     }
    ],
    "walls": [
@@ -3150,6 +3290,18 @@
    ],
    "outdoor": [],
    "open_edges": [
+    {
+     "a": [
+      34.395,
+      0.146
+     ],
+     "b": [
+      34.395,
+      16.146
+     ],
+     "h": 0,
+     "why": "master bedroom: its two halves are one room (ceiling ridge)"
+    },
     {
      "a": [
       35.8,

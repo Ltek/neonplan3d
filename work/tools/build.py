@@ -133,9 +133,9 @@ def svg_preview(path):
                     o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="#eff6ff" stroke-width="5"/>')
                     continue
                 o.append(f'<line x1="{X(a[0]):.1f}" y1="{Z(a[1]):.1f}" x2="{X(b[0]):.1f}" y2="{Z(b[1]):.1f}" stroke="{col}" stroke-width="5" stroke-opacity="0.85"/>')
-        for r in f["rooms"]:
+        for r in label_rooms(f["rooms"]):
             cx, cz = label_point(r["points"])
-            area = poly_area(r["points"]) * FT * FT
+            area = r.get("area_ft2", poly_area(r["points"])) * FT * FT
             o.append(f'<text x="{X(cx):.1f}" y="{Z(cz):.1f}" font-size="10" text-anchor="middle" fill="{COL["room"]}" font-weight="bold">{esc(r["name"])}</text>')
             o.append(f'<text x="{X(cx):.1f}" y="{Z(cz) + 11:.1f}" font-size="8" text-anchor="middle" fill="{COL["room"]}">{area:.1f} m²</text>')
         # overall dimensions
@@ -173,6 +173,23 @@ def seg_on(a, b, c, d, tol=0.02):
 
 def poly_area(P):
     return abs(sum(P[i][0] * P[(i + 1) % len(P)][1] - P[(i + 1) % len(P)][0] * P[i][1] for i in range(len(P)))) / 2
+
+
+def label_rooms(rooms):
+    """Rooms as labelled: parts of one room (split only for a ceiling, "part_of") get one label on their union."""
+    from shapely.geometry import Polygon
+    from shapely.ops import unary_union
+    out, parts = [], {}
+    for r in rooms:
+        if r.get("part_of"):
+            parts.setdefault(r["part_of"], []).append(r)
+        else:
+            out.append(r)
+    for r in out:
+        if r["name"] in parts:
+            u = unary_union([Polygon(r["points"])] + [Polygon(p["points"]) for p in parts[r["name"]]])
+            r = dict(r, points=[list(c) for c in u.exterior.coords[:-1]], area_ft2=sum(poly_area(x["points"]) for x in [r] + parts[r["name"]]))
+        yield r
 
 
 def label_point(P):
@@ -240,7 +257,7 @@ def overlays():
         for u in f["furniture"]:
             fw, fd = (u["d"], u["w"]) if u["rot"] in (90, 270) else (u["w"], u["d"])
             d.rectangle([Q((u["x"] - fw / 2, u["z"] - fd / 2)), Q((u["x"] + fw / 2, u["z"] + fd / 2))], outline=(16, 185, 129, 255), width=5)
-        for r in f["rooms"]:
+        for r in label_rooms(f["rooms"]):
             cx, cz = label_point(r["points"])
             x, y = Q((cx, cz))
             d.text((x, y), r["name"], fill=(185, 28, 28, 255), font=font, anchor="mm", stroke_width=3, stroke_fill=(255, 255, 255, 255))

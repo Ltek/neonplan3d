@@ -2,7 +2,8 @@
 <rect width="100%" height="100%" fill="white"/>
 <text x="60" y="30" font-size="12" font-weight="bold">House plan - NeonPlan reconstruction (wall centre lines; [0,0] = garage-left and rear wall centre lines)</text>
 <text x="60" y="112.0" font-size="16" font-weight="bold">Upper Floor  (elevation +3.397 m, storey 2.467 m)</text>
-<polygon points="304.1,192.0 450.4,192.0 450.4,336.0 304.1,336.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="304.1,192.0 377.2,192.0 377.2,336.0 304.1,336.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="377.2,192.0 450.4,192.0 450.4,336.0 377.2,336.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="201.0,237.0 304.1,237.0 304.1,300.9 249.0,300.9 249.0,282.0 201.0,282.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="105.0,282.0 201.0,282.0 249.0,282.0 249.0,300.9 304.1,300.9 304.1,336.0 249.0,336.0 206.0,336.0 168.9,374.3 168.9,405.4 105.0,405.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="168.9,374.3 181.1,374.3 181.1,405.4 168.9,405.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
@@ -19,10 +20,12 @@
 <polygon points="473.7,438.2 570.4,438.2 570.4,495.8 473.7,495.8" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="442.5,495.8 473.7,495.8 570.4,495.8 570.4,603.4 470.9,603.4 470.9,525.5 442.5,525.5" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="442.5,525.5 470.9,525.5 470.9,603.4 442.5,603.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<line x1="304.1" y1="192.0" x2="450.4" y2="192.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="450.4" y1="192.0" x2="450.4" y2="336.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="450.4" y1="336.0" x2="304.1" y2="336.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="304.1" y1="192.0" x2="377.2" y2="192.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="377.2" y1="336.0" x2="304.1" y2="336.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="336.0" x2="304.1" y2="192.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="377.2" y1="192.0" x2="450.4" y2="192.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="450.4" y1="192.0" x2="450.4" y2="336.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="450.4" y1="336.0" x2="377.2" y2="336.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="237.0" x2="304.1" y2="237.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="237.0" x2="304.1" y2="300.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="300.9" x2="249.0" y2="300.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
@@ -359,8 +362,10 @@
 <circle cx="69.0" cy="784.0" r="3" fill="red"/><text x="73.0" y="780.0" font-size="9" fill="red">[0,0]</text>
 <line x1="60.0" y1="1228.0" x2="207.6" y2="1228.0" stroke="#111" stroke-width="3"/><text x="60.0" y="1224.0" font-size="9">5 m</text>
 <text x="60" y="1296.0" font-size="16" font-weight="bold">Basement  (elevation -3.019 m, storey 3.019 m)</text>
-<polygon points="201.9,1376.4 443.4,1376.4 443.4,1394.4 468.4,1394.4 468.4,1520.5 426.8,1555.8 294.5,1555.8 294.5,1552.8 247.7,1552.8 216.0,1552.8 216.0,1466.0 201.9,1466.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<polygon points="105.7,1466.0 201.9,1466.0 216.0,1466.0 216.0,1552.8 201.9,1552.8 201.9,1585.3 105.7,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="201.9,1376.4 443.4,1376.4 443.4,1394.4 468.4,1394.4 468.4,1492.8 216.0,1492.8 216.0,1466.0 201.9,1466.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="216.0,1492.8 468.4,1492.8 468.4,1520.5 426.8,1555.8 294.5,1555.8 294.5,1552.8 247.7,1552.8 216.0,1552.8" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="105.7,1466.0 201.9,1466.0 216.0,1466.0 216.0,1492.8 105.7,1492.8" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="105.7,1492.8 216.0,1492.8 216.0,1552.8 201.9,1552.8 201.9,1585.3 105.7,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="201.9,1552.8 216.0,1552.8 247.7,1552.8 247.7,1586.9 204.9,1586.9 204.9,1585.3 201.9,1585.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="247.7,1552.8 294.5,1552.8 294.5,1588.9 294.5,1621.3 204.9,1621.3 204.9,1586.9 247.7,1586.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="294.5,1555.8 426.8,1555.8 426.8,1588.9 294.5,1588.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
@@ -370,20 +375,23 @@
 <line x1="201.9" y1="1376.4" x2="443.4" y2="1376.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="443.4" y1="1376.4" x2="443.4" y2="1394.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="443.4" y1="1394.4" x2="468.4" y2="1394.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="468.4" y1="1394.4" x2="468.4" y2="1520.5" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="468.4" y1="1394.4" x2="468.4" y2="1492.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="216.0" y1="1492.8" x2="216.0" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="216.0" y1="1466.0" x2="201.9" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="201.9" y1="1466.0" x2="201.9" y2="1376.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="468.4" y1="1492.8" x2="468.4" y2="1520.5" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="468.4" y1="1520.5" x2="426.8" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="426.8" y1="1555.8" x2="294.5" y2="1555.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="294.5" y1="1555.8" x2="294.5" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="294.5" y1="1552.8" x2="247.7" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="247.7" y1="1552.8" x2="216.0" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="216.0" y1="1552.8" x2="216.0" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="216.0" y1="1466.0" x2="201.9" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.9" y1="1466.0" x2="201.9" y2="1376.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="216.0" y1="1552.8" x2="216.0" y2="1492.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.7" y1="1466.0" x2="201.9" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="105.7" y1="1492.8" x2="105.7" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="216.0" y1="1552.8" x2="201.9" y2="1552.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.9" y1="1552.8" x2="201.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.9" y1="1585.3" x2="105.7" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="105.7" y1="1585.3" x2="105.7" y2="1466.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="105.7" y1="1585.3" x2="105.7" y2="1492.8" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="247.7" y1="1552.8" x2="247.7" y2="1586.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="247.7" y1="1586.9" x2="204.9" y2="1586.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="204.9" y1="1586.9" x2="204.9" y2="1585.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>

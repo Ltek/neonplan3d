@@ -5,7 +5,7 @@
 | Item | Value |
 |---|---|
 | Floors | 3: Basement (−3.019 m), Main Floor (0), Upper Floor (+3.397 m) |
-| Rooms | 37 (basement 8, main 12, upper 17) |
+| Rooms | 40 (basement 10, main 12, upper 18), counting the ceiling-height parts of the theater, office and master bedroom |
 | Doors | 34 (basement 6, main 12, upper 16), including 2 garage doors and 3 sliding glass doors |
 | Windows | 43 units (basement 5, main 27, upper 11), including 9 transoms, 1 sidelight, 1 crawlspace access |
 | Furniture / fixtures | 23 (2 U-stairs, kitchen, laundry, bathroom fixtures) |
@@ -13,7 +13,7 @@
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 37 rooms, 35 doors, 43 windows, 6 walls, 27 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 40 rooms, 35 doors, 43 windows, 5 walls, 27 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -97,6 +97,7 @@ Applied in `work/tools/geometry.py`. Where the owner moved a door, it was placed
 | Upper | Master WIC 2: its door corner cut at 45° (from the old door's right end to the linen's top-left corner), with the 2468 door in the angled wall. Master linen door on its left side. Master shower wall to wall (outer wall to the tub's edge, down to the bottom wall). The vanity's middle section is a plain counter |
 | Main | Owner: "Mud Hall / Pantry" is the Mud Room (not a pantry); its opening to the kitchen has no door (NeonPlan "passage" style in the full file). "Great Room" is the Living Room. The 2'-0" nook holds the fireplace (1/3 of it, at the rear end: assumed) and a built-in TV cabinet (the other 2/3); the floating niche wall is removed. NeonPlan has no fireplace type, so it is a sideboard named "fireplace" (NeonPlan's own importers do the same) |
 | Main | Stair split by a divider wall (full height assumed) into the up stair (rear half) and the down stair to the basement (front half); both ends facing the dining room are open (owner). "Den / Flex" renamed Playroom |
+| All | Ceilings (owner, full NeonPlan file): main floor 10'-0" (not the 2-storey foyer or the open stair). Upper floor 8'-0"; the master bedroom's ceiling is pitched from 8'-0" at its side walls to 12'-0" at its centre line, the ridge running from the window wall: it is modelled as two halves (one label in the preview) with sloping walls on the window wall and the opposite wall. Basement: theater, bathroom and office closet 9'-0"; the first 7'-0" of the theater and the office in front of the stair wall line 8'-0" (each split into two parts without a wall between them) |
 | All | Preview: open edges between rooms are no longer drawn; only stair openings are dashed (main floor: the stair's side facing the dining room) |
 | Main | Pantry wall + pocket door and the coat-closet walls + door are not built: Pantry, Mud Hall and Coat Closet are one room "Mud Hall / Pantry" |
 | Main | Kitchen island replaced by one island about 10'-0" × 3'-4", centred on the sketch's box (the box is not to scale; ±1 ft) |

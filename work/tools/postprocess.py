@@ -77,12 +77,26 @@ def main(src, dst):
                 r["wall_splits"] = splits
             if any(t for t in thick):
                 r["wall_thickness"] = thick
-        # ceiling heights given for some rooms (as built)
-        for gr in gf["rooms"]:
+        # ceiling heights (owner) and the master bedroom's pitched ceiling (sloping walls on the edges that cross it)
+        assert [r["name"] for r in gf["rooms"]] == [r["name"] for r in f["rooms"]], "room order changed in the import"
+        for gr, r in zip(gf["rooms"], f["rooms"]):
             if gr.get("ceiling_ft"):
-                r = next(r for r in f["rooms"] if r["name"] == gr["name"])
                 r["ceiling_height"] = m(gr["ceiling_ft"])
-                log.append(f"{f['name']}: '{gr['name']}' ceiling {r['ceiling_height']} m")
+            if gr.get("gable"):
+                g = G.GABLE
+                xr, half = m(g["ridge_x"] - G.X_GAR_L), m(g["half"])
+                lo, hi = m(g["low_ft"]), m(g["high_ft"])
+                hx = lambda x: round(lo + (hi - lo) * max(0.0, 1 - abs(x - xr) / half), 3)
+                P = r["points"]
+                sl = [None] * len(P)
+                for i in range(len(P)):
+                    a0, a1 = P[i], P[(i + 1) % len(P)]
+                    h0, h1 = hx(a0[0]), hx(a1[0])
+                    if abs(a0[1] - a1[1]) < 1e-6 and abs(h0 - h1) > 1e-3:
+                        sl[i] = [h0, h1]
+                r["wall_slopes"] = sl
+                log.append(f"{f['name']}: '{gr['name']}' pitched ceiling, wall slopes {sl}")
+        log.append(f"{f['name']}: ceilings " + ", ".join(f"{r['name']} {r['ceiling_height']}" for r in f["rooms"] if r.get("ceiling_height")))
         # door looks the import format cannot carry (sliding glass doors). A door 2.2 m or wider comes in as a garage
         # door; a sliding door is put back to a door.
         for d in gf["doors"]:
