@@ -285,6 +285,7 @@ M["open_edges"] = [
     {"a": [X_DIN_L, Z_DIN_TOP], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "dining flat arch #34"},
     {"a": [X_STAIR_R, Z_STAIR_BOT], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "great-room hall | foyer, columns + flat arch"},
     {"a": [X_DIN_L, Z_STAIR_BOT], "b": [X_HALF_END, Z_STAIR_BOT], "h": 0.914, "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"},
+    {"a": [X_STAIR_L, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_TOP], "h": 0, "why": "stair side facing the living room: open with a railing (owner); the wall under the flight is a free wall"},
     {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_MID], "h": 0, "why": "stair up: open end facing the dining room (owner)"},
     {"a": [X_STAIR_R, Z_STAIR_MID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair down: open end facing the dining room (owner)"},
 ]
@@ -324,11 +325,12 @@ for w in M["windows"]:
     if w["label"] == "3060 SH den" and w["at"][1] == Z_DEN_FRONT:
         w["label"] = "3660 SH den"
 FP_W = (Z_DIN_TOP - Z_CHASE) / 3   # owner: the fireplace takes 1/3 of the nook
-FP_OUT = 1.5                       # how far its stone stands out into the living room (photos, estimated)
-# the stone fireplace column, floor to ceiling, standing out from the living room wall and filling the nook behind it:
-# a solid free wall, so it shows as stone-like masonry rather than a cabinet
-M["walls"] += [{"from": [(X_REAR_R - FP_OUT + X_CHASE) / 2, Z_CHASE], "to": [(X_REAR_R - FP_OUT + X_CHASE) / 2, Z_CHASE + FP_W], "thickness_ft": X_CHASE - X_REAR_R + FP_OUT,
-                "prov": "P", "full_only": True, "note": "stone fireplace column (photos; it stands out 1'-6\", estimated)"}]
+# the stone fireplace (owner's photos): a column filling the rear third of the nook, its face flush with the TV cabinet
+# (owner: it does not stand out beyond it), with a black glass firebox and a wooden mantel. NeonPlan has no fireplace:
+# the column is a solid free wall, the firebox a flat black screen, the mantel a slab.
+FP_FACE = (X_REAR_R + X_CHASE) / 2 - (X_CHASE - X_REAR_R - 0.3) / 2   # front of the TV cabinet
+M["walls"] += [{"from": [(FP_FACE + X_CHASE) / 2, Z_CHASE], "to": [(FP_FACE + X_CHASE) / 2, Z_CHASE + FP_W], "thickness_ft": X_CHASE - FP_FACE,
+                "prov": "P", "full_only": True, "note": "stone fireplace column, flush with the TV cabinet (owner)"}]
 M["furniture"] += [
     {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
      "mirror": True, "h_ft": H_MAIN,
@@ -346,6 +348,10 @@ M["furniture"] += [
     # fireplace + built-in TV cabinet in the 2'-0" nook (owner). NeonPlan has no fireplace; its own importers use a sideboard.
     # owner's photos: a stone fireplace column standing out from the living room wall at the rear end of the nook (and
     # filling the nook behind it), the built-in TV cabinet in the recess beside it
+    {"type": "tv_wall", "x": FP_FACE - 0.05, "z": Z_CHASE + FP_W / 2, "w": 2.8, "d": 0.1, "rot": 90, "h_ft": 2.3, "mount_y_ft": 1.5,
+     "show": "firebox", "label": "fireplace: glass firebox (photos; size estimated)", "prov": "P"},
+    {"type": "worktop", "x": FP_FACE - 0.4, "z": Z_CHASE + FP_W / 2, "w": FP_W, "d": 0.8, "rot": 90, "h_ft": 4.6,
+     "show": "mantel", "label": "fireplace: wooden mantel (photos; height estimated)", "prov": "P"},
     {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + FP_W + (Z_DIN_TOP - Z_CHASE - FP_W) / 2, "w": Z_DIN_TOP - Z_CHASE - FP_W - 0.4, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90,
      "show": "TV cabinet", "label": "built-in TV cabinet in the recess beside the fireplace (photos)", "prov": "P"},
     {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
@@ -373,6 +379,16 @@ M["outdoor"] += [
 ]
 M["furniture"] += [{"type": "stairwell", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
                     "label": "opening for the stair from the basement", "prov": "M"}]
+# the wall under the stair's first flight, facing the living room: from the floor at the dining end up along the flight
+# to the landing, level under the landing (NeonPlan's U-stair: 19 risers, landing after 10 at 1.79 m, 9 treads of 0.206 m)
+_rise, _run = H_MAIN / 19, (X_STAIR_R - X_STAIR_L - 1.05 / 0.3048) / 9
+_x_land = X_STAIR_R - 9 * _run
+M["walls"] += [
+    {"from": [X_STAIR_R, Z_STAIR_TOP], "to": [_x_land, Z_STAIR_TOP], "thickness_ft": 0.375, "slope_ft": [_rise, 10 * _rise], "full_only": True, "prov": "P",
+     "note": "wall under the stair's first flight (owner)"},
+    {"from": [_x_land, Z_STAIR_TOP], "to": [X_STAIR_L, Z_STAIR_TOP], "thickness_ft": 0.375, "height_ft": 10 * _rise, "full_only": True, "prov": "P",
+     "note": "wall under the stair landing (owner)"},
+]
 FLOORS.append(M)
 
 # =============================================================== UPPER FLOOR

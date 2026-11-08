@@ -13,7 +13,7 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Main Floor] 8 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Main Floor] 11 rooms, 133.2 m2, extents x 0.000..16.980, z 0.000..14.541
   ok    [Main Floor] overall 16.980 x 14.541 m matches the drawing's dimension strings (16.980 x 14.542)
-  ok    [Main Floor] 10 doors, 33 windows, 27 furniture, 1 free walls
+  ok    [Main Floor] 10 doors, 33 windows, 29 furniture, 1 free walls
   ok    [Upper Floor] consistent winding (clockwise on screen)
   ok    [Upper Floor] 17 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Upper Floor] 18 rooms, 136.5 m2, extents x 1.219..16.980, z 0.000..13.932

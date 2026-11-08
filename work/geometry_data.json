@@ -1746,17 +1746,50 @@
     },
     {
      "from": [
-      42.771,
+      43.596000000000004,
       2.146
      ],
      "to": [
-      42.771,
+      43.596000000000004,
       6.812666666666667
      ],
-     "thickness_ft": 3.5,
+     "thickness_ft": 1.8500000000000014,
      "prov": "P",
      "full_only": true,
-     "note": "stone fireplace column (photos; it stands out 1'-6\", estimated)"
+     "note": "stone fireplace column, flush with the TV cabinet (owner)"
+    },
+    {
+     "from": [
+      35.8,
+      20.12
+     ],
+     "to": [
+      29.71488188976378,
+      20.12
+     ],
+     "thickness_ft": 0.375,
+     "slope_ft": [
+      0.5866228070175439,
+      5.866228070175438
+     ],
+     "full_only": true,
+     "prov": "P",
+     "note": "wall under the stair's first flight (owner)"
+    },
+    {
+     "from": [
+      29.71488188976378,
+      20.12
+     ],
+     "to": [
+      26.27,
+      20.12
+     ],
+     "thickness_ft": 0.375,
+     "height_ft": 5.866228070175438,
+     "full_only": true,
+     "prov": "P",
+     "note": "wall under the stair landing (owner)"
     }
    ],
    "doors": [
@@ -2333,6 +2366,31 @@
      "prov": "P"
     },
     {
+     "type": "tv_wall",
+     "x": 42.621,
+     "z": 4.479333333333333,
+     "w": 2.8,
+     "d": 0.1,
+     "rot": 90,
+     "h_ft": 2.3,
+     "mount_y_ft": 1.5,
+     "show": "firebox",
+     "label": "fireplace: glass firebox (photos; size estimated)",
+     "prov": "P"
+    },
+    {
+     "type": "worktop",
+     "x": 42.271,
+     "z": 4.479333333333333,
+     "w": 4.666666666666667,
+     "d": 0.8,
+     "rot": 90,
+     "h_ft": 4.6,
+     "show": "mantel",
+     "label": "fireplace: wooden mantel (photos; height estimated)",
+     "prov": "P"
+    },
+    {
      "type": "tv_board",
      "x": 43.521,
      "z": 11.479333333333333,
@@ -2662,6 +2720,18 @@
      ],
      "h": 0.914,
      "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"
+    },
+    {
+     "a": [
+      26.27,
+      20.12
+     ],
+     "b": [
+      35.8,
+      20.12
+     ],
+     "h": 0,
+     "why": "stair side facing the living room: open with a railing (owner); the wall under the flight is a free wall"
     },
     {
      "a": [

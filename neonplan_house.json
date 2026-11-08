@@ -1396,6 +1396,26 @@
      "rotation": 90
     },
     {
+     "type": "tv_wall",
+     "at": [
+      12.946,
+      1.321
+     ],
+     "width": 0.853,
+     "depth": 0.03,
+     "rotation": 90
+    },
+    {
+     "type": "worktop",
+     "at": [
+      12.84,
+      1.321
+     ],
+     "width": 1.422,
+     "depth": 0.244,
+     "rotation": 90
+    },
+    {
      "type": "tv_board",
      "at": [
       13.221,
