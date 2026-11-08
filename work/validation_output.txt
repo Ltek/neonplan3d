@@ -4,7 +4,7 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Basement] consistent winding (clockwise on screen)
   ok    [Basement] 6 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Basement] 10 rooms, 129.5 m2, extents x 1.242..16.799, z 0.012..13.932
-  ok    [Basement] 6 doors, 5 windows, 3 furniture, 2 free walls
+  ok    [Basement] 6 doors, 5 windows, 3 furniture, 1 free walls
   ok    [Garage] consistent winding (clockwise on screen)
   ok    [Garage] 0 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Garage] 2 rooms, 65.8 m2, extents x 0.000..10.363, z 7.225..14.541
@@ -13,13 +13,13 @@ Validation of /shared/user/home/neonplan_house.json
   ok    [Main Floor] 8 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Main Floor] 11 rooms, 133.2 m2, extents x 0.000..16.980, z 0.000..14.541
   ok    [Main Floor] overall 16.980 x 14.541 m matches the drawing's dimension strings (16.980 x 14.542)
-  ok    [Main Floor] 10 doors, 27 windows, 28 furniture, 1 free walls
+  ok    [Main Floor] 10 doors, 33 windows, 27 furniture, 1 free walls
   ok    [Upper Floor] consistent winding (clockwise on screen)
   ok    [Upper Floor] 17 T-junctions (a room corner on a neighbour's edge: NeonPlan splits that wall, D149)
   ok    [Upper Floor] 18 rooms, 136.5 m2, extents x 1.219..16.980, z 0.000..13.932
   ok    [Upper Floor] outline has 1 hole(s) (open-to-below / courtyard)
   ok    [Upper Floor] overall 15.761 x 13.932 m matches the drawing's dimension strings (15.761 x 13.932)
-  ok    [Upper Floor] 17 doors, 11 windows, 13 furniture, 3 free walls
+  ok    [Upper Floor] 17 doors, 17 windows, 13 furniture, 3 free walls
   ok    upper floor sits on the main floor footprint (overhang 0.24 m2)
   ok    right wall x aligned on main and upper (16.980 m)
   ok    rear wall aligned on main and upper (z 0.000 m)

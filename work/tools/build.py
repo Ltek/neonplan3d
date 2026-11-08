@@ -29,6 +29,8 @@ def build_import():
         for r in f["rooms"]:
             fl["rooms"].append({"name": r["name"], "points": [pt(p) for p in r["points"]]})
         for w in f["walls"]:
+            if w.get("full_only"):  # the importer drops walls that lie along room edges (or thicker than 0.6 m): added by postprocess.py
+                continue
             fl["walls"].append({"from": pt(w["from"]), "to": pt(w["to"]), "thickness": m(w["thickness_ft"])})
         for d in f["doors"]:
             fl["doors"].append({"at": pt(d["at"]), "width": m(d["w"]), "height": m(d["h"])})

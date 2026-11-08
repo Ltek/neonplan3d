@@ -102,6 +102,9 @@ def main(src, dst):
         for u, v in zip(gf["furniture"], f["furniture"]):
             if u.get("h_ft") and u["type"] not in ("stairs", "stairs_u"):
                 v["h"] = m(u["h_ft"])
+        for k, w in enumerate(x for x in gf["walls"] if x.get("full_only")):
+            f.setdefault("walls", []).append({"id": f"wall_full_{k}", "a": pt(w["from"]), "b": pt(w["to"]), "thickness": m(w["thickness_ft"])})
+            log.append(f"{f['name']}: wall {w.get('note', '')[:40]}")
         for k, q in enumerate(gf.get("posts", [])):
             x, z = q["at"]
             h = q["size_ft"] / 2

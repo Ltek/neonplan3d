@@ -883,6 +883,7 @@
      ],
      "thickness_ft": 0.375,
      "prov": "O",
+     "full_only": true,
      "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"
     }
    ],
@@ -1742,6 +1743,20 @@
      "thickness_ft": 0.375,
      "prov": "O",
      "note": "divider wall between the up stair (rear half) and the down stair (front half) (owner); full height assumed"
+    },
+    {
+     "from": [
+      42.771,
+      2.146
+     ],
+     "to": [
+      42.771,
+      6.812666666666667
+     ],
+     "thickness_ft": 3.5,
+     "prov": "P",
+     "full_only": true,
+     "note": "stone fireplace column (photos; it stands out 1'-6\", estimated)"
     }
    ],
    "doors": [
@@ -1856,65 +1871,21 @@
       0.146
      ],
      "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
-      21.917,
+      18.208,
       0.146
      ],
      "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      29.167,
-      0.146
-     ],
-     "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      32.667,
-      0.146
-     ],
-     "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      36.167,
-      0.146
-     ],
-     "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      39.667,
-      0.146
-     ],
-     "w": 3,
-     "h": 5,
-     "head": 8.072916666666666,
-     "label": "3050 SH",
-     "prov": "D"
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1923,9 +1894,31 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      21.917,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      21.917,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1934,9 +1927,31 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      29.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      29.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1945,9 +1960,31 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1956,9 +1993,31 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1967,9 +2026,31 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 3.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 5.572916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -1978,9 +2059,9 @@
      ],
      "w": 3,
      "h": 1.75,
-     "sill": 8.402916666666666,
-     "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)",
-     "prov": "D"
+     "sill": 8.072916666666666,
+     "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -2249,18 +2330,6 @@
      "d": 2.0,
      "rot": 90,
      "label": "tall pantry cabinets in the 24\" deep soffit zone (photos)",
-     "prov": "P"
-    },
-    {
-     "type": "sideboard",
-     "x": 42.771,
-     "z": 4.479333333333333,
-     "w": 4.666666666666667,
-     "d": 3.5,
-     "rot": 90,
-     "h_ft": 10.0,
-     "show": "fireplace",
-     "label": "stone fireplace, floor to ceiling, standing out 1'-6\" from the living room wall (photos; depth estimated)",
      "prov": "P"
     },
     {
@@ -2593,18 +2662,6 @@
      ],
      "h": 0.914,
      "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"
-    },
-    {
-     "a": [
-      26.27,
-      20.12
-     ],
-     "b": [
-      35.8,
-      20.12
-     ],
-     "h": 0.914,
-     "why": "#10 handrail at stair"
     },
     {
      "a": [
@@ -3430,32 +3487,21 @@
       0.146
      ],
      "w": 3,
-     "h": 5,
-     "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "h": 2.5,
+     "sill": 2.072916666666667,
+     "label": "3050 SH, panel 1 of 2 (photos)",
+     "prov": "P"
     },
     {
      "at": [
-      32.667,
+      29.167,
       0.146
      ],
      "w": 3,
-     "h": 5,
-     "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
-    },
-    {
-     "at": [
-      36.167,
-      0.146
-     ],
-     "w": 3,
-     "h": 5,
-     "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "h": 2.5,
+     "sill": 4.572916666666667,
+     "label": "3050 SH, panel 2 of 2 (photos)",
+     "prov": "P"
     },
     {
      "at": [
@@ -3463,10 +3509,87 @@
       0.146
      ],
      "w": 3,
-     "h": 5,
-     "head": 7.072916666666667,
-     "label": "3050 SH",
-     "prov": "D"
+     "h": 2.5,
+     "sill": 2.072916666666667,
+     "label": "3050 SH, panel 1 of 2 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      39.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.5,
+     "sill": 4.572916666666667,
+     "label": "3050 SH, panel 2 of 2 (photos)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 2.072916666666667,
+     "label": "tall window, panel 1 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 4.072916666666667,
+     "label": "tall window, panel 2 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      32.667,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 6.072916666666667,
+     "label": "tall window, panel 3 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 2.072916666666667,
+     "label": "tall window, panel 1 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 4.072916666666667,
+     "label": "tall window, panel 2 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
+    },
+    {
+     "at": [
+      36.167,
+      0.146
+     ],
+     "w": 3,
+     "h": 2.0,
+     "sill": 6.072916666666667,
+     "label": "tall window, panel 3 of 3 (photos; top limited to the floor height)",
+     "prov": "P"
     },
     {
      "at": [

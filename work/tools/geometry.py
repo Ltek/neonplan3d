@@ -192,7 +192,7 @@ B["outdoor"] += [{"type": "terrace", "name": "Patio", "points": rect(X_DECK - T,
 B["posts"] = [{"at": [x, z], "size_ft": 0.5, "note": "6x6 deck post"} for x, z in ((49.5, DD_Z0 + 0.5), (61.0, DD_Z0 + 0.5), (X_DECK + 0.25, -6.6), (X_BRK_L - 0.6, -6.6))]
 B["walls"] += [
     {"from": [B_X_BAFFLE, B_Z_REAR], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen"},
-    {"from": [B_X_BAFFLE, B_Z_BAFFLE_END], "to": [B_X_R2, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"},
+    {"from": [B_X_BAFFLE, B_Z_BAFFLE_END], "to": [B_X_R2, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "full_only": True, "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"},
 ]
 B["doors"] += [
     {"at": [B_X_WALK, 4.6], "w": 71 / 12, "h": 7.0, "label": "sliding glass door walk-out, as built 71\" x 84\"", "prov": "O", "style": "sliding"},
@@ -285,7 +285,6 @@ M["open_edges"] = [
     {"a": [X_DIN_L, Z_DIN_TOP], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "dining flat arch #34"},
     {"a": [X_STAIR_R, Z_STAIR_BOT], "b": [X_DIN_L, Z_STAIR_BOT], "h": 0, "why": "great-room hall | foyer, columns + flat arch"},
     {"a": [X_DIN_L, Z_STAIR_BOT], "b": [X_HALF_END, Z_STAIR_BOT], "h": 0.914, "why": "#22 half wall 36\" AFF (A6: '30\" AFF wall')"},
-    {"a": [X_STAIR_L, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_TOP], "h": 0.914, "why": "#10 handrail at stair"},
     {"a": [X_STAIR_R, Z_STAIR_TOP], "b": [X_STAIR_R, Z_STAIR_MID], "h": 0, "why": "stair up: open end facing the dining room (owner)"},
     {"a": [X_STAIR_R, Z_STAIR_MID], "b": [X_STAIR_R, Z_STAIR_BOT], "h": 0, "why": "stair down: open end facing the dining room (owner)"},
 ]
@@ -305,8 +304,11 @@ M["doors"] += [
 ]
 WT = dict(head=HEAD_MAIN)
 M["windows"] += [
-    *[{"at": [x, Z_REAR], "w": 3, "h": 5, **WT, "label": "3050 SH", "prov": "D"} for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)],
-    *[{"at": [x, Z_REAR], "w": 3, "h": 1.75, "sill": HEAD_MAIN + 0.33, "label": "3020 TRANS (height cut to fit under 10'-1 1/8\" plate)", "prov": "D"} for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)],
+    # breakfast and living room rear windows: 3050 SH + 3020 transom in one frame, 3 panels (owner's photos): drawn as 3
+    # windows stacked on each other, which NeonPlan joins into one unit; the drawn 4" between the SH and the transom is gone
+    *[{"at": [x, Z_REAR], "w": 3, "h": h, "sill": sl, "label": f"3050 SH + 3020 TRANS, panel {k + 1} of 3 (photos)", "prov": "P"}
+      for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)
+      for k, (sl, h) in enumerate(((HEAD_MAIN - 5, 2.5), (HEAD_MAIN - 2.5, 2.5), (HEAD_MAIN, 1.75)))],
     *[{"at": [x, Z_DIN_TOP], "w": 2.5, "h": 1.75, "sill": HEAD_MAIN + 0.33, "label": "2620 TRANS", "prov": "D"} for x in (47.333, 50.333, 53.333)],
     *[{"at": [X_R, z], "w": 2, "h": 2, **WT, "label": "2020 FX", "prov": "D"} for z in (19.333, 21.833, 24.333)],
     {"at": [X_R, 29.875], "w": 2, "h": 2, **WT, "label": "2020 FX powder", "prov": "D"},
@@ -323,6 +325,10 @@ for w in M["windows"]:
         w["label"] = "3660 SH den"
 FP_W = (Z_DIN_TOP - Z_CHASE) / 3   # owner: the fireplace takes 1/3 of the nook
 FP_OUT = 1.5                       # how far its stone stands out into the living room (photos, estimated)
+# the stone fireplace column, floor to ceiling, standing out from the living room wall and filling the nook behind it:
+# a solid free wall, so it shows as stone-like masonry rather than a cabinet
+M["walls"] += [{"from": [(X_REAR_R - FP_OUT + X_CHASE) / 2, Z_CHASE], "to": [(X_REAR_R - FP_OUT + X_CHASE) / 2, Z_CHASE + FP_W], "thickness_ft": X_CHASE - X_REAR_R + FP_OUT,
+                "prov": "P", "full_only": True, "note": "stone fireplace column (photos; it stands out 1'-6\", estimated)"}]
 M["furniture"] += [
     {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
      "mirror": True, "h_ft": H_MAIN,
@@ -340,8 +346,6 @@ M["furniture"] += [
     # fireplace + built-in TV cabinet in the 2'-0" nook (owner). NeonPlan has no fireplace; its own importers use a sideboard.
     # owner's photos: a stone fireplace column standing out from the living room wall at the rear end of the nook (and
     # filling the nook behind it), the built-in TV cabinet in the recess beside it
-    {"type": "sideboard", "x": (X_REAR_R - FP_OUT + X_CHASE) / 2, "z": Z_CHASE + FP_W / 2, "w": FP_W, "d": X_CHASE - X_REAR_R + FP_OUT, "rot": 90, "h_ft": 10.0,
-     "show": "fireplace", "label": "stone fireplace, floor to ceiling, standing out 1'-6\" from the living room wall (photos; depth estimated)", "prov": "P"},
     {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + FP_W + (Z_DIN_TOP - Z_CHASE - FP_W) / 2, "w": Z_DIN_TOP - Z_CHASE - FP_W - 0.4, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90,
      "show": "TV cabinet", "label": "built-in TV cabinet in the recess beside the fireplace (photos)", "prov": "P"},
     {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
@@ -439,7 +443,12 @@ U["doors"] += [
 ]
 WU = dict(head=HEAD_UP)
 U["windows"] += [
-    *[{"at": [x, Z_REAR], "w": 3, "h": 5, **WU, "label": "3050 SH", "prov": "D"} for x in (29.167, 32.667, 36.167, 39.667)],
+    # master bedroom rear windows (owner's back photo): the outer two 2 panels, the middle two 3 panels and taller. NeonPlan
+    # keeps windows below the floor height (8'-1 1/8"), so the middle ones end there instead of reaching into the gable
+    *[{"at": [x, Z_REAR], "w": 3, "h": 2.5, "sill": HEAD_UP - 5 + 2.5 * k, "label": f"3050 SH, panel {k + 1} of 2 (photos)", "prov": "P"}
+      for x in (29.167, 39.667) for k in range(2)],
+    *[{"at": [x, Z_REAR], "w": 3, "h": 2.0, "sill": HEAD_UP - 5 + 2.0 * k, "label": f"tall window, panel {k + 1} of 3 (photos; top limited to the floor height)", "prov": "P"}
+      for x in (32.667, 36.167) for k in range(3)],
     {"at": [6.708, Z_DECK], "w": 4, "h": 4, **WU, "label": "4040 SL (TEMP)", "prov": "D"},
     {"at": [X_DECK, 14.5], "w": 6, "h": 4, **WU, "label": "6040 FX (TEMP)", "prov": "D"},
     {"at": [50.0, Z_DIN_TOP], "w": 6, "h": 5, **WU, "label": "6050 SL #8", "prov": "D"},
