@@ -97,6 +97,21 @@ def main(src, dst):
                 r["wall_slopes"] = sl
                 log.append(f"{f['name']}: '{gr['name']}' pitched ceiling, wall slopes {sl}")
         log.append(f"{f['name']}: ceilings " + ", ".join(f"{r['name']} {r['ceiling_height']}" for r in f["rooms"] if r.get("ceiling_height")))
+        # furniture heights set in the geometry (the fireplace column up to the ceiling)
+        assert [u["type"] for u in gf["furniture"]] == [u["type"] for u in f["furniture"]], "furniture order changed in the import"
+        for u, v in zip(gf["furniture"], f["furniture"]):
+            if u.get("h_ft") and u["type"] not in ("stairs", "stairs_u"):
+                v["h"] = m(u["h_ft"])
+        for k, q in enumerate(gf.get("posts", [])):
+            x, z = q["at"]
+            h = q["size_ft"] / 2
+            f.setdefault("walls", []).append({"id": f"post_{k}", "a": pt([x, z - h]), "b": pt([x, z + h]), "thickness": m(q["size_ft"])})
+            log.append(f"{f['name']}: post at {pt([x, z])}")
+        # basement windows: the walk-out side is above ground, no light wells (owner)
+        if gf["name"] == "Basement":
+            for o in f["openings"]:
+                if o["type"] == "window":
+                    o["well"] = False
         # stairs: which way the flights run (mirror) and their full height, so each one opens the floor above
         stairs = [u for u in gf["furniture"] if u["type"] in ("stairs", "stairs_u")]
         built = [u for u in f["furniture"] if u["type"] in ("stairs", "stairs_u")]
@@ -156,6 +171,8 @@ def main(src, dst):
             s["open"] = True
         secs.append(s)
         log.append(f"roof {r['id']}: {r['shape']} x {x0}..{x1} z {z0}..{z1} eaves {ea}/{eb}")
+    # the walk-out basement stands free on its rear side (owner); NeonPlan's ground is one level, so no earth is drawn round it
+    b["settings"]["terrain"] = {**(b["settings"].get("terrain") or {}), "earth": False}
     b["settings"]["roof"] = {**b["settings"].get("roof", {}), "type": "custom", "pitch": 33.69, "overhang": 0.3, "sections": secs}
     out = {"format": "neonplan3d", "version": 1, "exported_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"), "building": b}
     json.dump(out, open(dst, "w"), indent=1)

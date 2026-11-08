@@ -196,14 +196,12 @@
 <circle cx="69.0" cy="192.0" r="3" fill="red"/><text x="73.0" y="188.0" font-size="9" fill="red">[0,0]</text>
 <line x1="60.0" y1="636.0" x2="207.6" y2="636.0" stroke="#111" stroke-width="3"/><text x="60.0" y="632.0" font-size="9">5 m</text>
 <text x="60" y="704.0" font-size="16" font-weight="bold">Main Floor  (elevation +0.000 m, storey 3.397 m)</text>
-<polygon points="103.7,782.7 199.7,782.7 199.7,872.7 103.7,872.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
-<text x="151.7" y="827.7" font-size="10" fill="#16a34a" text-anchor="middle">Covered Deck (outdoor)</text>
-<polygon points="103.7,719.7 199.7,719.7 199.7,782.7 103.7,782.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
-<text x="151.7" y="751.2" font-size="10" fill="#16a34a" text-anchor="middle">Uncovered Deck (outdoor)</text>
+<polygon points="103.7,719.7 199.7,719.7 199.7,872.7 103.7,872.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
+<text x="151.7" y="796.2" font-size="10" fill="#16a34a" text-anchor="middle">Deck (outdoor)</text>
 <polygon points="375.0,1141.3 447.0,1141.3 447.0,1246.2 375.0,1246.2" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
 <text x="411.0" y="1193.8" font-size="10" fill="#16a34a" text-anchor="middle">Porch (outdoor)</text>
-<polygon points="469.7,764.7 649.7,764.7 649.7,926.7 469.7,926.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
-<text x="559.7" y="845.7" font-size="10" fill="#16a34a" text-anchor="middle">Dining Deck (outdoor)</text>
+<polygon points="451.7,764.7 649.7,764.7 649.7,926.7 469.7,926.7 469.7,800.7 451.7,800.7 451.7,782.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
+<text x="513.4" y="823.8" font-size="10" fill="#16a34a" text-anchor="middle">Dining Deck (outdoor)</text>
 <polygon points="69.0,997.3 105.0,997.3 201.0,997.3 201.0,1030.2 201.0,1195.4 105.0,1195.4 105.0,1177.4 69.0,1177.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="201.0,1030.2 304.1,1030.2 375.0,1030.2 375.0,1141.3 375.0,1213.4 201.0,1213.4 201.0,1195.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="105.0,874.0 201.0,874.0 201.0,927.9 105.0,927.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
@@ -291,9 +289,9 @@
 <text x="207.6" y="936.4" font-size="7" fill="#6b7280" text-anchor="middle">kitchen_wall</text>
 <rect x="284.6" y="963.1" width="18.0" height="62.1" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="293.6" y="997.2" font-size="7" fill="#6b7280" text-anchor="middle">kitchen_tall</text>
-<rect x="451.7" y="802.9" width="15.3" height="40.2" fill="none" stroke="#6b7280" stroke-width="1"/>
-<text x="459.4" y="826.0" font-size="7" fill="#6b7280" text-anchor="middle">fireplace</text>
-<rect x="451.7" y="844.9" width="15.3" height="82.2" fill="none" stroke="#6b7280" stroke-width="1"/>
+<rect x="436.9" y="802.0" width="31.5" height="42.0" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="452.6" y="826.0" font-size="7" fill="#6b7280" text-anchor="middle">fireplace</text>
+<rect x="451.7" y="845.8" width="15.3" height="80.4" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="459.4" y="889.0" font-size="7" fill="#6b7280" text-anchor="middle">TV cabinet</text>
 <rect x="257.9" y="834.0" width="30.0" height="90.0" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="272.9" y="882.0" font-size="7" fill="#6b7280" text-anchor="middle">island</text>

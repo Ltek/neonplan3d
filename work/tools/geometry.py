@@ -148,6 +148,7 @@ def rect(x0, z0, x1, z1):
 FLOORS = []
 
 # =============================================================== BASEMENT
+DD_Z0 = Z_DIN_TOP - T - 18   # dining deck: 18 ft out from the dining wall (owner)
 B = {"name": "Basement", "elev_ft": -H_BASE, "height_ft": H_BASE, "sheet": "A1", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 B["rooms"] += [
     {"name": "Theater", "prov": "M", "ceiling_ft": 9.0,
@@ -186,6 +187,9 @@ B["thick_edges"] = [
 ]
 B["outdoor"] += [{"type": "terrace", "name": "Patio", "points": rect(X_DECK - T, Z_REAR - T, B_X_WALK - 0.2, B_Z_STEP - 0.2), "prov": "O",
                   "note": "walk-out patio under the covered deck, outside the basement sliding door (owner)"}]
+# deck posts from the patio / yard up to the decks (photos; positions estimated). Full NeonPlan file only: they stand
+# outside the house, and the import format would shift the whole plan to keep its coordinates positive.
+B["posts"] = [{"at": [x, z], "size_ft": 0.5, "note": "6x6 deck post"} for x, z in ((49.5, DD_Z0 + 0.5), (61.0, DD_Z0 + 0.5), (X_DECK + 0.25, -6.6), (X_BRK_L - 0.6, -6.6))]
 B["walls"] += [
     {"from": [B_X_BAFFLE, B_Z_REAR], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen"},
     {"from": [B_X_BAFFLE, B_Z_BAFFLE_END], "to": [B_X_R2, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"},
@@ -317,6 +321,8 @@ M["windows"] += [
 for w in M["windows"]:
     if w["label"] == "3060 SH den" and w["at"][1] == Z_DEN_FRONT:
         w["label"] = "3660 SH den"
+FP_W = (Z_DIN_TOP - Z_CHASE) / 3   # owner: the fireplace takes 1/3 of the nook
+FP_OUT = 1.5                       # how far its stone stands out into the living room (photos, estimated)
 M["furniture"] += [
     {"type": "stairs_u", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
      "mirror": True, "h_ft": H_MAIN,
@@ -332,10 +338,12 @@ M["furniture"] += [
     {"type": "kitchen_wall", "x": 15.55, "z": 16.75, "w": 4.5, "d": 1.2, "rot": 270, "label": "wall cabinets", "prov": "P"},
     {"type": "kitchen_tall", "x": 25.1, "z": 23.5, "w": 6.9, "d": 2.0, "rot": 90, "label": "tall pantry cabinets in the 24\" deep soffit zone (photos)", "prov": "P"},
     # fireplace + built-in TV cabinet in the 2'-0" nook (owner). NeonPlan has no fireplace; its own importers use a sideboard.
-    {"type": "sideboard", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + (Z_DIN_TOP - Z_CHASE) / 6, "w": (Z_DIN_TOP - Z_CHASE) / 3 - 0.2, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90, "show": "fireplace",
-     "label": "fireplace: 1/3 of the nook (owner); rear end assumed", "prov": "O"},
-    {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + (Z_DIN_TOP - Z_CHASE) * 2 / 3, "w": (Z_DIN_TOP - Z_CHASE) * 2 / 3 - 0.2, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90, "show": "TV cabinet",
-     "label": "built-in TV cabinet: the other 2/3 of the nook (owner)", "prov": "O"},
+    # owner's photos: a stone fireplace column standing out from the living room wall at the rear end of the nook (and
+    # filling the nook behind it), the built-in TV cabinet in the recess beside it
+    {"type": "sideboard", "x": (X_REAR_R - FP_OUT + X_CHASE) / 2, "z": Z_CHASE + FP_W / 2, "w": FP_W, "d": X_CHASE - X_REAR_R + FP_OUT, "rot": 90, "h_ft": 10.0,
+     "show": "fireplace", "label": "stone fireplace, floor to ceiling, standing out 1'-6\" from the living room wall (photos; depth estimated)", "prov": "P"},
+    {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + FP_W + (Z_DIN_TOP - Z_CHASE - FP_W) / 2, "w": Z_DIN_TOP - Z_CHASE - FP_W - 0.4, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90,
+     "show": "TV cabinet", "label": "built-in TV cabinet in the recess beside the fireplace (photos)", "prov": "P"},
     {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
     *[{"type": "bar_stool", "x": 25.25, "z": z, "w": 1.4, "d": 1.4, "rot": 90, "label": "bar stool, living-room side of the island (photos)", "prov": "P"}
       for z in (6.7, 8.3, 9.9, 11.5, 13.1, 14.7)],
@@ -350,12 +358,14 @@ M["furniture"] += [
     {"type": "washer", "x": 13.45, "z": 14.3, "w": 2.2, "d": 2.2, "rot": 90, "label": "#2 washer box", "prov": "M"},
 ]
 M["outdoor"] += [
-    {"type": "terrace", "name": "Covered Deck", "points": rect(X_DECK - T, Z_REAR - T, X_BRK_L - T, Z_DECK - T), "prov": "D"},
-    {"type": "terrace", "name": "Uncovered Deck", "points": rect(X_DECK - T, -7.0, X_BRK_L - T, Z_REAR - T), "prov": "D"},
+    {"type": "balcony", "name": "Deck", "points": rect(X_DECK - T, -7.0, X_BRK_L - T, Z_DECK - T), "prov": "D",
+     "note": "raised deck off the kitchen, covered part (z 0-10) under the roof; wire railing (photos); the walk-out patio below"},
     {"type": "terrace", "name": "Porch", "points": rect(X_GAR_R, Z_FOYER_FRONT, X_DEN_L, 51.5), "prov": "M",
      "note": "to the front of its two posts (A2: post pads at z 49.5-51.5; roof plan)"},
-    {"type": "terrace", "name": "Dining Deck", "points": rect(X_CHASE + T, Z_DIN_TOP - T - 18, X_CHASE + T + 20, Z_DIN_TOP - T), "prov": "E",
-     "note": "owner markup: approx. 20 ft wide x 18 ft deep, against the dining wall from the fireplace chase; exact position unconfirmed"},
+    {"type": "balcony", "name": "Dining Deck", "prov": "E",
+     "points": [[X_REAR_R + T, DD_Z0], [X_CHASE + T + 20, DD_Z0], [X_CHASE + T + 20, Z_DIN_TOP - T], [X_CHASE + T, Z_DIN_TOP - T], [X_CHASE + T, Z_CHASE - T],
+                [X_REAR_R + T, Z_CHASE - T], [X_REAR_R + T, Z_REAR - T]],
+     "note": "owner: approx. 20 ft wide x 18 ft deep off the dining room, wrapping round the living room's corner notch behind the fireplace bump-out; wire railing (photos)"},
 ]
 M["furniture"] += [{"type": "stairwell", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
                     "label": "opening for the stair from the basement", "prov": "M"}]
