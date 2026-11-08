@@ -184,6 +184,8 @@ B["open_edges"] = [{"a": [B_X_STAIR_END, Z_STAIR_TOP], "b": [B_X_STAIR_END, B_Z_
 B["thick_edges"] = [
     {"a": [B_X_R2, B_Z_R2], "b": [B_X_STAIR_END, Z_STAIR_TOP], "t": THICK_SOUND, "why": "thick sound reducing wall, theater | hall"},
 ]
+B["outdoor"] += [{"type": "terrace", "name": "Patio", "points": rect(X_DECK - T, Z_REAR - T, B_X_WALK - 0.2, B_Z_STEP - 0.2), "prov": "O",
+                  "note": "walk-out patio under the covered deck, outside the basement sliding door (owner)"}]
 B["walls"] += [
     {"from": [B_X_BAFFLE, B_Z_REAR], "to": [B_X_BAFFLE, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "theater baffle wall with the 130\" 16:9 AT screen"},
     {"from": [B_X_BAFFLE, B_Z_BAFFLE_END], "to": [B_X_R2, B_Z_BAFFLE_END], "thickness_ft": 0.375, "prov": "O", "note": "baffle side wall: slide-out equipment cabinet, hidden door (not modelled)"},
@@ -213,11 +215,46 @@ B["furniture"] += [
 ]
 FLOORS.append(B)
 
+# =============================================================== GARAGE (its own level: the slab is 4 steps below the house floor)
+GAR_DROP = c("GAR_DROP", 2.5, "O", "garage slab below the main floor: 4 steps down from the mud room door (owner), risers about 7 1/2\" (assumed)")
+GAR_PLATE = 9.5     # owner: the 1-car side ceiling ~9-10 ft; also the garage plate / roof eaves there
+GAR_2CAR_CLG = H_MAIN - (1 + 0.625 / 12) + GAR_DROP  # owner: 12-15 ft; the underside of the upper floor framing (A5: 1'-0 5/8" floor system)
+GAR = {"name": "Garage", "elev_ft": -GAR_DROP, "height_ft": GAR_PLATE, "sheet": "A2", "merge_into": "Main Floor",
+       "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
+GAR["rooms"] += [
+    {"name": "Garage", "prov": "D", "ceiling_ft": GAR_PLATE,
+     "points": [[X_GAR_L, Z_GAR_TOP], [X_DECK, Z_GAR_TOP], [X_BRK_L, Z_GAR_TOP], [X_BRK_L, Z_STAIR_BOT], [X_BRK_L, Z_GAR_DOOR1], [X_DECK, Z_GAR_DOOR1], [X_DECK, Z_GAR_JOG], [X_GAR_L, Z_GAR_JOG]],
+     "note": "3-car garage, 1-car side: ceiling ~9'-6\" (owner: 9-10 ft)"},
+    {"name": "Garage (2-car)", "part_of": "Garage", "prov": "D", "ceiling_ft": GAR_2CAR_CLG,
+     "points": [[X_BRK_L, Z_STAIR_BOT], [X_STAIR_L, Z_STAIR_BOT], [X_GAR_R, Z_STAIR_BOT], [X_GAR_R, Z_FOYER_FRONT], [X_GAR_R, Z_GAR_DOOR2], [X_BRK_L, Z_GAR_DOOR2], [X_BRK_L, Z_GAR_DOOR1]],
+     "note": "2-car side under bedroom 2: ceiling at the underside of the upper floor, ~12'-7\" above the garage slab (owner: 12-15 ft)"},
+]
+_curb = round(GAR_DROP * 0.3048, 3)
+_plate = round(GAR_PLATE * 0.3048, 3)
+GAR["open_edges"] = [
+    {"a": [X_BRK_L, Z_STAIR_BOT], "b": [X_BRK_L, Z_GAR_DOOR1], "h": 0, "why": "1-car | 2-car side: one garage"},
+    # where the garage meets the house its own walls are only the foundation curb up to the house floor; the house walls stand on it
+    {"a": [X_DECK, Z_GAR_TOP], "b": [X_BRK_L, Z_GAR_TOP], "h": _curb, "why": "curb under the mud room wall"},
+    {"a": [X_BRK_L, Z_GAR_TOP], "b": [X_BRK_L, Z_STAIR_BOT], "h": _curb, "why": "curb under the kitchen wall"},
+    {"a": [X_BRK_L, Z_STAIR_BOT], "b": [X_GAR_R, Z_STAIR_BOT], "h": _curb, "why": "curb under the kitchen / stair wall"},
+    {"a": [X_GAR_R, Z_STAIR_BOT], "b": [X_GAR_R, Z_FOYER_FRONT], "h": _curb, "why": "curb under the foyer wall"},
+    {"a": [X_GAR_R, Z_FOYER_FRONT], "b": [X_GAR_R, Z_GAR_DOOR2], "h": _plate, "why": "2-car side wall beside the porch, up to the garage plate"},
+    {"a": [X_GAR_R, Z_GAR_DOOR2], "b": [X_BRK_L, Z_GAR_DOOR2], "h": _plate, "why": "2-car door wall, up to the garage plate"},
+    {"a": [X_BRK_L, Z_GAR_DOOR2], "b": [X_BRK_L, Z_GAR_DOOR1], "h": _plate, "why": "2-car door wall return, up to the garage plate"},
+]
+GAR["doors"] += [
+    {"at": [9.333, Z_GAR_DOOR1], "w": 8, "h": 8, "label": "8080 O.G.D.", "prov": "D"},
+    {"at": [24.833, Z_GAR_DOOR2], "w": 16, "h": 8, "label": "16080 O.G.D.", "prov": "D"},
+]
+GAR["furniture"] += [
+    {"type": "stairs", "x": 12.33, "z": Z_GAR_TOP + 0.19 + 1.3, "w": 3.0, "d": 2.6, "rot": 0, "h_ft": GAR_DROP,
+     "label": "4 steps up to the mud room door (owner)", "prov": "O"},
+]
+FLOORS.append(GAR)
+
 # =============================================================== MAIN FLOOR
 M = {"name": "Main Floor", "elev_ft": 0.0, "height_ft": H_MAIN, "sheet": "A2", "rooms": [], "walls": [], "doors": [], "windows": [], "furniture": [], "outdoor": []}
 M["rooms"] += [
-    {"name": "3-Car Garage", "prov": "D", "points": [[X_GAR_L, Z_GAR_TOP], [X_BRK_L, Z_GAR_TOP], [X_BRK_L, Z_STAIR_BOT], [X_GAR_R, Z_STAIR_BOT], [X_GAR_R, Z_GAR_DOOR2],
-                                                   [X_BRK_L, Z_GAR_DOOR2], [X_BRK_L, Z_GAR_DOOR1], [X_DECK, Z_GAR_DOOR1], [X_DECK, Z_GAR_JOG], [X_GAR_L, Z_GAR_JOG]]},
     {"name": "Laundry", "prov": "D", "points": rect(X_DECK, Z_DECK, X_BRK_L, Z_LAUND_BOT)},
     {"name": "Mud Room", "prov": "M", "points": rect(X_DECK, Z_LAUND_BOT, X_BRK_L, Z_GAR_TOP),
      "note": "owner markup: the pantry wall + pocket door and the coat closet walls + door drawn on A3.1 were not built"},
@@ -261,8 +298,6 @@ M["doors"] += [
     {"at": [10.2, Z_LAUND_BOT], "w": 2 + 8 / 12, "h": DOOR_H, "label": "2868 PKT laundry", "prov": "M"},
     {"at": [X_BRK_L, 5.0], "w": 6, "h": DOOR_H, "label": "6080 SGD to covered deck", "prov": "M", "style": "sliding"},
     {"at": [50.333, Z_DIN_TOP], "w": 9.0, "h": 8.0, "label": "sliding glass door to the dining deck, 108\" x 8'-0\" (owner; replaces 3 x 2650 SH, centred on them)", "prov": "O", "style": "sliding"},
-    {"at": [9.333, Z_GAR_DOOR1], "w": 8, "h": 8, "label": "8080 O.G.D.", "prov": "D"},
-    {"at": [24.833, Z_GAR_DOOR2], "w": 16, "h": 8, "label": "16080 O.G.D.", "prov": "D"},
 ]
 WT = dict(head=HEAD_MAIN)
 M["windows"] += [
@@ -322,6 +357,8 @@ M["outdoor"] += [
     {"type": "terrace", "name": "Dining Deck", "points": rect(X_CHASE + T, Z_DIN_TOP - T - 18, X_CHASE + T + 20, Z_DIN_TOP - T), "prov": "E",
      "note": "owner markup: approx. 20 ft wide x 18 ft deep, against the dining wall from the fireplace chase; exact position unconfirmed"},
 ]
+M["furniture"] += [{"type": "stairwell", "x": (X_STAIR_L + X_STAIR_R) / 2, "z": (Z_STAIR_TOP + B_Z_BOT) / 2, "w": B_Z_BOT - Z_STAIR_TOP, "d": X_STAIR_R - X_STAIR_L, "rot": 270,
+                    "label": "opening for the stair from the basement", "prov": "M"}]
 FLOORS.append(M)
 
 # =============================================================== UPPER FLOOR
@@ -433,15 +470,15 @@ GABLE = {"ridge_x": X_UP_MB_RIDGE, "half": X_UP_MB_RIDGE - X_STAIR_L, "low_ft": 
 # from the roof plan (8:12 main roofs, 12:12 front gables and hips); eaves at the upper plate (upper floor top) or the
 # main plate (main floor top). Simplified: the hips' 12:12 ends are drawn at the side pitch, valleys come from overlaps.
 P8, P12 = 33.69, 45.0
-EAVE_UP, EAVE_MAIN = "upper", "main"
+EAVE_UP, EAVE_MAIN, EAVE_GAR = "upper", "main", "garage"
 ROOF = [
     {"id": "main", "shape": "hip", "axis": "x", "x0": 18.0, "z0": 9.75, "x1": 44.4, "z1": Z_FOYER_FRONT, "eave": EAVE_UP, "pitch": P8,
      "note": "main hip roof, ridge at z 24.8 from x 23.7 to 38.6 (roof plan)"},
     {"id": "master_gable", "shape": "gable", "axis": "z", "x0": X_STAIR_L, "z0": Z_REAR, "x1": X_REAR_R, "z1": 18.0, "eave": EAVE_UP, "pitch": P8,
      "note": "master bedroom gable to the rear (4 windows, back photo); its front end runs into the main roof"},
     {"id": "left_catslide", "shape": "hip", "axis": "x", "x0": X_DECK, "z0": Z_DECK, "x1": X_UP_BR2_L, "z1": Z_GAR_DOOR1, "eave": EAVE_UP, "pitch": P8,
-     "eave_b": EAVE_MAIN, "pitch_b": 26.3,
-     "note": "over the master bath, its front slope running down over the garage to the garage eave (front photo); front pitch set so the ridge lies at z 18.4 as on the roof plan"},
+     "eave_b": EAVE_GAR, "pitch_b": P8,
+     "note": "over the master bath, its front slope running down over the garage to the garage eave at 8:12 (front photo, roof plan)"},
     {"id": "wic", "shape": "hip", "axis": "x", "x0": X_BRK_L, "z0": Z_WIC_TOP, "x1": X_STAIR_L, "z1": 12.25, "eave": EAVE_UP, "pitch": P8, "note": "master WIC"},
     {"id": "right", "shape": "hip", "axis": "x", "x0": X_UP_HALL_R, "z0": Z_DIN_TOP, "x1": X_R, "z1": Z_DEN_FRONT, "eave": EAVE_UP, "pitch": P8,
      "note": "bedrooms 3 and 4, bath 2"},
@@ -451,9 +488,9 @@ ROOF = [
      "note": "front gable over bedroom 2's bay (board and batten, front photo)"},
     {"id": "porch", "shape": "gable", "axis": "z", "x0": X_GAR_R, "z0": Z_FOYER_FRONT, "x1": X_DEN_L, "z1": 51.5, "eave": EAVE_MAIN, "pitch": P12, "open": True,
      "note": "front porch gable on two posts"},
-    {"id": "garage_left", "shape": "pent", "axis": "z", "x0": X_GAR_L, "z0": Z_GAR_TOP, "x1": X_DECK, "z1": Z_GAR_JOG, "eave": EAVE_MAIN, "pitch": P8,
+    {"id": "garage_left", "shape": "pent", "axis": "z", "x0": X_GAR_L, "z0": Z_GAR_TOP, "x1": X_DECK, "z1": Z_GAR_JOG, "eave": EAVE_GAR, "pitch": P8,
      "note": "garage strip left of the master bath, sloping to the left"},
-    {"id": "garage_front", "shape": "pent", "axis": "x", "x0": X_BRK_L, "z0": Z_FOYER_FRONT, "x1": X_GAR_R, "z1": Z_GAR_DOOR2, "eave": EAVE_MAIN, "pitch": 26.3, "flip": True,
+    {"id": "garage_front", "shape": "pent", "axis": "x", "x0": X_BRK_L, "z0": Z_FOYER_FRONT, "x1": X_GAR_R, "z1": Z_GAR_DOOR2, "eave": EAVE_GAR, "pitch": P8, "flip": True,
      "note": "2-car garage in front of bedroom 2, sloping to the front"},
     {"id": "breakfast", "shape": "pent", "axis": "x", "x0": X_BRK_L, "z0": Z_REAR, "x1": X_STAIR_L, "z1": Z_WIC_TOP, "eave": EAVE_MAIN, "pitch": P8,
      "note": "breakfast nook behind the master WIC, sloping to the rear"},
@@ -468,6 +505,7 @@ ROOF = [
 FLOOR_MAT = {
     "Basement": {"Theater": "carpet", "Theater (8 ft)": "tiles", "Office": "carpet", "Office (9 ft)": "carpet", "Office Closet": "carpet",
                  "Bathroom": "tiles", "Stairs": "carpet", "Hall": "carpet", "Mechanical Room": "concrete", "Crawlspace": "concrete"},
-    "Main Floor": {"3-Car Garage": "concrete", "Stairs": "carpet"},
+    "Garage": {"Garage": "concrete", "Garage (2-car)": "concrete"},
+    "Main Floor": {"Stairs": "carpet"},
     "Upper Floor": {"Stairs": "carpet"},
 }

@@ -64,17 +64,33 @@ def build_geometry_data():
 COL = {"room": "#2b6cb0", "wall": "#111", "door": "#d97706", "win": "#0ea5e9", "furn": "#6b7280", "out": "#16a34a"}
 
 
+def view_floors():
+    """Floors as drawn in the preview and the overlays: a level merged into another one (the garage, 4 steps below
+    the main floor) is drawn with it."""
+    out = []
+    for f in G.FLOORS:
+        if f.get("merge_into"):
+            continue
+        g = dict(f)
+        for x in G.FLOORS:
+            if x.get("merge_into") == f["name"]:
+                for k in ("rooms", "walls", "doors", "windows", "furniture", "outdoor", "open_edges"):
+                    g[k] = list(x.get(k, [])) + list(g.get(k, []))
+        out.append(g)
+    return out
+
+
 def svg_preview(path):
     S = 9.0  # px per ft
     pad = 60
     W = 72 * S + 2 * pad
     gap = 70
     floor_h = 58 * S
-    H = len(G.FLOORS) * (floor_h + gap) + pad * 2 + 40
+    H = len(view_floors()) * (floor_h + gap) + pad * 2 + 40
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W:.0f}" height="{H:.0f}" viewBox="0 0 {W:.0f} {H:.0f}" font-family="Helvetica,Arial,sans-serif">',
          '<rect width="100%" height="100%" fill="white"/>',
          f'<text x="{pad}" y="30" font-size="12" font-weight="bold">House plan - NeonPlan reconstruction (wall centre lines; [0,0] = garage-left and rear wall centre lines)</text>']
-    for fi, f in enumerate(reversed(G.FLOORS)):
+    for fi, f in enumerate(reversed(view_floors())):
         oy = pad + 30 + fi * (floor_h + gap) + 30
         ox = pad
         X = lambda x: ox + (x - SX + 1.0) * S
@@ -232,7 +248,7 @@ def overlays():
     Image.MAX_IMAGE_PIXELS = None
     CAL = json.load(open(f"{WORK}/calib.json"))
     font = ImageFont.load_default(size=44)
-    for f in G.FLOORS:
+    for f in view_floors():
         H = np.array(CAL[f["sheet"]])
         im = Image.open(f"{WORK}/src/{f['sheet']}.png").convert("RGB")
         P = lambda p: apply(H, p[0], p[1])

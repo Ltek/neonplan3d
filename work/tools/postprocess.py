@@ -139,7 +139,8 @@ def main(src, dst):
             if mat:
                 r["floor_material"] = mat
     # roof: custom sections at the outer wall faces (wall centre line + half the exterior wall)
-    tops = {"upper": round(sum(m(f["height_ft"]) for f in G.FLOORS[1:]), 3), "main": m(G.FLOORS[1]["height_ft"])}
+    tops = {"upper": round(m(G.U["elev_ft"] + G.U["height_ft"]), 3), "main": m(G.M["elev_ft"] + G.M["height_ft"]),
+            "garage": round(m(G.GAR["elev_ft"] + G.GAR["plate_ft"] if "plate_ft" in G.GAR else G.GAR["elev_ft"] + G.GAR["height_ft"]), 3)}
     out_ft = EXT / 2 / G.FT
     secs = []
     for r in G.ROOF:

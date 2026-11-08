@@ -204,7 +204,8 @@
 <text x="411.0" y="1193.8" font-size="10" fill="#16a34a" text-anchor="middle">Porch (outdoor)</text>
 <polygon points="469.7,764.7 649.7,764.7 649.7,926.7 469.7,926.7" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
 <text x="559.7" y="845.7" font-size="10" fill="#16a34a" text-anchor="middle">Dining Deck (outdoor)</text>
-<polygon points="69.0,997.3 201.0,997.3 201.0,1030.2 375.0,1030.2 375.0,1213.4 201.0,1213.4 201.0,1195.4 105.0,1195.4 105.0,1177.4 69.0,1177.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="69.0,997.3 105.0,997.3 201.0,997.3 201.0,1030.2 201.0,1195.4 105.0,1195.4 105.0,1177.4 69.0,1177.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
+<polygon points="201.0,1030.2 304.1,1030.2 375.0,1030.2 375.0,1141.3 375.0,1213.4 201.0,1213.4 201.0,1195.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="105.0,874.0 201.0,874.0 201.0,927.9 105.0,927.9" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="105.0,927.9 201.0,927.9 201.0,997.3 105.0,997.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="201.0,784.0 304.1,784.0 304.1,859.2 201.0,859.2" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
@@ -216,27 +217,28 @@
 <polygon points="457.8,1064.4 522.6,1064.4 522.6,1087.3 457.8,1087.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="522.6,1030.2 570.4,1030.2 570.4,1087.3 522.6,1087.3" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="447.0,1087.3 570.4,1087.3 570.4,1195.4 447.0,1195.4" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
-<line x1="69.0" y1="997.3" x2="201.0" y2="997.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.0" y1="997.3" x2="201.0" y2="1030.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.0" y1="1030.2" x2="375.0" y2="1030.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="375.0" y1="1030.2" x2="375.0" y2="1213.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="375.0" y1="1213.4" x2="201.0" y2="1213.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.0" y1="1213.4" x2="201.0" y2="1195.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="69.0" y1="997.3" x2="105.0" y2="997.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="105.0" y1="997.3" x2="201.0" y2="997.3" stroke="#475569" stroke-width="2"/>
+<line x1="201.0" y1="997.3" x2="201.0" y2="1030.2" stroke="#475569" stroke-width="2"/>
 <line x1="201.0" y1="1195.4" x2="105.0" y2="1195.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.0" y1="1195.4" x2="105.0" y2="1177.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.0" y1="1177.4" x2="69.0" y2="1177.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="69.0" y1="1177.4" x2="69.0" y2="997.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
+<line x1="201.0" y1="1030.2" x2="304.1" y2="1030.2" stroke="#475569" stroke-width="2"/>
+<line x1="304.1" y1="1030.2" x2="375.0" y2="1030.2" stroke="#475569" stroke-width="2"/>
+<line x1="375.0" y1="1030.2" x2="375.0" y2="1141.3" stroke="#475569" stroke-width="2"/>
+<line x1="375.0" y1="1141.3" x2="375.0" y2="1213.4" stroke="#475569" stroke-width="2"/>
+<line x1="375.0" y1="1213.4" x2="201.0" y2="1213.4" stroke="#475569" stroke-width="2"/>
+<line x1="201.0" y1="1213.4" x2="201.0" y2="1195.4" stroke="#475569" stroke-width="2"/>
 <line x1="105.0" y1="874.0" x2="201.0" y2="874.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="874.0" x2="201.0" y2="927.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="927.9" x2="105.0" y2="927.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.0" y1="927.9" x2="105.0" y2="874.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="927.9" x2="201.0" y2="997.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="201.0" y1="997.3" x2="105.0" y2="997.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="105.0" y1="997.3" x2="105.0" y2="927.9" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="784.0" x2="304.1" y2="784.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="859.2" x2="201.0" y2="784.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="963.8" x2="304.1" y2="1030.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="304.1" y1="1030.2" x2="201.0" y2="1030.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="201.0" y1="874.0" x2="201.0" y2="859.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="784.0" x2="450.4" y2="784.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="450.4" y1="784.0" x2="450.4" y2="802.0" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
@@ -257,7 +259,6 @@
 <line x1="457.8" y1="1087.3" x2="447.0" y2="1087.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="447.0" y1="1087.3" x2="447.0" y2="1141.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="447.0" y1="1141.3" x2="375.0" y2="1141.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
-<line x1="375.0" y1="1141.3" x2="375.0" y2="1030.2" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="522.6" y1="1064.4" x2="522.6" y2="1087.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="522.6" y1="1087.3" x2="457.8" y2="1087.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="570.4" y1="1030.2" x2="570.4" y2="1087.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
@@ -268,6 +269,8 @@
 <line x1="570.4" y1="1195.4" x2="447.0" y2="1195.4" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="447.0" y1="1195.4" x2="447.0" y2="1087.3" stroke="#111" stroke-width="3.5" stroke-linecap="square"/>
 <line x1="304.1" y1="996.9" x2="389.9" y2="996.9" stroke="#334155" stroke-width="2.5"/>
+<rect x="165.2" y="999.0" width="27.0" height="23.4" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="178.7" y="1013.7" font-size="7" fill="#6b7280" text-anchor="middle">stairs</text>
 <rect x="304.1" y="963.8" width="85.8" height="65.5" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="347.0" y="999.5" font-size="7" fill="#6b7280" text-anchor="middle">stairs_u</text>
 <rect x="220.7" y="1008.6" width="27.0" height="21.6" fill="none" stroke="#6b7280" stroke-width="1"/>
@@ -322,6 +325,8 @@
 <text x="188.7" y="889.6" font-size="7" fill="#6b7280" text-anchor="middle">dryer</text>
 <rect x="178.8" y="901.5" width="19.8" height="19.8" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="188.7" y="914.4" font-size="7" fill="#6b7280" text-anchor="middle">washer</text>
+<rect x="304.1" y="963.8" width="85.8" height="65.5" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="347.0" y="999.5" font-size="7" fill="#6b7280" text-anchor="middle">stairwell</text>
 <line x1="389.9" y1="1030.2" x2="389.9" y2="996.9" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4 3"/>
 <line x1="389.9" y1="996.9" x2="389.9" y2="963.8" stroke="#0f172a" stroke-width="1.5" stroke-dasharray="4 3"/>
 <line x1="218.1" y1="784.0" x2="245.1" y2="784.0" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
@@ -351,6 +356,8 @@
 <line x1="105.0" y1="924.1" x2="105.0" y2="901.6" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="423.9" y1="1141.3" x2="413.4" y2="1141.3" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="425.9" y1="1141.3" x2="385.4" y2="1141.3" stroke="#0ea5e9" stroke-width="5" stroke-opacity="0.85"/>
+<line x1="187.7" y1="1195.4" x2="115.7" y2="1195.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
+<line x1="363.2" y1="1213.4" x2="219.2" y2="1213.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="412.4" y1="1141.3" x2="385.4" y2="1141.3" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="447.0" y1="1091.4" x2="447.0" y2="1127.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="489.3" y1="1064.4" x2="459.6" y2="1064.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
@@ -361,9 +368,7 @@
 <line x1="171.5" y1="927.9" x2="147.5" y2="927.9" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="201.0" y1="854.7" x2="201.0" y2="800.7" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
 <line x1="480.2" y1="928.0" x2="561.2" y2="928.0" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<line x1="187.7" y1="1195.4" x2="115.7" y2="1195.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<line x1="363.2" y1="1213.4" x2="219.2" y2="1213.4" stroke="#d97706" stroke-width="5" stroke-opacity="0.85"/>
-<text x="220.6" y="1109.5" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">3-Car Garage</text>
+<text x="220.6" y="1109.5" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Garage</text>
 <text x="220.6" y="1120.5" font-size="8" text-anchor="middle" fill="#2b6cb0">65.8 m²</text>
 <text x="153.0" y="900.9" font-size="10" text-anchor="middle" fill="#2b6cb0" font-weight="bold">Laundry</text>
 <text x="153.0" y="911.9" font-size="8" text-anchor="middle" fill="#2b6cb0">5.9 m²</text>
@@ -394,6 +399,8 @@
 <circle cx="69.0" cy="784.0" r="3" fill="red"/><text x="73.0" y="780.0" font-size="9" fill="red">[0,0]</text>
 <line x1="60.0" y1="1228.0" x2="207.6" y2="1228.0" stroke="#111" stroke-width="3"/><text x="60.0" y="1224.0" font-size="9">5 m</text>
 <text x="60" y="1296.0" font-size="16" font-weight="bold">Basement  (elevation -3.019 m, storey 3.019 m)</text>
+<polygon points="103.7,1374.7 200.1,1374.7 200.1,1464.2 103.7,1464.2" fill="#dcfce7" stroke="#16a34a" stroke-dasharray="4 3"/>
+<text x="151.9" y="1419.4" font-size="10" fill="#16a34a" text-anchor="middle">Patio (outdoor)</text>
 <polygon points="201.9,1376.4 443.4,1376.4 443.4,1394.4 468.4,1394.4 468.4,1492.8 216.0,1492.8 216.0,1466.0 201.9,1466.0" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="216.0,1492.8 468.4,1492.8 468.4,1520.5 426.8,1555.8 294.5,1555.8 294.5,1552.8 247.7,1552.8 216.0,1552.8" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>
 <polygon points="105.7,1466.0 201.9,1466.0 216.0,1466.0 216.0,1552.8 201.9,1552.8 201.9,1555.5 105.7,1555.5" fill="#eff6ff" fill-opacity="0.7" stroke="none"/>

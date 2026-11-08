@@ -13,7 +13,7 @@ ALLOWED = {"rooms": {"name", "points"}, "walls": {"from", "to", "thickness", "he
            "windows": {"at", "width", "height", "sill", "sill_board"}, "furniture": {"type", "name", "at", "width", "depth", "height", "rotation", "elevation"}}
 FURN = set("sofa sofa_l sofa_u armchair stool coffee_table tv_board tv_wall sideboard shelf plant rug table table_round chair bench corner_bench bar_stool "
            "kitchen kitchen_wall kitchen_tall island worktop sink stove dishwasher fridge bed bunk_bed nightstand wardrobe dresser bathtub shower wc washbasin "
-           "washer dryer desk office_chair tall_cabinet coat_rack stairs stairs_u radiator ac_unit robot_vacuum lamp_ceiling lamp_downlight lamp_spot lamp_panel "
+           "washer dryer desk office_chair tall_cabinet coat_rack stairs stairs_u stairwell radiator ac_unit robot_vacuum lamp_ceiling lamp_downlight lamp_spot lamp_panel "
            "lamp_pendant lamp_floor lamp_table lamp_wall led_strip".split())
 TOL = 0.005     # m: coordinates closer than this count as the same point
 REACH = 0.35    # m: the import page snaps an opening onto an edge within ~0.35 m (builder.ts); we demand much less
@@ -67,7 +67,9 @@ def main(path):
     if not isinstance(floors, list) or not floors: E("no floors"); return d
     elev = [f.get("elevation") for f in floors]
     if elev != sorted(elev): E(f"floors not ordered lowest first: {elev}")
-    for a, b in zip(floors, floors[1:]):
+    # the garage is a split level (4 steps below the main floor): the storeys stack without it
+    stack = [f for f in floors if f["name"] != "Garage"]
+    for a, b in zip(stack, stack[1:]):
         if abs(a["elevation"] + a["height"] - b["elevation"]) > 0.01:
             W(f"'{a['name']}' elevation+height ({a['elevation'] + a['height']:.3f}) != next floor elevation {b['elevation']:.3f}")
     if 0 not in elev: E("no floor at elevation 0")
@@ -136,6 +138,8 @@ def main(path):
                     if 1e-6 < gap < 0.06 and ov > 0.05:
                         E(f"[{fn}] edges of '{rooms[r1]['name']}' and '{rooms[r2]['name']}' are {gap * 100:.1f} cm apart over {ov:.2f} m (sliver / double wall)")
         u = unary_union([p for _, p in polys])
+        if fn == "Main Floor" and "Garage" in outlines:  # the garage is its own level, 4 steps down, in the main floor's outline
+            u = unary_union([u, outlines["Garage"]])
         outlines[fn] = u
         xs, zs = u.bounds[0::2], u.bounds[1::2]
         I(f"[{fn}] {len(rooms)} rooms, {sum(abs(area(r['points'])) for r in rooms):.1f} m2, extents x {u.bounds[0]:.3f}..{u.bounds[2]:.3f}, z {u.bounds[1]:.3f}..{u.bounds[3]:.3f}")

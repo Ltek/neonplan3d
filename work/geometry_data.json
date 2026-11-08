@@ -497,6 +497,11 @@
    "value": 20.093,
    "prov": "O",
    "note": "office: 8'-0\" ceiling from the window wall to here (the closet door opening's near edge), 9'-0\" beyond (owner)"
+  },
+  "GAR_DROP": {
+   "value": 2.5,
+   "prov": "O",
+   "note": "garage slab below the main floor: 4 steps down from the mud room door (owner), risers about 7 1/2\" (assumed)"
   }
  },
  "vertical_ft": {
@@ -1035,7 +1040,32 @@
      "prov": "O"
     }
    ],
-   "outdoor": [],
+   "outdoor": [
+    {
+     "type": "terrace",
+     "name": "Patio",
+     "points": [
+      [
+       4.0,
+       0.0
+      ],
+      [
+       14.715,
+       0.0
+      ],
+      [
+       14.715,
+       9.944
+      ],
+      [
+       4.0,
+       9.944
+      ]
+     ],
+     "prov": "O",
+     "note": "walk-out patio under the covered deck, outside the basement sliding door (owner)"
+    }
+   ],
    "open_edges": [
     {
      "a": [
@@ -1090,38 +1120,32 @@
    ]
   },
   {
-   "name": "Main Floor",
-   "elev_ft": 0.0,
-   "height_ft": 11.145833333333334,
+   "name": "Garage",
+   "elev_ft": -2.5,
+   "height_ft": 9.5,
    "sheet": "A2",
+   "merge_into": "Main Floor",
    "rooms": [
     {
-     "name": "3-Car Garage",
+     "name": "Garage",
      "prov": "D",
+     "ceiling_ft": 9.5,
      "points": [
       [
        0.146,
        23.85
       ],
       [
+       4.146,
+       23.85
+      ],
+      [
        14.813,
        23.85
       ],
       [
        14.813,
        27.5
-      ],
-      [
-       34.146,
-       27.5
-      ],
-      [
-       34.146,
-       47.854
-      ],
-      [
-       14.813,
-       47.854
       ],
       [
        14.813,
@@ -1140,8 +1164,189 @@
        43.854
       ]
      ],
-     "ceiling_ft": 10.0
+     "note": "3-car garage, 1-car side: ceiling ~9'-6\" (owner: 9-10 ft)"
     },
+    {
+     "name": "Garage (2-car)",
+     "part_of": "Garage",
+     "prov": "D",
+     "ceiling_ft": 12.59375,
+     "points": [
+      [
+       14.813,
+       27.5
+      ],
+      [
+       26.27,
+       27.5
+      ],
+      [
+       34.146,
+       27.5
+      ],
+      [
+       34.146,
+       39.85
+      ],
+      [
+       34.146,
+       47.854
+      ],
+      [
+       14.813,
+       47.854
+      ],
+      [
+       14.813,
+       45.854
+      ]
+     ],
+     "note": "2-car side under bedroom 2: ceiling at the underside of the upper floor, ~12'-7\" above the garage slab (owner: 12-15 ft)"
+    }
+   ],
+   "walls": [],
+   "doors": [
+    {
+     "at": [
+      9.333,
+      45.854
+     ],
+     "w": 8,
+     "h": 8,
+     "label": "8080 O.G.D.",
+     "prov": "D"
+    },
+    {
+     "at": [
+      24.833,
+      47.854
+     ],
+     "w": 16,
+     "h": 8,
+     "label": "16080 O.G.D.",
+     "prov": "D"
+    }
+   ],
+   "windows": [],
+   "furniture": [
+    {
+     "type": "stairs",
+     "x": 12.33,
+     "z": 25.340000000000003,
+     "w": 3.0,
+     "d": 2.6,
+     "rot": 0,
+     "h_ft": 2.5,
+     "label": "4 steps up to the mud room door (owner)",
+     "prov": "O"
+    }
+   ],
+   "outdoor": [],
+   "open_edges": [
+    {
+     "a": [
+      14.813,
+      27.5
+     ],
+     "b": [
+      14.813,
+      45.854
+     ],
+     "h": 0,
+     "why": "1-car | 2-car side: one garage"
+    },
+    {
+     "a": [
+      4.146,
+      23.85
+     ],
+     "b": [
+      14.813,
+      23.85
+     ],
+     "h": 0.762,
+     "why": "curb under the mud room wall"
+    },
+    {
+     "a": [
+      14.813,
+      23.85
+     ],
+     "b": [
+      14.813,
+      27.5
+     ],
+     "h": 0.762,
+     "why": "curb under the kitchen wall"
+    },
+    {
+     "a": [
+      14.813,
+      27.5
+     ],
+     "b": [
+      34.146,
+      27.5
+     ],
+     "h": 0.762,
+     "why": "curb under the kitchen / stair wall"
+    },
+    {
+     "a": [
+      34.146,
+      27.5
+     ],
+     "b": [
+      34.146,
+      39.85
+     ],
+     "h": 0.762,
+     "why": "curb under the foyer wall"
+    },
+    {
+     "a": [
+      34.146,
+      39.85
+     ],
+     "b": [
+      34.146,
+      47.854
+     ],
+     "h": 2.896,
+     "why": "2-car side wall beside the porch, up to the garage plate"
+    },
+    {
+     "a": [
+      34.146,
+      47.854
+     ],
+     "b": [
+      14.813,
+      47.854
+     ],
+     "h": 2.896,
+     "why": "2-car door wall, up to the garage plate"
+    },
+    {
+     "a": [
+      14.813,
+      47.854
+     ],
+     "b": [
+      14.813,
+      45.854
+     ],
+     "h": 2.896,
+     "why": "2-car door wall return, up to the garage plate"
+    }
+   ]
+  },
+  {
+   "name": "Main Floor",
+   "elev_ft": 0.0,
+   "height_ft": 11.145833333333334,
+   "sheet": "A2",
+   "rooms": [
     {
      "name": "Laundry",
      "prov": "D",
@@ -1608,26 +1813,6 @@
      "label": "sliding glass door to the dining deck, 108\" x 8'-0\" (owner; replaces 3 x 2650 SH, centred on them)",
      "prov": "O",
      "style": "sliding"
-    },
-    {
-     "at": [
-      9.333,
-      45.854
-     ],
-     "w": 8,
-     "h": 8,
-     "label": "8080 O.G.D.",
-     "prov": "D"
-    },
-    {
-     "at": [
-      24.833,
-      47.854
-     ],
-     "w": 16,
-     "h": 8,
-     "label": "16080 O.G.D.",
-     "prov": "D"
     }
    ],
    "windows": [
@@ -2202,6 +2387,16 @@
      "d": 2.2,
      "rot": 90,
      "label": "#2 washer box",
+     "prov": "M"
+    },
+    {
+     "type": "stairwell",
+     "x": 31.034999999999997,
+     "z": 23.759999999999998,
+     "w": 7.279999999999998,
+     "d": 9.529999999999998,
+     "rot": 270,
+     "label": "opening for the stair from the basement",
      "prov": "M"
     }
    ],
