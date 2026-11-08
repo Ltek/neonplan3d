@@ -132,6 +132,26 @@ def main(src, dst):
             if u.get("h_ft"):
                 v["h"] = m(u["h_ft"])
             log.append(f"{f['name']}: {u['type']} mirror={v.get('mirror')} h={v['h']}")
+        # window looks: slim fixed glazing ("glass_wall") for the paneled windows (owner's photos)
+        for w in gf["windows"]:
+            if not w.get("style"):
+                continue
+            tp = pt(w["at"])
+            sill = m(w["sill"] if "sill" in w else w["head"] - w["h"])
+            hit = None
+            for o in f.get("openings", []):
+                if o["type"] != "window" or abs(o["sill"] - sill) > 0.02:
+                    continue
+                r = next(r for r in f["rooms"] if r["id"] == o["room_id"])
+                P = r["points"]
+                a0, a1 = P[o["edge"]], P[(o["edge"] + 1) % len(P)]
+                L = math.hypot(a1[0] - a0[0], a1[1] - a0[1])
+                c = [a0[0] + (a1[0] - a0[0]) * o["offset"] / L, a0[1] + (a1[1] - a0[1]) * o["offset"] / L]
+                if math.hypot(c[0] - tp[0], c[1] - tp[1]) < 0.05:
+                    hit = o
+            assert hit, f"no opening for {w['label']}"
+            hit["style"] = w["style"]
+            hit["leaves"] = 1
         # door looks the import format cannot carry (sliding glass doors). A door 2.2 m or wider comes in as a garage
         # door; a sliding door is put back to a door.
         for d in gf["doors"]:

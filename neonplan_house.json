@@ -1426,6 +1426,26 @@
      "rotation": 90
     },
     {
+     "type": "worktop",
+     "at": [
+      13.358,
+      3.02
+     ],
+     "width": 1.158,
+     "depth": 0.274,
+     "rotation": 90
+    },
+    {
+     "type": "worktop",
+     "at": [
+      13.358,
+      3.905
+     ],
+     "width": 0.914,
+     "depth": 0.274,
+     "rotation": 90
+    },
+    {
      "type": "island",
      "at": [
       6.905,

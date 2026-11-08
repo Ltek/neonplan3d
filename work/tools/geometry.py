@@ -307,7 +307,7 @@ WT = dict(head=HEAD_MAIN)
 M["windows"] += [
     # breakfast and living room rear windows: 3050 SH + 3020 transom in one frame, 3 panels (owner's photos): drawn as 3
     # windows stacked on each other, which NeonPlan joins into one unit; the drawn 4" between the SH and the transom is gone
-    *[{"at": [x, Z_REAR], "w": 3, "h": h, "sill": sl, "label": f"3050 SH + 3020 TRANS, panel {k + 1} of 3 (photos)", "prov": "P"}
+    *[{"at": [x, Z_REAR], "w": 3, "h": h, "sill": sl, "label": f"3050 SH + 3020 TRANS, panel {k + 1} of 3 (photos)", "prov": "P", "style": "glass_wall"}
       for x in (18.208, 21.917, 29.167, 32.667, 36.167, 39.667)
       for k, (sl, h) in enumerate(((HEAD_MAIN - 5, 2.5), (HEAD_MAIN - 2.5, 2.5), (HEAD_MAIN, 1.75)))],
     *[{"at": [x, Z_DIN_TOP], "w": 2.5, "h": 1.75, "sill": HEAD_MAIN + 0.33, "label": "2620 TRANS", "prov": "D"} for x in (47.333, 50.333, 53.333)],
@@ -325,6 +325,7 @@ for w in M["windows"]:
     if w["label"] == "3060 SH den" and w["at"][1] == Z_DEN_FRONT:
         w["label"] = "3660 SH den"
 FP_W = (Z_DIN_TOP - Z_CHASE) / 3   # owner: the fireplace takes 1/3 of the nook
+TV_LEN = Z_DIN_TOP - Z_CHASE - FP_W - 0.4   # the TV cabinet along the recess
 # the stone fireplace (owner's photos): a column filling the rear third of the nook, its face flush with the TV cabinet
 # (owner: it does not stand out beyond it), with a black glass firebox and a wooden mantel. NeonPlan has no fireplace:
 # the column is a solid free wall, the firebox a flat black screen, the mantel a slab.
@@ -352,8 +353,13 @@ M["furniture"] += [
      "show": "firebox", "label": "fireplace: glass firebox (photos; size estimated)", "prov": "P"},
     {"type": "worktop", "x": FP_FACE - 0.4, "z": Z_CHASE + FP_W / 2, "w": FP_W, "d": 0.8, "rot": 90, "h_ft": 4.6,
      "show": "mantel", "label": "fireplace: wooden mantel (photos; height estimated)", "prov": "P"},
-    {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + FP_W + (Z_DIN_TOP - Z_CHASE - FP_W) / 2, "w": Z_DIN_TOP - Z_CHASE - FP_W - 0.4, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90,
+    {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + FP_W + (Z_DIN_TOP - Z_CHASE - FP_W) / 2, "w": Z_DIN_TOP - Z_CHASE - FP_W - 0.4, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90, "h_ft": 2.5,
      "show": "TV cabinet", "label": "built-in TV cabinet in the recess beside the fireplace (photos)", "prov": "P"},
+    # two live-edge floating shelves above the TV (photos; lengths and heights estimated)
+    {"type": "worktop", "x": X_CHASE - 0.55, "z": Z_CHASE + FP_W + 0.15 * TV_LEN + 1.9, "w": 3.8, "d": 0.9, "rot": 90, "h_ft": 5.9, "show": "shelf",
+     "label": "floating shelf above the TV", "prov": "P"},
+    {"type": "worktop", "x": X_CHASE - 0.55, "z": Z_CHASE + FP_W + 0.52 * TV_LEN + 1.5, "w": 3.0, "d": 0.9, "rot": 90, "h_ft": 7.0, "show": "shelf",
+     "label": "floating shelf above the TV, higher", "prov": "P"},
     {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
     *[{"type": "bar_stool", "x": 25.25, "z": z, "w": 1.4, "d": 1.4, "rot": 90, "label": "bar stool, living-room side of the island (photos)", "prov": "P"}
       for z in (6.7, 8.3, 9.9, 11.5, 13.1, 14.7)],
@@ -461,9 +467,9 @@ WU = dict(head=HEAD_UP)
 U["windows"] += [
     # master bedroom rear windows (owner's back photo): the outer two 2 panels, the middle two 3 panels and taller. NeonPlan
     # keeps windows below the floor height (8'-1 1/8"), so the middle ones end there instead of reaching into the gable
-    *[{"at": [x, Z_REAR], "w": 3, "h": 2.5, "sill": HEAD_UP - 5 + 2.5 * k, "label": f"3050 SH, panel {k + 1} of 2 (photos)", "prov": "P"}
+    *[{"at": [x, Z_REAR], "w": 3, "h": 2.5, "sill": HEAD_UP - 5 + 2.5 * k, "label": f"3050 SH, panel {k + 1} of 2 (photos)", "prov": "P", "style": "glass_wall"}
       for x in (29.167, 39.667) for k in range(2)],
-    *[{"at": [x, Z_REAR], "w": 3, "h": 2.0, "sill": HEAD_UP - 5 + 2.0 * k, "label": f"tall window, panel {k + 1} of 3 (photos; top limited to the floor height)", "prov": "P"}
+    *[{"at": [x, Z_REAR], "w": 3, "h": 2.0, "sill": HEAD_UP - 5 + 2.0 * k, "label": f"tall window, panel {k + 1} of 3 (photos; top limited to the floor height)", "prov": "P", "style": "glass_wall"}
       for x in (32.667, 36.167) for k in range(3)],
     {"at": [6.708, Z_DECK], "w": 4, "h": 4, **WU, "label": "4040 SL (TEMP)", "prov": "D"},
     {"at": [X_DECK, 14.5], "w": 6, "h": 4, **WU, "label": "6040 FX (TEMP)", "prov": "D"},

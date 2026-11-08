@@ -303,6 +303,10 @@
 <text x="448.1" y="826.0" font-size="7" fill="#6b7280" text-anchor="middle">mantel</text>
 <rect x="451.7" y="845.8" width="15.3" height="80.4" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="459.4" y="889.0" font-size="7" fill="#6b7280" text-anchor="middle">TV cabinet</text>
+<rect x="459.4" y="856.1" width="8.1" height="34.2" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="463.4" y="876.2" font-size="7" fill="#6b7280" text-anchor="middle">shelf</text>
+<rect x="459.4" y="885.8" width="8.1" height="27.0" fill="none" stroke="#6b7280" stroke-width="1"/>
+<text x="463.4" y="902.3" font-size="7" fill="#6b7280" text-anchor="middle">shelf</text>
 <rect x="257.9" y="834.0" width="30.0" height="90.0" fill="none" stroke="#6b7280" stroke-width="1"/>
 <text x="272.9" y="882.0" font-size="7" fill="#6b7280" text-anchor="middle">island</text>
 <rect x="288.6" y="836.7" width="12.6" height="12.6" fill="none" stroke="#6b7280" stroke-width="1"/>

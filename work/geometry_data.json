@@ -1907,7 +1907,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1918,7 +1919,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1929,7 +1931,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1940,7 +1943,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1951,7 +1955,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1962,7 +1967,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1973,7 +1979,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1984,7 +1991,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -1995,7 +2003,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2006,7 +2015,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2017,7 +2027,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2028,7 +2039,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2039,7 +2051,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2050,7 +2063,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2061,7 +2075,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2072,7 +2087,8 @@
      "h": 2.5,
      "sill": 3.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 1 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2083,7 +2099,8 @@
      "h": 2.5,
      "sill": 5.572916666666666,
      "label": "3050 SH + 3020 TRANS, panel 2 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2094,7 +2111,8 @@
      "h": 1.75,
      "sill": 8.072916666666666,
      "label": "3050 SH + 3020 TRANS, panel 3 of 3 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -2397,8 +2415,33 @@
      "w": 8.933333333333332,
      "d": 1.7,
      "rot": 90,
+     "h_ft": 2.5,
      "show": "TV cabinet",
      "label": "built-in TV cabinet in the recess beside the fireplace (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "worktop",
+     "x": 43.971000000000004,
+     "z": 10.052666666666667,
+     "w": 3.8,
+     "d": 0.9,
+     "rot": 90,
+     "h_ft": 5.9,
+     "show": "shelf",
+     "label": "floating shelf above the TV",
+     "prov": "P"
+    },
+    {
+     "type": "worktop",
+     "x": 43.971000000000004,
+     "z": 12.957999999999998,
+     "w": 3.0,
+     "d": 0.9,
+     "rot": 90,
+     "h_ft": 7.0,
+     "show": "shelf",
+     "label": "floating shelf above the TV, higher",
      "prov": "P"
     },
     {
@@ -3560,7 +3603,8 @@
      "h": 2.5,
      "sill": 2.072916666666667,
      "label": "3050 SH, panel 1 of 2 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3571,7 +3615,8 @@
      "h": 2.5,
      "sill": 4.572916666666667,
      "label": "3050 SH, panel 2 of 2 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3582,7 +3627,8 @@
      "h": 2.5,
      "sill": 2.072916666666667,
      "label": "3050 SH, panel 1 of 2 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3593,7 +3639,8 @@
      "h": 2.5,
      "sill": 4.572916666666667,
      "label": "3050 SH, panel 2 of 2 (photos)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3604,7 +3651,8 @@
      "h": 2.0,
      "sill": 2.072916666666667,
      "label": "tall window, panel 1 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3615,7 +3663,8 @@
      "h": 2.0,
      "sill": 4.072916666666667,
      "label": "tall window, panel 2 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3626,7 +3675,8 @@
      "h": 2.0,
      "sill": 6.072916666666667,
      "label": "tall window, panel 3 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3637,7 +3687,8 @@
      "h": 2.0,
      "sill": 2.072916666666667,
      "label": "tall window, panel 1 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3648,7 +3699,8 @@
      "h": 2.0,
      "sill": 4.072916666666667,
      "label": "tall window, panel 2 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
@@ -3659,7 +3711,8 @@
      "h": 2.0,
      "sill": 6.072916666666667,
      "label": "tall window, panel 3 of 3 (photos; top limited to the floor height)",
-     "prov": "P"
+     "prov": "P",
+     "style": "glass_wall"
     },
     {
      "at": [
