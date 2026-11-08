@@ -1249,14 +1249,54 @@
      "type": "kitchen",
      "at": [
       4.787,
-      4.558
+      2.988
      ],
-     "width": 2.926,
+     "width": 0.945,
+     "depth": 0.61,
+     "rotation": 270
+    },
+    {
+     "type": "stove",
+     "at": [
+      4.787,
+      3.918
+     ],
+     "width": 0.914,
      "depth": 0.61,
      "rotation": 270
     },
     {
      "type": "kitchen",
+     "at": [
+      4.787,
+      5.061
+     ],
+     "width": 1.372,
+     "depth": 0.61,
+     "rotation": 270
+    },
+    {
+     "type": "kitchen_wall",
+     "at": [
+      4.695,
+      2.988
+     ],
+     "width": 0.945,
+     "depth": 0.366,
+     "rotation": 270
+    },
+    {
+     "type": "kitchen_wall",
+     "at": [
+      4.695,
+      5.061
+     ],
+     "width": 1.372,
+     "depth": 0.366,
+     "rotation": 270
+    },
+    {
+     "type": "kitchen_tall",
      "at": [
       7.606,
       7.118
@@ -1293,6 +1333,126 @@
      ],
      "width": 3.048,
      "depth": 1.016,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      1.998
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      2.485
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      2.973
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      3.461
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      3.948
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "bar_stool",
+     "at": [
+      7.652,
+      4.436
+     ],
+     "width": 0.427,
+     "depth": 0.427,
+     "rotation": 90
+    },
+    {
+     "type": "sofa",
+     "at": [
+      10.623,
+      0.579
+     ],
+     "width": 3.048,
+     "depth": 0.975,
+     "rotation": 0
+    },
+    {
+     "type": "sofa",
+     "at": [
+      8.932,
+      3.4
+     ],
+     "width": 3.048,
+     "depth": 1.006,
+     "rotation": 270
+    },
+    {
+     "type": "sofa",
+     "at": [
+      10.364,
+      4.421
+     ],
+     "width": 1.829,
+     "depth": 1.006,
+     "rotation": 180
+    },
+    {
+     "type": "stool",
+     "at": [
+      11.812,
+      4.421
+     ],
+     "width": 0.914,
+     "depth": 0.914,
+     "rotation": 0
+    },
+    {
+     "type": "coffee_table",
+     "at": [
+      10.623,
+      2.546
+     ],
+     "width": 0.792,
+     "depth": 0.792,
+     "rotation": 0
+    },
+    {
+     "type": "table",
+     "at": [
+      8.185,
+      3.4
+     ],
+     "width": 1.372,
+     "depth": 0.335,
      "rotation": 90
     },
     {

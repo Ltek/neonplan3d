@@ -289,21 +289,36 @@ M["furniture"] += [
     {"type": "fridge", "x": 18.5, "z": 26.3, "w": 3.0, "d": 2.4, "rot": 180, "label": "REF.", "prov": "M"},
     {"type": "kitchen_tall", "x": 16.2, "z": 26.2, "w": 2.4, "d": 2.3, "rot": 180, "label": "double oven", "prov": "M"},
     {"type": "kitchen", "x": 21.8, "z": 26.3, "w": 4.4, "d": 2.0, "rot": 180, "label": "base cabinets", "prov": "M"},
-    {"type": "kitchen", "x": 15.85, "z": 15.1, "w": 9.6, "d": 2.0, "rot": 270, "label": "base cabinets (220V range position at ~12.8)", "prov": "M"},
-    {"type": "kitchen", "x": 25.1, "z": 23.5, "w": 6.9, "d": 2.0, "rot": 90, "label": "base cabinets under 24\" soffit", "prov": "M"},
+    # hood wall as in the owner's photos: base cabinets either side of the range (220V position on A2), wall cabinets above
+    {"type": "kitchen", "x": 15.85, "z": 9.95, "w": 3.1, "d": 2.0, "rot": 270, "label": "base cabinets, slider side", "prov": "P"},
+    {"type": "stove", "x": 15.85, "z": 13.0, "w": 3.0, "d": 2.0, "rot": 270, "label": "range with hood (photos; 220V position on A2)", "prov": "P"},
+    {"type": "kitchen", "x": 15.85, "z": 16.75, "w": 4.5, "d": 2.0, "rot": 270, "label": "base cabinets", "prov": "P"},
+    {"type": "kitchen_wall", "x": 15.55, "z": 9.95, "w": 3.1, "d": 1.2, "rot": 270, "label": "wall cabinets", "prov": "P"},
+    {"type": "kitchen_wall", "x": 15.55, "z": 16.75, "w": 4.5, "d": 1.2, "rot": 270, "label": "wall cabinets", "prov": "P"},
+    {"type": "kitchen_tall", "x": 25.1, "z": 23.5, "w": 6.9, "d": 2.0, "rot": 90, "label": "tall pantry cabinets in the 24\" deep soffit zone (photos)", "prov": "P"},
     # fireplace + built-in TV cabinet in the 2'-0" nook (owner). NeonPlan has no fireplace; its own importers use a sideboard.
     {"type": "sideboard", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + (Z_DIN_TOP - Z_CHASE) / 6, "w": (Z_DIN_TOP - Z_CHASE) / 3 - 0.2, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90, "show": "fireplace",
      "label": "fireplace: 1/3 of the nook (owner); rear end assumed", "prov": "O"},
     {"type": "tv_board", "x": (X_REAR_R + X_CHASE) / 2, "z": Z_CHASE + (Z_DIN_TOP - Z_CHASE) * 2 / 3, "w": (Z_DIN_TOP - Z_CHASE) * 2 / 3 - 0.2, "d": X_CHASE - X_REAR_R - 0.3, "rot": 90, "show": "TV cabinet",
      "label": "built-in TV cabinet: the other 2/3 of the nook (owner)", "prov": "O"},
     {"type": "island", "x": 22.8, "z": 10.7, "w": 10.0, "d": 40 / 12, "rot": 90, "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)", "prov": "E"},
+    *[{"type": "bar_stool", "x": 25.25, "z": z, "w": 1.4, "d": 1.4, "rot": 90, "label": "bar stool, living-room side of the island (photos)", "prov": "P"}
+      for z in (6.7, 8.3, 9.9, 11.5, 13.1, 14.7)],
+    # living room seating as in the owner's photos (sizes estimated from the photos, +/- 1 ft)
+    {"type": "sofa", "x": 35.0, "z": Z_REAR + 0.3 + 1.6, "w": 10.0, "d": 3.2, "rot": 0, "label": "sofa under the rear windows", "prov": "P"},
+    {"type": "sofa", "x": 29.45, "z": 11.3, "w": 10.0, "d": 3.3, "rot": 270, "label": "sectional: long side, back to the kitchen, facing the fireplace / TV", "prov": "P"},
+    {"type": "sofa", "x": 34.15, "z": 14.65, "w": 6.0, "d": 3.3, "rot": 180, "label": "sectional: short side, facing the rear windows", "prov": "P"},
+    {"type": "stool", "x": 38.9, "z": 14.65, "w": 3.0, "d": 3.0, "rot": 0, "label": "tufted ottoman", "prov": "P"},
+    {"type": "coffee_table", "x": 35.0, "z": 8.5, "w": 2.6, "d": 2.6, "rot": 0, "label": "round coffee table", "prov": "P"},
+    {"type": "table", "x": 27.0, "z": 11.3, "w": 4.5, "d": 1.1, "rot": 90, "label": "hairpin sofa table behind the sectional", "prov": "P"},
     {"type": "dryer", "x": 13.45, "z": 11.55, "w": 2.2, "d": 2.2, "rot": 90, "label": "#24 +36 220V", "prov": "M"},
     {"type": "washer", "x": 13.45, "z": 14.3, "w": 2.2, "d": 2.2, "rot": 90, "label": "#2 washer box", "prov": "M"},
 ]
 M["outdoor"] += [
     {"type": "terrace", "name": "Covered Deck", "points": rect(X_DECK - T, Z_REAR - T, X_BRK_L - T, Z_DECK - T), "prov": "D"},
     {"type": "terrace", "name": "Uncovered Deck", "points": rect(X_DECK - T, -7.0, X_BRK_L - T, Z_REAR - T), "prov": "D"},
-    {"type": "terrace", "name": "Porch", "points": rect(X_GAR_R, Z_FOYER_FRONT, X_DEN_L, Z_DEN_FRONT), "prov": "M"},
+    {"type": "terrace", "name": "Porch", "points": rect(X_GAR_R, Z_FOYER_FRONT, X_DEN_L, 51.5), "prov": "M",
+     "note": "to the front of its two posts (A2: post pads at z 49.5-51.5; roof plan)"},
     {"type": "terrace", "name": "Dining Deck", "points": rect(X_CHASE + T, Z_DIN_TOP - T - 18, X_CHASE + T + 20, Z_DIN_TOP - T), "prov": "E",
      "note": "owner markup: approx. 20 ft wide x 18 ft deep, against the dining wall from the fireplace chase; exact position unconfirmed"},
 ]
@@ -411,3 +426,48 @@ for r in M["rooms"]:
 for r in U["rooms"]:
     r.setdefault("ceiling_ft", 8.0)
 GABLE = {"ridge_x": X_UP_MB_RIDGE, "half": X_UP_MB_RIDGE - X_STAIR_L, "low_ft": 8.0, "high_ft": 12.0}
+
+
+# ---------------------------------------------------------------- roof (sheet A5 roof plan + building sections, owner's photos)
+# Sections over wall centre lines in feet; postprocess.py moves them to the outer wall faces and to metres. Pitches
+# from the roof plan (8:12 main roofs, 12:12 front gables and hips); eaves at the upper plate (upper floor top) or the
+# main plate (main floor top). Simplified: the hips' 12:12 ends are drawn at the side pitch, valleys come from overlaps.
+P8, P12 = 33.69, 45.0
+EAVE_UP, EAVE_MAIN = "upper", "main"
+ROOF = [
+    {"id": "main", "shape": "hip", "axis": "x", "x0": 18.0, "z0": 9.75, "x1": 44.4, "z1": Z_FOYER_FRONT, "eave": EAVE_UP, "pitch": P8,
+     "note": "main hip roof, ridge at z 24.8 from x 23.7 to 38.6 (roof plan)"},
+    {"id": "master_gable", "shape": "gable", "axis": "z", "x0": X_STAIR_L, "z0": Z_REAR, "x1": X_REAR_R, "z1": 18.0, "eave": EAVE_UP, "pitch": P8,
+     "note": "master bedroom gable to the rear (4 windows, back photo); its front end runs into the main roof"},
+    {"id": "left_catslide", "shape": "hip", "axis": "x", "x0": X_DECK, "z0": Z_DECK, "x1": X_UP_BR2_L, "z1": Z_GAR_DOOR1, "eave": EAVE_UP, "pitch": P8,
+     "eave_b": EAVE_MAIN, "pitch_b": 26.3,
+     "note": "over the master bath, its front slope running down over the garage to the garage eave (front photo); front pitch set so the ridge lies at z 18.4 as on the roof plan"},
+    {"id": "wic", "shape": "hip", "axis": "x", "x0": X_BRK_L, "z0": Z_WIC_TOP, "x1": X_STAIR_L, "z1": 12.25, "eave": EAVE_UP, "pitch": P8, "note": "master WIC"},
+    {"id": "right", "shape": "hip", "axis": "x", "x0": X_UP_HALL_R, "z0": Z_DIN_TOP, "x1": X_R, "z1": Z_DEN_FRONT, "eave": EAVE_UP, "pitch": P8,
+     "note": "bedrooms 3 and 4, bath 2"},
+    {"id": "bed4_gable", "shape": "gable", "axis": "z", "x0": 43.7, "z0": 32.6, "x1": X_R, "z1": Z_DEN_FRONT, "eave": EAVE_UP, "pitch": P12,
+     "note": "stone front gable over bedroom 4 (front photo)"},
+    {"id": "bay_gable", "shape": "gable", "axis": "z", "x0": X_BAY_L, "z0": 33.0, "x1": X_BAY_R, "z1": Z_BAY, "eave": EAVE_UP, "pitch": P12,
+     "note": "front gable over bedroom 2's bay (board and batten, front photo)"},
+    {"id": "porch", "shape": "gable", "axis": "z", "x0": X_GAR_R, "z0": Z_FOYER_FRONT, "x1": X_DEN_L, "z1": 51.5, "eave": EAVE_MAIN, "pitch": P12, "open": True,
+     "note": "front porch gable on two posts"},
+    {"id": "garage_left", "shape": "pent", "axis": "z", "x0": X_GAR_L, "z0": Z_GAR_TOP, "x1": X_DECK, "z1": Z_GAR_JOG, "eave": EAVE_MAIN, "pitch": P8,
+     "note": "garage strip left of the master bath, sloping to the left"},
+    {"id": "garage_front", "shape": "pent", "axis": "x", "x0": X_BRK_L, "z0": Z_FOYER_FRONT, "x1": X_GAR_R, "z1": Z_GAR_DOOR2, "eave": EAVE_MAIN, "pitch": 26.3, "flip": True,
+     "note": "2-car garage in front of bedroom 2, sloping to the front"},
+    {"id": "breakfast", "shape": "pent", "axis": "x", "x0": X_BRK_L, "z0": Z_REAR, "x1": X_STAIR_L, "z1": Z_WIC_TOP, "eave": EAVE_MAIN, "pitch": P8,
+     "note": "breakfast nook behind the master WIC, sloping to the rear"},
+    {"id": "covered_deck", "shape": "pent", "axis": "x", "x0": X_DECK, "z0": Z_REAR, "x1": X_BRK_L, "z1": Z_DECK, "eave": EAVE_MAIN, "pitch": P8, "open": True,
+     "note": "covered deck roof on posts, sloping to the rear (back photo)"},
+    {"id": "chase", "shape": "pent", "axis": "z", "x0": X_REAR_R, "z0": Z_CHASE, "x1": X_CHASE, "z1": Z_DIN_TOP, "eave": EAVE_MAIN, "pitch": P12, "flip": True,
+     "note": "fireplace / TV nook bump-out"},
+]
+
+# floor finishes (NeonPlan: wood, oak, tiles, carpet, stone, concrete). From the owner's photos and as-built sketch;
+# rooms not listed keep NeonPlan's default (wood).
+FLOOR_MAT = {
+    "Basement": {"Theater": "carpet", "Theater (8 ft)": "tiles", "Office": "carpet", "Office (9 ft)": "carpet", "Office Closet": "carpet",
+                 "Bathroom": "tiles", "Stairs": "carpet", "Hall": "carpet", "Mechanical Room": "concrete", "Crawlspace": "concrete"},
+    "Main Floor": {"3-Car Garage": "concrete", "Stairs": "carpet"},
+    "Upper Floor": {"Stairs": "carpet"},
+}

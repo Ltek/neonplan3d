@@ -132,6 +132,30 @@ def main(src, dst):
         for k, o in enumerate(gf.get("outdoor", [])):
             f.setdefault("outdoor", []).append({"id": f"outdoor_{gf['name'][:4].lower()}_{k}", "type": o["type"], "name": o["name"], "points": [pt(p) for p in o["points"]]})
             log.append(f"{f['name']}: outdoor '{o['name']}' ({o['type']})")
+    # floor finishes
+    for gf, f in zip(G.FLOORS, b["floors"]):
+        for r in f["rooms"]:
+            mat = G.FLOOR_MAT.get(gf["name"], {}).get(r["name"])
+            if mat:
+                r["floor_material"] = mat
+    # roof: custom sections at the outer wall faces (wall centre line + half the exterior wall)
+    tops = {"upper": round(sum(m(f["height_ft"]) for f in G.FLOORS[1:]), 3), "main": m(G.FLOORS[1]["height_ft"])}
+    out_ft = EXT / 2 / G.FT
+    secs = []
+    for r in G.ROOF:
+        x0, z0 = pt([r["x0"] - out_ft, r["z0"] - out_ft])
+        x1, z1 = pt([r["x1"] + out_ft, r["z1"] + out_ft])
+        ea = tops[r["eave"]]
+        eb = tops[r.get("eave_b", r["eave"])]
+        s = {"id": f"roof_{r['id']}", "x0": x0, "z0": z0, "x1": x1, "z1": z1, "shape": r["shape"], "axis": r["axis"],
+             "eave_a": ea, "eave_b": eb, "pitch_a": r["pitch"], "pitch_b": r.get("pitch_b", r["pitch"]), "base": ea, "overhang": None}
+        if r.get("flip"):
+            s["flip"] = True
+        if r.get("open"):
+            s["open"] = True
+        secs.append(s)
+        log.append(f"roof {r['id']}: {r['shape']} x {x0}..{x1} z {z0}..{z1} eaves {ea}/{eb}")
+    b["settings"]["roof"] = {**b["settings"].get("roof", {}), "type": "custom", "pitch": 33.69, "overhang": 0.3, "sections": secs}
     out = {"format": "neonplan3d", "version": 1, "exported_at": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"), "building": b}
     json.dump(out, open(dst, "w"), indent=1)
     print("\n".join(log))

@@ -13,7 +13,7 @@
 | Main floor overall | 16.980 × 14.541 m between wall centre lines (= 56'-0" × 48'-0" to face of studs = 17.069 × 14.630 m) |
 | Upper floor overall | 15.761 × 13.932 m centre lines (= 52'-0" × 46'-0" face of studs) |
 | Automated validation | **passed**: 0 errors, 2 warnings (`validation_output.txt`) |
-| Official importer (repo code = live page code) | 40 rooms, 35 doors, 43 windows, 5 walls, 27 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
+| Official importer (repo code = live page code) | 40 rooms, 35 doors, 43 windows, 5 walls, 43 furniture, **0 warnings, nothing dropped, every opening at its given position (max shift 0.000 m)** |
 
 ## 2. Dimension provenance
 
@@ -24,6 +24,8 @@ From `geometry_data.json → constants_ft` (74 coordinate lines):
 | D: explicit architect dimension | 21 | 41 | 4 |
 | M: measured on the calibrated raster (±½") | 50 | 4 | 15 |
 | E: estimated / inferred | 3 | 1 | 12 |
+
+The owner's corrections added two more codes: O (owner markup or as-built note) and P (owner's photos, for furniture). The counts above are for the v1 reconstruction.
 
 All exterior walls on all floors, the overall sizes and 41 of 46 window centres come from written dimensions. Most interior partitions are measured: their stud lines were located on the calibrated scan, and where interior dimensions exist they agree within about 1".
 
@@ -99,6 +101,9 @@ Applied in `work/tools/geometry.py`. Where the owner moved a door, it was placed
 | Main | Stair split by a divider wall (full height assumed) into the up stair (rear half) and the down stair to the basement (front half); both ends facing the dining room are open (owner). "Den / Flex" renamed Playroom |
 | All | Ceilings (owner, full NeonPlan file): main floor 10'-0" (not the 2-storey foyer or the open stair). Upper floor 8'-0"; the master bedroom's ceiling is pitched from 8'-0" at its side walls to 12'-0" at its centre line, the ridge running from the window wall: it is modelled as two halves (one label in the preview) with sloping walls on the window wall and the opposite wall. Basement: theater, bathroom and office closet 9'-0"; the first 7'-0" of the theater in front of the stair wall 8'-0"; the office 8'-0" from the window wall to the closet door opening, 9'-0" beyond it (theater and office each split into two parts without a wall between them) |
 | All | Stairs from the owner's photos: both are U-stairs in the same footprint (x 26.3–35.8, z 20.1–27.4 ft). Main to upper: up the rear half from the dining side, landing at the far end, back up over the down stair to the upper hall. Basement to main: up the rear half from the basement hall end, landing at the far end, back up the front half to the main floor's down-stair side; the mechanical room runs under that second flight. In the full NeonPlan file both are mirrored U-stairs at full storey height, so each opens the floor above over its footprint |
+| All | Roof (full NeonPlan file): 13 custom roof sections drawn from the A5 roof plan, the building sections and the owner's front and back photos: the main hip roof, the master bedroom's rear gable, the hip over the master bath whose front slope runs down over the garage, the WIC hip, the hip over bedrooms 3 and 4, front gables over bedroom 4 and bedroom 2's bay (12:12), the porch gable on two posts, lean-tos over the garage front, the garage's left strip, the breakfast nook, the covered deck (open, on posts) and the fireplace nook. Eaves at the upper or main plate, 1'-0" overhang. Simplified: hip ends at the side pitch, valleys where sections overlap; the garage front slopes are 26° (instead of the plan's 8:12) so they meet the roofs above |
+| Main | Furniture from the owner's photos (provenance P, sizes estimated from the photos, about ±1 ft): range with base and wall cabinets on the hood wall, tall pantry cabinets by the stair wall, 6 bar stools on the island's living-room side, a sofa under the rear windows, a sectional (long side facing the fireplace/TV, short side facing the windows) with ottoman, round coffee table and sofa table. Porch extended to the front of its posts (A2: post pads at z 49.5–51.5 ft) |
+| All | Floor finishes (full file): carpet on the stairs, theater, office and basement hall; tiles in the theater's 8 ft strip and the basement bathroom; concrete in the garage, mechanical room and crawlspace; other rooms NeonPlan's default wood |
 | All | Preview: open edges between rooms are no longer drawn; only stair openings are dashed (main floor: the stair's side facing the dining room) |
 | Main | Pantry wall + pocket door and the coat-closet walls + door are not built: Pantry, Mud Hall and Coat Closet are one room "Mud Hall / Pantry" |
 | Main | Kitchen island replaced by one island about 10'-0" × 3'-4", centred on the sketch's box (the box is not to scale; ±1 ft) |

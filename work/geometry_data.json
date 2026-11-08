@@ -1975,22 +1975,62 @@
     {
      "type": "kitchen",
      "x": 15.85,
-     "z": 15.1,
-     "w": 9.6,
+     "z": 9.95,
+     "w": 3.1,
      "d": 2.0,
      "rot": 270,
-     "label": "base cabinets (220V range position at ~12.8)",
-     "prov": "M"
+     "label": "base cabinets, slider side",
+     "prov": "P"
+    },
+    {
+     "type": "stove",
+     "x": 15.85,
+     "z": 13.0,
+     "w": 3.0,
+     "d": 2.0,
+     "rot": 270,
+     "label": "range with hood (photos; 220V position on A2)",
+     "prov": "P"
     },
     {
      "type": "kitchen",
+     "x": 15.85,
+     "z": 16.75,
+     "w": 4.5,
+     "d": 2.0,
+     "rot": 270,
+     "label": "base cabinets",
+     "prov": "P"
+    },
+    {
+     "type": "kitchen_wall",
+     "x": 15.55,
+     "z": 9.95,
+     "w": 3.1,
+     "d": 1.2,
+     "rot": 270,
+     "label": "wall cabinets",
+     "prov": "P"
+    },
+    {
+     "type": "kitchen_wall",
+     "x": 15.55,
+     "z": 16.75,
+     "w": 4.5,
+     "d": 1.2,
+     "rot": 270,
+     "label": "wall cabinets",
+     "prov": "P"
+    },
+    {
+     "type": "kitchen_tall",
      "x": 25.1,
      "z": 23.5,
      "w": 6.9,
      "d": 2.0,
      "rot": 90,
-     "label": "base cabinets under 24\" soffit",
-     "prov": "M"
+     "label": "tall pantry cabinets in the 24\" deep soffit zone (photos)",
+     "prov": "P"
     },
     {
      "type": "sideboard",
@@ -2023,6 +2063,126 @@
      "rot": 90,
      "label": "kitchen island approx. 10'-0\" x 3'-4\" (owner markup; position from the sketch, +/- 1 ft)",
      "prov": "E"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 6.7,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 8.3,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 9.9,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 11.5,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 13.1,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "bar_stool",
+     "x": 25.25,
+     "z": 14.7,
+     "w": 1.4,
+     "d": 1.4,
+     "rot": 90,
+     "label": "bar stool, living-room side of the island (photos)",
+     "prov": "P"
+    },
+    {
+     "type": "sofa",
+     "x": 35.0,
+     "z": 2.0460000000000003,
+     "w": 10.0,
+     "d": 3.2,
+     "rot": 0,
+     "label": "sofa under the rear windows",
+     "prov": "P"
+    },
+    {
+     "type": "sofa",
+     "x": 29.45,
+     "z": 11.3,
+     "w": 10.0,
+     "d": 3.3,
+     "rot": 270,
+     "label": "sectional: long side, back to the kitchen, facing the fireplace / TV",
+     "prov": "P"
+    },
+    {
+     "type": "sofa",
+     "x": 34.15,
+     "z": 14.65,
+     "w": 6.0,
+     "d": 3.3,
+     "rot": 180,
+     "label": "sectional: short side, facing the rear windows",
+     "prov": "P"
+    },
+    {
+     "type": "stool",
+     "x": 38.9,
+     "z": 14.65,
+     "w": 3.0,
+     "d": 3.0,
+     "rot": 0,
+     "label": "tufted ottoman",
+     "prov": "P"
+    },
+    {
+     "type": "coffee_table",
+     "x": 35.0,
+     "z": 8.5,
+     "w": 2.6,
+     "d": 2.6,
+     "rot": 0,
+     "label": "round coffee table",
+     "prov": "P"
+    },
+    {
+     "type": "table",
+     "x": 27.0,
+     "z": 11.3,
+     "w": 4.5,
+     "d": 1.1,
+     "rot": 90,
+     "label": "hairpin sofa table behind the sectional",
+     "prov": "P"
     },
     {
      "type": "dryer",
@@ -2106,14 +2266,15 @@
       ],
       [
        42.15,
-       45.854
+       51.5
       ],
       [
        34.146,
-       45.854
+       51.5
       ]
      ],
-     "prov": "M"
+     "prov": "M",
+     "note": "to the front of its two posts (A2: post pads at z 49.5-51.5; roof plan)"
     },
     {
      "type": "terrace",

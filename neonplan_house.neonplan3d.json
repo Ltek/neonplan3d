@@ -1,7 +1,7 @@
 {
  "format": "neonplan3d",
  "version": 1,
- "exported_at": "2026-11-07T22:39:43Z",
+ "exported_at": "2026-11-08T13:32:30Z",
  "building": {
   "version": 1,
   "floors": [
@@ -13,7 +13,7 @@
     "cut_height": 1.15,
     "rooms": [
      {
-      "id": "room_1v08j",
+      "id": "room_10wy0",
       "name": "Theater",
       "area_id": null,
       "points": [
@@ -50,7 +50,7 @@
         3.047
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        null,
@@ -75,7 +75,7 @@
       "ceiling_height": 2.743
      },
      {
-      "id": "room_22i5v",
+      "id": "room_26mak",
       "name": "Theater (8 ft)",
       "area_id": null,
       "points": [
@@ -108,7 +108,7 @@
         5.987
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "tiles",
       "panel": [],
       "wall_heights": [
        0,
@@ -131,7 +131,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_3yuz5",
+      "id": "room_3n8fo",
       "name": "Office",
       "area_id": null,
       "points": [
@@ -160,7 +160,7 @@
         6.08
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        null,
@@ -181,7 +181,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_4l4lv",
+      "id": "room_4j6vp",
       "name": "Office (9 ft)",
       "area_id": null,
       "points": [
@@ -202,7 +202,7 @@
         7.088
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        0,
@@ -219,7 +219,7 @@
       "ceiling_height": 2.743
      },
      {
-      "id": "room_5a2bu",
+      "id": "room_5d4uz",
       "name": "Office Closet",
       "area_id": null,
       "points": [
@@ -248,7 +248,7 @@
         7.088
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_thickness": [
        null,
@@ -261,7 +261,7 @@
       "ceiling_height": 2.743
      },
      {
-      "id": "room_6zlwr",
+      "id": "room_6uj4e",
       "name": "Bathroom",
       "area_id": null,
       "points": [
@@ -290,7 +290,7 @@
         7.142
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "tiles",
       "panel": [],
       "wall_thickness": [
        null,
@@ -303,7 +303,7 @@
       "ceiling_height": 2.743
      },
      {
-      "id": "room_7zr5f",
+      "id": "room_7s4os",
       "name": "Stairs",
       "area_id": null,
       "points": [
@@ -324,7 +324,7 @@
         7.21
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        null,
@@ -334,7 +334,7 @@
       ]
      },
      {
-      "id": "room_8kkkq",
+      "id": "room_8ij78",
       "name": "Hall",
       "area_id": null,
       "points": [
@@ -359,7 +359,7 @@
         7.21
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        null,
@@ -377,7 +377,7 @@
       ]
      },
      {
-      "id": "room_9vta0",
+      "id": "room_93zbj",
       "name": "Mechanical Room",
       "area_id": null,
       "points": [
@@ -410,7 +410,7 @@
         6.173
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "concrete",
       "panel": [],
       "wall_thickness": [
        0.2,
@@ -423,7 +423,7 @@
       ]
      },
      {
-      "id": "room_axo0z",
+      "id": "room_a8qaq",
       "name": "Crawlspace",
       "area_id": null,
       "points": [
@@ -452,7 +452,7 @@
         11.934
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "concrete",
       "panel": [],
       "wall_thickness": [
        null,
@@ -466,8 +466,8 @@
     ],
     "openings": [
      {
-      "id": "opening_c5gk8",
-      "room_id": "room_1v08j",
+      "id": "opening_c1ttx",
+      "room_id": "room_10wy0",
       "edge": 7,
       "offset": 1.689,
       "wall": null,
@@ -485,8 +485,8 @@
       "style": "sliding"
      },
      {
-      "id": "opening_d5rem",
-      "room_id": "room_22i5v",
+      "id": "opening_dwdig",
+      "room_id": "room_26mak",
       "edge": 6,
       "offset": 0.616,
       "wall": null,
@@ -504,8 +504,8 @@
       "style": null
      },
      {
-      "id": "opening_e5d18",
-      "room_id": "room_4l4lv",
+      "id": "opening_ebd12",
+      "room_id": "room_4j6vp",
       "edge": 1,
       "offset": 0.467,
       "wall": null,
@@ -523,8 +523,8 @@
       "style": null
      },
      {
-      "id": "opening_fwnp7",
-      "room_id": "room_22i5v",
+      "id": "opening_flg1f",
+      "room_id": "room_26mak",
       "edge": 5,
       "offset": 1.097,
       "wall": null,
@@ -542,8 +542,8 @@
       "style": null
      },
      {
-      "id": "opening_gbwwu",
-      "room_id": "room_22i5v",
+      "id": "opening_gtc8p",
+      "room_id": "room_26mak",
       "edge": 2,
       "offset": 0.924,
       "wall": null,
@@ -561,8 +561,8 @@
       "style": null
      },
      {
-      "id": "opening_hxl90",
-      "room_id": "room_8kkkq",
+      "id": "opening_h3tw8",
+      "room_id": "room_8ij78",
       "edge": 2,
       "offset": 0.769,
       "wall": null,
@@ -580,8 +580,8 @@
       "style": null
      },
      {
-      "id": "opening_ihk5f",
-      "room_id": "room_1v08j",
+      "id": "opening_icj7b",
+      "room_id": "room_10wy0",
       "edge": 0,
       "offset": 1.753,
       "wall": null,
@@ -599,8 +599,8 @@
       "style": null
      },
      {
-      "id": "opening_jgw1r",
-      "room_id": "room_1v08j",
+      "id": "opening_jdy7d",
+      "room_id": "room_10wy0",
       "edge": 0,
       "offset": 4.191,
       "wall": null,
@@ -618,8 +618,8 @@
       "style": null
      },
      {
-      "id": "opening_k6318",
-      "room_id": "room_1v08j",
+      "id": "opening_kz1sq",
+      "room_id": "room_10wy0",
       "edge": 0,
       "offset": 6.63,
       "wall": null,
@@ -637,8 +637,8 @@
       "style": null
      },
      {
-      "id": "opening_l5sng",
-      "room_id": "room_3yuz5",
+      "id": "opening_l317n",
+      "room_id": "room_3n8fo",
       "edge": 0,
       "offset": 1.487,
       "wall": null,
@@ -656,8 +656,8 @@
       "style": null
      },
      {
-      "id": "opening_mklup",
-      "room_id": "room_9vta0",
+      "id": "opening_mqchl",
+      "room_id": "room_93zbj",
       "edge": 2,
       "offset": 2.213,
       "wall": null,
@@ -677,7 +677,7 @@
     ],
     "furniture": [
      {
-      "id": "furn_nbuwx",
+      "id": "furn_nw2ry",
       "type": "stairs_u",
       "x": 9.415,
       "z": 7.198,
@@ -691,7 +691,7 @@
       "mirror": true
      },
      {
-      "id": "furn_ovly7",
+      "id": "furn_oy1qz",
       "type": "shower",
       "x": 6.844,
       "z": 7.703,
@@ -704,7 +704,7 @@
       "power": null
      },
      {
-      "id": "furn_puvxx",
+      "id": "furn_pfte4",
       "type": "wc",
       "x": 5.07,
       "z": 7.703,
@@ -722,7 +722,7 @@
     "outdoor": [],
     "walls": [
      {
-      "id": "wall_b4x86",
+      "id": "wall_b5qg1",
       "a": [
        12.524,
        0.012
@@ -745,7 +745,7 @@
     "cut_height": 1.15,
     "rooms": [
      {
-      "id": "room_q51yo",
+      "id": "room_q5vq6",
       "name": "3-Car Garage",
       "area_id": null,
       "points": [
@@ -790,12 +790,12 @@
         13.322
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "concrete",
       "panel": [],
       "ceiling_height": 3.048
      },
      {
-      "id": "room_rva3h",
+      "id": "room_r4f54",
       "name": "Laundry",
       "area_id": null,
       "points": [
@@ -821,7 +821,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_sw95f",
+      "id": "room_syfqx",
       "name": "Mud Room",
       "area_id": null,
       "points": [
@@ -847,7 +847,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_ttqsp",
+      "id": "room_tsop3",
       "name": "Breakfast",
       "area_id": null,
       "points": [
@@ -879,7 +879,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_ulvwc",
+      "id": "room_uo11w",
       "name": "Kitchen",
       "area_id": null,
       "points": [
@@ -915,7 +915,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_vdij4",
+      "id": "room_vull5",
       "name": "Living Room",
       "area_id": null,
       "points": [
@@ -983,7 +983,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_wr69h",
+      "id": "room_w3r1r",
       "name": "Stairs",
       "area_id": null,
       "points": [
@@ -1004,7 +1004,7 @@
         8.337
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        0.914,
@@ -1017,7 +1017,7 @@
       ]
      },
      {
-      "id": "room_xnr5r",
+      "id": "room_xpigg",
       "name": "Dining Room",
       "area_id": null,
       "points": [
@@ -1061,7 +1061,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_yx595",
+      "id": "room_y1bj1",
       "name": "Foyer",
       "area_id": null,
       "points": [
@@ -1129,7 +1129,7 @@
       ]
      },
      {
-      "id": "room_z0esa",
+      "id": "room_zxg4y",
       "name": "Coat Closet (Foyer)",
       "area_id": null,
       "points": [
@@ -1155,7 +1155,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_10ht8v",
+      "id": "room_10db1h",
       "name": "Powder",
       "area_id": null,
       "points": [
@@ -1181,7 +1181,7 @@
       "ceiling_height": 3.048
      },
      {
-      "id": "room_11dhba",
+      "id": "room_11fiak",
       "name": "Playroom",
       "area_id": null,
       "points": [
@@ -1209,8 +1209,8 @@
     ],
     "openings": [
      {
-      "id": "opening_135pww",
-      "room_id": "room_yx595",
+      "id": "opening_13wp1i",
+      "room_id": "room_y1bj1",
       "edge": 6,
       "offset": 1.631,
       "wall": null,
@@ -1228,8 +1228,8 @@
       "style": null
      },
      {
-      "id": "opening_14a8ho",
-      "room_id": "room_yx595",
+      "id": "opening_142rf2",
+      "room_id": "room_y1bj1",
       "edge": 5,
       "offset": 0.747,
       "wall": null,
@@ -1247,8 +1247,8 @@
       "style": null
      },
      {
-      "id": "opening_15dctd",
-      "room_id": "room_yx595",
+      "id": "opening_15i577",
+      "room_id": "room_y1bj1",
       "edge": 2,
       "offset": 1.631,
       "wall": null,
@@ -1266,8 +1266,8 @@
       "style": null
      },
      {
-      "id": "opening_1604e9",
-      "room_id": "room_yx595",
+      "id": "opening_16jpao",
+      "room_id": "room_y1bj1",
       "edge": 2,
       "offset": 0.564,
       "wall": null,
@@ -1285,8 +1285,8 @@
       "style": null
      },
      {
-      "id": "opening_17y5c3",
-      "room_id": "room_yx595",
+      "id": "opening_17mohs",
+      "room_id": "room_y1bj1",
       "edge": 1,
       "offset": 0.58,
       "wall": null,
@@ -1304,8 +1304,8 @@
       "style": null
      },
      {
-      "id": "opening_18wcoe",
-      "room_id": "room_q51yo",
+      "id": "opening_18qalb",
+      "room_id": "room_q5vq6",
       "edge": 0,
       "offset": 3.714,
       "wall": null,
@@ -1323,8 +1323,8 @@
       "style": null
      },
      {
-      "id": "opening_19xeyb",
-      "room_id": "room_sw95f",
+      "id": "opening_19k3bp",
+      "room_id": "room_syfqx",
       "edge": 1,
       "offset": 1.789,
       "wall": null,
@@ -1342,8 +1342,8 @@
       "style": "passage"
      },
      {
-      "id": "opening_1a3zbc",
-      "room_id": "room_rva3h",
+      "id": "opening_1awu40",
+      "room_id": "room_r4f54",
       "edge": 2,
       "offset": 1.407,
       "wall": null,
@@ -1361,8 +1361,8 @@
       "style": null
      },
      {
-      "id": "opening_1b4bfg",
-      "room_id": "room_ttqsp",
+      "id": "opening_1b6qxr",
+      "room_id": "room_tsop3",
       "edge": 3,
       "offset": 1.067,
       "wall": null,
@@ -1380,8 +1380,8 @@
       "style": "sliding"
      },
      {
-      "id": "opening_1cqn2r",
-      "room_id": "room_xnr5r",
+      "id": "opening_1cu4zl",
+      "room_id": "room_xpigg",
       "edge": 0,
       "offset": 2.418,
       "wall": null,
@@ -1399,8 +1399,8 @@
       "style": "sliding"
      },
      {
-      "id": "opening_1deqmg",
-      "room_id": "room_q51yo",
+      "id": "opening_1dn8cp",
+      "room_id": "room_q5vq6",
       "edge": 6,
       "offset": 1.671,
       "wall": null,
@@ -1418,8 +1418,8 @@
       "style": null
      },
      {
-      "id": "opening_1ev3q0",
-      "room_id": "room_q51yo",
+      "id": "opening_1e0o7r",
+      "room_id": "room_q5vq6",
       "edge": 4,
       "offset": 2.838,
       "wall": null,
@@ -1437,8 +1437,8 @@
       "style": null
      },
      {
-      "id": "opening_1fu2q7",
-      "room_id": "room_ttqsp",
+      "id": "opening_1fucwr",
+      "room_id": "room_tsop3",
       "edge": 0,
       "offset": 1.034,
       "wall": null,
@@ -1456,8 +1456,8 @@
       "style": null
      },
      {
-      "id": "opening_1ge990",
-      "room_id": "room_ttqsp",
+      "id": "opening_1gejvu",
+      "room_id": "room_tsop3",
       "edge": 0,
       "offset": 2.165,
       "wall": null,
@@ -1475,8 +1475,8 @@
       "style": null
      },
      {
-      "id": "opening_1h4beo",
-      "room_id": "room_vdij4",
+      "id": "opening_1hm3mb",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 0.883,
       "wall": null,
@@ -1494,8 +1494,8 @@
       "style": null
      },
      {
-      "id": "opening_1im370",
-      "room_id": "room_vdij4",
+      "id": "opening_1ir8nr",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 1.949,
       "wall": null,
@@ -1513,8 +1513,8 @@
       "style": null
      },
      {
-      "id": "opening_1jv8uc",
-      "room_id": "room_vdij4",
+      "id": "opening_1jhfi6",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 3.016,
       "wall": null,
@@ -1532,8 +1532,8 @@
       "style": null
      },
      {
-      "id": "opening_1k997n",
-      "room_id": "room_vdij4",
+      "id": "opening_1ka8i4",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 4.083,
       "wall": null,
@@ -1551,8 +1551,8 @@
       "style": null
      },
      {
-      "id": "opening_1lpe6r",
-      "room_id": "room_ttqsp",
+      "id": "opening_1l4o18",
+      "room_id": "room_tsop3",
       "edge": 0,
       "offset": 1.034,
       "wall": null,
@@ -1570,8 +1570,8 @@
       "style": null
      },
      {
-      "id": "opening_1mrwx5",
-      "room_id": "room_ttqsp",
+      "id": "opening_1m4ajc",
+      "room_id": "room_tsop3",
       "edge": 0,
       "offset": 2.165,
       "wall": null,
@@ -1589,8 +1589,8 @@
       "style": null
      },
      {
-      "id": "opening_1ntiq2",
-      "room_id": "room_vdij4",
+      "id": "opening_1ne72f",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 0.883,
       "wall": null,
@@ -1608,8 +1608,8 @@
       "style": null
      },
      {
-      "id": "opening_1oz56s",
-      "room_id": "room_vdij4",
+      "id": "opening_1o1mv1",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 1.949,
       "wall": null,
@@ -1627,8 +1627,8 @@
       "style": null
      },
      {
-      "id": "opening_1pagp5",
-      "room_id": "room_vdij4",
+      "id": "opening_1psbnd",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 3.016,
       "wall": null,
@@ -1646,8 +1646,8 @@
       "style": null
      },
      {
-      "id": "opening_1qx0xs",
-      "room_id": "room_vdij4",
+      "id": "opening_1q83mk",
+      "room_id": "room_vull5",
       "edge": 0,
       "offset": 4.083,
       "wall": null,
@@ -1665,8 +1665,8 @@
       "style": null
      },
      {
-      "id": "opening_1rd4sf",
-      "room_id": "room_xnr5r",
+      "id": "opening_1rti18",
+      "room_id": "room_xpigg",
       "edge": 0,
       "offset": 1.504,
       "wall": null,
@@ -1684,8 +1684,8 @@
       "style": null
      },
      {
-      "id": "opening_1skq3v",
-      "room_id": "room_xnr5r",
+      "id": "opening_1sabvn",
+      "room_id": "room_xpigg",
       "edge": 0,
       "offset": 2.418,
       "wall": null,
@@ -1703,8 +1703,8 @@
       "style": null
      },
      {
-      "id": "opening_1t1a01",
-      "room_id": "room_xnr5r",
+      "id": "opening_1tnngy",
+      "room_id": "room_xpigg",
       "edge": 0,
       "offset": 3.332,
       "wall": null,
@@ -1722,8 +1722,8 @@
       "style": null
      },
      {
-      "id": "opening_1u1e28",
-      "room_id": "room_xnr5r",
+      "id": "opening_1ui2vy",
+      "room_id": "room_xpigg",
       "edge": 1,
       "offset": 0.971,
       "wall": null,
@@ -1741,8 +1741,8 @@
       "style": null
      },
      {
-      "id": "opening_1v0pz0",
-      "room_id": "room_xnr5r",
+      "id": "opening_1vp7z7",
+      "room_id": "room_xpigg",
       "edge": 1,
       "offset": 1.733,
       "wall": null,
@@ -1760,8 +1760,8 @@
       "style": null
      },
      {
-      "id": "opening_1w3ppn",
-      "room_id": "room_xnr5r",
+      "id": "opening_1whz7w",
+      "room_id": "room_xpigg",
       "edge": 1,
       "offset": 2.495,
       "wall": null,
@@ -1779,8 +1779,8 @@
       "style": null
      },
      {
-      "id": "opening_1xpg4q",
-      "room_id": "room_10ht8v",
+      "id": "opening_1xzw33",
+      "room_id": "room_10db1h",
       "edge": 1,
       "offset": 0.724,
       "wall": null,
@@ -1798,8 +1798,8 @@
       "style": null
      },
      {
-      "id": "opening_1y2frd",
-      "room_id": "room_11dhba",
+      "id": "opening_1yxtrd",
+      "room_id": "room_11fiak",
       "edge": 1,
       "offset": 0.783,
       "wall": null,
@@ -1817,8 +1817,8 @@
       "style": null
      },
      {
-      "id": "opening_1zbxls",
-      "room_id": "room_11dhba",
+      "id": "opening_1zlv4j",
+      "room_id": "room_11fiak",
       "edge": 2,
       "offset": 3.08,
       "wall": null,
@@ -1836,8 +1836,8 @@
       "style": null
      },
      {
-      "id": "opening_20c4rb",
-      "room_id": "room_11dhba",
+      "id": "opening_20iiyr",
+      "room_id": "room_11fiak",
       "edge": 2,
       "offset": 2.089,
       "wall": null,
@@ -1855,8 +1855,8 @@
       "style": null
      },
      {
-      "id": "opening_21pmm6",
-      "room_id": "room_11dhba",
+      "id": "opening_21a06x",
+      "room_id": "room_11fiak",
       "edge": 2,
       "offset": 1.099,
       "wall": null,
@@ -1874,8 +1874,8 @@
       "style": null
      },
      {
-      "id": "opening_225s8t",
-      "room_id": "room_rva3h",
+      "id": "opening_22xr43",
+      "room_id": "room_r4f54",
       "edge": 3,
       "offset": 0.51,
       "wall": null,
@@ -1893,8 +1893,8 @@
       "style": null
      },
      {
-      "id": "opening_23qjan",
-      "room_id": "room_rva3h",
+      "id": "opening_23rwzs",
+      "room_id": "room_r4f54",
       "edge": 3,
       "offset": 0.51,
       "wall": null,
@@ -1912,8 +1912,8 @@
       "style": null
      },
      {
-      "id": "opening_24qk5z",
-      "room_id": "room_yx595",
+      "id": "opening_24w6u8",
+      "room_id": "room_y1bj1",
       "edge": 6,
       "offset": 0.96,
       "wall": null,
@@ -1932,8 +1932,8 @@
       "style": null
      },
      {
-      "id": "opening_25oz7f",
-      "room_id": "room_yx595",
+      "id": "opening_25faqm",
+      "room_id": "room_y1bj1",
       "edge": 6,
       "offset": 1.402,
       "wall": null,
@@ -1953,7 +1953,7 @@
     ],
     "furniture": [
      {
-      "id": "furn_26uv4d",
+      "id": "furn_266yg4",
       "type": "stairs_u",
       "x": 9.415,
       "z": 7.198,
@@ -1967,7 +1967,7 @@
       "mirror": true
      },
      {
-      "id": "furn_27dbgy",
+      "id": "furn_27v5me",
       "type": "fridge",
       "x": 5.594,
       "z": 7.972,
@@ -1980,7 +1980,7 @@
       "power": null
      },
      {
-      "id": "furn_28wkf9",
+      "id": "furn_28141e",
       "type": "kitchen_tall",
       "x": 4.893,
       "z": 7.941,
@@ -1993,7 +1993,7 @@
       "power": null
      },
      {
-      "id": "furn_29enfk",
+      "id": "furn_29wgqb",
       "type": "kitchen",
       "x": 6.6,
       "z": 7.972,
@@ -2006,12 +2006,12 @@
       "power": null
      },
      {
-      "id": "furn_2ahg9c",
+      "id": "furn_2af9v2",
       "type": "kitchen",
       "x": 4.787,
-      "z": 4.558,
+      "z": 2.988,
       "rotation": 270,
-      "w": 2.926,
+      "w": 0.945,
       "d": 0.61,
       "h": 0.92,
       "variant": null,
@@ -2019,20 +2019,72 @@
       "power": null
      },
      {
-      "id": "furn_2bdg6c",
+      "id": "furn_2brm1x",
+      "type": "stove",
+      "x": 4.787,
+      "z": 3.918,
+      "rotation": 270,
+      "w": 0.914,
+      "d": 0.61,
+      "h": 0.92,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2c1t6l",
       "type": "kitchen",
+      "x": 4.787,
+      "z": 5.061,
+      "rotation": 270,
+      "w": 1.372,
+      "d": 0.61,
+      "h": 0.92,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2df614",
+      "type": "kitchen_wall",
+      "x": 4.695,
+      "z": 2.988,
+      "rotation": 270,
+      "w": 0.945,
+      "d": 0.366,
+      "h": 0.7,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2ejh3j",
+      "type": "kitchen_wall",
+      "x": 4.695,
+      "z": 5.061,
+      "rotation": 270,
+      "w": 1.372,
+      "d": 0.366,
+      "h": 0.7,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2fy57p",
+      "type": "kitchen_tall",
       "x": 7.606,
       "z": 7.118,
       "rotation": 90,
       "w": 2.103,
       "d": 0.61,
-      "h": 0.92,
+      "h": 2.1,
       "variant": null,
       "entity": null,
       "power": null
      },
      {
-      "id": "furn_2cflov",
+      "id": "furn_2gyzox",
       "type": "sideboard",
       "x": 13.221,
       "z": 1.321,
@@ -2045,7 +2097,7 @@
       "power": null
      },
      {
-      "id": "furn_2d3lli",
+      "id": "furn_2hfo19",
       "type": "tv_board",
       "x": 13.221,
       "z": 3.454,
@@ -2058,7 +2110,7 @@
       "power": null
      },
      {
-      "id": "furn_2eewbb",
+      "id": "furn_2ihf2g",
       "type": "island",
       "x": 6.905,
       "z": 3.217,
@@ -2071,7 +2123,163 @@
       "power": null
      },
      {
-      "id": "furn_2f1pyr",
+      "id": "furn_2jwauz",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 1.998,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2k7c8a",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 2.485,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2lxajz",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 2.973,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2mi6ev",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 3.461,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2n5xk8",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 3.948,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2ov8ch",
+      "type": "bar_stool",
+      "x": 7.652,
+      "z": 4.436,
+      "rotation": 90,
+      "w": 0.427,
+      "d": 0.427,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2p73gg",
+      "type": "sofa",
+      "x": 10.623,
+      "z": 0.579,
+      "rotation": 0,
+      "w": 3.048,
+      "d": 0.975,
+      "h": 0.82,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2qgose",
+      "type": "sofa",
+      "x": 8.932,
+      "z": 3.4,
+      "rotation": 270,
+      "w": 3.048,
+      "d": 1.006,
+      "h": 0.82,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2rwjxj",
+      "type": "sofa",
+      "x": 10.364,
+      "z": 4.421,
+      "rotation": 180,
+      "w": 1.829,
+      "d": 1.006,
+      "h": 0.82,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2sjj7v",
+      "type": "stool",
+      "x": 11.812,
+      "z": 4.421,
+      "rotation": 0,
+      "w": 0.914,
+      "d": 0.914,
+      "h": 0.42,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2tlirm",
+      "type": "coffee_table",
+      "x": 10.623,
+      "z": 2.546,
+      "rotation": 0,
+      "w": 0.792,
+      "d": 0.792,
+      "h": 0.42,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2uqdz5",
+      "type": "table",
+      "x": 8.185,
+      "z": 3.4,
+      "rotation": 90,
+      "w": 1.372,
+      "d": 0.335,
+      "h": 0.75,
+      "variant": null,
+      "entity": null,
+      "power": null
+     },
+     {
+      "id": "furn_2v5ss3",
       "type": "dryer",
       "x": 4.055,
       "z": 3.476,
@@ -2084,7 +2292,7 @@
       "power": null
      },
      {
-      "id": "furn_2gwjvd",
+      "id": "furn_2woupn",
       "type": "washer",
       "x": 4.055,
       "z": 4.314,
@@ -2161,11 +2369,11 @@
        ],
        [
         12.803,
-        13.932
+        15.653
        ],
        [
         10.363,
-        13.932
+        15.653
        ]
       ]
      },
@@ -2195,7 +2403,7 @@
     ],
     "walls": [
      {
-      "id": "wall_12cfsc",
+      "id": "wall_12rsqy",
       "a": [
        7.963,
        7.21
@@ -2218,7 +2426,7 @@
     "cut_height": 1.15,
     "rooms": [
      {
-      "id": "room_2hir2h",
+      "id": "room_2x9q8j",
       "name": "Master Bedroom",
       "area_id": null,
       "points": [
@@ -2262,7 +2470,7 @@
       ]
      },
      {
-      "id": "room_2i1g4g",
+      "id": "room_2yef4t",
       "name": "Master Bedroom (right)",
       "area_id": null,
       "points": [
@@ -2306,7 +2514,7 @@
       ]
      },
      {
-      "id": "room_2j3uv5",
+      "id": "room_2zykg9",
       "name": "Master WIC",
       "area_id": null,
       "points": [
@@ -2340,7 +2548,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2kdc9p",
+      "id": "room_300q7m",
       "name": "Master Bath",
       "area_id": null,
       "points": [
@@ -2386,7 +2594,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2lsida",
+      "id": "room_31c72d",
       "name": "Master Linen",
       "area_id": null,
       "points": [
@@ -2412,7 +2620,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2mbwqq",
+      "id": "room_32v1fg",
       "name": "Master WIC 2",
       "area_id": null,
       "points": [
@@ -2446,7 +2654,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2n7x4o",
+      "id": "room_332djj",
       "name": "Master WC",
       "area_id": null,
       "points": [
@@ -2472,7 +2680,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2osv2f",
+      "id": "room_346l0p",
       "name": "Bath 3",
       "area_id": null,
       "points": [
@@ -2498,7 +2706,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2p0jcl",
+      "id": "room_35pux4",
       "name": "Bedroom 2 Dressing",
       "area_id": null,
       "points": [
@@ -2524,7 +2732,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2qs3nd",
+      "id": "room_36uzz8",
       "name": "Bedroom 2",
       "area_id": null,
       "points": [
@@ -2574,7 +2782,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2r9lmh",
+      "id": "room_37q4ny",
       "name": "Hall Closet",
       "area_id": null,
       "points": [
@@ -2600,7 +2808,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2scq9q",
+      "id": "room_38br7n",
       "name": "Stairs",
       "area_id": null,
       "points": [
@@ -2621,7 +2829,7 @@
         8.337
        ]
       ],
-      "floor_material": "wood",
+      "floor_material": "carpet",
       "panel": [],
       "wall_heights": [
        [
@@ -2643,7 +2851,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2t7wen",
+      "id": "room_39y2l0",
       "name": "Upper Hall",
       "area_id": null,
       "points": [
@@ -2711,7 +2919,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2ubi4m",
+      "id": "room_3ac4s2",
       "name": "Bedroom 3",
       "area_id": null,
       "points": [
@@ -2745,7 +2953,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2viug1",
+      "id": "room_3bbzj4",
       "name": "Bedroom 3 Closet",
       "area_id": null,
       "points": [
@@ -2771,7 +2979,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2wo4tn",
+      "id": "room_3c4vv5",
       "name": "Bath 2",
       "area_id": null,
       "points": [
@@ -2797,7 +3005,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2x1aso",
+      "id": "room_3drgpe",
       "name": "Bedroom 4",
       "area_id": null,
       "points": [
@@ -2831,7 +3039,7 @@
       "ceiling_height": 2.438
      },
      {
-      "id": "room_2yxie0",
+      "id": "room_3epbbv",
       "name": "Bedroom 4 Closet",
       "area_id": null,
       "points": [
@@ -2859,8 +3067,8 @@
     ],
     "openings": [
      {
-      "id": "opening_32yzxc",
-      "room_id": "room_2qs3nd",
+      "id": "opening_3ibr7o",
+      "room_id": "room_36uzz8",
       "edge": 1,
       "offset": 0.549,
       "wall": null,
@@ -2878,8 +3086,8 @@
       "style": null
      },
      {
-      "id": "opening_33qu6y",
-      "room_id": "room_2p0jcl",
+      "id": "opening_3j0yjh",
+      "room_id": "room_35pux4",
       "edge": 1,
       "offset": 1.843,
       "wall": null,
@@ -2897,8 +3105,8 @@
       "style": null
      },
      {
-      "id": "opening_34q7v4",
-      "room_id": "room_2osv2f",
+      "id": "opening_3ktx47",
+      "room_id": "room_346l0p",
       "edge": 2,
       "offset": 1.393,
       "wall": null,
@@ -2916,8 +3124,8 @@
       "style": null
      },
      {
-      "id": "opening_35xzgs",
-      "room_id": "room_2r9lmh",
+      "id": "opening_3lib21",
+      "room_id": "room_37q4ny",
       "edge": 0,
       "offset": 0.239,
       "wall": null,
@@ -2935,8 +3143,8 @@
       "style": null
      },
      {
-      "id": "opening_364vvt",
-      "room_id": "room_2i1g4g",
+      "id": "opening_3mtwl6",
+      "room_id": "room_2yef4t",
       "edge": 2,
       "offset": 0.991,
       "wall": null,
@@ -2954,8 +3162,8 @@
       "style": null
      },
      {
-      "id": "opening_37ripq",
-      "room_id": "room_2hir2h",
+      "id": "opening_3n3m1o",
+      "room_id": "room_2x9q8j",
       "edge": 3,
       "offset": 0.532,
       "wall": null,
@@ -2973,8 +3181,8 @@
       "style": null
      },
      {
-      "id": "opening_38jebo",
-      "room_id": "room_2j3uv5",
+      "id": "opening_3o1aur",
+      "room_id": "room_2zykg9",
       "edge": 2,
       "offset": 1.363,
       "wall": null,
@@ -2992,8 +3200,8 @@
       "style": null
      },
      {
-      "id": "opening_395rd2",
-      "room_id": "room_2kdc9p",
+      "id": "opening_3pu7iw",
+      "room_id": "room_300q7m",
       "edge": 4,
       "offset": 1.47,
       "wall": null,
@@ -3011,8 +3219,8 @@
       "style": null
      },
      {
-      "id": "opening_3atcbs",
-      "room_id": "room_2kdc9p",
+      "id": "opening_3qyubb",
+      "room_id": "room_300q7m",
       "edge": 5,
       "offset": 0.902,
       "wall": null,
@@ -3030,8 +3238,8 @@
       "style": null
      },
      {
-      "id": "opening_3bknye",
-      "room_id": "room_2kdc9p",
+      "id": "opening_3rjg7n",
+      "room_id": "room_300q7m",
       "edge": 6,
       "offset": 0.558,
       "wall": null,
@@ -3049,8 +3257,8 @@
       "style": null
      },
      {
-      "id": "opening_3coijb",
-      "room_id": "room_2t7wen",
+      "id": "opening_3sw3ps",
+      "room_id": "room_39y2l0",
       "edge": 2,
       "offset": 0.534,
       "wall": null,
@@ -3068,8 +3276,8 @@
       "style": null
      },
      {
-      "id": "opening_3d9gql",
-      "room_id": "room_2ubi4m",
+      "id": "opening_3tw3yn",
+      "room_id": "room_3ac4s2",
       "edge": 5,
       "offset": 1.22,
       "wall": null,
@@ -3087,8 +3295,8 @@
       "style": null
      },
      {
-      "id": "opening_3ewzd8",
-      "room_id": "room_2ubi4m",
+      "id": "opening_3u3dkm",
+      "room_id": "room_3ac4s2",
       "edge": 2,
       "offset": 2.211,
       "wall": null,
@@ -3106,8 +3314,8 @@
       "style": null
      },
      {
-      "id": "opening_3fdjxn",
-      "room_id": "room_2wo4tn",
+      "id": "opening_3v17yd",
+      "room_id": "room_3c4vv5",
       "edge": 2,
       "offset": 2.303,
       "wall": null,
@@ -3125,11 +3333,11 @@
       "style": null
      },
      {
-      "id": "opening_3gfxdz",
-      "room_id": "room_2hir2h",
+      "id": "opening_3ww80r",
+      "room_id": "room_2x9q8j",
       "edge": 0,
       "offset": 1.448,
-      "wall": "wall_31tac7",
+      "wall": "wall_3hpj64",
       "width": 0.711,
       "type": "door",
       "sill": 0,
@@ -3144,8 +3352,8 @@
       "style": null
      },
      {
-      "id": "opening_3hr342",
-      "room_id": "room_2t7wen",
+      "id": "opening_3xahlz",
+      "room_id": "room_39y2l0",
       "edge": 4,
       "offset": 0.552,
       "wall": null,
@@ -3163,8 +3371,8 @@
       "style": null
      },
      {
-      "id": "opening_3i1jfu",
-      "room_id": "room_2x1aso",
+      "id": "opening_3ymo0m",
+      "room_id": "room_3drgpe",
       "edge": 3,
       "offset": 1.327,
       "wall": null,
@@ -3182,8 +3390,8 @@
       "style": null
      },
      {
-      "id": "opening_3jrdg5",
-      "room_id": "room_2hir2h",
+      "id": "opening_3zhozr",
+      "room_id": "room_2x9q8j",
       "edge": 0,
       "offset": 0.883,
       "wall": null,
@@ -3201,8 +3409,8 @@
       "style": null
      },
      {
-      "id": "opening_3k1vei",
-      "room_id": "room_2hir2h",
+      "id": "opening_40m4o4",
+      "room_id": "room_2x9q8j",
       "edge": 0,
       "offset": 1.949,
       "wall": null,
@@ -3220,8 +3428,8 @@
       "style": null
      },
      {
-      "id": "opening_3lcsm1",
-      "room_id": "room_2i1g4g",
+      "id": "opening_417e2z",
+      "room_id": "room_2yef4t",
       "edge": 0,
       "offset": 0.54,
       "wall": null,
@@ -3239,8 +3447,8 @@
       "style": null
      },
      {
-      "id": "opening_3mw0qz",
-      "room_id": "room_2i1g4g",
+      "id": "opening_42o1jx",
+      "room_id": "room_2yef4t",
       "edge": 0,
       "offset": 1.607,
       "wall": null,
@@ -3258,8 +3466,8 @@
       "style": null
      },
      {
-      "id": "opening_3n2pfu",
-      "room_id": "room_2kdc9p",
+      "id": "opening_43b5lj",
+      "room_id": "room_300q7m",
       "edge": 0,
       "offset": 0.781,
       "wall": null,
@@ -3277,8 +3485,8 @@
       "style": null
      },
      {
-      "id": "opening_3oqs3k",
-      "room_id": "room_2kdc9p",
+      "id": "opening_44yor4",
+      "room_id": "room_300q7m",
       "edge": 8,
       "offset": 2.851,
       "wall": null,
@@ -3296,8 +3504,8 @@
       "style": null
      },
      {
-      "id": "opening_3p7zku",
-      "room_id": "room_2ubi4m",
+      "id": "opening_458ry0",
+      "room_id": "room_3ac4s2",
       "edge": 0,
       "offset": 1.584,
       "wall": null,
@@ -3315,8 +3523,8 @@
       "style": null
      },
      {
-      "id": "opening_3q7z6l",
-      "room_id": "room_2x1aso",
+      "id": "opening_46wzts",
+      "room_id": "room_3drgpe",
       "edge": 2,
       "offset": 2.089,
       "wall": null,
@@ -3334,8 +3542,8 @@
       "style": null
      },
      {
-      "id": "opening_3rlo28",
-      "room_id": "room_2qs3nd",
+      "id": "opening_47nbmf",
+      "room_id": "room_36uzz8",
       "edge": 6,
       "offset": 1.784,
       "wall": null,
@@ -3353,8 +3561,8 @@
       "style": null
      },
      {
-      "id": "opening_3svu3z",
-      "room_id": "room_2qs3nd",
+      "id": "opening_482r0b",
+      "room_id": "room_36uzz8",
       "edge": 6,
       "offset": 0.717,
       "wall": null,
@@ -3372,11 +3580,11 @@
       "style": null
      },
      {
-      "id": "opening_3t4la8",
-      "room_id": "room_2hir2h",
+      "id": "opening_49apfs",
+      "room_id": "room_2x9q8j",
       "edge": 0,
       "offset": 1.387,
-      "wall": "wall_2zc3zr",
+      "wall": "wall_3fm416",
       "width": 0.61,
       "type": "window",
       "sill": 1.546,
@@ -3393,7 +3601,7 @@
     ],
     "furniture": [
      {
-      "id": "furn_3u3f59",
+      "id": "furn_4a9ox4",
       "type": "bathtub",
       "x": 1.967,
       "z": 4.406,
@@ -3406,7 +3614,7 @@
       "power": null
      },
      {
-      "id": "furn_3vo5op",
+      "id": "furn_4bsir8",
       "type": "shower",
       "x": 1.901,
       "z": 6.387,
@@ -3419,7 +3627,7 @@
       "power": null
      },
      {
-      "id": "furn_3wrevt",
+      "id": "furn_4cuar3",
       "type": "sink",
       "x": 3.263,
       "z": 3.354,
@@ -3432,7 +3640,7 @@
       "power": null
      },
      {
-      "id": "furn_3xdf51",
+      "id": "furn_4dr5ji",
       "type": "worktop",
       "x": 4.36,
       "z": 3.354,
@@ -3445,7 +3653,7 @@
       "power": null
      },
      {
-      "id": "furn_3yynhv",
+      "id": "furn_4eflg4",
       "type": "sink",
       "x": 5.488,
       "z": 3.354,
@@ -3458,7 +3666,7 @@
       "power": null
      },
      {
-      "id": "furn_3zqf5k",
+      "id": "furn_4ftopg",
       "type": "wc",
       "x": 7.484,
       "z": 5.289,
@@ -3471,7 +3679,7 @@
       "power": null
      },
      {
-      "id": "furn_40mlhx",
+      "id": "furn_4gc5qg",
       "type": "bathtub",
       "x": 6.844,
       "z": 6.234,
@@ -3484,7 +3692,7 @@
       "power": null
      },
      {
-      "id": "furn_41afy1",
+      "id": "furn_4h0h8e",
       "type": "wc",
       "x": 7.515,
       "z": 6.966,
@@ -3497,7 +3705,7 @@
       "power": null
      },
      {
-      "id": "furn_42lvo5",
+      "id": "furn_4im5fi",
       "type": "washbasin",
       "x": 7.575,
       "z": 7.88,
@@ -3510,7 +3718,7 @@
       "power": null
      },
      {
-      "id": "furn_431hb6",
+      "id": "furn_4jv78t",
       "type": "washbasin",
       "x": 13.976,
       "z": 8.856,
@@ -3523,7 +3731,7 @@
       "power": null
      },
      {
-      "id": "furn_44omj6",
+      "id": "furn_4kjfxt",
       "type": "washbasin",
       "x": 13.976,
       "z": 9.587,
@@ -3536,7 +3744,7 @@
       "power": null
      },
      {
-      "id": "furn_4524vk",
+      "id": "furn_4lj0mq",
       "type": "wc",
       "x": 15.744,
       "z": 8.917,
@@ -3549,7 +3757,7 @@
       "power": null
      },
      {
-      "id": "furn_469q2d",
+      "id": "furn_4myqix",
       "type": "bathtub",
       "x": 16.567,
       "z": 9.404,
@@ -3567,7 +3775,7 @@
     "outdoor": [],
     "walls": [
      {
-      "id": "wall_2zc3zr",
+      "id": "wall_3fm416",
       "a": [
        10.242,
        12.103
@@ -3580,7 +3788,7 @@
       "height": null
      },
      {
-      "id": "wall_304me5",
+      "id": "wall_3gfje8",
       "a": [
        12.65,
        9.758
@@ -3593,7 +3801,7 @@
       "height": null
      },
      {
-      "id": "wall_31tac7",
+      "id": "wall_3hpj64",
       "a": [
        15.302,
        8.337
@@ -3615,9 +3823,210 @@
    "grid": 0.05,
    "north": 0,
    "roof": {
-    "type": "none",
-    "pitch": 35,
-    "overhang": 0.4
+    "type": "custom",
+    "pitch": 33.69,
+    "overhang": 0.3,
+    "sections": [
+     {
+      "id": "roof_main",
+      "x0": 5.372,
+      "z0": 2.857,
+      "x1": 13.559,
+      "z1": 12.172,
+      "shape": "hip",
+      "axis": "x",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_master_gable",
+      "x0": 7.893,
+      "z0": -0.07,
+      "x1": 12.986,
+      "z1": 5.512,
+      "shape": "gable",
+      "axis": "z",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_left_catslide",
+      "x0": 1.149,
+      "z0": 2.978,
+      "x1": 6.166,
+      "z1": 14.002,
+      "shape": "hip",
+      "axis": "x",
+      "eave_a": 5.864,
+      "eave_b": 3.397,
+      "pitch_a": 33.69,
+      "pitch_b": 26.3,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_wic",
+      "x0": 4.401,
+      "z0": 1.454,
+      "x1": 8.033,
+      "z1": 3.759,
+      "shape": "hip",
+      "axis": "x",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_right",
+      "x0": 12.58,
+      "z0": 4.807,
+      "x1": 17.05,
+      "z1": 14.002,
+      "shape": "hip",
+      "axis": "x",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_bed4_gable",
+      "x0": 13.205,
+      "z0": 9.822,
+      "x1": 17.05,
+      "z1": 14.002,
+      "shape": "gable",
+      "axis": "z",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 45.0,
+      "pitch_b": 45.0,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_bay_gable",
+      "x0": 7.017,
+      "z0": 9.944,
+      "x1": 9.658,
+      "z1": 13.011,
+      "shape": "gable",
+      "axis": "z",
+      "eave_a": 5.864,
+      "eave_b": 5.864,
+      "pitch_a": 45.0,
+      "pitch_b": 45.0,
+      "base": 5.864,
+      "overhang": null
+     },
+     {
+      "id": "roof_porch",
+      "x0": 10.293,
+      "z0": 12.032,
+      "x1": 12.873,
+      "z1": 15.723,
+      "shape": "gable",
+      "axis": "z",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 45.0,
+      "pitch_b": 45.0,
+      "base": 3.397,
+      "overhang": null,
+      "open": true
+     },
+     {
+      "id": "roof_garage_left",
+      "x0": -0.07,
+      "z0": 7.155,
+      "x1": 1.289,
+      "z1": 13.392,
+      "shape": "pent",
+      "axis": "z",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 3.397,
+      "overhang": null
+     },
+     {
+      "id": "roof_garage_front",
+      "x0": 4.401,
+      "z0": 12.032,
+      "x1": 10.433,
+      "z1": 14.611,
+      "shape": "pent",
+      "axis": "x",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 26.3,
+      "pitch_b": 26.3,
+      "base": 3.397,
+      "overhang": null,
+      "flip": true
+     },
+     {
+      "id": "roof_breakfast",
+      "x0": 4.401,
+      "z0": -0.07,
+      "x1": 8.033,
+      "z1": 1.594,
+      "shape": "pent",
+      "axis": "x",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 3.397,
+      "overhang": null
+     },
+     {
+      "id": "roof_covered_deck",
+      "x0": 1.149,
+      "z0": -0.07,
+      "x1": 4.541,
+      "z1": 3.118,
+      "shape": "pent",
+      "axis": "x",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 33.69,
+      "pitch_b": 33.69,
+      "base": 3.397,
+      "overhang": null,
+      "open": true
+     },
+     {
+      "id": "roof_chase",
+      "x0": 12.846,
+      "z0": 0.54,
+      "x1": 13.595,
+      "z1": 4.947,
+      "shape": "pent",
+      "axis": "z",
+      "eave_a": 3.397,
+      "eave_b": 3.397,
+      "pitch_a": 45.0,
+      "pitch_b": 45.0,
+      "base": 3.397,
+      "overhang": null,
+      "flip": true
+     }
+    ]
    }
   },
   "energy": {
